@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MapTypePopupController.h"
 
 /**
  * This view controller handles the first view that gets shown from application
@@ -16,9 +17,20 @@
  * Games (that have a start location) are shown on the map as annotations
  */
 
-@interface GameListViewController : UIViewController {
+@interface GameListViewController : UIViewController<MapTypeChangedDelegate> {
 	NSManagedObjectContext *managedObjectContext;
+	UIPopoverController *popOver;
+	
+	IBOutlet MKMapView* mapView;
 }
 
+-(void) insertNewObject;
+
+-(IBAction) centerOnLocation: (id) sender;
+-(IBAction) chooseMapType: (id) sender;
+
+-(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender;
+
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) UIPopoverController *popOver;
 @end

@@ -285,15 +285,18 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>153E580E11C9563700DCDAC0</string>
 								<string>153E57AF11C944BF00DCDAC0</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
+									<integer>4</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -336,7 +339,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Scavenger_iPadAppDelegate.m</string>
+								<string>MapTypePopupController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -344,19 +347,22 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Scavenger_iPadAppDelegate.m</string>
+										<string>MapTypePopupController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>153E57C311C9475E00DCDAC0</string>
+										<string>153E586C11C95C3F00DCDAC0</string>
 										<key>history</key>
 										<array>
 											<string>153E57A611C9354500DCDAC0</string>
 											<string>153E57A711C9354500DCDAC0</string>
 											<string>153E57A811C9354500DCDAC0</string>
-											<string>153E57C011C9475E00DCDAC0</string>
-											<string>153E57C111C9475E00DCDAC0</string>
-											<string>153E57C211C9475E00DCDAC0</string>
+											<string>153E57EF11C952E400DCDAC0</string>
+											<string>153E57F111C952E400DCDAC0</string>
+											<string>153E586811C95C3F00DCDAC0</string>
+											<string>153E586911C95C3F00DCDAC0</string>
+											<string>153E586A11C95C3F00DCDAC0</string>
+											<string>153E586B11C95C3F00DCDAC0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -537,7 +543,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298403678.17415702</real>
+	<real>298409023.69156998</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -554,6 +560,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>153E580A11C9556300DCDAC0</string>
+		<string>153E580B11C9556300DCDAC0</string>
 		<string>153E57AD11C9354500DCDAC0</string>
 		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 		<string>155BE54711C92BF00019A783</string>
@@ -582,7 +590,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Scavenger_iPadAppDelegate.m</string>
+								<string>GameListViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

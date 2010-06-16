@@ -22,9 +22,10 @@
     // Override point for customization after application launch
 	
 	self.rootViewController = [[GameListViewController alloc] initWithNibName:nil bundle:nil];
-
-	[window addSubview:self.rootViewController.view];
-	rootViewController.managedObjectContext = self.managedObjectContext;
+	self.rootViewController.managedObjectContext = self.managedObjectContext;
+	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: self.rootViewController];
+	
+	[window addSubview:nav.view];
     [window makeKeyAndVisible];
     
     return YES;
