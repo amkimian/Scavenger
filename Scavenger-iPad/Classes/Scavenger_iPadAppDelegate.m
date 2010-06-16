@@ -24,6 +24,7 @@
 	self.rootViewController = [[GameListViewController alloc] initWithNibName:nil bundle:nil];
 	self.rootViewController.managedObjectContext = self.managedObjectContext;
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: self.rootViewController];
+	[nav setToolbarHidden:NO animated:YES];
 	
 	[window addSubview:nav.view];
     [window makeKeyAndVisible];

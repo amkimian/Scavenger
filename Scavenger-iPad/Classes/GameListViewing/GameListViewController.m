@@ -36,6 +36,22 @@
 	self.navigationItem.rightBarButtonItem = addButton;
 	[addButton release];
 	
+	// Also setup the toolbar items (we do it this way programattically...)
+	
+	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(chooseMapType:)];
+	UIBarButtonItem *locateButton = [[UIBarButtonItem alloc] initWithTitle:@"Locate"  style:UIBarButtonItemStyleBordered target:self action:@selector(centerOnLocation:)];
+	UIBarButtonItem *flexibleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+																			   target:nil
+																			   action:nil];
+	
+	NSArray *array = [[NSArray alloc] initWithObjects:flexibleButton,mapButton,locateButton, nil];	
+	self.toolbarItems = array;
+	
+	[mapButton release];
+	[locateButton release];
+	[flexibleButton release];
+	[array release];
+	
 	// Now need to fetch the games and put out the annotations...
     [super viewDidLoad];
 }
@@ -51,7 +67,11 @@
 
 -(IBAction) centerOnLocation: (id) sender
 {
+	// Depending on whether we are toggling this button on or off, 
+	// start monitoring location or stop monitoring location
 	
+	// When the location comes in, if we are monitoring, center the map on that location with a region size of 0.01f (as a default)
+	// And then stop monitoring location (after a certain amount of time or when there is an error)
 }
 
 -(IBAction) chooseMapType: (id) sender
