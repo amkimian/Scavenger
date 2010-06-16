@@ -23,6 +23,7 @@
 		153E57CE11C9478A00DCDAC0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E57CD11C9478A00DCDAC0 /* MapKit.framework */; };
 		153E581411C9566B00DCDAC0 /* MapTypePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E581211C9566B00DCDAC0 /* MapTypePopupController.m */; };
 		153E581511C9566B00DCDAC0 /* MapTypePopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E581311C9566B00DCDAC0 /* MapTypePopupController.xib */; };
+		153E58A211C9666C00DCDAC0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E58A111C9666B00DCDAC0 /* CoreLocation.framework */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -61,6 +62,7 @@
 		153E581111C9566B00DCDAC0 /* MapTypePopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapTypePopupController.h; path = CommonControllers/MapTypePopupController.h; sourceTree = "<group>"; };
 		153E581211C9566B00DCDAC0 /* MapTypePopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapTypePopupController.m; path = CommonControllers/MapTypePopupController.m; sourceTree = "<group>"; };
 		153E581311C9566B00DCDAC0 /* MapTypePopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapTypePopupController.xib; path = CommonControllers/MapTypePopupController.xib; sourceTree = "<group>"; };
+		153E58A111C9666B00DCDAC0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */,
 				153E57CE11C9478A00DCDAC0 /* MapKit.framework in Frameworks */,
+				153E58A211C9666C00DCDAC0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +141,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				153E57CD11C9478A00DCDAC0 /* MapKit.framework */,
+				153E58A111C9666B00DCDAC0 /* CoreLocation.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";

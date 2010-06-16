@@ -12,6 +12,9 @@
 @implementation GameListViewController
 @synthesize managedObjectContext;
 @synthesize popOver;
+@synthesize locManager;
+@synthesize currentLocation;
+@synthesize locateButton;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -23,11 +26,34 @@
 }
 */
 
+-(void) locationManager:(CLLocationManager *)manager didFailWithError: (NSError *) error
+{
+	NSLog(@"Location failed:%@", [error description]);
+	scanningForLocation = NO;
+	[self.locManager stopUpdatingLocation];
+	self.locateButton.title = @"Locate";
+}
+
+-(void) locationManager:(CLLocationManager *)manager didUpdateToLocation: (CLLocation *) newLocation fromLocation: (CLLocation *) oldLocation
+{
+	NSLog(@"New location");
+	self.currentLocation = newLocation;
+	MKCoordinateRegion region = MKCoordinateRegionMake(newLocation.coordinate,
+													   MKCoordinateSpanMake(0.01f, 0.01f));
+	[mapView setRegion:region animated:YES];
+	 
+}
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	// Fetch the games and create the annotations...
 	self.title = @"Scavenger Games";
+	scanningForLocation = NO;
+	self.locManager = [[CLLocationManager alloc] init];
+	self.locManager.delegate = self;
+	self.locManager.desiredAccuracy = kCLLocationAccuracyBest;
+	self.locManager.distanceFilter = 5.0f;
 	
 	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
 																			   target:self
@@ -39,16 +65,15 @@
 	// Also setup the toolbar items (we do it this way programattically...)
 	
 	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(chooseMapType:)];
-	UIBarButtonItem *locateButton = [[UIBarButtonItem alloc] initWithTitle:@"Locate"  style:UIBarButtonItemStyleBordered target:self action:@selector(centerOnLocation:)];
+	self.locateButton = [[UIBarButtonItem alloc] initWithTitle:@"Locate"  style:UIBarButtonItemStyleBordered target:self action:@selector(centerOnLocation:)];
 	UIBarButtonItem *flexibleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
 																			   target:nil
 																			   action:nil];
 	
-	NSArray *array = [[NSArray alloc] initWithObjects:flexibleButton,mapButton,locateButton, nil];	
+	NSArray *array = [[NSArray alloc] initWithObjects:flexibleButton,mapButton,self.locateButton, nil];	
 	self.toolbarItems = array;
 	
 	[mapButton release];
-	[locateButton release];
 	[flexibleButton release];
 	[array release];
 	
@@ -72,6 +97,18 @@
 	
 	// When the location comes in, if we are monitoring, center the map on that location with a region size of 0.01f (as a default)
 	// And then stop monitoring location (after a certain amount of time or when there is an error)
+	if (scanningForLocation == YES)
+	{
+		[self.locManager stopUpdatingLocation];
+		scanningForLocation = NO;
+		self.locateButton.title = @"Locate";
+	}
+	else
+	{
+		scanningForLocation = YES;
+		[self.locManager startUpdatingLocation];
+		self.locateButton.title = @"Stop";
+	}
 }
 
 -(IBAction) chooseMapType: (id) sender

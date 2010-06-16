@@ -25,6 +25,8 @@
 	self.rootViewController.managedObjectContext = self.managedObjectContext;
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: self.rootViewController];
 	[nav setToolbarHidden:NO animated:YES];
+	nav.navigationBar.barStyle = UIBarStyleBlack;
+	nav.toolbar.barStyle = UIBarStyleBlack;
 	
 	[window addSubview:nav.view];
     [window makeKeyAndVisible];

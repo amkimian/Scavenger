@@ -17,11 +17,15 @@
  * Games (that have a start location) are shown on the map as annotations
  */
 
-@interface GameListViewController : UIViewController<MapTypeChangedDelegate> {
+@interface GameListViewController : UIViewController<MapTypeChangedDelegate, CLLocationManagerDelegate> {
 	NSManagedObjectContext *managedObjectContext;
 	UIPopoverController *popOver;
+	UIBarButtonItem *locateButton;
 	
 	IBOutlet MKMapView* mapView;
+	BOOL scanningForLocation;
+	CLLocationManager *locManager;
+	CLLocation *currentLocation;
 }
 
 -(void) insertNewObject;
@@ -33,4 +37,10 @@
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) UIPopoverController *popOver;
+
+@property (nonatomic, retain) CLLocationManager *locManager;
+@property (nonatomic, retain) CLLocation *currentLocation;
+
+@property (nonatomic, retain) UIBarButtonItem *locateButton;
+
 @end
