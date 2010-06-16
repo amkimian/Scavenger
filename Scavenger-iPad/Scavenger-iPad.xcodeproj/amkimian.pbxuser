@@ -359,10 +359,93 @@
 		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
 		name = "Scavenger_iPadAppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 859;
 		rType = 0;
 		vrLen = 2279;
 		vrLoc = 2089;
+	};
+	153E57B011C944FE00DCDAC0 /* GameListViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1411, 702}}";
+			sepNavSelRange = "{675, 0}";
+			sepNavVisRange = "{0, 681}";
+		};
+	};
+	153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1411, 780}}";
+			sepNavSelRange = "{286, 0}";
+			sepNavVisRange = "{0, 1347}";
+		};
+	};
+	153E57C011C9475E00DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
+		name = "GameListViewController.h: 17";
+		rLen = 0;
+		rLoc = 493;
+		rType = 0;
+		vrLen = 559;
+		vrLoc = 0;
+	};
+	153E57C111C9475E00DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */;
+		name = "Scavenger_iPadAppDelegate.h: 30";
+		rLen = 0;
+		rLoc = 956;
+		rType = 0;
+		vrLen = 1009;
+		vrLoc = 0;
+	};
+	153E57C211C9475E00DCDAC0 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'GameListController' undeclared (first use in this function)";
+		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 24;
+		rType = 1;
+	};
+	153E57C311C9475E00DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
+		name = "Scavenger_iPadAppDelegate.m: 26";
+		rLen = 0;
+		rLoc = 638;
+		rType = 0;
+		vrLen = 1670;
+		vrLoc = 0;
+	};
+	153E57DF11C94A0C00DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
+		name = "Scavenger_iPadAppDelegate.m: 24";
+		rLen = 0;
+		rLoc = 529;
+		rType = 0;
+		vrLen = 343;
+		vrLoc = 460;
+	};
+	153E57E211C94A5400DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
+		name = "Scavenger_iPadAppDelegate.m: 24";
+		rLen = 0;
+		rLoc = 529;
+		rType = 0;
+		vrLen = 467;
+		vrLoc = 460;
+	};
+	153E57E511C94A6400DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
+		name = "Scavenger_iPadAppDelegate.m: 24";
+		rLen = 0;
+		rLoc = 529;
+		rType = 0;
+		vrLen = 464;
+		vrLoc = 460;
 	};
 	155BE53311C92A670019A783 /* Scavenger-iPad */ = {
 		isa = PBXExecutable;
@@ -380,6 +463,7 @@
 		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
@@ -582,11 +666,18 @@
 		fRef = 155BE54311C92BC10019A783 /* Scavenger-iPad.xcdatamodel */;
 		fallbackIsa = PBXBookmark;
 	};
+	1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1411, 702}}";
+			sepNavSelRange = "{956, 0}";
+			sepNavVisRange = "{0, 1009}";
+		};
+	};
 	1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2371, 1898}}";
-			sepNavSelRange = "{614, 0}";
-			sepNavVisRange = "{2089, 2279}";
+			sepNavIntBoundsRect = "{{0, 0}, {2371, 1989}}";
+			sepNavSelRange = "{674, 0}";
+			sepNavVisRange = "{0, 1682}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* Scavenger-iPad */ = {
@@ -638,6 +729,13 @@
 			153E57A811C9354500DCDAC0 /* PBXTextBookmark */ = 153E57A811C9354500DCDAC0 /* PBXTextBookmark */;
 			153E57A911C9354500DCDAC0 /* PBXBookmark */ = 153E57A911C9354500DCDAC0 /* PBXBookmark */;
 			153E57AA11C9354500DCDAC0 /* PBXTextBookmark */ = 153E57AA11C9354500DCDAC0 /* PBXTextBookmark */;
+			153E57C011C9475E00DCDAC0 /* PBXTextBookmark */ = 153E57C011C9475E00DCDAC0 /* PBXTextBookmark */;
+			153E57C111C9475E00DCDAC0 /* PBXTextBookmark */ = 153E57C111C9475E00DCDAC0 /* PBXTextBookmark */;
+			153E57C211C9475E00DCDAC0 /* XCBuildMessageTextBookmark */ = 153E57C211C9475E00DCDAC0 /* XCBuildMessageTextBookmark */;
+			153E57C311C9475E00DCDAC0 /* PBXTextBookmark */ = 153E57C311C9475E00DCDAC0 /* PBXTextBookmark */;
+			153E57DF11C94A0C00DCDAC0 /* PBXTextBookmark */ = 153E57DF11C94A0C00DCDAC0 /* PBXTextBookmark */;
+			153E57E211C94A5400DCDAC0 /* PBXTextBookmark */ = 153E57E211C94A5400DCDAC0 /* PBXTextBookmark */;
+			153E57E511C94A6400DCDAC0 /* PBXTextBookmark */ = 153E57E511C94A6400DCDAC0 /* PBXTextBookmark */;
 			155BE57911C934370019A783 = 155BE57911C934370019A783 /* XDModelBookmark */;
 			155BE57A11C934370019A783 = 155BE57A11C934370019A783 /* XDModelBookmark */;
 		};

@@ -18,6 +18,9 @@
 		153E579311C934BC00DCDAC0 /* LocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578711C934BC00DCDAC0 /* LocationObject.m */; };
 		153E579411C934BC00DCDAC0 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578911C934BC00DCDAC0 /* GameObject.m */; };
 		153E579511C934BC00DCDAC0 /* HardwareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578B11C934BC00DCDAC0 /* HardwareObject.m */; };
+		153E57B311C944FE00DCDAC0 /* GameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */; };
+		153E57B411C944FE00DCDAC0 /* GameListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E57B211C944FE00DCDAC0 /* GameListViewController.xib */; };
+		153E57CE11C9478A00DCDAC0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E57CD11C9478A00DCDAC0 /* MapKit.framework */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -49,6 +52,10 @@
 		153E578911C934BC00DCDAC0 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		153E578A11C934BC00DCDAC0 /* HardwareObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardwareObject.h; sourceTree = "<group>"; };
 		153E578B11C934BC00DCDAC0 /* HardwareObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardwareObject.m; sourceTree = "<group>"; };
+		153E57B011C944FE00DCDAC0 /* GameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameListViewController.h; path = GameListViewing/GameListViewController.h; sourceTree = "<group>"; };
+		153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameListViewController.m; path = GameListViewing/GameListViewController.m; sourceTree = "<group>"; };
+		153E57B211C944FE00DCDAC0 /* GameListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GameListViewController.xib; path = GameListViewing/GameListViewController.xib; sourceTree = "<group>"; };
+		153E57CD11C9478A00DCDAC0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */,
+				153E57CE11C9478A00DCDAC0 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,10 +88,21 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				153E57AF11C944BF00DCDAC0 /* GameListViewing */,
 				1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */,
 				1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		153E57AF11C944BF00DCDAC0 /* GameListViewing */ = {
+			isa = PBXGroup;
+			children = (
+				153E57B011C944FE00DCDAC0 /* GameListViewController.h */,
+				153E57B111C944FE00DCDAC0 /* GameListViewController.m */,
+				153E57B211C944FE00DCDAC0 /* GameListViewController.xib */,
+			);
+			name = GameListViewing;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -102,6 +121,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				153E57CD11C9478A00DCDAC0 /* MapKit.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -182,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				153E57B411C944FE00DCDAC0 /* GameListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +226,7 @@
 				153E579311C934BC00DCDAC0 /* LocationObject.m in Sources */,
 				153E579411C934BC00DCDAC0 /* GameObject.m in Sources */,
 				153E579511C934BC00DCDAC0 /* HardwareObject.m in Sources */,
+				153E57B311C944FE00DCDAC0 /* GameListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

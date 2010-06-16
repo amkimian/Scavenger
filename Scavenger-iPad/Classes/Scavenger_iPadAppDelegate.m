@@ -12,7 +12,7 @@
 @implementation Scavenger_iPadAppDelegate
 
 @synthesize window;
-
+@synthesize rootViewController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -21,6 +21,10 @@
 	
     // Override point for customization after application launch
 	
+	self.rootViewController = [[GameListViewController alloc] initWithNibName:nil bundle:nil];
+
+	[window addSubview:self.rootViewController.view];
+	rootViewController.managedObjectContext = self.managedObjectContext;
     [window makeKeyAndVisible];
     
     return YES;

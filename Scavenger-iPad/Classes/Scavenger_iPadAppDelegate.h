@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "GameListViewController.h"
 
 @interface Scavenger_iPadAppDelegate : NSObject <UIApplicationDelegate> {
 
@@ -16,6 +17,7 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
     UIWindow *window;
+	GameListViewController *rootViewController;
 }
 
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
@@ -23,6 +25,8 @@
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+
+@property (nonatomic, retain) GameListViewController *rootViewController;
 
 - (NSString *)applicationDocumentsDirectory;
 
