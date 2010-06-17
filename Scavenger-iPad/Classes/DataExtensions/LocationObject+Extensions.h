@@ -30,7 +30,7 @@ typedef enum
 } LocationType;
 
 @interface LocationObject(Extensions)
-
+-(UIColor *) locationDisplayColor;
 @end
 
 

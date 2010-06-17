@@ -128,7 +128,7 @@
 		{
 			// Eventually color from location Type and state
 			NSLog(@"Drawing location");
-			[self drawLocation: loc withColor: [UIColor greenColor]];
+			[self drawLocation: loc withColor: [loc locationDisplayColor] ];
 		}
 	}
 }
@@ -180,6 +180,12 @@
 regionDidChangeAnimated:(BOOL)animated
 {
 	self.hidden = NO; // unhide the view
+	// Update the center location
+	LocationObject *centerLocation = [game addLocationOfType:LTYPE_CENTER];
+	centerLocation.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
+	centerLocation.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];
+	centerLocation.size = [NSNumber numberWithFloat: 50.0f]; // FOR NOW
+	
 	[self setNeedsDisplay]; // redraw the view
 } // end method mapview:regionDidChangeAnimated:
 
