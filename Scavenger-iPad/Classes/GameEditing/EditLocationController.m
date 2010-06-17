@@ -7,7 +7,7 @@
 //
 
 #import "EditLocationController.h"
-
+#import "TextEditController.h"
 
 @implementation EditLocationController
 @synthesize location;
@@ -94,7 +94,7 @@
     switch(section)
 	{
 		case 0:
-			return 1;
+			return 2;
 		case 1:
 			return 3;
 		case 2:
@@ -163,16 +163,26 @@
 	switch(indexPath.section)
 	{
 		case 0:
-			if (!location.name)
+			switch(indexPath.row)
 			{
-				location.name = @"Name";
+			case 0:
+				if (!location.name)
+				{
+					location.name = @"Name";
+				}
+					UnitsEditCell *unitsCell = [self getUnitsCell];
+					[unitsCell setLabelText: @"Name"];
+					[unitsCell setUnitsText:@""];
+					unitsCell.textField.text = location.name;
+					unitsCell.tag = @"name";
+					cell = unitsCell;
+					break;
+			case 1:
+					cell = [self getStandardCell];
+					cell.textLabel.text = @"Location Type";
+					cell.detailTextLabel.text = [location locationTypeString];
+					break;
 			}
-			UnitsEditCell *unitsCell = [self getUnitsCell];
-			[unitsCell setLabelText: @"Name"];
-			[unitsCell setUnitsText:@""];
-			unitsCell.textField.text = location.name;
-			unitsCell.tag = @"name";
-			cell = unitsCell;
 			break;
 		case 1:	// Location
 			switch(indexPath.row)
@@ -302,6 +312,29 @@
 	frame.size.height += KEYBOARD_HEIGHT; // subtract from the height
 	[[self tableView] setFrame:frame]; // apply the new frame	
 	keyboardShown = NO; // hide the keyboard	
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+		if (indexPath.section == 3)
+		{
+			if (indexPath.row == 0)
+			{
+				TextEditController *controller = [[TextEditController alloc] initWithNibName:nil bundle:nil];
+				controller.tagToEdit = @"enterCommentary";
+				controller.location = location;
+				controller.labelText = @"Commentary when entering location";
+				[[self navigationController] pushViewController: controller animated:YES];
+			}
+			else if (indexPath.row == 1)
+			{
+				TextEditController *controller = [[TextEditController alloc] initWithNibName:nil bundle:nil];
+				controller.tagToEdit = @"exitCommentary";
+				controller.location = location;
+				controller.labelText = @"Commentary when leaving location";
+				[[self navigationController] pushViewController: controller animated:YES];
+			}
+		}
 }
 
 /*

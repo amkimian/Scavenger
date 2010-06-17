@@ -33,6 +33,8 @@
 	LocationObject *loc = [[LocationObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[self managedObjectContext]];
 	loc.locationType = [NSNumber numberWithInt:(int) type];
 	[locations addObject:loc];
+	
+	// If this is a LTYPE_RALLY_SCORE, add it to the Default GameRouteObject
 	return loc;
 }
 
@@ -40,6 +42,8 @@
 {
     NSMutableSet *l = [self mutableSetValueForKey:@"locations"];
 	[l removeObject:loc];
+	// If this is a LTYPE_RALLY_SCORE, remove it from the Default GameRouteObject
+	
 }
 
 -(LocationObject *) getLocationOfType: (LocationType) type

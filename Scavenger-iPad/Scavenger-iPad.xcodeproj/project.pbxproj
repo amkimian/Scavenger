@@ -39,6 +39,9 @@
 		153E5BD911CAB28B00DCDAC0 /* MenuPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5BD811CAB28B00DCDAC0 /* MenuPopupController.m */; };
 		153E5BE011CAC7CC00DCDAC0 /* UnitsEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5BDF11CAC7CC00DCDAC0 /* UnitsEditCell.m */; };
 		153E5BE611CAC85300DCDAC0 /* EditLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5BE511CAC85300DCDAC0 /* EditLocationController.m */; };
+		153E5CA311CADCA000DCDAC0 /* TextEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5CA111CADCA000DCDAC0 /* TextEditController.m */; };
+		153E5CA411CADCA000DCDAC0 /* TextEditController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E5CA211CADCA000DCDAC0 /* TextEditController.xib */; };
+		153E5CFB11CAE2EC00DCDAC0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -104,6 +107,10 @@
 		153E5BDF11CAC7CC00DCDAC0 /* UnitsEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnitsEditCell.m; path = CommonViews/UnitsEditCell.m; sourceTree = "<group>"; };
 		153E5BE411CAC85300DCDAC0 /* EditLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditLocationController.h; path = GameEditing/EditLocationController.h; sourceTree = "<group>"; };
 		153E5BE511CAC85300DCDAC0 /* EditLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditLocationController.m; path = GameEditing/EditLocationController.m; sourceTree = "<group>"; };
+		153E5CA011CADCA000DCDAC0 /* TextEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextEditController.h; path = GameEditing/TextEditController.h; sourceTree = "<group>"; };
+		153E5CA111CADCA000DCDAC0 /* TextEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextEditController.m; path = GameEditing/TextEditController.m; sourceTree = "<group>"; };
+		153E5CA211CADCA000DCDAC0 /* TextEditController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TextEditController.xib; path = GameEditing/TextEditController.xib; sourceTree = "<group>"; };
+		153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +135,7 @@
 				28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */,
 				153E57CE11C9478A00DCDAC0 /* MapKit.framework in Frameworks */,
 				153E58A211C9666C00DCDAC0 /* CoreLocation.framework in Frameworks */,
+				153E5CFB11CAE2EC00DCDAC0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +205,9 @@
 				153E5AF111CA939E00DCDAC0 /* LocationListView.m */,
 				153E5BE411CAC85300DCDAC0 /* EditLocationController.h */,
 				153E5BE511CAC85300DCDAC0 /* EditLocationController.m */,
+				153E5CA011CADCA000DCDAC0 /* TextEditController.h */,
+				153E5CA111CADCA000DCDAC0 /* TextEditController.m */,
+				153E5CA211CADCA000DCDAC0 /* TextEditController.xib */,
 			);
 			name = GameEditing;
 			sourceTree = "<group>";
@@ -233,6 +244,7 @@
 				153E57CD11C9478A00DCDAC0 /* MapKit.framework */,
 				153E58A111C9666B00DCDAC0 /* CoreLocation.framework */,
 				153E5AEE11CA911700DCDAC0 /* LocationCell.xib */,
+				153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -319,6 +331,7 @@
 				153E59F011CA6EC900DCDAC0 /* GameEditViewController.xib in Resources */,
 				153E5A8B11CA80AE00DCDAC0 /* ChooseListPopupController.xib in Resources */,
 				153E5AEF11CA911700DCDAC0 /* LocationCell.xib in Resources */,
+				153E5CA411CADCA000DCDAC0 /* TextEditController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +368,7 @@
 				153E5BD911CAB28B00DCDAC0 /* MenuPopupController.m in Sources */,
 				153E5BE011CAC7CC00DCDAC0 /* UnitsEditCell.m in Sources */,
 				153E5BE611CAC85300DCDAC0 /* EditLocationController.m in Sources */,
+				153E5CA311CADCA000DCDAC0 /* TextEditController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
