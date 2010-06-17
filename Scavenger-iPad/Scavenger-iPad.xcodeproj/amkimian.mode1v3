@@ -291,22 +291,20 @@
 								<string>153E580E11C9563700DCDAC0</string>
 								<string>153E57AF11C944BF00DCDAC0</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
-								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>153E577211C934AB00DCDAC0</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>2</integer>
+									<integer>9</integer>
+									<integer>7</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {275, 823}}</string>
+							<string>{{0, 2}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -343,7 +341,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LocationOverlayView.m</string>
+								<string>GameEditViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -351,11 +349,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>LocationOverlayView.m</string>
+										<string>GameEditViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>153E5AED11CA8C0D00DCDAC0</string>
+										<string>153E5B4111CA9C0800DCDAC0</string>
 										<key>history</key>
 										<array>
 											<string>153E57A711C9354500DCDAC0</string>
@@ -377,13 +375,16 @@
 											<string>153E5ACD11CA892C00DCDAC0</string>
 											<string>153E5ACE11CA892C00DCDAC0</string>
 											<string>153E5ACF11CA892C00DCDAC0</string>
-											<string>153E5AD011CA892C00DCDAC0</string>
 											<string>153E5AE111CA8B2300DCDAC0</string>
 											<string>153E5AE211CA8B2300DCDAC0</string>
 											<string>153E5AE311CA8B2300DCDAC0</string>
-											<string>153E5AEA11CA8C0D00DCDAC0</string>
 											<string>153E5AEB11CA8C0D00DCDAC0</string>
-											<string>153E5AEC11CA8C0D00DCDAC0</string>
+											<string>153E5AFA11CA941800DCDAC0</string>
+											<string>153E5AFB11CA941800DCDAC0</string>
+											<string>153E5B1711CA97AE00DCDAC0</string>
+											<string>153E5B2011CA991400DCDAC0</string>
+											<string>153E5B3C11CA9B9600DCDAC0</string>
+											<string>153E5B3D11CA9B9600DCDAC0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -564,7 +565,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298486797.25151998</real>
+	<real>298490888.14035201</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -611,7 +612,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ChooseListPopupController.m</string>
+								<string>LocationListView.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -713,8 +714,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 194}}</string>
-											<string>{{316, 0}, {378, 194}}</string>
+											<string>{{0, 0}, {423, 253}}</string>
+											<string>{{423, 0}, {507, 253}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -729,8 +730,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 194}}</string>
-											<string>{{0, 194}, {694, 187}}</string>
+											<string>{{0, 0}, {930, 253}}</string>
+											<string>{{0, 253}, {930, 244}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -750,7 +751,7 @@
 								<key>DebugSTDIOWindowFrame</key>
 								<string>{{200, 200}, {500, 300}}</string>
 								<key>Frame</key>
-								<string>{{0, 0}, {694, 381}}</string>
+								<string>{{0, 0}, {930, 497}}</string>
 								<key>PBXDebugSessionStackFrameViewKey</key>
 								<dict>
 									<key>DebugVariablesTableConfiguration</key>
@@ -760,24 +761,24 @@
 										<string>Value</string>
 										<real>171</real>
 										<string>Summary</string>
-										<real>80</real>
+										<real>191</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 194}}</string>
+									<string>{{423, 0}, {507, 253}}</string>
 									<key>RubberWindowFrame</key>
-									<string>21 583 694 422 0 0 1680 1028 </string>
+									<string>21 467 930 538 0 0 1680 1028 </string>
 								</dict>
 								<key>RubberWindowFrame</key>
-								<string>21 583 694 422 0 0 1680 1028 </string>
+								<string>21 467 930 538 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugSessionModule</string>
 							<key>Proportion</key>
-							<string>381pt</string>
+							<string>497pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>381pt</string>
+					<string>497pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -802,7 +803,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
 			<key>WindowString</key>
-			<string>21 583 694 422 0 0 1680 1028 </string>
+			<string>21 467 930 538 0 0 1680 1028 </string>
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>

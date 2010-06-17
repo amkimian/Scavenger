@@ -165,6 +165,13 @@
 			sepNavVisRange = "{0, 725}";
 		};
 	};
+	153E578611C934BC00DCDAC0 /* LocationObject.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 832}}";
+			sepNavSelRange = "{348, 0}";
+			sepNavVisRange = "{0, 1781}";
+		};
+	};
 	153E578811C934BC00DCDAC0 /* GameObject.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1411, 702}}";
@@ -380,9 +387,9 @@
 	};
 	153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 4563}}";
-			sepNavSelRange = "{6268, 251}";
-			sepNavVisRange = "{4142, 2469}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 4511}}";
+			sepNavSelRange = "{344, 0}";
+			sepNavVisRange = "{176, 341}";
 		};
 	};
 	153E57C011C9475E00DCDAC0 /* PBXTextBookmark */ = {
@@ -577,7 +584,7 @@
 		ignoreCount = 0;
 		lineNumber = 14;
 		location = "Scavenger-iPad";
-		modificationTime = 298481134.200895;
+		modificationTime = 298490190.013808;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2335,22 +2342,22 @@
 		ignoreCount = 0;
 		lineNumber = 328;
 		location = "Scavenger-iPad";
-		modificationTime = 298481130.225421;
+		modificationTime = 298490187.805442;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
 	153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 679}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 702}}";
 			sepNavSelRange = "{360, 0}";
 			sepNavVisRange = "{0, 971}";
 		};
 	};
 	153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 2119}}";
-			sepNavSelRange = "{1690, 0}";
-			sepNavVisRange = "{1349, 1771}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 2236}}";
+			sepNavSelRange = "{2938, 0}";
+			sepNavVisRange = "{1720, 1864}";
 		};
 	};
 	153E59F311CA6F1900DCDAC0 /* PBXTextBookmark */ = {
@@ -2417,7 +2424,7 @@
 		isa = PBXTextBookmark;
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		rLen = 0;
-		rLoc = 9223372036854779818;
+		rLoc = 9223372036854780286;
 		rType = 0;
 	};
 	153E59FE11CA6FD200DCDAC0 /* PBXTextBookmark */ = {
@@ -2425,7 +2432,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 14";
 		rLen = 0;
-		rLoc = 353;
+		rLoc = 382;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 0;
@@ -2453,9 +2460,9 @@
 	};
 	153E5A0211CA704600DCDAC0 /* LocationOverlayView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 2392}}";
-			sepNavSelRange = "{5274, 0}";
-			sepNavVisRange = "{3498, 1877}";
+			sepNavIntBoundsRect = "{{0, 0}, {845, 2548}}";
+			sepNavSelRange = "{3547, 0}";
+			sepNavVisRange = "{3304, 296}";
 		};
 	};
 	153E5A0F11CA725200DCDAC0 /* PBXTextBookmark */ = {
@@ -2502,7 +2509,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 14";
 		rLen = 0;
-		rLoc = 353;
+		rLoc = 382;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 0;
@@ -2601,7 +2608,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 40";
 		rLen = 0;
-		rLoc = 4801;
+		rLoc = 5269;
 		rType = 0;
 		vrLen = 1517;
 		vrLoc = 0;
@@ -2651,7 +2658,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 38";
 		rLen = 0;
-		rLoc = 4275;
+		rLoc = 4743;
 		rType = 0;
 		vrLen = 1481;
 		vrLoc = 0;
@@ -2661,7 +2668,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 49";
 		rLen = 0;
-		rLoc = 4702;
+		rLoc = 5170;
 		rType = 0;
 		vrLen = 1612;
 		vrLoc = 0;
@@ -2671,7 +2678,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 49";
 		rLen = 0;
-		rLoc = 4702;
+		rLoc = 5170;
 		rType = 0;
 		vrLen = 1524;
 		vrLoc = 545;
@@ -2701,7 +2708,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 49";
 		rLen = 0;
-		rLoc = 4702;
+		rLoc = 5170;
 		rType = 0;
 		vrLen = 1524;
 		vrLoc = 545;
@@ -2746,11 +2753,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 153E5A0211CA704600DCDAC0 /* LocationOverlayView.m */;
 		functionName = "-drawLocation:withColor:";
-		hitCount = 1;
+		hitCount = 6;
 		ignoreCount = 0;
 		lineNumber = 143;
 		location = "Scavenger-iPad";
-		modificationTime = 298481143.765724;
+		modificationTime = 298490206.128939;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2818,8 +2825,8 @@
 		isa = PBXTextBookmark;
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 31";
-		rLen = 784;
-		rLoc = 1731;
+		rLen = 1221;
+		rLoc = 1760;
 		rType = 0;
 		vrLen = 1747;
 		vrLoc = 663;
@@ -2879,7 +2886,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 48";
 		rLen = 0;
-		rLoc = 2435;
+		rLoc = 2464;
 		rType = 0;
 		vrLen = 1445;
 		vrLoc = 663;
@@ -2889,7 +2896,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 15";
 		rLen = 0;
-		rLoc = 352;
+		rLoc = 381;
 		rType = 0;
 		vrLen = 1486;
 		vrLoc = 0;
@@ -2919,7 +2926,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 15";
 		rLen = 0;
-		rLoc = 352;
+		rLoc = 381;
 		rType = 0;
 		vrLen = 1487;
 		vrLoc = 0;
@@ -3075,7 +3082,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 41";
 		rLen = 0;
-		rLoc = 2254;
+		rLoc = 2283;
 		rType = 0;
 		vrLen = 1520;
 		vrLoc = 252;
@@ -3189,7 +3196,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 33";
 		rLen = 0;
-		rLoc = 1237;
+		rLoc = 1266;
 		rType = 0;
 		vrLen = 1808;
 		vrLoc = 175;
@@ -3229,7 +3236,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 33";
 		rLen = 0;
-		rLoc = 1237;
+		rLoc = 1266;
 		rType = 0;
 		vrLen = 1808;
 		vrLoc = 175;
@@ -3239,7 +3246,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 29";
 		rLen = 0;
-		rLoc = 887;
+		rLoc = 916;
 		rType = 0;
 		vrLen = 1817;
 		vrLoc = 175;
@@ -3249,7 +3256,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 29";
 		rLen = 0;
-		rLoc = 887;
+		rLoc = 916;
 		rType = 0;
 		vrLen = 1817;
 		vrLoc = 175;
@@ -3408,7 +3415,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 41";
 		rLen = 0;
-		rLoc = 1727;
+		rLoc = 1756;
 		rType = 0;
 		vrLen = 1911;
 		vrLoc = 172;
@@ -3418,7 +3425,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 30";
 		rLen = 0;
-		rLoc = 918;
+		rLoc = 947;
 		rType = 0;
 		vrLen = 2099;
 		vrLoc = 172;
@@ -3428,7 +3435,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 47";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 1719;
 		rType = 0;
 		vrLen = 1955;
 		vrLoc = 520;
@@ -3467,7 +3474,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 47";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 1719;
 		rType = 0;
 		vrLen = 1955;
 		vrLoc = 520;
@@ -3527,7 +3534,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 47";
 		rLen = 0;
-		rLoc = 1690;
+		rLoc = 1719;
 		rType = 0;
 		vrLen = 1771;
 		vrLoc = 1349;
@@ -3561,6 +3568,358 @@
 		rType = 0;
 		vrLen = 1877;
 		vrLoc = 3498;
+	};
+	153E5AF011CA939E00DCDAC0 /* LocationListView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 679}}";
+			sepNavSelRange = "{436, 0}";
+			sepNavVisRange = "{0, 442}";
+		};
+	};
+	153E5AF111CA939E00DCDAC0 /* LocationListView.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{5103, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{5154, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{5204, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5900}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 2886}}";
+			sepNavSelRange = "{656, 0}";
+			sepNavVisRange = "{0, 1258}";
+		};
+	};
+	153E5AF711CA941600DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5A8811CA80AE00DCDAC0 /* ChooseListPopupController.m */;
+		name = "ChooseListPopupController.m: 281";
+		rLen = 0;
+		rLoc = 6015;
+		rType = 0;
+		vrLen = 295;
+		vrLoc = 5823;
+	};
+	153E5AF811CA941600DCDAC0 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected expression before '<' token";
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 78;
+		rType = 1;
+	};
+	153E5AF911CA941600DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 76";
+		rLen = 0;
+		rLoc = 1800;
+		rType = 0;
+		vrLen = 433;
+		vrLoc = 1409;
+	};
+	153E5AFA11CA941800DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5A0211CA704600DCDAC0 /* LocationOverlayView.m */;
+		name = "LocationOverlayView.m: 188";
+		rLen = 0;
+		rLoc = 5274;
+		rType = 0;
+		vrLen = 1877;
+		vrLoc = 3498;
+	};
+	153E5AFB11CA941800DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E578611C934BC00DCDAC0 /* LocationObject.h */;
+		name = "LocationObject.h: 18";
+		rLen = 0;
+		rLoc = 348;
+		rType = 0;
+		vrLen = 1781;
+		vrLoc = 0;
+	};
+	153E5AFC11CA941800DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF011CA939E00DCDAC0 /* LocationListView.h */;
+		name = "LocationListView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 255;
+		vrLoc = 0;
+	};
+	153E5AFD11CA941800DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 82";
+		rLen = 0;
+		rLoc = 1969;
+		rType = 0;
+		vrLen = 1276;
+		vrLoc = 1092;
+	};
+	153E5B0011CA946200DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 76";
+		rLen = 0;
+		rLoc = 1800;
+		rType = 0;
+		vrLen = 335;
+		vrLoc = 1529;
+	};
+	153E5B0111CA946300DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF011CA939E00DCDAC0 /* LocationListView.h */;
+		name = "LocationListView.h: 16";
+		rLen = 0;
+		rLoc = 436;
+		rType = 0;
+		vrLen = 343;
+		vrLoc = 0;
+	};
+	153E5B0211CA946300DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 82";
+		rLen = 0;
+		rLoc = 1969;
+		rType = 0;
+		vrLen = 1276;
+		vrLoc = 1092;
+	};
+	153E5B0311CA946300DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 13";
+		rLen = 0;
+		rLoc = 331;
+		rType = 0;
+		vrLen = 1155;
+		vrLoc = 0;
+	};
+	153E5B0A11CA959200DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 78";
+		rLen = 0;
+		rLoc = 1800;
+		rType = 0;
+		vrLen = 335;
+		vrLoc = 1573;
+	};
+	153E5B1111CA975700DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF011CA939E00DCDAC0 /* LocationListView.h */;
+		name = "LocationListView.h: 18";
+		rLen = 0;
+		rLoc = 436;
+		rType = 0;
+		vrLen = 442;
+		vrLoc = 0;
+	};
+	153E5B1211CA975700DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 123";
+		rLen = 0;
+		rLoc = 3232;
+		rType = 0;
+		vrLen = 1960;
+		vrLoc = 2192;
+	};
+	153E5B1311CA975700DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 127";
+		rLen = 35;
+		rLoc = 5087;
+		rType = 0;
+		vrLen = 2190;
+		vrLoc = 2515;
+	};
+	153E5B1411CA975700DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 74";
+		rLen = 0;
+		rLoc = 2940;
+		rType = 0;
+		vrLen = 1780;
+		vrLoc = 1267;
+	};
+	153E5B1711CA97AE00DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
+		name = "GameEditViewController.h: 14";
+		rLen = 0;
+		rLoc = 360;
+		rType = 0;
+		vrLen = 971;
+		vrLoc = 0;
+	};
+	153E5B1811CA97AE00DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 74";
+		rLen = 0;
+		rLoc = 2940;
+		rType = 0;
+		vrLen = 2058;
+		vrLoc = 801;
+	};
+	153E5B1911CA97AE00DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 104";
+		rLen = 0;
+		rLoc = 4051;
+		rType = 0;
+		vrLen = 2071;
+		vrLoc = 1943;
+	};
+	153E5B2011CA991400DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF011CA939E00DCDAC0 /* LocationListView.h */;
+		name = "LocationListView.h: 18";
+		rLen = 0;
+		rLoc = 436;
+		rType = 0;
+		vrLen = 442;
+		vrLoc = 0;
+	};
+	153E5B2111CA991400DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 104";
+		rLen = 0;
+		rLoc = 4051;
+		rType = 0;
+		vrLen = 2063;
+		vrLoc = 2701;
+	};
+	153E5B2211CA991400DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 126";
+		rLen = 0;
+		rLoc = 3241;
+		rType = 0;
+		vrLen = 1461;
+		vrLoc = 4355;
+	};
+	153E5B2311CA991400DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 25";
+		rLen = 0;
+		rLoc = 657;
+		rType = 0;
+		vrLen = 1258;
+		vrLoc = 0;
+	};
+	153E5B2411CA994400DCDAC0 /* LocationListView.m:110 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		functionName = "-tableView:cellForRowAtIndexPath:";
+		hitCount = 2;
+		ignoreCount = 0;
+		lineNumber = 110;
+		location = "Scavenger-iPad";
+		modificationTime = 298490286.611367;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	153E5B2811CA994A00DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 25";
+		rLen = 0;
+		rLoc = 657;
+		rType = 0;
+		vrLen = 1775;
+		vrLoc = 1800;
+	};
+	153E5B2911CA994A00DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 25";
+		rLen = 0;
+		rLoc = 657;
+		rType = 0;
+		vrLen = 1775;
+		vrLoc = 1800;
+	};
+	153E5B2D11CA99F900DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 25";
+		rLen = 0;
+		rLoc = 657;
+		rType = 0;
+		vrLen = 1761;
+		vrLoc = 1800;
+	};
+	153E5B3611CA9AD400DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 25";
+		rLen = 0;
+		rLoc = 657;
+		rType = 0;
+		vrLen = 1761;
+		vrLoc = 1800;
+	};
+	153E5B3711CA9AD400DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 25";
+		rLen = 0;
+		rLoc = 656;
+		rType = 0;
+		vrLen = 1258;
+		vrLoc = 0;
+	};
+	153E5B3C11CA9B9600DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */;
+		name = "LocationListView.m: 25";
+		rLen = 0;
+		rLoc = 656;
+		rType = 0;
+		vrLen = 1258;
+		vrLoc = 0;
+	};
+	153E5B3D11CA9B9600DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 104";
+		rLen = 0;
+		rLoc = 4051;
+		rType = 0;
+		vrLen = 2063;
+		vrLoc = 2701;
+	};
+	153E5B3E11CA9B9600DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 78";
+		rLen = 0;
+		rLoc = 2938;
+		rType = 0;
+		vrLen = 1864;
+		vrLoc = 1720;
+	};
+	153E5B4111CA9C0800DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 78";
+		rLen = 0;
+		rLoc = 2938;
+		rType = 0;
+		vrLen = 1864;
+		vrLoc = 1720;
 	};
 	155BE53311C92A670019A783 /* Scavenger-iPad */ = {
 		isa = PBXExecutable;
@@ -3817,6 +4176,7 @@
 			153E580411C9555900DCDAC0 /* GameListViewController.m:14 */,
 			153E59DA11C9ED2B00DCDAC0 /* GameListViewController.m:328 */,
 			153E5A4211CA75E100DCDAC0 /* LocationOverlayView.m:143 */,
+			153E5B2411CA994400DCDAC0 /* LocationListView.m:110 */,
 		);
 		codeSenseManager = 155BE54111C92A870019A783 /* Code sense */;
 		executables = (
@@ -4137,6 +4497,38 @@
 			153E5AEB11CA8C0D00DCDAC0 /* PBXTextBookmark */ = 153E5AEB11CA8C0D00DCDAC0 /* PBXTextBookmark */;
 			153E5AEC11CA8C0D00DCDAC0 /* PBXTextBookmark */ = 153E5AEC11CA8C0D00DCDAC0 /* PBXTextBookmark */;
 			153E5AED11CA8C0D00DCDAC0 /* PBXTextBookmark */ = 153E5AED11CA8C0D00DCDAC0 /* PBXTextBookmark */;
+			153E5AF711CA941600DCDAC0 /* PBXTextBookmark */ = 153E5AF711CA941600DCDAC0 /* PBXTextBookmark */;
+			153E5AF811CA941600DCDAC0 /* XCBuildMessageTextBookmark */ = 153E5AF811CA941600DCDAC0 /* XCBuildMessageTextBookmark */;
+			153E5AF911CA941600DCDAC0 /* PBXTextBookmark */ = 153E5AF911CA941600DCDAC0 /* PBXTextBookmark */;
+			153E5AFA11CA941800DCDAC0 /* PBXTextBookmark */ = 153E5AFA11CA941800DCDAC0 /* PBXTextBookmark */;
+			153E5AFB11CA941800DCDAC0 /* PBXTextBookmark */ = 153E5AFB11CA941800DCDAC0 /* PBXTextBookmark */;
+			153E5AFC11CA941800DCDAC0 /* PBXTextBookmark */ = 153E5AFC11CA941800DCDAC0 /* PBXTextBookmark */;
+			153E5AFD11CA941800DCDAC0 /* PBXTextBookmark */ = 153E5AFD11CA941800DCDAC0 /* PBXTextBookmark */;
+			153E5B0011CA946200DCDAC0 /* PBXTextBookmark */ = 153E5B0011CA946200DCDAC0 /* PBXTextBookmark */;
+			153E5B0111CA946300DCDAC0 /* PBXTextBookmark */ = 153E5B0111CA946300DCDAC0 /* PBXTextBookmark */;
+			153E5B0211CA946300DCDAC0 /* PBXTextBookmark */ = 153E5B0211CA946300DCDAC0 /* PBXTextBookmark */;
+			153E5B0311CA946300DCDAC0 /* PBXTextBookmark */ = 153E5B0311CA946300DCDAC0 /* PBXTextBookmark */;
+			153E5B0A11CA959200DCDAC0 /* PBXTextBookmark */ = 153E5B0A11CA959200DCDAC0 /* PBXTextBookmark */;
+			153E5B1111CA975700DCDAC0 /* PBXTextBookmark */ = 153E5B1111CA975700DCDAC0 /* PBXTextBookmark */;
+			153E5B1211CA975700DCDAC0 /* PBXTextBookmark */ = 153E5B1211CA975700DCDAC0 /* PBXTextBookmark */;
+			153E5B1311CA975700DCDAC0 /* PBXTextBookmark */ = 153E5B1311CA975700DCDAC0 /* PBXTextBookmark */;
+			153E5B1411CA975700DCDAC0 /* PBXTextBookmark */ = 153E5B1411CA975700DCDAC0 /* PBXTextBookmark */;
+			153E5B1711CA97AE00DCDAC0 /* PBXTextBookmark */ = 153E5B1711CA97AE00DCDAC0 /* PBXTextBookmark */;
+			153E5B1811CA97AE00DCDAC0 /* PBXTextBookmark */ = 153E5B1811CA97AE00DCDAC0 /* PBXTextBookmark */;
+			153E5B1911CA97AE00DCDAC0 /* PBXTextBookmark */ = 153E5B1911CA97AE00DCDAC0 /* PBXTextBookmark */;
+			153E5B2011CA991400DCDAC0 /* PBXTextBookmark */ = 153E5B2011CA991400DCDAC0 /* PBXTextBookmark */;
+			153E5B2111CA991400DCDAC0 /* PBXTextBookmark */ = 153E5B2111CA991400DCDAC0 /* PBXTextBookmark */;
+			153E5B2211CA991400DCDAC0 /* PBXTextBookmark */ = 153E5B2211CA991400DCDAC0 /* PBXTextBookmark */;
+			153E5B2311CA991400DCDAC0 /* PBXTextBookmark */ = 153E5B2311CA991400DCDAC0 /* PBXTextBookmark */;
+			153E5B2811CA994A00DCDAC0 /* PBXTextBookmark */ = 153E5B2811CA994A00DCDAC0 /* PBXTextBookmark */;
+			153E5B2911CA994A00DCDAC0 /* PBXTextBookmark */ = 153E5B2911CA994A00DCDAC0 /* PBXTextBookmark */;
+			153E5B2D11CA99F900DCDAC0 /* PBXTextBookmark */ = 153E5B2D11CA99F900DCDAC0 /* PBXTextBookmark */;
+			153E5B3611CA9AD400DCDAC0 /* PBXTextBookmark */ = 153E5B3611CA9AD400DCDAC0 /* PBXTextBookmark */;
+			153E5B3711CA9AD400DCDAC0 /* PBXTextBookmark */ = 153E5B3711CA9AD400DCDAC0 /* PBXTextBookmark */;
+			153E5B3C11CA9B9600DCDAC0 /* PBXTextBookmark */ = 153E5B3C11CA9B9600DCDAC0 /* PBXTextBookmark */;
+			153E5B3D11CA9B9600DCDAC0 /* PBXTextBookmark */ = 153E5B3D11CA9B9600DCDAC0 /* PBXTextBookmark */;
+			153E5B3E11CA9B9600DCDAC0 /* PBXTextBookmark */ = 153E5B3E11CA9B9600DCDAC0 /* PBXTextBookmark */;
+			153E5B4111CA9C0800DCDAC0 /* PBXTextBookmark */ = 153E5B4111CA9C0800DCDAC0 /* PBXTextBookmark */;
 			155BE57911C934370019A783 = 155BE57911C934370019A783 /* XDModelBookmark */;
 			155BE57A11C934370019A783 = 155BE57A11C934370019A783 /* XDModelBookmark */;
 		};

@@ -8,6 +8,7 @@
 
 #import "GameEditViewController.h"
 #import "ChooseListPopupController.h"
+#import "LocationListView.h"
 
 @implementation GameEditViewController
 @synthesize game;
@@ -68,6 +69,13 @@
 
 -(void) chooseDetails: (id) sender
 {
+	LocationListView *controller = [[LocationListView alloc] initWithStyle:UITableViewStylePlain];
+	controller.game = self.game;
+	
+	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
+	//[self.popOver setPopoverContentSize:mapTypeController.view.bounds.size];
+	[self.popOver presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];	
+	[controller release];
 	
 }
 
@@ -98,7 +106,7 @@
 	// Also setup the toolbar items (we do it this way programattically...)
 	
 	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(chooseMapType:)];
-	UIBarButtonItem *detailsButton = [[UIBarButtonItem alloc] initWithTitle:@"Details"  style:UIBarButtonItemStyleBordered target:self action:@selector(showDetails:)];
+	UIBarButtonItem *detailsButton = [[UIBarButtonItem alloc] initWithTitle:@"Details"  style:UIBarButtonItemStyleBordered target:self action:@selector(chooseDetails:)];
 	UIBarButtonItem *flexibleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
 																					target:nil
 																					action:nil];
