@@ -36,6 +36,12 @@
 	return loc;
 }
 
+-(void) removeLocationObject: (LocationObject *) loc
+{
+    NSMutableSet *l = [self mutableSetValueForKey:@"locations"];
+	[l removeObject:loc];
+}
+
 -(LocationObject *) getLocationOfType: (LocationType) type
 {
 	NSMutableSet *locations = [self mutableSetValueForKey: @"locations"];

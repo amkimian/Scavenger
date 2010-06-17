@@ -9,6 +9,7 @@
 #import "GameListViewController.h"
 #import "MapTypePopupController.h"
 #import "GameEditViewController.h"
+#import "MenuPopupController.h"
 #import "GameObject.h"
 
 @implementation GameListViewController
@@ -18,6 +19,7 @@
 @synthesize locManager;
 @synthesize currentLocation;
 @synthesize locateButton;
+@synthesize currentGame;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -293,45 +295,36 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
 	NSLog(@"Disclosure tapped");
-	GameActionPopupController *controller = [[GameActionPopupController alloc] initWithNibName:nil bundle:nil];
+	MenuPopupController *controller = [[MenuPopupController alloc] initWithNibName:nil bundle:nil];
 	controller.delegate = self;
-	controller.game = (GameObject *) view.annotation;
+	controller.menuStrings = [[NSArray alloc] initWithObjects:@"Play",@"Edit",@"Transmit",@"Delete", nil];
+	self.currentGame = (GameObject *) view.annotation;	
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
 	[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	[self.popOver presentPopoverFromRect:control.bounds inView:control permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 }
 
--(void) selectedAction: (GameActionType) actionType from: (GameActionPopupController *) sender
+-(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
 {
-	// Do something based on action
-	
-	switch(actionType)
+	switch(item)
 	{
-		case GAME_EDIT:
-			// push GameEditController using navController
-			{
-				GameEditViewController *editController = [[GameEditViewController alloc] initWithNibName:nil bundle:nil];
-				editController.game = sender.game;
-				[[self navigationController] pushViewController:editController animated:YES];
-				[editController release];
-			}
+		case 0:
 			break;
-		case GAME_PLAY:
-			// push GamePlayController using navController
+		case 1:
+		{
+			GameEditViewController *editController = [[GameEditViewController alloc] initWithNibName:nil bundle:nil];
+			editController.game = currentGame;
+			[[self navigationController] pushViewController:editController animated:YES];
+			[editController release];
 			break;
-		case GAME_SEND:
-			// Start GKPicker thing
+		}		
+		case 2:
 			break;
-		case GAME_DELETE:
-			// Delete this game
-			[mapView removeAnnotations:[NSArray arrayWithObjects:sender.game, nil]];
-			[[sender.game managedObjectContext] deleteObject:sender.game];
-			fetchedResultsController = nil;
-			break;			
-	}	
-	
+		case 3:
+			break;
+	}
 	[self.popOver dismissPopoverAnimated:YES];
-	self.popOver = nil;
+	self.popOver = nil;			
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated

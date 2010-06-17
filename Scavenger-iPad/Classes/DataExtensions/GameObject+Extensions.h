@@ -14,5 +14,7 @@
 @interface GameObject(Extensions) <MKAnnotation>
 -(LocationObject *) addLocationOfType: (LocationType) type;
 -(LocationObject *) getLocationOfType: (LocationType) type;
+
+-(void) removeLocationObject: (LocationObject *) loc;
 @end
 

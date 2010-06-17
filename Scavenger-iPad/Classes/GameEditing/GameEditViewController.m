@@ -9,6 +9,7 @@
 #import "GameEditViewController.h"
 #import "ChooseListPopupController.h"
 #import "LocationListView.h"
+#import "MenuPopupController.h"
 
 @implementation GameEditViewController
 @synthesize game;
@@ -137,9 +138,49 @@
 	}
 }
 
+-(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
+{
+	// We selected a menu item (this will curently be from Location click)
+	switch(item)
+	{
+		case 0:
+			// Edit
+			break;
+		case 1:
+			// Delete
+			[game removeLocationObject:overlayView.selectedLocation];
+			overlayView.selectedLocation = nil;
+			[overlayView setNeedsDisplay];
+			break;
+	}	
+	[self.popOver dismissPopoverAnimated:YES];
+	self.popOver = nil;
+}
+
 -(void) locationSelected: (LocationObject *) loc
 {
 	// What do we do when location is selected?
+}
+
+-(void) showIt
+{
+	[self.popOver presentPopoverFromRect:savedRect inView:overlayView permittedArrowDirections:UIPopoverArrowDirectionAny
+								animated:YES];
+}
+
+-(void) locationSelectedAgain: (LocationObject *) loc atPoint: (CGPoint) p
+{
+	// A location has been selected, and clicked again. Show a popup menu for actions
+	MenuPopupController *controller = [[MenuPopupController alloc] initWithStyle: UITableViewStylePlain];
+	controller.delegate = self;
+	controller.menuStrings = [NSArray arrayWithObjects:@"Edit",@"Delete",nil];
+	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
+	[self.popOver setPopoverContentSize:controller.view.bounds.size];
+	savedRect.origin = p;
+	savedRect.size.height = 10;
+	savedRect.size.width = 10;
+	
+	[self performSelector:@selector(showIt) withObject:nil afterDelay:0.1];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

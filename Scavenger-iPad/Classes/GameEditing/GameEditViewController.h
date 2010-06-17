@@ -12,12 +12,14 @@
 #import "LocationOverlayView.h"
 #import "MapTypePopupController.h"
 #import "ChooseListPopupController.h"
+#import "MenuPopupController.h"
 
-@interface GameEditViewController : UIViewController<LocationOverlayViewDelegate,MapTypeChangedDelegate,ChooseListDidChooseDelegate> {
+@interface GameEditViewController : UIViewController<LocationOverlayViewDelegate,MapTypeChangedDelegate,ChooseListDidChooseDelegate,MenuPopupDelegate> {
 	IBOutlet MKMapView *mapView;
 	GameObject *game;
 	LocationOverlayView *overlayView;
 	UIPopoverController *popOver;
+	CGRect savedRect;
 }
 
 @property(nonatomic, retain) GameObject *game;
@@ -25,8 +27,14 @@
 @property(nonatomic, retain) UIPopoverController *popOver;
 
 -(void) locationSelected: (LocationObject *) loc;
+-(void) locationSelectedAgain: (LocationObject *) loc atPoint: (CGPoint) p;
+
 -(void) insertNewLocation;
 -(void) chooseMapType: (id) sender;
 -(void) chooseDetails: (id) sender;
 -(void) showRoute: (id) sender;
+
+-(void) showIt;
+
+-(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender;
 @end

@@ -29,6 +29,7 @@
 		self.tag = 1001;
 		self.selectedLocation = nil;
 		playMode = NO;
+		releasedAfterSelection = NO;
     }
     return self;
 }
@@ -48,10 +49,18 @@
 		LocationObject *o = [self findLocationAtPoint: point];
 		if (o)
 		{
-			self.selectedLocation = o;
-			[self setNeedsDisplay];
-			if (delegate)
+			NSLog(@"Selected location");
+			if (o == self.selectedLocation && releasedAfterSelection)
 			{
+					// Tell the delegate that a second hit has been made, so maybe pop up something
+				NSLog(@"Selected existing location");
+				[delegate locationSelectedAgain:self.selectedLocation atPoint: point];
+			}
+			else
+			{
+				self.selectedLocation = o;
+				releasedAfterSelection = NO;
+				[self setNeedsDisplay];
 				[delegate locationSelected:self.selectedLocation];
 			}
 			return YES;
@@ -113,6 +122,7 @@
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	NSLog(@"Touch ended");
+	releasedAfterSelection = YES;
 }
 
 
@@ -123,11 +133,9 @@
 	
 	if (!self.hidden)
 	{
-		NSLog(@"Drawing locations");
 		for(LocationObject *loc in game.locations)
 		{
 			// Eventually color from location Type and state
-			NSLog(@"Drawing location");
 			[self drawLocation: loc withColor: [loc locationDisplayColor] ];
 		}
 	}
@@ -139,7 +147,6 @@
 		if (playMode == YES && [loc.visible boolValue] == NO)
 			return;
 	
-	NSLog(@"Really drawing location");
 		MKMapView *mapView = (MKMapView *) self.superview;
 		CLLocationCoordinate2D coord;
 		coord.latitude = [loc.latitude floatValue];

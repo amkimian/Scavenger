@@ -20,6 +20,7 @@
 	CLLocationCoordinate2D snapBackCoord;
 	BOOL hidden;
 	BOOL playMode;
+	BOOL releasedAfterSelection;
 }
 
 @property(nonatomic) BOOL playMode;
@@ -34,4 +35,5 @@
 
 @protocol LocationOverlayViewDelegate 
 -(void) locationSelected: (LocationObject *) loc;
+-(void) locationSelectedAgain: (LocationObject *) loc atPoint: (CGPoint) p;
 @end

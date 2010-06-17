@@ -10,7 +10,8 @@
 #import "MapTypePopupController.h"
 #import "GameObject+Extensions.h"
 #import "GetTextPopupController.h"
-#import "GameActionPopupController.h"
+#import "MenuPopupController.h"
+
 
 /**
  * This view controller handles the first view that gets shown from application
@@ -25,7 +26,7 @@
 								NSFetchedResultsControllerDelegate, 
 								GetTextPopupDelegate,
 								MKMapViewDelegate,
-								GameActionDelegate,
+								MenuPopupDelegate,
 								UINavigationControllerDelegate> {
 	NSManagedObjectContext *managedObjectContext;
 	NSFetchedResultsController *fetchedResultsController;
@@ -36,8 +37,7 @@
 	BOOL scanningForLocation;
 	CLLocationManager *locManager;
 	CLLocation *currentLocation;
-	
-	
+	GameObject *currentGame;	
 }
 
 -(void) insertNewObject;
@@ -48,7 +48,8 @@
 
 -(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender;
 -(void) textChangedFrom: (GetTextPopupController *) sender;
--(void) selectedAction: (GameActionType) actionType from: (GameActionPopupController *) sender;
+
+-(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender;
 
 - (NSFetchedResultsController *)fetchedResultsController;
 
@@ -57,6 +58,7 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) UIPopoverController *popOver;
+@property (nonatomic, retain) GameObject *currentGame;
 
 @property (nonatomic, retain) CLLocationManager *locManager;
 @property (nonatomic, retain) CLLocation *currentLocation;
