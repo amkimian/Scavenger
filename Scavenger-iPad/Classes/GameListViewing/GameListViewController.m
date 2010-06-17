@@ -8,9 +8,11 @@
 
 #import "GameListViewController.h"
 #import "MapTypePopupController.h"
+#import "GameObject.h"
 
 @implementation GameListViewController
 @synthesize managedObjectContext;
+@synthesize fetchedResultsController;
 @synthesize popOver;
 @synthesize locManager;
 @synthesize currentLocation;
@@ -78,7 +80,14 @@
 	[array release];
 	
 	// Now need to fetch the games and put out the annotations...
+	NSError *error;
+	
+	if (![[self fetchedResultsController] performFetch: &error])
+	{
+		NSLog(@"Could not load data: %@", [error description ]);
+	}
     [super viewDidLoad];
+	[self addAllAnnotations];
 }
 
 
@@ -86,6 +95,7 @@
     // Overriden to allow any orientation.
     return YES;
 }
+
 
 #pragma -
 #pragma buttonActions
@@ -135,8 +145,79 @@
 	// Popup an edit control to get the text for the name of the game, then insert and add the annotation to the screen
 	// To edit this new game a user will select the annotation and click edit (or do we simply push the edit control directly here?)
 	
+	NSLog(@"Add new game");
 	
+	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:managedObjectContext];
+	GameObject *game = [[GameObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:managedObjectContext];
+	game.name = @"Hello"; // for now
+	// And add a location of type "Center", centered on the current map position with size the range of the mapView
+	
+	LocationObject *centerLocation = [game addLocationOfType:LTYPE_CENTER];
+	centerLocation.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
+	centerLocation.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];
+	centerLocation.size = [NSNumber numberWithFloat: 0.1f]; // FOR NOW
+	
+	[self addGameAnnotation: game];
 }
+
+/**
+ * Add an annotation to the mapView for this game
+ */
+
+-(void) addGameAnnotation: (GameObject *) game
+{
+	[mapView addAnnotation:game];
+}
+
+-(void) addAllAnnotations
+{
+	[mapView removeAnnotations:[mapView annotations]];
+	NSArray *games = [self fetchedResultsController].fetchedObjects;
+	for(GameObject *g in games)
+	{
+		[self addGameAnnotation: g];
+	}
+}
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+	// if a fetched results controller has already been initialized
+	if (fetchedResultsController != nil)
+		return fetchedResultsController; // return the controller
+	
+	// create the fetch request for the entity
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	
+	// edit the entity name as appropriate.
+	NSEntityDescription *entity = [NSEntityDescription entityForName:
+								   @"Game" inManagedObjectContext:managedObjectContext];
+	[fetchRequest setEntity:entity];
+	
+	// edit the sort key as appropriate.
+	NSSortDescriptor *sortDescriptor =
+	[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+	NSArray *sortDescriptors =
+	[[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	
+	[fetchRequest setSortDescriptors:sortDescriptors];
+	
+	// edit the section name key path and cache name if appropriate
+	// nil for section name key path means "no sections"
+	NSFetchedResultsController *aFetchedResultsController =
+	[[NSFetchedResultsController alloc] initWithFetchRequest:
+	 fetchRequest managedObjectContext:managedObjectContext
+										  sectionNameKeyPath:nil cacheName:@"Root"];
+	
+	aFetchedResultsController.delegate = self;
+	self.fetchedResultsController = aFetchedResultsController;
+	
+	[aFetchedResultsController release]; // release temporary controller
+	[fetchRequest release]; // release fetchRequest NSFetcheRequest
+	[sortDescriptor release]; // release sortDescriptor NSSortDescriptor
+	[sortDescriptors release]; // release sortDescriptor NSArray
+	
+	return fetchedResultsController;
+}  
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MapTypePopupController.h"
+#import "GameObject+Extensions.h"
 
 /**
  * This view controller handles the first view that gets shown from application
@@ -17,8 +18,9 @@
  * Games (that have a start location) are shown on the map as annotations
  */
 
-@interface GameListViewController : UIViewController<MapTypeChangedDelegate, CLLocationManagerDelegate> {
+@interface GameListViewController : UIViewController<MapTypeChangedDelegate, CLLocationManagerDelegate, NSFetchedResultsControllerDelegate> {
 	NSManagedObjectContext *managedObjectContext;
+	NSFetchedResultsController *fetchedResultsController;
 	UIPopoverController *popOver;
 	UIBarButtonItem *locateButton;
 	
@@ -26,16 +28,24 @@
 	BOOL scanningForLocation;
 	CLLocationManager *locManager;
 	CLLocation *currentLocation;
+	
+	
 }
 
 -(void) insertNewObject;
+-(void) addAllAnnotations;
 
 -(IBAction) centerOnLocation: (id) sender;
 -(IBAction) chooseMapType: (id) sender;
 
 -(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender;
 
+- (NSFetchedResultsController *)fetchedResultsController;
+
+-(void) addGameAnnotation: (GameObject *) game;
+
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) UIPopoverController *popOver;
 
 @property (nonatomic, retain) CLLocationManager *locManager;
