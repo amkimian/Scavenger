@@ -272,7 +272,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>186</real>
+								<real>275</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -297,13 +297,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>12</integer>
+									<integer>7</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 823}}</string>
+							<string>{{0, 0}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -315,11 +316,11 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {203, 841}}</string>
+						<string>{{0, 0}, {292, 841}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>186</real>
+							<real>275</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>0 146 1680 882 0 0 1680 1028 </string>
@@ -327,7 +328,7 @@
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>203pt</string>
+					<string>292pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -340,7 +341,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LocationObject+Extensions.m</string>
+								<string>GetTextPopupController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -348,26 +349,28 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>LocationObject+Extensions.m</string>
+										<string>GetTextPopupController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>153E595611C9DB4900DCDAC0</string>
+										<string>153E597F11C9E2FB00DCDAC0</string>
 										<key>history</key>
 										<array>
 											<string>153E57A711C9354500DCDAC0</string>
 											<string>153E57A811C9354500DCDAC0</string>
-											<string>153E586811C95C3F00DCDAC0</string>
 											<string>153E589811C9653000DCDAC0</string>
 											<string>153E589F11C9664F00DCDAC0</string>
 											<string>153E58B311C9689700DCDAC0</string>
 											<string>153E58FD11C9D5CB00DCDAC0</string>
 											<string>153E593611C9D86A00DCDAC0</string>
 											<string>153E594111C9D95E00DCDAC0</string>
-											<string>153E594211C9D95E00DCDAC0</string>
-											<string>153E595411C9DB4900DCDAC0</string>
 											<string>153E595511C9DB4900DCDAC0</string>
-											<string>153E595211C9DB4700DCDAC0</string>
+											<string>153E596011C9E0EC00DCDAC0</string>
+											<string>153E596211C9E0EC00DCDAC0</string>
+											<string>153E597011C9E2B900DCDAC0</string>
+											<string>153E597111C9E2B900DCDAC0</string>
+											<string>153E597D11C9E2FB00DCDAC0</string>
+											<string>153E597E11C9E2FB00DCDAC0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -379,7 +382,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1472, 734}}</string>
+								<string>{{0, 0}, {1383, 734}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 146 1680 882 0 0 1680 1028 </string>
 							</dict>
@@ -399,7 +402,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 739}, {1472, 102}}</string>
+								<string>{{0, 739}, {1383, 102}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 146 1680 882 0 0 1680 1028 </string>
 							</dict>
@@ -410,7 +413,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>1472pt</string>
+					<string>1383pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -548,7 +551,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298441545.839342</real>
+	<real>298443515.71431398</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -567,11 +570,11 @@
 	<array>
 		<string>153E580A11C9556300DCDAC0</string>
 		<string>153E580B11C9556300DCDAC0</string>
-		<string>155BE54711C92BF00019A783</string>
 		<string>153E57AD11C9354500DCDAC0</string>
+		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
+		<string>155BE54711C92BF00019A783</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 146 1680 882 0 0 1680 1028 </string>
@@ -595,7 +598,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LocationObject+Extensions.m</string>
+								<string>GameListViewController.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -666,7 +669,7 @@
 			<key>WindowToolGUID</key>
 			<string>155BE54711C92BF00019A783</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

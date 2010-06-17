@@ -141,6 +141,15 @@
 
 -(void) insertNewObject
 {
+	GetTextPopupController *controller = [[GetTextPopupController alloc] initWithNibName:nil bundle:nil];
+	controller.delegate = self;
+	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
+	[self.popOver setPopoverContentSize:controller.view.bounds.size];
+	[self.popOver presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+
+-(void) textChangedFrom: (GetTextPopupController *) sender
+{
 	// Create a game, with a location (of type map) centered on the current view of the map
 	// Popup an edit control to get the text for the name of the game, then insert and add the annotation to the screen
 	// To edit this new game a user will select the annotation and click edit (or do we simply push the edit control directly here?)
@@ -149,9 +158,12 @@
 	
 	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:managedObjectContext];
 	GameObject *game = [[GameObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:managedObjectContext];
-	game.name = @"Hello"; // for now
+	game.name = sender.textField.text;
 	// And add a location of type "Center", centered on the current map position with size the range of the mapView
-	
+
+	[self.popOver dismissPopoverAnimated:YES];
+	self.popOver = nil;
+
 	LocationObject *centerLocation = [game addLocationOfType:LTYPE_CENTER];
 	centerLocation.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
 	centerLocation.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];

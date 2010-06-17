@@ -26,6 +26,8 @@
 		153E58A211C9666C00DCDAC0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E58A111C9666B00DCDAC0 /* CoreLocation.framework */; };
 		153E58DE11C9D12D00DCDAC0 /* GameObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E58DD11C9D12D00DCDAC0 /* GameObject+Extensions.m */; };
 		153E594A11C9DB2800DCDAC0 /* LocationObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E594911C9DB2800DCDAC0 /* LocationObject+Extensions.m */; };
+		153E595A11C9E02F00DCDAC0 /* GetTextPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E595811C9E02F00DCDAC0 /* GetTextPopupController.m */; };
+		153E595B11C9E02F00DCDAC0 /* GetTextPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E595911C9E02F00DCDAC0 /* GetTextPopupController.xib */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -69,6 +71,9 @@
 		153E58DD11C9D12D00DCDAC0 /* GameObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GameObject+Extensions.m"; path = "DataExtensions/GameObject+Extensions.m"; sourceTree = "<group>"; };
 		153E594811C9DB2800DCDAC0 /* LocationObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LocationObject+Extensions.h"; path = "DataExtensions/LocationObject+Extensions.h"; sourceTree = "<group>"; };
 		153E594911C9DB2800DCDAC0 /* LocationObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LocationObject+Extensions.m"; path = "DataExtensions/LocationObject+Extensions.m"; sourceTree = "<group>"; };
+		153E595711C9E02F00DCDAC0 /* GetTextPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetTextPopupController.h; path = CommonControllers/GetTextPopupController.h; sourceTree = "<group>"; };
+		153E595811C9E02F00DCDAC0 /* GetTextPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetTextPopupController.m; path = CommonControllers/GetTextPopupController.m; sourceTree = "<group>"; };
+		153E595911C9E02F00DCDAC0 /* GetTextPopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GetTextPopupController.xib; path = CommonControllers/GetTextPopupController.xib; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -127,6 +132,9 @@
 				153E581111C9566B00DCDAC0 /* MapTypePopupController.h */,
 				153E581211C9566B00DCDAC0 /* MapTypePopupController.m */,
 				153E581311C9566B00DCDAC0 /* MapTypePopupController.xib */,
+				153E595711C9E02F00DCDAC0 /* GetTextPopupController.h */,
+				153E595811C9E02F00DCDAC0 /* GetTextPopupController.m */,
+				153E595911C9E02F00DCDAC0 /* GetTextPopupController.xib */,
 			);
 			name = CommonControllers;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				153E57B411C944FE00DCDAC0 /* GameListViewController.xib in Resources */,
 				153E581511C9566B00DCDAC0 /* MapTypePopupController.xib in Resources */,
+				153E595B11C9E02F00DCDAC0 /* GetTextPopupController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +278,7 @@
 				153E581411C9566B00DCDAC0 /* MapTypePopupController.m in Sources */,
 				153E58DE11C9D12D00DCDAC0 /* GameObject+Extensions.m in Sources */,
 				153E594A11C9DB2800DCDAC0 /* LocationObject+Extensions.m in Sources */,
+				153E595A11C9E02F00DCDAC0 /* GetTextPopupController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

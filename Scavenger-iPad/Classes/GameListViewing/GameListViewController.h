@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MapTypePopupController.h"
 #import "GameObject+Extensions.h"
+#import "GetTextPopupController.h"
 
 /**
  * This view controller handles the first view that gets shown from application
@@ -18,7 +19,10 @@
  * Games (that have a start location) are shown on the map as annotations
  */
 
-@interface GameListViewController : UIViewController<MapTypeChangedDelegate, CLLocationManagerDelegate, NSFetchedResultsControllerDelegate> {
+@interface GameListViewController : UIViewController<MapTypeChangedDelegate, 
+								CLLocationManagerDelegate, 
+								NSFetchedResultsControllerDelegate, 
+								GetTextPopupDelegate> {
 	NSManagedObjectContext *managedObjectContext;
 	NSFetchedResultsController *fetchedResultsController;
 	UIPopoverController *popOver;
@@ -39,6 +43,7 @@
 -(IBAction) chooseMapType: (id) sender;
 
 -(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender;
+-(void) textChangedFrom: (GetTextPopupController *) sender;
 
 - (NSFetchedResultsController *)fetchedResultsController;
 
