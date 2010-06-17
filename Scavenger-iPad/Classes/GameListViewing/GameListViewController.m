@@ -250,5 +250,61 @@
     [super dealloc];
 }
 
+- (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    // if it's the user location, just return nil.
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+      // try to dequeue an existing pin view first
+        static NSString* BridgeAnnotationIdentifier = @"bridgeAnnotationIdentifier";
+        MKPinAnnotationView* pinView = (MKPinAnnotationView *)
+		[mapView dequeueReusableAnnotationViewWithIdentifier:BridgeAnnotationIdentifier];
+        if (!pinView)
+        {
+            // if an existing pin view was not available, create one
+            MKPinAnnotationView* customPinView = [[[MKPinAnnotationView alloc]
+												   initWithAnnotation:annotation reuseIdentifier:BridgeAnnotationIdentifier] autorelease];
+            customPinView.pinColor = MKPinAnnotationColorPurple;
+            customPinView.animatesDrop = YES;
+            customPinView.canShowCallout = YES;
+            
+            // add a detail disclosure button to the callout which will open a new view controller page
+            //
+            // note: you can assign a specific call out accessory view, or as MKMapViewDelegate you can implement:
+            //  - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control;
+            //
+            UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            //[rightButton addTarget:self
+            //                action:@selector(showDetails:)
+            //      forControlEvents:UIControlEventTouchUpInside];
+            customPinView.rightCalloutAccessoryView = rightButton;
+			
+            return customPinView;
+        }
+        else
+        {
+            pinView.annotation = annotation;
+        }
+        return pinView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+	NSLog(@"Disclosure tapped");
+	GameActionPopupController *controller = [[GameActionPopupController alloc] initWithNibName:nil bundle:nil];
+	controller.delegate = self;
+	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
+	[self.popOver setPopoverContentSize:controller.view.bounds.size];
+	[self.popOver presentPopoverFromRect:control.bounds inView:control permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+}
+
+-(void) selectedAction: (GameActionType) actionType from: (GameActionPopupController *) sender
+{
+	// Do something based on action
+	[self.popOver dismissPopoverAnimated:YES];
+	self.popOver = nil;
+	
+}
 
 @end

@@ -10,6 +10,7 @@
 #import "MapTypePopupController.h"
 #import "GameObject+Extensions.h"
 #import "GetTextPopupController.h"
+#import "GameActionPopupController.h"
 
 /**
  * This view controller handles the first view that gets shown from application
@@ -22,7 +23,9 @@
 @interface GameListViewController : UIViewController<MapTypeChangedDelegate, 
 								CLLocationManagerDelegate, 
 								NSFetchedResultsControllerDelegate, 
-								GetTextPopupDelegate> {
+								GetTextPopupDelegate,
+								MKMapViewDelegate,
+								GameActionDelegate> {
 	NSManagedObjectContext *managedObjectContext;
 	NSFetchedResultsController *fetchedResultsController;
 	UIPopoverController *popOver;
@@ -44,6 +47,7 @@
 
 -(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender;
 -(void) textChangedFrom: (GetTextPopupController *) sender;
+-(void) selectedAction: (GameActionType) actionType from: (GameActionPopupController *) sender;
 
 - (NSFetchedResultsController *)fetchedResultsController;
 
