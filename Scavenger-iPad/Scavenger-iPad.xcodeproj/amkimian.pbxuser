@@ -366,23 +366,23 @@
 		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
 		name = "Scavenger_iPadAppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 1091;
+		rLoc = 1132;
 		rType = 0;
 		vrLen = 2279;
 		vrLoc = 2089;
 	};
 	153E57B011C944FE00DCDAC0 /* GameListViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 858}}";
-			sepNavSelRange = "{690, 22}";
-			sepNavVisRange = "{265, 1800}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 871}}";
+			sepNavSelRange = "{919, 0}";
+			sepNavVisRange = "{231, 1873}";
 		};
 	};
 	153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 4446}}";
-			sepNavSelRange = "{4670, 179}";
-			sepNavVisRange = "{3285, 1723}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 4498}}";
+			sepNavSelRange = "{12544, 0}";
+			sepNavVisRange = "{10735, 1818}";
 		};
 	};
 	153E57C011C9475E00DCDAC0 /* PBXTextBookmark */ = {
@@ -411,7 +411,7 @@
 		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 29;
+		rLoc = 30;
 		rType = 1;
 	};
 	153E57C311C9475E00DCDAC0 /* PBXTextBookmark */ = {
@@ -419,7 +419,7 @@
 		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
 		name = "Scavenger_iPadAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 960;
+		rLoc = 1001;
 		rType = 0;
 		vrLen = 1670;
 		vrLoc = 0;
@@ -489,7 +489,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 23";
 		rLen = 0;
-		rLoc = 2064;
+		rLoc = 2104;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -499,7 +499,7 @@
 		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
 		name = "Scavenger_iPadAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 974;
+		rLoc = 1015;
 		rType = 0;
 		vrLen = 1770;
 		vrLoc = 0;
@@ -549,7 +549,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 23";
 		rLen = 1;
-		rLoc = 1311;
+		rLoc = 1351;
 		rType = 0;
 		vrLen = 707;
 		vrLoc = 0;
@@ -586,7 +586,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 25";
 		rLen = 83;
-		rLoc = 1229;
+		rLoc = 1269;
 		rType = 0;
 		vrLen = 791;
 		vrLoc = 0;
@@ -794,7 +794,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 30";
 		rLen = 83;
-		rLoc = 1313;
+		rLoc = 1353;
 		rType = 0;
 		vrLen = 1025;
 		vrLoc = 0;
@@ -804,7 +804,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 24";
 		rLen = 0;
-		rLoc = 1172;
+		rLoc = 1212;
 		rType = 0;
 		vrLen = 1057;
 		vrLoc = 0;
@@ -814,7 +814,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 24";
 		rLen = 0;
-		rLoc = 1172;
+		rLoc = 1212;
 		rType = 0;
 		vrLen = 1057;
 		vrLoc = 0;
@@ -973,7 +973,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 24";
 		rLen = 0;
-		rLoc = 1172;
+		rLoc = 1212;
 		rType = 0;
 		vrLen = 1057;
 		vrLoc = 0;
@@ -1053,7 +1053,7 @@
 		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
 		name = "Scavenger_iPadAppDelegate.m: 27";
 		rLen = 0;
-		rLoc = 942;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 1769;
 		vrLoc = 0;
@@ -1112,7 +1112,7 @@
 		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
 		name = "Scavenger_iPadAppDelegate.m: 27";
 		rLen = 0;
-		rLoc = 942;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 1769;
 		vrLoc = 0;
@@ -1122,7 +1122,7 @@
 		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
 		name = "Scavenger_iPadAppDelegate.m: 27";
 		rLen = 0;
-		rLoc = 941;
+		rLoc = 982;
 		rType = 0;
 		vrLen = 1809;
 		vrLoc = 0;
@@ -1132,7 +1132,7 @@
 		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
 		name = "Scavenger_iPadAppDelegate.m: 27";
 		rLen = 0;
-		rLoc = 941;
+		rLoc = 982;
 		rType = 0;
 		vrLen = 1809;
 		vrLoc = 0;
@@ -1182,7 +1182,7 @@
 		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
 		name = "Scavenger_iPadAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 941;
+		rLoc = 982;
 		rType = 0;
 		vrLen = 1889;
 		vrLoc = 0;
@@ -1241,7 +1241,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 44";
 		rLen = 0;
-		rLoc = 2063;
+		rLoc = 2103;
 		rType = 0;
 		vrLen = 1389;
 		vrLoc = 0;
@@ -1321,7 +1321,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 25";
 		rLen = 0;
-		rLoc = 1049;
+		rLoc = 1089;
 		rType = 0;
 		vrLen = 1627;
 		vrLoc = 0;
@@ -1428,7 +1428,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 53;
+		rLoc = 54;
 		rType = 1;
 	};
 	153E58FB11C9D5C400DCDAC0 /* PBXTextBookmark */ = {
@@ -1436,7 +1436,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 44";
 		rLen = 0;
-		rLoc = 1612;
+		rLoc = 1652;
 		rType = 0;
 		vrLen = 618;
 		vrLoc = 1025;
@@ -1546,7 +1546,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 44";
 		rLen = 0;
-		rLoc = 1612;
+		rLoc = 1652;
 		rType = 0;
 		vrLen = 618;
 		vrLoc = 1025;
@@ -1791,7 +1791,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 37";
 		rLen = 0;
-		rLoc = 1228;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 1670;
 		vrLoc = 0;
@@ -1811,7 +1811,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 37";
 		rLen = 0;
-		rLoc = 1228;
+		rLoc = 1268;
 		rType = 0;
 		vrLen = 1670;
 		vrLoc = 0;
@@ -1845,7 +1845,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 45";
 		rLen = 0;
-		rLoc = 1612;
+		rLoc = 1652;
 		rType = 0;
 		vrLen = 618;
 		vrLoc = 1052;
@@ -2015,7 +2015,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 46";
 		rLen = 59;
-		rLoc = 1396;
+		rLoc = 1436;
 		rType = 0;
 		vrLen = 1692;
 		vrLoc = 0;
@@ -2114,7 +2114,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 26";
 		rLen = 0;
-		rLoc = 879;
+		rLoc = 919;
 		rType = 0;
 		vrLen = 1677;
 		vrLoc = 231;
@@ -2208,7 +2208,7 @@
 		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
 		name = "GameListViewController.h: 51";
 		rLen = 0;
-		rLoc = 1552;
+		rLoc = 1592;
 		rType = 0;
 		vrLen = 1805;
 		vrLoc = 265;
@@ -2341,7 +2341,7 @@
 	};
 	153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 679}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 702}}";
 			sepNavSelRange = "{717, 0}";
 			sepNavVisRange = "{0, 905}";
 		};
@@ -2914,6 +2914,66 @@
 		vrLen = 594;
 		vrLoc = 1263;
 	};
+	153E5A6711CA7A4000DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 15";
+		rLen = 0;
+		rLoc = 315;
+		rType = 0;
+		vrLen = 1487;
+		vrLoc = 0;
+	};
+	153E5A6811CA7A4000DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */;
+		name = "Scavenger_iPadAppDelegate.m: 18";
+		rLen = 0;
+		rLoc = 343;
+		rType = 0;
+		vrLen = 1930;
+		vrLoc = 0;
+	};
+	153E5A6911CA7A4000DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
+		name = "GameEditViewController.h: 24";
+		rLen = 0;
+		rLoc = 717;
+		rType = 0;
+		vrLen = 905;
+		vrLoc = 0;
+	};
+	153E5A6A11CA7A4000DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
+		name = "GameListViewController.h: 29";
+		rLen = 0;
+		rLoc = 919;
+		rType = 0;
+		vrLen = 1873;
+		vrLoc = 231;
+	};
+	153E5A6B11CA7A4000DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
+		name = "GameListViewController.m: 341";
+		rLen = 0;
+		rLoc = 12522;
+		rType = 0;
+		vrLen = 1870;
+		vrLoc = 10653;
+	};
+	153E5A6C11CA7A4000DCDAC0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
+		name = "GameListViewController.m: 342";
+		rLen = 0;
+		rLoc = 12544;
+		rType = 0;
+		vrLen = 1818;
+		vrLoc = 10735;
+	};
 	155BE53311C92A670019A783 /* Scavenger-iPad */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -3146,9 +3206,9 @@
 	};
 	1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2371, 2041}}";
-			sepNavSelRange = "{660, 0}";
-			sepNavVisRange = "{0, 1895}";
+			sepNavIntBoundsRect = "{{0, 0}, {2371, 2054}}";
+			sepNavSelRange = "{343, 0}";
+			sepNavVisRange = "{0, 1930}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* Scavenger-iPad */ = {
@@ -3428,6 +3488,12 @@
 			153E5A6011CA78C000DCDAC0 /* PBXTextBookmark */ = 153E5A6011CA78C000DCDAC0 /* PBXTextBookmark */;
 			153E5A6111CA792200DCDAC0 /* PBXTextBookmark */ = 153E5A6111CA792200DCDAC0 /* PBXTextBookmark */;
 			153E5A6211CA792400DCDAC0 /* PBXTextBookmark */ = 153E5A6211CA792400DCDAC0 /* PBXTextBookmark */;
+			153E5A6711CA7A4000DCDAC0 /* PBXTextBookmark */ = 153E5A6711CA7A4000DCDAC0 /* PBXTextBookmark */;
+			153E5A6811CA7A4000DCDAC0 /* PBXTextBookmark */ = 153E5A6811CA7A4000DCDAC0 /* PBXTextBookmark */;
+			153E5A6911CA7A4000DCDAC0 /* PBXTextBookmark */ = 153E5A6911CA7A4000DCDAC0 /* PBXTextBookmark */;
+			153E5A6A11CA7A4000DCDAC0 /* PBXTextBookmark */ = 153E5A6A11CA7A4000DCDAC0 /* PBXTextBookmark */;
+			153E5A6B11CA7A4000DCDAC0 /* PBXTextBookmark */ = 153E5A6B11CA7A4000DCDAC0 /* PBXTextBookmark */;
+			153E5A6C11CA7A4000DCDAC0 /* PBXTextBookmark */ = 153E5A6C11CA7A4000DCDAC0 /* PBXTextBookmark */;
 			155BE57911C934370019A783 = 155BE57911C934370019A783 /* XDModelBookmark */;
 			155BE57A11C934370019A783 = 155BE57A11C934370019A783 /* XDModelBookmark */;
 		};

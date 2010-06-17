@@ -334,4 +334,12 @@
 	self.popOver = nil;
 }
 
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+	if (viewController == self)
+	{
+		[self addAllAnnotations];
+	}
+}
+
 @end

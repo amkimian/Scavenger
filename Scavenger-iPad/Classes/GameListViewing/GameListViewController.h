@@ -25,7 +25,8 @@
 								NSFetchedResultsControllerDelegate, 
 								GetTextPopupDelegate,
 								MKMapViewDelegate,
-								GameActionDelegate> {
+								GameActionDelegate,
+								UINavigationControllerDelegate> {
 	NSManagedObjectContext *managedObjectContext;
 	NSFetchedResultsController *fetchedResultsController;
 	UIPopoverController *popOver;

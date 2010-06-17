@@ -27,6 +27,7 @@
 	[nav setToolbarHidden:NO animated:YES];
 	nav.navigationBar.barStyle = UIBarStyleBlack;
 	nav.toolbar.barStyle = UIBarStyleBlack;
+	nav.delegate = self.rootViewController;
 	
 	[window addSubview:nav.view];
     [window makeKeyAndVisible];
