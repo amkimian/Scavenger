@@ -7,7 +7,7 @@
 //
 
 #import "GameEditViewController.h"
-
+#import "ChooseListPopupController.h"
 
 @implementation GameEditViewController
 @synthesize game;
@@ -26,7 +26,26 @@
 
 -(void) insertNewLocation
 {
+	ChooseListPopupController *controller = [[ChooseListPopupController alloc] initWithStyle: UITableViewStyleGrouped] ;
+	controller.delegate = self;
+	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
+	[self.popOver setPopoverContentSize:controller.view.bounds.size];
+	[self.popOver presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny
+										 animated:YES];
+}
+
+-(void) didChoose: (LocationType) type from: (ChooseListPopupController *) sender
+{
+	// Create new location
 	
+	LocationObject *loc = [game addLocationOfType:type];
+	loc.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
+	loc.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];
+	loc.size = [NSNumber numberWithFloat: 50.0f]; // FOR NOW	
+	
+	[self.popOver dismissPopoverAnimated:YES];
+	self.popOver = nil;
+	[self.overlayView setNeedsDisplay];
 }
 
 -(void) chooseMapType: (id) sender

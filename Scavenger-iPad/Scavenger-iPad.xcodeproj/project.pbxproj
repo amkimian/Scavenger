@@ -34,6 +34,8 @@
 		153E59F011CA6EC900DCDAC0 /* GameEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E59EE11CA6EC900DCDAC0 /* GameEditViewController.xib */; };
 		153E5A0311CA704600DCDAC0 /* CheckingMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5A0011CA704600DCDAC0 /* CheckingMapView.m */; };
 		153E5A0411CA704600DCDAC0 /* LocationOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5A0211CA704600DCDAC0 /* LocationOverlayView.m */; };
+		153E5A8A11CA80AE00DCDAC0 /* ChooseListPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5A8811CA80AE00DCDAC0 /* ChooseListPopupController.m */; };
+		153E5A8B11CA80AE00DCDAC0 /* ChooseListPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E5A8911CA80AE00DCDAC0 /* ChooseListPopupController.xib */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -90,6 +92,9 @@
 		153E5A0011CA704600DCDAC0 /* CheckingMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckingMapView.m; path = CommonViews/CheckingMapView.m; sourceTree = "<group>"; };
 		153E5A0111CA704600DCDAC0 /* LocationOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationOverlayView.h; path = CommonViews/LocationOverlayView.h; sourceTree = "<group>"; };
 		153E5A0211CA704600DCDAC0 /* LocationOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationOverlayView.m; path = CommonViews/LocationOverlayView.m; sourceTree = "<group>"; };
+		153E5A8711CA80AE00DCDAC0 /* ChooseListPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseListPopupController.h; path = CommonControllers/ChooseListPopupController.h; sourceTree = "<group>"; };
+		153E5A8811CA80AE00DCDAC0 /* ChooseListPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseListPopupController.m; path = CommonControllers/ChooseListPopupController.m; sourceTree = "<group>"; };
+		153E5A8911CA80AE00DCDAC0 /* ChooseListPopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChooseListPopupController.xib; path = CommonControllers/ChooseListPopupController.xib; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -156,6 +161,9 @@
 				153E595711C9E02F00DCDAC0 /* GetTextPopupController.h */,
 				153E595811C9E02F00DCDAC0 /* GetTextPopupController.m */,
 				153E595911C9E02F00DCDAC0 /* GetTextPopupController.xib */,
+				153E5A8711CA80AE00DCDAC0 /* ChooseListPopupController.h */,
+				153E5A8811CA80AE00DCDAC0 /* ChooseListPopupController.m */,
+				153E5A8911CA80AE00DCDAC0 /* ChooseListPopupController.xib */,
 			);
 			name = CommonControllers;
 			sourceTree = "<group>";
@@ -295,6 +303,7 @@
 				153E595B11C9E02F00DCDAC0 /* GetTextPopupController.xib in Resources */,
 				153E599411C9E43F00DCDAC0 /* GameActionPopupController.xib in Resources */,
 				153E59F011CA6EC900DCDAC0 /* GameEditViewController.xib in Resources */,
+				153E5A8B11CA80AE00DCDAC0 /* ChooseListPopupController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +336,7 @@
 				153E59EF11CA6EC900DCDAC0 /* GameEditViewController.m in Sources */,
 				153E5A0311CA704600DCDAC0 /* CheckingMapView.m in Sources */,
 				153E5A0411CA704600DCDAC0 /* LocationOverlayView.m in Sources */,
+				153E5A8A11CA80AE00DCDAC0 /* ChooseListPopupController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

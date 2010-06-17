@@ -11,8 +11,9 @@
 #import "GameObject+Extensions.h"
 #import "LocationOverlayView.h"
 #import "MapTypePopupController.h"
+#import "ChooseListPopupController.h"
 
-@interface GameEditViewController : UIViewController<LocationOverlayViewDelegate,MapTypeChangedDelegate> {
+@interface GameEditViewController : UIViewController<LocationOverlayViewDelegate,MapTypeChangedDelegate,ChooseListDidChooseDelegate> {
 	IBOutlet MKMapView *mapView;
 	GameObject *game;
 	LocationOverlayView *overlayView;
