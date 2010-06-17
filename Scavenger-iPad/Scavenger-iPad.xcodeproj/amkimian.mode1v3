@@ -285,6 +285,8 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>153E59F711CA6FC800DCDAC0</string>
+								<string>153E59EB11CA6E9600DCDAC0</string>
 								<string>153E58DB11C9D10C00DCDAC0</string>
 								<string>153E580E11C9563700DCDAC0</string>
 								<string>153E57AF11C944BF00DCDAC0</string>
@@ -297,8 +299,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>14</integer>
+									<integer>25</integer>
+									<integer>23</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -341,7 +343,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameActionPopupController.m</string>
+								<string>GameListViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -349,18 +351,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameActionPopupController.m</string>
+										<string>GameListViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>153E59BC11C9E8F500DCDAC0</string>
+										<string>153E5A4F11CA764E00DCDAC0</string>
 										<key>history</key>
 										<array>
 											<string>153E57A711C9354500DCDAC0</string>
 											<string>153E57A811C9354500DCDAC0</string>
 											<string>153E589811C9653000DCDAC0</string>
 											<string>153E589F11C9664F00DCDAC0</string>
-											<string>153E58B311C9689700DCDAC0</string>
 											<string>153E58FD11C9D5CB00DCDAC0</string>
 											<string>153E593611C9D86A00DCDAC0</string>
 											<string>153E594111C9D95E00DCDAC0</string>
@@ -370,9 +371,17 @@
 											<string>153E597011C9E2B900DCDAC0</string>
 											<string>153E598811C9E3E500DCDAC0</string>
 											<string>153E59A411C9E62E00DCDAC0</string>
-											<string>153E59BA11C9E8F500DCDAC0</string>
-											<string>153E59BB11C9E8F500DCDAC0</string>
-											<string>153E59A211C9E62E00DCDAC0</string>
+											<string>153E59F811CA6FD200DCDAC0</string>
+											<string>153E59F911CA6FD200DCDAC0</string>
+											<string>153E59FB11CA6FD200DCDAC0</string>
+											<string>153E5A1511CA726000DCDAC0</string>
+											<string>153E5A1611CA726000DCDAC0</string>
+											<string>153E5A2611CA73F500DCDAC0</string>
+											<string>153E5A2711CA73F500DCDAC0</string>
+											<string>153E5A2911CA73F500DCDAC0</string>
+											<string>153E5A3E11CA75C500DCDAC0</string>
+											<string>153E5A4D11CA764E00DCDAC0</string>
+											<string>153E5A4E11CA764E00DCDAC0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -553,7 +562,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298445045.41387397</real>
+	<real>298481230.23821402</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -570,14 +579,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>153E59BD11C9E8F500DCDAC0</string>
 		<string>153E580A11C9556300DCDAC0</string>
 		<string>153E580B11C9556300DCDAC0</string>
-		<string>155BE54711C92BF00019A783</string>
 		<string>153E57AD11C9354500DCDAC0</string>
+		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
+		<string>155BE54711C92BF00019A783</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 146 1680 882 0 0 1680 1028 </string>
@@ -601,7 +609,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameListViewController.m</string>
+								<string>LocationOverlayView.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -672,7 +680,7 @@
 			<key>WindowToolGUID</key>
 			<string>155BE54711C92BF00019A783</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -748,9 +756,9 @@
 										<string>Name</string>
 										<real>120</real>
 										<string>Value</string>
-										<real>85</real>
+										<real>171</real>
 										<string>Summary</string>
-										<real>148</real>
+										<real>80</real>
 									</array>
 									<key>Frame</key>
 									<string>{{316, 0}, {378, 194}}</string>

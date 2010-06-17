@@ -8,6 +8,7 @@
 
 #import "GameListViewController.h"
 #import "MapTypePopupController.h"
+#import "GameEditViewController.h"
 #import "GameObject.h"
 
 @implementation GameListViewController
@@ -167,7 +168,7 @@
 	LocationObject *centerLocation = [game addLocationOfType:LTYPE_CENTER];
 	centerLocation.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
 	centerLocation.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];
-	centerLocation.size = [NSNumber numberWithFloat: 0.1f]; // FOR NOW
+	centerLocation.size = [NSNumber numberWithFloat: 50.0f]; // FOR NOW
 	
 	[self addGameAnnotation: game];
 }
@@ -308,6 +309,12 @@
 	{
 		case GAME_EDIT:
 			// push GameEditController using navController
+			{
+				GameEditViewController *editController = [[GameEditViewController alloc] initWithNibName:nil bundle:nil];
+				editController.game = sender.game;
+				[[self navigationController] pushViewController:editController animated:YES];
+				[editController release];
+			}
 			break;
 		case GAME_PLAY:
 			// push GamePlayController using navController
