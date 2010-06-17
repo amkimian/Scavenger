@@ -37,6 +37,8 @@
 		153E5AEF11CA911700DCDAC0 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E5AEE11CA911700DCDAC0 /* LocationCell.xib */; };
 		153E5AF211CA939E00DCDAC0 /* LocationListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5AF111CA939E00DCDAC0 /* LocationListView.m */; };
 		153E5BD911CAB28B00DCDAC0 /* MenuPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5BD811CAB28B00DCDAC0 /* MenuPopupController.m */; };
+		153E5BE011CAC7CC00DCDAC0 /* UnitsEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5BDF11CAC7CC00DCDAC0 /* UnitsEditCell.m */; };
+		153E5BE611CAC85300DCDAC0 /* EditLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5BE511CAC85300DCDAC0 /* EditLocationController.m */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -98,6 +100,10 @@
 		153E5AF111CA939E00DCDAC0 /* LocationListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationListView.m; path = GameEditing/LocationListView.m; sourceTree = "<group>"; };
 		153E5BD711CAB28B00DCDAC0 /* MenuPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuPopupController.h; path = CommonControllers/MenuPopupController.h; sourceTree = "<group>"; };
 		153E5BD811CAB28B00DCDAC0 /* MenuPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuPopupController.m; path = CommonControllers/MenuPopupController.m; sourceTree = "<group>"; };
+		153E5BDE11CAC7CC00DCDAC0 /* UnitsEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitsEditCell.h; path = CommonViews/UnitsEditCell.h; sourceTree = "<group>"; };
+		153E5BDF11CAC7CC00DCDAC0 /* UnitsEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnitsEditCell.m; path = CommonViews/UnitsEditCell.m; sourceTree = "<group>"; };
+		153E5BE411CAC85300DCDAC0 /* EditLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditLocationController.h; path = GameEditing/EditLocationController.h; sourceTree = "<group>"; };
+		153E5BE511CAC85300DCDAC0 /* EditLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditLocationController.m; path = GameEditing/EditLocationController.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -189,6 +195,8 @@
 				153E59EE11CA6EC900DCDAC0 /* GameEditViewController.xib */,
 				153E5AF011CA939E00DCDAC0 /* LocationListView.h */,
 				153E5AF111CA939E00DCDAC0 /* LocationListView.m */,
+				153E5BE411CAC85300DCDAC0 /* EditLocationController.h */,
+				153E5BE511CAC85300DCDAC0 /* EditLocationController.m */,
 			);
 			name = GameEditing;
 			sourceTree = "<group>";
@@ -196,6 +204,8 @@
 		153E59F711CA6FC800DCDAC0 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				153E5BDE11CAC7CC00DCDAC0 /* UnitsEditCell.h */,
+				153E5BDF11CAC7CC00DCDAC0 /* UnitsEditCell.m */,
 				153E59FF11CA704600DCDAC0 /* CheckingMapView.h */,
 				153E5A0011CA704600DCDAC0 /* CheckingMapView.m */,
 				153E5A0111CA704600DCDAC0 /* LocationOverlayView.h */,
@@ -343,6 +353,8 @@
 				153E5A8A11CA80AE00DCDAC0 /* ChooseListPopupController.m in Sources */,
 				153E5AF211CA939E00DCDAC0 /* LocationListView.m in Sources */,
 				153E5BD911CAB28B00DCDAC0 /* MenuPopupController.m in Sources */,
+				153E5BE011CAC7CC00DCDAC0 /* UnitsEditCell.m in Sources */,
+				153E5BE611CAC85300DCDAC0 /* EditLocationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

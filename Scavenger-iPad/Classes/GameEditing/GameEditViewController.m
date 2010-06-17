@@ -138,6 +138,14 @@
 	}
 }
 
+-(void) editLocationDidFinishEditing:(EditLocationController *) controller
+{
+	// Dismiss modal dialog for the location editing...
+	[self dismissModalViewControllerAnimated:YES];
+	overlayView.selectedLocation = nil;
+	[overlayView setNeedsDisplay];
+}
+
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
 {
 	// We selected a menu item (this will curently be from Location click)
@@ -145,7 +153,16 @@
 	{
 		case 0:
 			// Edit
-			break;
+		{
+			EditLocationController *controller = [[EditLocationController alloc] initWithStyle: UITableViewStyleGrouped];
+			UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+			//nav.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+			nav.modalPresentationStyle = UIModalPresentationFormSheet;
+			controller.delegate = self;
+			controller.location = overlayView.selectedLocation;
+			[self presentModalViewController:nav animated:YES];
+		}
+			 break;
 		case 1:
 			// Delete
 			[game removeLocationObject:overlayView.selectedLocation];

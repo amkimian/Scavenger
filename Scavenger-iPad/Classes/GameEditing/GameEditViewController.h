@@ -13,8 +13,9 @@
 #import "MapTypePopupController.h"
 #import "ChooseListPopupController.h"
 #import "MenuPopupController.h"
+#import "EditLocationController.h"
 
-@interface GameEditViewController : UIViewController<LocationOverlayViewDelegate,MapTypeChangedDelegate,ChooseListDidChooseDelegate,MenuPopupDelegate> {
+@interface GameEditViewController : UIViewController<LocationOverlayViewDelegate,MapTypeChangedDelegate,ChooseListDidChooseDelegate,MenuPopupDelegate,EditLocationEndDelegate> {
 	IBOutlet MKMapView *mapView;
 	GameObject *game;
 	LocationOverlayView *overlayView;
@@ -37,4 +38,7 @@
 -(void) showIt;
 
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender;
+
+-(void) editLocationDidFinishEditing:(EditLocationController *) controller;
+
 @end
