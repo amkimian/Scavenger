@@ -11,10 +11,12 @@
 
 @implementation GameActionPopupController
 @synthesize delegate;
+@synthesize game;
 
 -(IBAction) changed: (id) sender
 {
-	[delegate selectedAction:segControl.selectedSegmentIndex from:self];
+	UIControl *control = (UIControl *) sender;
+	[delegate selectedAction:control.tag-1000 from:self];
 }
 
 /*

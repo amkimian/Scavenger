@@ -249,8 +249,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -299,7 +297,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
+									<integer>19</integer>
 									<integer>14</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -336,12 +334,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameListViewController.m</string>
+								<string>GameActionPopupController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -349,11 +349,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameListViewController.m</string>
+										<string>GameActionPopupController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>153E59B011C9E75100DCDAC0</string>
+										<string>153E59BC11C9E8F500DCDAC0</string>
 										<key>history</key>
 										<array>
 											<string>153E57A711C9354500DCDAC0</string>
@@ -369,10 +369,10 @@
 											<string>153E596211C9E0EC00DCDAC0</string>
 											<string>153E597011C9E2B900DCDAC0</string>
 											<string>153E598811C9E3E500DCDAC0</string>
-											<string>153E59A211C9E62E00DCDAC0</string>
-											<string>153E59A311C9E62E00DCDAC0</string>
 											<string>153E59A411C9E62E00DCDAC0</string>
-											<string>153E59AC11C9E73D00DCDAC0</string>
+											<string>153E59BA11C9E8F500DCDAC0</string>
+											<string>153E59BB11C9E8F500DCDAC0</string>
+											<string>153E59A211C9E62E00DCDAC0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -553,7 +553,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298444625.16235298</real>
+	<real>298445045.41387397</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -570,13 +570,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>153E59BD11C9E8F500DCDAC0</string>
 		<string>153E580A11C9556300DCDAC0</string>
 		<string>153E580B11C9556300DCDAC0</string>
-		<string>153E57AD11C9354500DCDAC0</string>
-		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 		<string>155BE54711C92BF00019A783</string>
+		<string>153E57AD11C9354500DCDAC0</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 146 1680 882 0 0 1680 1028 </string>
@@ -609,7 +610,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {883, 259}}</string>
 								<key>RubberWindowFrame</key>
-								<string>659 299 883 541 0 0 1680 1028 </string>
+								<string>660 298 883 541 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -635,7 +636,7 @@
 								<key>Frame</key>
 								<string>{{0, 264}, {883, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>659 299 883 541 0 0 1680 1028 </string>
+								<string>660 298 883 541 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -667,11 +668,11 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>659 299 883 541 0 0 1680 1028 </string>
+			<string>660 298 883 541 0 0 1680 1028 </string>
 			<key>WindowToolGUID</key>
 			<string>155BE54711C92BF00019A783</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

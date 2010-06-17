@@ -7,24 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GameObject.h"
 typedef enum
 {
 	GAME_EDIT,
 	GAME_PLAY,
-	GAME_SEND
+	GAME_SEND,
+	GAME_DELETE
 } GameActionType;
 
 @protocol GameActionDelegate;
 
 @interface GameActionPopupController : UIViewController {
 	id<GameActionDelegate> delegate;
-	IBOutlet UISegmentedControl *segControl;
+	GameObject *game;
 }
 
 -(IBAction) changed: (id) sender;
 
 @property(retain, nonatomic) id<GameActionDelegate> delegate;
+@property(retain, nonatomic) GameObject *game;
 
 @end
 

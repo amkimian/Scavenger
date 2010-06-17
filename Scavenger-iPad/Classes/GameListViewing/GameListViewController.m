@@ -294,6 +294,7 @@
 	NSLog(@"Disclosure tapped");
 	GameActionPopupController *controller = [[GameActionPopupController alloc] initWithNibName:nil bundle:nil];
 	controller.delegate = self;
+	controller.game = (GameObject *) view.annotation;
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
 	[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	[self.popOver presentPopoverFromRect:control.bounds inView:control permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
@@ -302,9 +303,28 @@
 -(void) selectedAction: (GameActionType) actionType from: (GameActionPopupController *) sender
 {
 	// Do something based on action
+	
+	switch(actionType)
+	{
+		case GAME_EDIT:
+			// push GameEditController using navController
+			break;
+		case GAME_PLAY:
+			// push GamePlayController using navController
+			break;
+		case GAME_SEND:
+			// Start GKPicker thing
+			break;
+		case GAME_DELETE:
+			// Delete this game
+			[mapView removeAnnotations:[NSArray arrayWithObjects:sender.game, nil]];
+			[[sender.game managedObjectContext] deleteObject:sender.game];
+			fetchedResultsController = nil;
+			break;			
+	}	
+	
 	[self.popOver dismissPopoverAnimated:YES];
 	self.popOver = nil;
-	
 }
 
 @end
