@@ -12,6 +12,7 @@
 @implementation GameEditViewController
 @synthesize game;
 @synthesize overlayView;
+@synthesize popOver;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -23,6 +24,39 @@
 }
 */
 
+-(void) insertNewLocation
+{
+	
+}
+
+-(void) chooseMapType: (id) sender
+{
+	MapTypePopupController *mapTypeController = [[MapTypePopupController alloc] initWithNibName:nil bundle:nil];
+	mapTypeController.delegate = self;
+	mapTypeController.mapType = mapView.mapType;
+	
+	self.popOver = [[UIPopoverController alloc] initWithContentViewController:mapTypeController];
+	[self.popOver setPopoverContentSize:mapTypeController.view.bounds.size];
+	[self.popOver presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];	
+}
+
+-(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender
+{
+	mapView.mapType = mapType;
+	[self.popOver dismissPopoverAnimated:YES];
+	self.popOver = nil;
+}
+
+-(void) chooseDetails: (id) sender
+{
+	
+}
+
+-(void) showRoute: (id) sender
+{
+	
+}
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -33,6 +67,33 @@
 	overlayView.playMode = NO;
 	[mapView addSubview:overlayView];
 	mapView.delegate = overlayView;
+
+	// Setup toolbar buttons
+	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+																			   target:self
+																			   action:@selector(insertNewLocation)];
+	
+	self.navigationItem.rightBarButtonItem = addButton;
+	[addButton release];
+	
+	// Also setup the toolbar items (we do it this way programattically...)
+	
+	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(chooseMapType:)];
+	UIBarButtonItem *detailsButton = [[UIBarButtonItem alloc] initWithTitle:@"Details"  style:UIBarButtonItemStyleBordered target:self action:@selector(showDetails:)];
+	UIBarButtonItem *flexibleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+																					target:nil
+																					action:nil];
+	
+	UIBarButtonItem *routeButton = [[UIBarButtonItem alloc] initWithTitle:@"Route"  style:UIBarButtonItemStyleBordered target:self action:@selector(showRoute:)];
+	
+	NSArray *array = [[NSArray alloc] initWithObjects:detailsButton,routeButton,flexibleButton,mapButton, nil];	
+	self.toolbarItems = array;
+	
+	[mapButton release];
+	[flexibleButton release];
+	[detailsButton release];
+	[routeButton release];
+	[array release];
 	
 	// Look for the CENTER location type and scale the mapView to that
 	
