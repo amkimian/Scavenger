@@ -10,6 +10,7 @@
 #import "ChooseListPopupController.h"
 #import "LocationListView.h"
 #import "MenuPopupController.h"
+#import "RouteListController.h"
 
 
 @implementation GameEditViewController
@@ -83,9 +84,22 @@
 
 -(void) showRoute: (id) sender
 {
-	
+	// Show the Route edit dialog
+	// Route Name List -> Route Edit (order/delete/add)
+	RouteListController *controller = [[RouteListController alloc] initWithStyle: UITableViewStylePlain];
+	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+	[nav setToolbarHidden:NO];
+	//nav.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+	nav.modalPresentationStyle = UIModalPresentationFormSheet;
+	controller.delegate = self;
+	controller.game = game;
+	[self presentModalViewController:nav animated:YES];	
 }
 
+-(void) didEndRouteList: (RouteListController *) sender
+{
+	[self dismissModalViewControllerAnimated:YES];
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {

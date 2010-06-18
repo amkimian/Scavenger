@@ -249,6 +249,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -284,12 +286,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
-								<string>080E96DDFE201D6D7F000001</string>
-								<string>153E59F711CA6FC800DCDAC0</string>
-								<string>153E59EB11CA6E9600DCDAC0</string>
-								<string>153E58DB11C9D10C00DCDAC0</string>
-								<string>153E580E11C9563700DCDAC0</string>
-								<string>153E57AF11C944BF00DCDAC0</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>153E577211C934AB00DCDAC0</string>
@@ -299,14 +295,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>24</integer>
-									<integer>20</integer>
-									<integer>1</integer>
+									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 436}, {275, 823}}</string>
+							<string>{{0, 0}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -336,14 +330,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameObject+Extensions.m</string>
+								<string>GameEditViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -351,17 +343,16 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameObject+Extensions.m</string>
+										<string>GameEditViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>153E5D1F11CAE6B400DCDAC0</string>
+										<string>153E5D9711CB3B7200DCDAC0</string>
 										<key>history</key>
 										<array>
 											<string>153E57A711C9354500DCDAC0</string>
 											<string>153E57A811C9354500DCDAC0</string>
 											<string>153E589F11C9664F00DCDAC0</string>
-											<string>153E58FD11C9D5CB00DCDAC0</string>
 											<string>153E593611C9D86A00DCDAC0</string>
 											<string>153E597011C9E2B900DCDAC0</string>
 											<string>153E598811C9E3E500DCDAC0</string>
@@ -372,7 +363,6 @@
 											<string>153E5ACB11CA892C00DCDAC0</string>
 											<string>153E5B2011CA991400DCDAC0</string>
 											<string>153E5BB211CAB03400DCDAC0</string>
-											<string>153E5BB711CAB03400DCDAC0</string>
 											<string>153E5C1511CAD0C200DCDAC0</string>
 											<string>153E5C1811CAD0C200DCDAC0</string>
 											<string>153E5C1911CAD0C200DCDAC0</string>
@@ -380,17 +370,22 @@
 											<string>153E5C4E11CAD49E00DCDAC0</string>
 											<string>153E5C5911CAD55C00DCDAC0</string>
 											<string>153E5C8111CAD9A800DCDAC0</string>
-											<string>153E5CAB11CADCCA00DCDAC0</string>
-											<string>153E5CBA11CADEEE00DCDAC0</string>
-											<string>153E5CBB11CADEEE00DCDAC0</string>
 											<string>153E5CBC11CADEEE00DCDAC0</string>
 											<string>153E5CEE11CAE26C00DCDAC0</string>
 											<string>153E5CEF11CAE26C00DCDAC0</string>
-											<string>153E5D1011CAE56400DCDAC0</string>
 											<string>153E5D1111CAE56400DCDAC0</string>
 											<string>153E5D1C11CAE6B400DCDAC0</string>
 											<string>153E5D1D11CAE6B400DCDAC0</string>
-											<string>153E5D1E11CAE6B400DCDAC0</string>
+											<string>153E5D5611CB333B00DCDAC0</string>
+											<string>153E5D5711CB333B00DCDAC0</string>
+											<string>153E5D5811CB333B00DCDAC0</string>
+											<string>153E5D5A11CB333B00DCDAC0</string>
+											<string>153E5D6611CB33F700DCDAC0</string>
+											<string>153E5D7F11CB360C00DCDAC0</string>
+											<string>153E5D8011CB360C00DCDAC0</string>
+											<string>153E5D8111CB360C00DCDAC0</string>
+											<string>153E5D8211CB360C00DCDAC0</string>
+											<string>153E5D8311CB360C00DCDAC0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -571,7 +566,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298510004.11365902</real>
+	<real>298531698.08048201</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -590,12 +585,12 @@
 	<array>
 		<string>153E580A11C9556300DCDAC0</string>
 		<string>153E580B11C9556300DCDAC0</string>
-		<string>153E57AD11C9354500DCDAC0</string>
-		<string>153E5C5011CAD49E00DCDAC0</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 		<string>155BE54711C92BF00019A783</string>
+		<string>153E5C5011CAD49E00DCDAC0</string>
+		<string>153E57AD11C9354500DCDAC0</string>
+		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 146 1680 882 0 0 1680 1028 </string>
@@ -619,7 +614,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EditLocationController.m</string>
+								<string>GameEditViewController.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -690,7 +685,7 @@
 			<key>WindowToolGUID</key>
 			<string>155BE54711C92BF00019A783</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -814,7 +809,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
@@ -979,7 +974,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

@@ -2,7 +2,7 @@
 //  GameRouteObject.h
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/16/10.
+//  Created by Alan Moore on 6/17/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -18,7 +18,7 @@
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet* inGameRun;
-@property (nonatomic, retain) LocationOrderObject * locations;
+@property (nonatomic, retain) NSSet* locations;
 @property (nonatomic, retain) GameObject * game;
 
 @end
@@ -29,6 +29,11 @@
 - (void)removeInGameRunObject:(GameRunObject *)value;
 - (void)addInGameRun:(NSSet *)value;
 - (void)removeInGameRun:(NSSet *)value;
+
+- (void)addLocationsObject:(LocationOrderObject *)value;
+- (void)removeLocationsObject:(LocationOrderObject *)value;
+- (void)addLocations:(NSSet *)value;
+- (void)removeLocations:(NSSet *)value;
 
 @end
 

@@ -14,7 +14,6 @@
 		153E578F11C934BC00DCDAC0 /* AnswerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577F11C934BC00DCDAC0 /* AnswerObject.m */; };
 		153E579011C934BC00DCDAC0 /* GameRunObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578111C934BC00DCDAC0 /* GameRunObject.m */; };
 		153E579111C934BC00DCDAC0 /* LocationOrderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578311C934BC00DCDAC0 /* LocationOrderObject.m */; };
-		153E579211C934BC00DCDAC0 /* GameRouteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578511C934BC00DCDAC0 /* GameRouteObject.m */; };
 		153E579311C934BC00DCDAC0 /* LocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578711C934BC00DCDAC0 /* LocationObject.m */; };
 		153E579411C934BC00DCDAC0 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578911C934BC00DCDAC0 /* GameObject.m */; };
 		153E579511C934BC00DCDAC0 /* HardwareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578B11C934BC00DCDAC0 /* HardwareObject.m */; };
@@ -42,6 +41,10 @@
 		153E5CA311CADCA000DCDAC0 /* TextEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5CA111CADCA000DCDAC0 /* TextEditController.m */; };
 		153E5CA411CADCA000DCDAC0 /* TextEditController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E5CA211CADCA000DCDAC0 /* TextEditController.xib */; };
 		153E5CFB11CAE2EC00DCDAC0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */; };
+		153E5D2D11CB2FEE00DCDAC0 /* GameRouteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5D2C11CB2FEE00DCDAC0 /* GameRouteObject.m */; };
+		153E5D4411CB31EE00DCDAC0 /* RouteListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5D4311CB31EE00DCDAC0 /* RouteListController.m */; };
+		153E5D8A11CB39B200DCDAC0 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */; };
+		15652A9411CB3D4E0051E687 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 15652A9311CB3D4E0051E687 /* Default-Portrait.png */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -65,8 +68,6 @@
 		153E578111C934BC00DCDAC0 /* GameRunObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRunObject.m; sourceTree = "<group>"; };
 		153E578211C934BC00DCDAC0 /* LocationOrderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationOrderObject.h; sourceTree = "<group>"; };
 		153E578311C934BC00DCDAC0 /* LocationOrderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationOrderObject.m; sourceTree = "<group>"; };
-		153E578411C934BC00DCDAC0 /* GameRouteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRouteObject.h; sourceTree = "<group>"; };
-		153E578511C934BC00DCDAC0 /* GameRouteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRouteObject.m; sourceTree = "<group>"; };
 		153E578611C934BC00DCDAC0 /* LocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationObject.h; sourceTree = "<group>"; };
 		153E578711C934BC00DCDAC0 /* LocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationObject.m; sourceTree = "<group>"; };
 		153E578811C934BC00DCDAC0 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
@@ -111,6 +112,12 @@
 		153E5CA111CADCA000DCDAC0 /* TextEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextEditController.m; path = GameEditing/TextEditController.m; sourceTree = "<group>"; };
 		153E5CA211CADCA000DCDAC0 /* TextEditController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TextEditController.xib; path = GameEditing/TextEditController.xib; sourceTree = "<group>"; };
 		153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		153E5D2B11CB2FEE00DCDAC0 /* GameRouteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRouteObject.h; sourceTree = "<group>"; };
+		153E5D2C11CB2FEE00DCDAC0 /* GameRouteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRouteObject.m; sourceTree = "<group>"; };
+		153E5D4211CB31EE00DCDAC0 /* RouteListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteListController.h; sourceTree = "<group>"; };
+		153E5D4311CB31EE00DCDAC0 /* RouteListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteListController.m; sourceTree = "<group>"; };
+		153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		15652A9311CB3D4E0051E687 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -208,6 +215,8 @@
 				153E5CA011CADCA000DCDAC0 /* TextEditController.h */,
 				153E5CA111CADCA000DCDAC0 /* TextEditController.m */,
 				153E5CA211CADCA000DCDAC0 /* TextEditController.xib */,
+				153E5D4211CB31EE00DCDAC0 /* RouteListController.h */,
+				153E5D4311CB31EE00DCDAC0 /* RouteListController.m */,
 			);
 			name = GameEditing;
 			sourceTree = "<group>";
@@ -261,6 +270,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				15652A9311CB3D4E0051E687 /* Default-Portrait.png */,
+				153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */,
 				153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Scavenger_iPad-Info.plist */,
@@ -332,6 +343,8 @@
 				153E5A8B11CA80AE00DCDAC0 /* ChooseListPopupController.xib in Resources */,
 				153E5AEF11CA911700DCDAC0 /* LocationCell.xib in Resources */,
 				153E5CA411CADCA000DCDAC0 /* TextEditController.xib in Resources */,
+				153E5D8A11CB39B200DCDAC0 /* Default-Landscape.png in Resources */,
+				15652A9411CB3D4E0051E687 /* Default-Portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +364,6 @@
 				153E578F11C934BC00DCDAC0 /* AnswerObject.m in Sources */,
 				153E579011C934BC00DCDAC0 /* GameRunObject.m in Sources */,
 				153E579111C934BC00DCDAC0 /* LocationOrderObject.m in Sources */,
-				153E579211C934BC00DCDAC0 /* GameRouteObject.m in Sources */,
 				153E579311C934BC00DCDAC0 /* LocationObject.m in Sources */,
 				153E579411C934BC00DCDAC0 /* GameObject.m in Sources */,
 				153E579511C934BC00DCDAC0 /* HardwareObject.m in Sources */,
@@ -369,6 +381,8 @@
 				153E5BE011CAC7CC00DCDAC0 /* UnitsEditCell.m in Sources */,
 				153E5BE611CAC85300DCDAC0 /* EditLocationController.m in Sources */,
 				153E5CA311CADCA000DCDAC0 /* TextEditController.m in Sources */,
+				153E5D2D11CB2FEE00DCDAC0 /* GameRouteObject.m in Sources */,
+				153E5D4411CB31EE00DCDAC0 /* RouteListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +474,8 @@
 		153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				153E5D2B11CB2FEE00DCDAC0 /* GameRouteObject.h */,
+				153E5D2C11CB2FEE00DCDAC0 /* GameRouteObject.m */,
 				153E577811C934BC00DCDAC0 /* ActiveLocationObject.h */,
 				153E577911C934BC00DCDAC0 /* ActiveLocationObject.m */,
 				153E577A11C934BC00DCDAC0 /* PlayerLocationObject.h */,
@@ -472,8 +488,6 @@
 				153E578111C934BC00DCDAC0 /* GameRunObject.m */,
 				153E578211C934BC00DCDAC0 /* LocationOrderObject.h */,
 				153E578311C934BC00DCDAC0 /* LocationOrderObject.m */,
-				153E578411C934BC00DCDAC0 /* GameRouteObject.h */,
-				153E578511C934BC00DCDAC0 /* GameRouteObject.m */,
 				153E578611C934BC00DCDAC0 /* LocationObject.h */,
 				153E578711C934BC00DCDAC0 /* LocationObject.m */,
 				153E578811C934BC00DCDAC0 /* GameObject.h */,

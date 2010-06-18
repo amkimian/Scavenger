@@ -8,6 +8,8 @@
 
 #import "GameObject+Extensions.h"
 #import "LocationObject+Extensions.h"
+#import "GameRouteObject.h"
+#import "LocationOrderObject.h"
 
 @implementation GameObject(Extensions)
 -(LocationObject *) addLocationOfType: (LocationType) type
@@ -35,6 +37,10 @@
 	[locations addObject:loc];
 	
 	// If this is a LTYPE_RALLY_SCORE, add it to the Default GameRouteObject
+	if (type == LTYPE_RALLY_CHARGE || type == LTYPE_RALLY_FIX || type == LTYPE_RALLY_SCORE)
+	{
+		[self addLocationToDefaultRoute:loc];
+	}
 	return loc;
 }
 
@@ -43,7 +49,7 @@
     NSMutableSet *l = [self mutableSetValueForKey:@"locations"];
 	[l removeObject:loc];
 	// If this is a LTYPE_RALLY_SCORE, remove it from the Default GameRouteObject
-	
+	// ??? Hmm - will this automatically disappear?
 }
 
 -(LocationObject *) getLocationOfType: (LocationType) type
@@ -75,6 +81,39 @@
 	ret.latitude = [centerPoint.latitude floatValue];
 	ret.longitude = [centerPoint.longitude floatValue];
 	return ret;
+}
+
+/**
+ * This is a new location that needs to be added to the special
+ * "default" route
+ */
+
+-(void) addLocationToDefaultRoute: (LocationObject *) loc
+{
+	GameRouteObject *mainRoute = nil;
+	
+	for(GameRouteObject *gRoute in self.gameRoutes)
+	{
+		if ([gRoute.name isEqualToString: @"Default"])
+		{
+			mainRoute = gRoute;
+			break;
+		}
+	}
+	if (mainRoute == nil)
+	{
+		NSEntityDescription *edesc = [NSEntityDescription entityForName:@"GameRoute" inManagedObjectContext:[self managedObjectContext]];
+		mainRoute = [[GameRouteObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[self managedObjectContext]];
+		mainRoute.name = @"Default";
+		[self addGameRoutesObject:mainRoute];
+	}
+	
+	// Now add this location to that route
+	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"LocationOrder" inManagedObjectContext:[self managedObjectContext]];
+	LocationOrderObject *lo = [[LocationOrderObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[self managedObjectContext]];
+	lo.location = loc;
+	lo.position = [NSNumber numberWithInt: [mainRoute.locations count]];
+	[mainRoute addLocationsObject:lo];	
 }
 
 @end

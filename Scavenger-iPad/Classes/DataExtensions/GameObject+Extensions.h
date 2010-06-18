@@ -16,5 +16,6 @@
 -(LocationObject *) getLocationOfType: (LocationType) type;
 
 -(void) removeLocationObject: (LocationObject *) loc;
+-(void) addLocationToDefaultRoute: (LocationObject *) loc;
 @end
 
