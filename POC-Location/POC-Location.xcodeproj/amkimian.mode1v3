@@ -296,7 +296,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>16</integer>
+									<integer>19</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
@@ -339,7 +339,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SingleLocationEditor.m</string>
+								<string>SingleLocationView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -347,11 +347,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SingleLocationEditor.m</string>
+										<string>SingleLocationView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>15652CF711CEA32B0051E687</string>
+										<string>15652D0E11CEA47F0051E687</string>
 										<key>history</key>
 										<array>
 											<string>15652BDE11CE8CF20051E687</string>
@@ -359,13 +359,15 @@
 											<string>15652C2B11CE91580051E687</string>
 											<string>15652C9B11CE9DEF0051E687</string>
 											<string>15652C9C11CE9DEF0051E687</string>
-											<string>15652CC111CE9FC70051E687</string>
 											<string>15652CDE11CEA1650051E687</string>
 											<string>15652CDF11CEA1650051E687</string>
-											<string>15652CE011CEA1650051E687</string>
-											<string>15652CEF11CEA2640051E687</string>
-											<string>15652CF011CEA2640051E687</string>
-											<string>15652CF111CEA2640051E687</string>
+											<string>15652D0211CEA40B0051E687</string>
+											<string>15652D0311CEA40B0051E687</string>
+											<string>15652D0511CEA40B0051E687</string>
+											<string>15652D0611CEA40B0051E687</string>
+											<string>15652D0711CEA40B0051E687</string>
+											<string>15652D0C11CEA47F0051E687</string>
+											<string>15652D0D11CEA47F0051E687</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -546,7 +548,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298754859.06412798</real>
+	<real>298755199.46443301</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -564,10 +566,10 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>15652CA311CE9DEF0051E687</string>
+		<string>1CD10A99069EF8BA00B06720</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/amkimian/Development/Scavenger/POC-Location/POC-Location.xcodeproj</string>
 		<string>15652BB511CE8A060051E687</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 	</array>
 	<key>WindowString</key>
 	<string>613 412 1079 616 0 0 1680 1028 </string>

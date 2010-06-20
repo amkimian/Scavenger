@@ -1,5 +1,5 @@
 //
-//  SingleLocationEditor.h
+//  SingleLocationView.h
 //  POC-Location
 //
 //  Created by Alan Moore on 6/20/10.
@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
 #import "LocationObject+Extensions.h"
-#import "SingleLocationView.h"
 
-@interface SingleLocationEditor : UIViewController {
-	IBOutlet MKMapView* mapView;
-	SingleLocationView *overlayView;
+@interface SingleLocationView : UIView {
 	LocationObject *location;
 }
 
 @property(nonatomic, retain) LocationObject *location;
+
 @end

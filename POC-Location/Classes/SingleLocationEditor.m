@@ -34,7 +34,12 @@
 	
 	MKCoordinateRegion region = MKCoordinateRegionMake(coordinate,
 													   MKCoordinateSpanMake(0.01f, 0.01f));
-	[mapView setRegion:region animated:YES];    
+	[mapView setRegion:region animated:YES];
+    
+	overlayView = [[SingleLocationView alloc] initWithFrame: mapView.frame];
+//	overlayView.delegate = self;
+	[mapView addSubview:overlayView];
+	
 	[super viewDidLoad];
 }
 

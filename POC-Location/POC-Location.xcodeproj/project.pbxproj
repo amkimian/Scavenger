@@ -20,6 +20,7 @@
 		15652C6F11CE980F0051E687 /* LocationObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652C6E11CE980F0051E687 /* LocationObject+Extensions.m */; };
 		15652CD011CEA09E0051E687 /* SingleLocationEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652CCE11CEA09E0051E687 /* SingleLocationEditor.m */; };
 		15652CD111CEA09E0051E687 /* SingleLocationEditor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15652CCF11CEA09E0051E687 /* SingleLocationEditor.xib */; };
+		15652CFA11CEA3640051E687 /* SingleLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652CF911CEA3640051E687 /* SingleLocationView.m */; };
 		1D3623260D0F684500981E51 /* POC_LocationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* POC_LocationAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -67,6 +68,8 @@
 		15652CCD11CEA09E0051E687 /* SingleLocationEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleLocationEditor.h; sourceTree = "<group>"; };
 		15652CCE11CEA09E0051E687 /* SingleLocationEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleLocationEditor.m; sourceTree = "<group>"; };
 		15652CCF11CEA09E0051E687 /* SingleLocationEditor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLocationEditor.xib; sourceTree = "<group>"; };
+		15652CF811CEA3640051E687 /* SingleLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleLocationView.h; sourceTree = "<group>"; };
+		15652CF911CEA3640051E687 /* SingleLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleLocationView.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* POC_LocationAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POC_LocationAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* POC_LocationAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POC_LocationAppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				15652CCD11CEA09E0051E687 /* SingleLocationEditor.h */,
 				15652CCE11CEA09E0051E687 /* SingleLocationEditor.m */,
 				15652CCF11CEA09E0051E687 /* SingleLocationEditor.xib */,
+				15652CF811CEA3640051E687 /* SingleLocationView.h */,
+				15652CF911CEA3640051E687 /* SingleLocationView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				15652C5511CE94C50051E687 /* LocationOverlayView.m in Sources */,
 				15652C6F11CE980F0051E687 /* LocationObject+Extensions.m in Sources */,
 				15652CD011CEA09E0051E687 /* SingleLocationEditor.m in Sources */,
+				15652CFA11CEA3640051E687 /* SingleLocationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
