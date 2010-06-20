@@ -25,7 +25,6 @@
 		153E594A11C9DB2800DCDAC0 /* LocationObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E594911C9DB2800DCDAC0 /* LocationObject+Extensions.m */; };
 		153E59EF11CA6EC900DCDAC0 /* GameEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */; };
 		153E59F011CA6EC900DCDAC0 /* GameEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E59EE11CA6EC900DCDAC0 /* GameEditViewController.xib */; };
-		153E5A0311CA704600DCDAC0 /* CheckingMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5A0011CA704600DCDAC0 /* CheckingMapView.m */; };
 		153E5A0411CA704600DCDAC0 /* LocationOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5A0211CA704600DCDAC0 /* LocationOverlayView.m */; };
 		153E5A8A11CA80AE00DCDAC0 /* ChooseListPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5A8811CA80AE00DCDAC0 /* ChooseListPopupController.m */; };
 		153E5A8B11CA80AE00DCDAC0 /* ChooseListPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E5A8911CA80AE00DCDAC0 /* ChooseListPopupController.xib */; };
@@ -91,8 +90,6 @@
 		153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameEditViewController.h; path = GameEditing/GameEditViewController.h; sourceTree = "<group>"; };
 		153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameEditViewController.m; path = GameEditing/GameEditViewController.m; sourceTree = "<group>"; };
 		153E59EE11CA6EC900DCDAC0 /* GameEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GameEditViewController.xib; path = GameEditing/GameEditViewController.xib; sourceTree = "<group>"; };
-		153E59FF11CA704600DCDAC0 /* CheckingMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckingMapView.h; path = CommonViews/CheckingMapView.h; sourceTree = "<group>"; };
-		153E5A0011CA704600DCDAC0 /* CheckingMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckingMapView.m; path = CommonViews/CheckingMapView.m; sourceTree = "<group>"; };
 		153E5A0111CA704600DCDAC0 /* LocationOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationOverlayView.h; path = CommonViews/LocationOverlayView.h; sourceTree = "<group>"; };
 		153E5A0211CA704600DCDAC0 /* LocationOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationOverlayView.m; path = CommonViews/LocationOverlayView.m; sourceTree = "<group>"; };
 		153E5A8711CA80AE00DCDAC0 /* ChooseListPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseListPopupController.h; path = CommonControllers/ChooseListPopupController.h; sourceTree = "<group>"; };
@@ -213,8 +210,6 @@
 		153E59F711CA6FC800DCDAC0 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
-				153E59FF11CA704600DCDAC0 /* CheckingMapView.h */,
-				153E5A0011CA704600DCDAC0 /* CheckingMapView.m */,
 				153E5A0111CA704600DCDAC0 /* LocationOverlayView.h */,
 				153E5A0211CA704600DCDAC0 /* LocationOverlayView.m */,
 			);
@@ -381,7 +376,6 @@
 				153E58DE11C9D12D00DCDAC0 /* GameObject+Extensions.m in Sources */,
 				153E594A11C9DB2800DCDAC0 /* LocationObject+Extensions.m in Sources */,
 				153E59EF11CA6EC900DCDAC0 /* GameEditViewController.m in Sources */,
-				153E5A0311CA704600DCDAC0 /* CheckingMapView.m in Sources */,
 				153E5A0411CA704600DCDAC0 /* LocationOverlayView.m in Sources */,
 				153E5A8A11CA80AE00DCDAC0 /* ChooseListPopupController.m in Sources */,
 				153E5AF211CA939E00DCDAC0 /* LocationListView.m in Sources */,

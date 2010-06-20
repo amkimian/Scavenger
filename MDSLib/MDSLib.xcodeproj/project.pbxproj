@@ -15,6 +15,8 @@
 		15652B5411CE86380051E687 /* MapTypePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652B4D11CE86380051E687 /* MapTypePopupController.m */; };
 		15652B5511CE86380051E687 /* MenuPopupController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15652B4F11CE86380051E687 /* MenuPopupController.h */; };
 		15652B5611CE86380051E687 /* MenuPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652B5011CE86380051E687 /* MenuPopupController.m */; };
+		15652B9211CE89630051E687 /* CheckingMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15652B9011CE89630051E687 /* CheckingMapView.h */; };
+		15652B9311CE89630051E687 /* CheckingMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652B9111CE89630051E687 /* CheckingMapView.m */; };
 		AA747D9F0F9514B9006C5449 /* MDSLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* MDSLib_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		15652B4E11CE86380051E687 /* MapTypePopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapTypePopupController.xib; path = CommonControllers/MapTypePopupController.xib; sourceTree = "<group>"; };
 		15652B4F11CE86380051E687 /* MenuPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuPopupController.h; path = CommonControllers/MenuPopupController.h; sourceTree = "<group>"; };
 		15652B5011CE86380051E687 /* MenuPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuPopupController.m; path = CommonControllers/MenuPopupController.m; sourceTree = "<group>"; };
+		15652B9011CE89630051E687 /* CheckingMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckingMapView.h; path = CommonViews/CheckingMapView.h; sourceTree = "<group>"; };
+		15652B9111CE89630051E687 /* CheckingMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckingMapView.m; path = CommonViews/CheckingMapView.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* MDSLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSLib_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libMDSLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMDSLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,8 @@
 		15652ABF11CE81510051E687 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				15652B9011CE89630051E687 /* CheckingMapView.h */,
+				15652B9111CE89630051E687 /* CheckingMapView.m */,
 				15652AC011CE81620051E687 /* UnitsEditCell.h */,
 				15652AC111CE81620051E687 /* UnitsEditCell.m */,
 			);
@@ -139,6 +145,7 @@
 				15652B5111CE86380051E687 /* GetTextPopupController.h in Headers */,
 				15652B5311CE86380051E687 /* MapTypePopupController.h in Headers */,
 				15652B5511CE86380051E687 /* MenuPopupController.h in Headers */,
+				15652B9211CE89630051E687 /* CheckingMapView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +197,7 @@
 				15652B5211CE86380051E687 /* GetTextPopupController.m in Sources */,
 				15652B5411CE86380051E687 /* MapTypePopupController.m in Sources */,
 				15652B5611CE86380051E687 /* MenuPopupController.m in Sources */,
+				15652B9311CE89630051E687 /* CheckingMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

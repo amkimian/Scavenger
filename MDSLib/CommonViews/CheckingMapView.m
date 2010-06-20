@@ -11,6 +11,11 @@
 
 @implementation CheckingMapView
 
++(void) _keepAtLinkTime
+{
+	
+}
+
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {

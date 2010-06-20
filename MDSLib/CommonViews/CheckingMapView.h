@@ -13,4 +13,6 @@
 
 }
 
++(void) _keepAtLinkTime;
+
 @end

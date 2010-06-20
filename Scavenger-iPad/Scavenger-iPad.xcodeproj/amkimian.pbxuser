@@ -201,14 +201,14 @@
 	};
 	153E57B011C944FE00DCDAC0 /* GameListViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 897}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 884}}";
 			sepNavSelRange = "{1223, 0}";
-			sepNavVisRange = "{172, 1804}";
+			sepNavVisRange = "{171, 1806}";
 		};
 	};
 	153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 4407}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 4524}}";
 			sepNavSelRange = "{337, 39}";
 			sepNavVisRange = "{0, 1716}";
 		};
@@ -343,17 +343,29 @@
 		};
 	};
 	153E59FF11CA704600DCDAC0 /* CheckingMapView.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = CheckingMapView.h;
+		path = "/Users/amkimian/Development/Scavenger/Scavenger-iPad/Classes/CommonViews/CheckingMapView.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 702}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 699}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 239}";
 		};
 	};
 	153E5A0011CA704600DCDAC0 /* CheckingMapView.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CheckingMapView.m;
+		path = "/Users/amkimian/Development/Scavenger/Scavenger-iPad/Classes/CommonViews/CheckingMapView.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1322, 1183}}";
 			sepNavSelRange = "{535, 0}";
-			sepNavVisRange = "{738, 1305}";
+			sepNavVisRange = "{0, 1106}";
 		};
 	};
 	153E5A0111CA704600DCDAC0 /* LocationOverlayView.h */ = {
@@ -872,7 +884,7 @@
 	};
 	1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1411, 679}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 699}}";
 			sepNavSelRange = "{956, 0}";
 			sepNavVisRange = "{0, 1009}";
 		};
@@ -880,8 +892,8 @@
 	1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {2371, 2054}}";
-			sepNavSelRange = "{343, 0}";
-			sepNavVisRange = "{0, 1930}";
+			sepNavSelRange = "{835, 0}";
+			sepNavVisRange = "{154, 1830}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* Scavenger-iPad */ = {
