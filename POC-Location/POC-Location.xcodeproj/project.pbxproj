@@ -13,6 +13,9 @@
 		15652B8711CE88BB0051E687 /* LocationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15652B8511CE88BB0051E687 /* LocationListViewController.xib */; };
 		15652BB211CE89C10051E687 /* libMDSLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15652BB111CE89B20051E687 /* libMDSLib.a */; };
 		15652BFB11CE8E100051E687 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15652BFA11CE8E100051E687 /* MapKit.framework */; };
+		15652C0C11CE8E850051E687 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15652C0B11CE8E850051E687 /* CoreLocation.framework */; };
+		15652C3911CE92570051E687 /* GetTextPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15652C3711CE92570051E687 /* GetTextPopupController.xib */; };
+		15652C3A11CE92570051E687 /* MapTypePopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15652C3811CE92570051E687 /* MapTypePopupController.xib */; };
 		1D3623260D0F684500981E51 /* POC_LocationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* POC_LocationAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -48,8 +51,11 @@
 		15652B8311CE88BB0051E687 /* LocationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationListViewController.h; sourceTree = "<group>"; };
 		15652B8411CE88BB0051E687 /* LocationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationListViewController.m; sourceTree = "<group>"; };
 		15652B8511CE88BB0051E687 /* LocationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LocationListViewController.xib; path = "../POC-Location/Classes/LocationListViewController.xib"; sourceTree = MDS_SRC; };
-		15652BA611CE89A90051E687 /* MDSLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MDSLib.xcodeproj; sourceTree = MDS_SRC; };
+		15652BA611CE89A90051E687 /* MDSLib.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; path = MDSLib.xcodeproj; sourceTree = MDS_SRC; };
 		15652BFA11CE8E100051E687 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		15652C0B11CE8E850051E687 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		15652C3711CE92570051E687 /* GetTextPopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GetTextPopupController.xib; path = ../MDSLib/CommonControllers/GetTextPopupController.xib; sourceTree = SOURCE_ROOT; };
+		15652C3811CE92570051E687 /* MapTypePopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapTypePopupController.xib; path = ../MDSLib/CommonControllers/MapTypePopupController.xib; sourceTree = SOURCE_ROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* POC_LocationAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POC_LocationAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* POC_LocationAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POC_LocationAppDelegate.m; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */,
 				15652BFB11CE8E100051E687 /* MapKit.framework in Frameworks */,
+				15652C0C11CE8E850051E687 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				15652C3711CE92570051E687 /* GetTextPopupController.xib */,
+				15652C3811CE92570051E687 /* MapTypePopupController.xib */,
 				15652BA611CE89A90051E687 /* MDSLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -149,6 +158,7 @@
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				28D801B30F44B63D00FB423F /* CoreData.framework */,
 				15652BFA11CE8E100051E687 /* MapKit.framework */,
+				15652C0B11CE8E850051E687 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,6 +224,8 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				15652B8711CE88BB0051E687 /* LocationListViewController.xib in Resources */,
+				15652C3911CE92570051E687 /* GetTextPopupController.xib in Resources */,
+				15652C3A11CE92570051E687 /* MapTypePopupController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,6 +22,7 @@
     // Override point for customization after application launch
 	
 	LocationListViewController *rootController = [[LocationListViewController alloc] initWithNibName:nil bundle:nil];
+	rootController.managedObjectContext = self.managedObjectContext;
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootController];
 	[nav setToolbarHidden: NO animated:YES];
 	nav.navigationBar.barStyle = UIBarStyleBlack;
