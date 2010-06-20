@@ -37,7 +37,7 @@
 		CLLocationCoordinate2D coord;
 		coord.latitude = [o.latitude floatValue];
 		coord.longitude = [o.longitude floatValue];
-		MKCoordinateRegion r = MKCoordinateRegionMakeWithDistance(coord, 10.0f, 10.0f);
+		MKCoordinateRegion r = MKCoordinateRegionMakeWithDistance(coord, 20.0f, 20.0f);
 		
 		CGRect rect = [mapView convertRegion:r toRectToView:self];
 		if (CGRectContainsPoint(rect, p))
