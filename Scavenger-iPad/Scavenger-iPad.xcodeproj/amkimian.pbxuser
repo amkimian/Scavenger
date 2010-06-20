@@ -214,17 +214,29 @@
 		};
 	};
 	153E581111C9566B00DCDAC0 /* MapTypePopupController.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = MapTypePopupController.h;
+		path = "/Users/amkimian/Development/Scavenger/Scavenger-iPad/Classes/CommonControllers/MapTypePopupController.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 679}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 699}}";
 			sepNavSelRange = "{679, 0}";
 			sepNavVisRange = "{0, 809}";
 		};
 	};
 	153E581211C9566B00DCDAC0 /* MapTypePopupController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = MapTypePopupController.m;
+		path = "/Users/amkimian/Development/Scavenger/Scavenger-iPad/Classes/CommonControllers/MapTypePopupController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1322, 1261}}";
 			sepNavSelRange = "{1828, 0}";
-			sepNavVisRange = "{978, 1165}";
+			sepNavVisRange = "{977, 1166}";
 		};
 	};
 	153E589F11C9664F00DCDAC0 /* PBXTextBookmark */ = {
@@ -271,17 +283,29 @@
 		};
 	};
 	153E595711C9E02F00DCDAC0 /* GetTextPopupController.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = GetTextPopupController.h;
+		path = "/Users/amkimian/Development/Scavenger/Scavenger-iPad/Classes/CommonControllers/GetTextPopupController.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1054, 697}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 699}}";
 			sepNavSelRange = "{544, 59}";
 			sepNavVisRange = "{0, 610}";
 		};
 	};
 	153E595811C9E02F00DCDAC0 /* GetTextPopupController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = GetTextPopupController.m;
+		path = "/Users/amkimian/Development/Scavenger/Scavenger-iPad/Classes/CommonControllers/GetTextPopupController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 806}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 767}}";
 			sepNavSelRange = "{928, 0}";
-			sepNavVisRange = "{0, 1479}";
+			sepNavVisRange = "{0, 1534}";
 		};
 	};
 	153E597011C9E2B900DCDAC0 /* PBXTextBookmark */ = {
@@ -334,7 +358,7 @@
 	};
 	153E5A0111CA704600DCDAC0 /* LocationOverlayView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 679}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 699}}";
 			sepNavSelRange = "{562, 0}";
 			sepNavVisRange = "{0, 1153}";
 		};
@@ -343,7 +367,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1322, 2704}}";
 			sepNavSelRange = "{3842, 53}";
-			sepNavVisRange = "{3150, 1604}";
+			sepNavVisRange = "{3149, 1606}";
 		};
 	};
 	153E5A1511CA726000DCDAC0 /* PBXTextBookmark */ = {
@@ -388,16 +412,16 @@
 	};
 	153E5A8711CA80AE00DCDAC0 /* ChooseListPopupController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 679}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 699}}";
 			sepNavSelRange = "{502, 82}";
 			sepNavVisRange = "{0, 590}";
 		};
 	};
 	153E5A8811CA80AE00DCDAC0 /* ChooseListPopupController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 3991}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 4134}}";
 			sepNavSelRange = "{1577, 239}";
-			sepNavVisRange = "{937, 1339}";
+			sepNavVisRange = "{858, 1423}";
 		};
 	};
 	153E5ACB11CA892C00DCDAC0 /* PBXTextBookmark */ = {
@@ -936,7 +960,7 @@
 					1104,
 					60,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 				);
