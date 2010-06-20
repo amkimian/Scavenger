@@ -58,16 +58,16 @@
 	};
 	15652B8311CE88BB0051E687 /* LocationListViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {810, 871}}";
-			sepNavSelRange = "{950, 0}";
-			sepNavVisRange = "{316, 1005}";
+			sepNavIntBoundsRect = "{{0, 0}, {810, 897}}";
+			sepNavSelRange = "{787, 30}";
+			sepNavVisRange = "{315, 1006}";
 		};
 	};
 	15652B8411CE88BB0051E687 /* LocationListViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1097, 3770}}";
-			sepNavSelRange = "{7151, 0}";
-			sepNavVisRange = "{7246, 1114}";
+			sepNavIntBoundsRect = "{{0, 0}, {978, 3965}}";
+			sepNavSelRange = "{9594, 0}";
+			sepNavVisRange = "{8621, 1115}";
 		};
 	};
 	15652BDD11CE8CF20051E687 /* PBXTextBookmark */ = {
@@ -215,7 +215,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 68";
 		rLen = 0;
-		rLoc = 3347;
+		rLoc = 3380;
 		rType = 0;
 		vrLen = 1302;
 		vrLoc = 1539;
@@ -225,7 +225,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 210";
 		rLen = 0;
-		rLoc = 9140;
+		rLoc = 9173;
 		rType = 0;
 		vrLen = 1178;
 		vrLoc = 6458;
@@ -245,7 +245,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 189";
 		rLen = 0;
-		rLoc = 8434;
+		rLoc = 8467;
 		rType = 0;
 		vrLen = 1087;
 		vrLoc = 6549;
@@ -255,7 +255,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 47";
 		rLen = 0;
-		rLoc = 1524;
+		rLoc = 1557;
 		rType = 0;
 		vrLen = 1267;
 		vrLoc = 443;
@@ -266,7 +266,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 188;
+		rLoc = 189;
 		rType = 1;
 	};
 	15652C4E11CE945F0051E687 /* PBXTextBookmark */ = {
@@ -274,7 +274,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 183";
 		rLen = 0;
-		rLoc = 6704;
+		rLoc = 6737;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 6285;
@@ -284,7 +284,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 183";
 		rLen = 0;
-		rLoc = 6704;
+		rLoc = 6737;
 		rType = 0;
 		vrLen = 759;
 		vrLoc = 6285;
@@ -298,9 +298,9 @@
 	};
 	15652C5411CE94C50051E687 /* LocationOverlayView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {810, 1768}}";
-			sepNavSelRange = "{3423, 0}";
-			sepNavVisRange = "{608, 974}";
+			sepNavIntBoundsRect = "{{0, 0}, {810, 1807}}";
+			sepNavSelRange = "{251, 0}";
+			sepNavVisRange = "{0, 850}";
 		};
 	};
 	15652C5811CE95D30051E687 /* PBXTextBookmark */ = {
@@ -308,7 +308,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 183";
 		rLen = 0;
-		rLoc = 6704;
+		rLoc = 6737;
 		rType = 0;
 		vrLen = 759;
 		vrLoc = 6285;
@@ -318,7 +318,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 183";
 		rLen = 0;
-		rLoc = 6704;
+		rLoc = 6737;
 		rType = 0;
 		vrLen = 759;
 		vrLoc = 6285;
@@ -328,7 +328,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 189";
 		rLen = 0;
-		rLoc = 6704;
+		rLoc = 6737;
 		rType = 0;
 		vrLen = 759;
 		vrLoc = 6485;
@@ -412,7 +412,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 250";
 		rLen = 0;
-		rLoc = 9579;
+		rLoc = 9876;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 8305;
@@ -422,7 +422,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 256";
 		rLen = 0;
-		rLoc = 9885;
+		rLoc = 10182;
 		rType = 0;
 		vrLen = 1085;
 		vrLoc = 8828;
@@ -432,7 +432,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 256";
 		rLen = 0;
-		rLoc = 9885;
+		rLoc = 10182;
 		rType = 0;
 		vrLen = 1085;
 		vrLoc = 8828;
@@ -482,7 +482,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 256";
 		rLen = 0;
-		rLoc = 9885;
+		rLoc = 10182;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 8794;
@@ -492,7 +492,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 260";
 		rLen = 0;
-		rLoc = 9504;
+		rLoc = 9801;
 		rType = 0;
 		vrLen = 1022;
 		vrLoc = 8828;
@@ -502,7 +502,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 198";
 		rLen = 0;
-		rLoc = 7245;
+		rLoc = 7278;
 		rType = 0;
 		vrLen = 1832;
 		vrLoc = 5609;
@@ -542,7 +542,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 199";
 		rLen = 19;
-		rLoc = 7249;
+		rLoc = 7282;
 		rType = 0;
 		vrLen = 1481;
 		vrLoc = 6195;
@@ -552,7 +552,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 268";
 		rLen = 0;
-		rLoc = 9460;
+		rLoc = 9757;
 		rType = 0;
 		vrLen = 1132;
 		vrLoc = 9150;
@@ -572,7 +572,7 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 268";
 		rLen = 0;
-		rLoc = 9460;
+		rLoc = 9757;
 		rType = 0;
 		vrLen = 1155;
 		vrLoc = 9150;
@@ -582,10 +582,173 @@
 		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
 		name = "LocationListViewController.m: 193";
 		rLen = 0;
-		rLoc = 7151;
+		rLoc = 7184;
 		rType = 0;
 		vrLen = 1678;
 		vrLoc = 5609;
+	};
+	15652CCD11CEA09E0051E687 /* SingleLocationEditor.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {810, 462}}";
+			sepNavSelRange = "{407, 0}";
+			sepNavVisRange = "{0, 413}";
+		};
+	};
+	15652CCE11CEA09E0051E687 /* SingleLocationEditor.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 845}}";
+			sepNavSelRange = "{1224, 0}";
+			sepNavVisRange = "{530, 1073}";
+		};
+	};
+	15652CD411CEA0F50051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
+		name = "LocationListViewController.m: 189";
+		rLen = 0;
+		rLoc = 6737;
+		rType = 0;
+		vrLen = 730;
+		vrLoc = 6485;
+	};
+	15652CD511CEA0F50051E687 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Redeclaration of 'coord' with no linkage";
+		fRef = 15652C5411CE94C50051E687 /* LocationOverlayView.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 50;
+		rType = 1;
+	};
+	15652CD611CEA0F50051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652C5411CE94C50051E687 /* LocationOverlayView.m */;
+		name = "LocationOverlayView.m: 51";
+		rLen = 0;
+		rLoc = 1269;
+		rType = 0;
+		vrLen = 546;
+		vrLoc = 1033;
+	};
+	15652CDB11CEA1640051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652C5411CE94C50051E687 /* LocationOverlayView.m */;
+		name = "LocationOverlayView.m: 51";
+		rLen = 0;
+		rLoc = 1269;
+		rType = 0;
+		vrLen = 546;
+		vrLoc = 1033;
+	};
+	15652CDD11CEA1650051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
+		name = "LocationListViewController.m: 193";
+		rLen = 0;
+		rLoc = 7184;
+		rType = 0;
+		vrLen = 1114;
+		vrLoc = 7246;
+	};
+	15652CDE11CEA1650051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652C6E11CE980F0051E687 /* LocationObject+Extensions.m */;
+		name = "LocationObject+Extensions.m: 22";
+		rLen = 0;
+		rLoc = 433;
+		rType = 0;
+		vrLen = 441;
+		vrLoc = 0;
+	};
+	15652CDF11CEA1650051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652B8311CE88BB0051E687 /* LocationListViewController.h */;
+		name = "LocationListViewController.h: 28";
+		rLen = 30;
+		rLoc = 787;
+		rType = 0;
+		vrLen = 1006;
+		vrLoc = 315;
+	};
+	15652CE011CEA1650051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652CCD11CEA09E0051E687 /* SingleLocationEditor.h */;
+		name = "SingleLocationEditor.h: 18";
+		rLen = 0;
+		rLoc = 407;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 0;
+	};
+	15652CE111CEA1650051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652CCE11CEA09E0051E687 /* SingleLocationEditor.m */;
+		name = "SingleLocationEditor.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 925;
+		vrLoc = 0;
+	};
+	15652CE211CEA1650051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652CCE11CEA09E0051E687 /* SingleLocationEditor.m */;
+		name = "SingleLocationEditor.m: 14";
+		rLen = 0;
+		rLoc = 280;
+		rType = 0;
+		vrLen = 946;
+		vrLoc = 0;
+	};
+	15652CEF11CEA2640051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652C5411CE94C50051E687 /* LocationOverlayView.m */;
+		name = "LocationOverlayView.m: 11";
+		rLen = 0;
+		rLoc = 251;
+		rType = 0;
+		vrLen = 850;
+		vrLoc = 0;
+	};
+	15652CF011CEA2640051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652B8411CE88BB0051E687 /* LocationListViewController.m */;
+		name = "LocationListViewController.m: 269";
+		rLen = 0;
+		rLoc = 9594;
+		rType = 0;
+		vrLen = 1115;
+		vrLoc = 8621;
+	};
+	15652CF111CEA2640051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652CCE11CEA09E0051E687 /* SingleLocationEditor.m */;
+		name = "SingleLocationEditor.m: 11";
+		rLen = 0;
+		rLoc = 220;
+		rType = 0;
+		vrLen = 946;
+		vrLoc = 0;
+	};
+	15652CF211CEA2640051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652CCE11CEA09E0051E687 /* SingleLocationEditor.m */;
+		name = "SingleLocationEditor.m: 28";
+		rLen = 0;
+		rLoc = 907;
+		rType = 0;
+		vrLen = 921;
+		vrLoc = 51;
+	};
+	15652CF711CEA32B0051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15652CCE11CEA09E0051E687 /* SingleLocationEditor.m */;
+		name = "SingleLocationEditor.m: 38";
+		rLen = 0;
+		rLoc = 1224;
+		rType = 0;
+		vrLen = 1073;
+		vrLoc = 530;
 	};
 	1D3623240D0F684500981E51 /* POC_LocationAppDelegate.h */ = {
 		uiCtxt = {
@@ -874,6 +1037,21 @@
 			15652CCA11CEA0440051E687 /* PBXTextBookmark */ = 15652CCA11CEA0440051E687 /* PBXTextBookmark */;
 			15652CCB11CEA0440051E687 /* PBXTextBookmark */ = 15652CCB11CEA0440051E687 /* PBXTextBookmark */;
 			15652CCC11CEA0440051E687 /* PBXTextBookmark */ = 15652CCC11CEA0440051E687 /* PBXTextBookmark */;
+			15652CD411CEA0F50051E687 /* PBXTextBookmark */ = 15652CD411CEA0F50051E687 /* PBXTextBookmark */;
+			15652CD511CEA0F50051E687 /* XCBuildMessageTextBookmark */ = 15652CD511CEA0F50051E687 /* XCBuildMessageTextBookmark */;
+			15652CD611CEA0F50051E687 /* PBXTextBookmark */ = 15652CD611CEA0F50051E687 /* PBXTextBookmark */;
+			15652CDB11CEA1640051E687 /* PBXTextBookmark */ = 15652CDB11CEA1640051E687 /* PBXTextBookmark */;
+			15652CDD11CEA1650051E687 /* PBXTextBookmark */ = 15652CDD11CEA1650051E687 /* PBXTextBookmark */;
+			15652CDE11CEA1650051E687 /* PBXTextBookmark */ = 15652CDE11CEA1650051E687 /* PBXTextBookmark */;
+			15652CDF11CEA1650051E687 /* PBXTextBookmark */ = 15652CDF11CEA1650051E687 /* PBXTextBookmark */;
+			15652CE011CEA1650051E687 /* PBXTextBookmark */ = 15652CE011CEA1650051E687 /* PBXTextBookmark */;
+			15652CE111CEA1650051E687 /* PBXTextBookmark */ = 15652CE111CEA1650051E687 /* PBXTextBookmark */;
+			15652CE211CEA1650051E687 /* PBXTextBookmark */ = 15652CE211CEA1650051E687 /* PBXTextBookmark */;
+			15652CEF11CEA2640051E687 /* PBXTextBookmark */ = 15652CEF11CEA2640051E687 /* PBXTextBookmark */;
+			15652CF011CEA2640051E687 /* PBXTextBookmark */ = 15652CF011CEA2640051E687 /* PBXTextBookmark */;
+			15652CF111CEA2640051E687 /* PBXTextBookmark */ = 15652CF111CEA2640051E687 /* PBXTextBookmark */;
+			15652CF211CEA2640051E687 /* PBXTextBookmark */ = 15652CF211CEA2640051E687 /* PBXTextBookmark */;
+			15652CF711CEA32B0051E687 /* PBXTextBookmark */ = 15652CF711CEA32B0051E687 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 15652B7211CE878D0051E687 /* Source Control */;
 		userBuildSettings = {

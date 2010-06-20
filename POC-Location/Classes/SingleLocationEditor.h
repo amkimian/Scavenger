@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <MapKit/MapKit.h>
+#import "LocationObject+Extensions.h"
 
 @interface SingleLocationEditor : UIViewController {
-
+	IBOutlet MKMapView* mapView;
+	LocationObject *location;
 }
 
+@property(nonatomic, retain) LocationObject *location;
 @end

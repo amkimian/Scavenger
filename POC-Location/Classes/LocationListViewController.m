@@ -9,6 +9,7 @@
 #import "LocationListViewController.h"
 #import "LocationObject.h"
 #import "LocationPointObject.h"
+#import "SingleLocationEditor.h"
 
 @implementation LocationListViewController
 @synthesize managedObjectContext;
@@ -260,6 +261,12 @@
 		case 0:
 			// Edit
 			// Push new viewController for editing a location
+		{
+			SingleLocationEditor *controller = [[SingleLocationEditor alloc] initWithNibName:nil bundle:nil];
+			controller.location = overlayView.selectedLocation;
+			[self.navigationController pushViewController:controller animated:YES];
+			[controller release];
+		}
 			break;
 		case 1:
 			// Delete
