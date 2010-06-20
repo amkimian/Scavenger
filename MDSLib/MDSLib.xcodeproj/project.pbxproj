@@ -7,11 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15652AC211CE81620051E687 /* UnitsEditCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 15652AC011CE81620051E687 /* UnitsEditCell.h */; };
+		15652AC311CE81620051E687 /* UnitsEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652AC111CE81620051E687 /* UnitsEditCell.m */; };
 		AA747D9F0F9514B9006C5449 /* MDSLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* MDSLib_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		15652AEE11CE82340051E687 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		15652AC011CE81620051E687 /* UnitsEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitsEditCell.h; path = CommonViews/UnitsEditCell.h; sourceTree = "<group>"; };
+		15652AC111CE81620051E687 /* UnitsEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnitsEditCell.m; path = CommonViews/UnitsEditCell.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* MDSLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSLib_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libMDSLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMDSLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,8 +75,18 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				15652ABF11CE81510051E687 /* CommonViews */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		15652ABF11CE81510051E687 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				15652AC011CE81620051E687 /* UnitsEditCell.h */,
+				15652AC111CE81620051E687 /* UnitsEditCell.m */,
+			);
+			name = CommonViews;
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -79,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* MDSLib_Prefix.pch in Headers */,
+				15652AC211CE81620051E687 /* UnitsEditCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +119,7 @@
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
+				15652AEE11CE82340051E687 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -125,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15652AC311CE81620051E687 /* UnitsEditCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

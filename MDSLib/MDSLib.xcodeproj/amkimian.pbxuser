@@ -3,6 +3,9 @@
 	0867D690FE84028FC02AAC07 /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeTarget = D2AAC07D0554694100DB518D /* MDSLib */;
+		addToTargets = (
+			D2AAC07D0554694100DB518D /* MDSLib */,
+		);
 		codeSenseManager = 15652AB511CE809A0051E687 /* Code sense */;
 		perUserDictionary = {
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {

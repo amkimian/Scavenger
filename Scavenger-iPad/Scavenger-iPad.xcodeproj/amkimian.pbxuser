@@ -446,13 +446,25 @@
 		vrLoc = 0;
 	};
 	153E5BDE11CAC7CC00DCDAC0 /* UnitsEditCell.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = UnitsEditCell.h;
+		path = "/Users/amkimian/Development/Scavenger/Scavenger-iPad/Classes/CommonViews/UnitsEditCell.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 679}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 699}}";
 			sepNavSelRange = "{1009, 177}";
 			sepNavVisRange = "{0, 1193}";
 		};
 	};
 	153E5BDF11CAC7CC00DCDAC0 /* UnitsEditCell.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = UnitsEditCell.m;
+		path = "/Users/amkimian/Development/Scavenger/Scavenger-iPad/Classes/CommonViews/UnitsEditCell.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1105, 1352}}";
 			sepNavSelRange = "{1466, 0}";
@@ -812,6 +824,28 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	15652B2411CE83EF0051E687 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
+		name = "GameEditViewController.h: 18";
+		rLen = 0;
+		rLoc = 460;
+		rType = 0;
+		vrLen = 1405;
+		vrLoc = 0;
+	};
+	15652B2511CE83EF0051E687 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */;
+	};
+	15652B2611CE83EF0051E687 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */;
+	};
+	15652B3511CE84470051E687 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */;
+	};
 	1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1411, 679}}";
@@ -835,7 +869,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 155BE53311C92A670019A783 /* Scavenger-iPad */;
-		activeSDKPreference = iphoneos3.2;
+		activeSDKPreference = iphonesimulator3.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Scavenger-iPad */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* Scavenger-iPad */,
@@ -894,6 +928,28 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1104,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
 			PBXPerProjectTemplateStateSaveDate = 298532149;
 			PBXWorkspaceStateSaveDate = 298532149;
 		};
@@ -935,6 +991,10 @@
 			153E5D8211CB360C00DCDAC0 = 153E5D8211CB360C00DCDAC0 /* PBXTextBookmark */;
 			153E5D8311CB360C00DCDAC0 = 153E5D8311CB360C00DCDAC0 /* PBXTextBookmark */;
 			153E5D9711CB3B7200DCDAC0 = 153E5D9711CB3B7200DCDAC0 /* PBXTextBookmark */;
+			15652B2411CE83EF0051E687 /* PBXTextBookmark */ = 15652B2411CE83EF0051E687 /* PBXTextBookmark */;
+			15652B2511CE83EF0051E687 /* PBXBookmark */ = 15652B2511CE83EF0051E687 /* PBXBookmark */;
+			15652B2611CE83EF0051E687 /* PBXBookmark */ = 15652B2611CE83EF0051E687 /* PBXBookmark */;
+			15652B3511CE84470051E687 /* PBXBookmark */ = 15652B3511CE84470051E687 /* PBXBookmark */;
 		};
 		sourceControlManager = 155BE54011C92A870019A783 /* Source Control */;
 		userBuildSettings = {
