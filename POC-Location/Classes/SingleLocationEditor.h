@@ -11,11 +11,23 @@
 #import "LocationObject+Extensions.h"
 #import "SingleLocationView.h"
 
-@interface SingleLocationEditor : UIViewController {
+
+@interface SingleLocationEditor : UIViewController<SingleLocationViewDelegate> {
 	IBOutlet MKMapView* mapView;
+
 	SingleLocationView *overlayView;
 	LocationObject *location;
+	LocationPointObject *selectedPoint;
 }
 
+-(void) selectedLocationPoint: (LocationPointObject *) point;
+-(void) clickedWithNoSelectionAtPoint: (CGPoint) point;
+
+-(void) deleteMode:(id) sender;
+-(void) addMode: (id) sender;
+-(void) moveMode: (id) sender;
+
 @property(nonatomic, retain) LocationObject *location;
+
+
 @end

@@ -47,14 +47,7 @@
 	MKMapView *mapView = (MKMapView *) [self superview];
 	for(LocationObject *o in locations)
 	{
-		CLLocationCoordinate2D coord;
-		LocationPointObject *mainPoint = o.firstPoint;
-		coord.latitude = [mainPoint.latitude floatValue];
-		coord.longitude = [mainPoint.longitude floatValue];
-		MKCoordinateRegion r = MKCoordinateRegionMakeWithDistance(coord, 50.0f, 50.0f);
-		
-		CGRect rect = [mapView convertRegion:r toRectToView:self];
-		if (CGRectContainsPoint(rect, p))
+		if ([o pointInLocation:p inMap:mapView andView:self])
 		{
 			return o;
 		}
@@ -79,34 +72,7 @@
 -(void) drawLocation: (LocationObject *) loc
 {
 	MKMapView *mapView = (MKMapView *) self.superview;
-	
-	// How we draw depends on the number of coordinates
-	int numberOfPoints = [loc countPoints];
-	if (numberOfPoints == 1)
-	{
-		// Draw a 50 meter circle;
-		LocationPointObject *mainPoint = loc.firstPoint;
-		CLLocationCoordinate2D coord;
-		coord.latitude = [mainPoint.latitude floatValue];
-		coord.longitude = [mainPoint.longitude floatValue];
-		
-		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, 50.0f, 50.0f);
-		CGRect dRect = [mapView convertRegion:cr toRectToView:self];
-		dRect.size.height = dRect.size.width;
-		CGContextRef context = UIGraphicsGetCurrentContext();
-		CGColorRef cRef = CGColorCreateCopyWithAlpha([UIColor greenColor].CGColor, 0.5);
-		CGContextSetFillColorWithColor(context, cRef);
-		CGContextFillEllipseInRect(context, dRect);
-	}
-	else if (numberOfPoints == 2)
-	{
-		// Draw a circle, centered on first point, radius to 2nd point
-	}
-	else
-	{
-		// Draw a polygon using the points
-		
-	}
+	[loc drawLocation:mapView andView:self];
 }
 
 - (void)dealloc {

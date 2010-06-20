@@ -12,6 +12,7 @@
 @implementation SingleLocationEditor
 @synthesize location;
 
+
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -22,11 +23,43 @@
 }
 */
 
+-(void) moveMode: (id) sender
+{
+	overlayView.mode = MODE_MOVE;
+	self.title = @"Mode = Move";
+}
+
+-(void) deleteMode: (id) sender
+{
+	overlayView.mode = MODE_DELETE;
+	self.title = @"Mode = Delete";
+}
+
+-(void) addMode: (id) sender
+{
+	overlayView.mode = MODE_ADD;
+	self.title = @"Mode = Add";
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	self.title = location.name;
 	// Zoom map onto location point
+	
+	UIBarButtonItem *moveButton = [[UIBarButtonItem alloc] initWithTitle:@"Move" style:UIBarButtonItemStyleBordered target:self action:@selector(moveMode:)];
+	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStyleBordered target:self action:@selector(addMode:)];
+	UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc] initWithTitle:@"Delete"  style:UIBarButtonItemStyleBordered target:self action:@selector(deleteMode:)];
+	UIBarButtonItem *flexibleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+																					target:nil
+																					action:nil];
+	
+	NSArray *array = [[NSArray alloc] initWithObjects:flexibleButton,moveButton,addButton,deleteButton, nil];	
+	self.toolbarItems = array;
+	[moveButton release];
+	[addButton release];
+	[deleteButton release];
+	[flexibleButton release];
+	
 	LocationPointObject *firstPoint = location.firstPoint;
 	CLLocationCoordinate2D coordinate;
 	coordinate.latitude = [firstPoint.latitude floatValue];
@@ -37,7 +70,9 @@
 	[mapView setRegion:region animated:YES];
     
 	overlayView = [[SingleLocationView alloc] initWithFrame: mapView.frame];
-//	overlayView.delegate = self;
+	overlayView.location = self.location;
+	overlayView.delegate = self;
+	mapView.delegate = overlayView;
 	[mapView addSubview:overlayView];
 	
 	[super viewDidLoad];
@@ -67,6 +102,16 @@
 
 - (void)dealloc {
     [super dealloc];
+}
+
+-(void) selectedLocationPoint: (LocationPointObject *) point
+{
+	selectedPoint = point;
+}
+
+-(void) clickedWithNoSelectionAtPoint: (CGPoint) point
+{
+	
 }
 
 

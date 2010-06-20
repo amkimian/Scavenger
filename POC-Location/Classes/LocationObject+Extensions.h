@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "LocationObject.h"
+#import <MapKit/MapKit.h>
 
 @interface LocationObject(Extensions)
 -(int) countPoints;
+-(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view;
+-(CGMutablePathRef) getPathRef: (MKMapView *) mapView andView: (UIView *) view;
+-(BOOL) pointInLocation: (CGPoint) p inMap: (MKMapView *) mapView andView: (UIView *) view;
 @end
