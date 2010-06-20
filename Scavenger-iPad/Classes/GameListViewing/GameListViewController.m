@@ -167,10 +167,13 @@
 	[self.popOver dismissPopoverAnimated:YES];
 	self.popOver = nil;
 
-	LocationObject *centerLocation = [game addLocationOfType:LTYPE_CENTER];
+	LocationObject *centerLocation = [game addLocationOfType:LTYPE_CENTER at:mapView.centerCoordinate];
+	
+	/*
 	centerLocation.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
 	centerLocation.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];
 	centerLocation.size = [NSNumber numberWithFloat: 50.0f]; // FOR NOW
+	*/
 	
 	[self addGameAnnotation: game];
 }

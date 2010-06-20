@@ -9,6 +9,7 @@
 #import "LocationListView.h"
 #import <MapKit/MapKit.h>
 #import "LocationObject+Extensions.h"
+#import "LocationPointObject.h"
 
 
 @implementation LocationListView
@@ -113,8 +114,8 @@
 		{
 			// Here it is!
 			CLLocationCoordinate2D coord;
-			coord.latitude = [location.latitude floatValue];
-			coord.longitude = [location.longitude floatValue];
+			coord.latitude = [location.firstPoint.latitude floatValue];
+			coord.longitude = [location.firstPoint.longitude floatValue];
 			MKCoordinateRegion region = MKCoordinateRegionMake(coord,  MKCoordinateSpanMake(0.001f, 0.001f));
 			MKMapView *mapView = (MKMapView *) v;
 			[mapView setRegion:region animated:NO];

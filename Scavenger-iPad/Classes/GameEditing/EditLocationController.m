@@ -96,10 +96,8 @@
 		case 0:
 			return 2;
 		case 1:
-			return 3;
-		case 2:
 			return 2;
-		case 3:
+		case 2:
 			return 3;
 	}
 	return 0;
@@ -112,10 +110,8 @@
 		case 0:
 			return @"General";
 		case 1:
-			return @"Location";
-		case 2:
 			return @"Effect";
-		case 3:
+		case 2:
 			return @"Commentary";
 	}
 	return nil;
@@ -184,33 +180,7 @@
 					break;
 			}
 			break;
-		case 1:	// Location
-			switch(indexPath.row)
-			{
-				case 0:
-					cell = [self getStandardCell];
-					cell.textLabel.text = @"Latitude";
-					cell.detailTextLabel.text = [NSString stringWithFormat: @"%.2f degrees", [location.latitude floatValue]];
-					break;
-				case 1:
-					cell = [self getStandardCell];
-					cell.textLabel.text = @"Longitude";
-					cell.detailTextLabel.text = [NSString stringWithFormat: @"%.2f degrees", [location.longitude floatValue]];
-					break;
-				case 2:
-				{
-					UnitsEditCell *unitsCell = [self getUnitsCell];
-					unitsCell.textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
-					[unitsCell setLabelText: @"Size"];
-					[unitsCell setUnitsText: @"meters"];
-					unitsCell.textField.text = [NSString stringWithFormat: @"%.2f", [location.size floatValue]];
-					unitsCell.tag = @"size";
-					cell = unitsCell;
-				}
-					break;
-			}
-			break;
-		case 2: // Effect
+		case 1: // Effect
 			switch(indexPath.row)
 			{
 				case 0:
@@ -237,7 +207,7 @@
 					break;
 			}
 			break;
-		case 3: // Commentary
+		case 2: // Commentary
 			cell = [self getSubtitleCell];
 			cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 			switch(indexPath.row)

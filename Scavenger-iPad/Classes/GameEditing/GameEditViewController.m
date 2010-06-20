@@ -11,6 +11,8 @@
 #import "LocationListView.h"
 #import "MenuPopupController.h"
 #import "RouteListController.h"
+#import "LocationPointObject.h"
+#import "SingleLocationEditor.h"
 
 
 @implementation GameEditViewController
@@ -42,10 +44,7 @@
 {
 	// Create new location
 	
-	LocationObject *loc = [game addLocationOfType:type];
-	loc.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
-	loc.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];
-	loc.size = [NSNumber numberWithFloat: 50.0f]; // FOR NOW	
+	LocationObject *loc = [game addLocationOfType:type at:mapView.centerCoordinate];
 	
 	[self.popOver dismissPopoverAnimated:YES];
 	self.popOver = nil;
@@ -104,10 +103,14 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	// Frame is the whole screen minus the toolbar and nav bar
 	overlayView = [[LocationOverlayView alloc] initWithFrame:mapView.frame];
 	overlayView.game = self.game;
 	overlayView.delegate = self;
 	overlayView.playMode = NO;
+	[overlayView setAutoresizingMask:( UIViewAutoresizingFlexibleWidth |
+                                     UIViewAutoresizingFlexibleHeight )];
+	[mapView setAutoresizesSubviews:YES];
 	[mapView addSubview:overlayView];
 	mapView.delegate = overlayView;
 
@@ -144,8 +147,8 @@
 	if (centerLocation)
 	{
 		CLLocationCoordinate2D coordinate;
-		coordinate.latitude = [centerLocation.latitude floatValue];
-		coordinate.longitude = [centerLocation.longitude floatValue];
+		coordinate.latitude = [centerLocation.firstPoint.latitude floatValue];
+		coordinate.longitude = [centerLocation.firstPoint.longitude floatValue];
 		
 		MKCoordinateRegion region = MKCoordinateRegionMake(coordinate,
 													   MKCoordinateSpanMake(0.01f, 0.01f));
@@ -167,7 +170,7 @@
 	switch(item)
 	{
 		case 0:
-			// Edit
+			// Edit Details
 		{
 			EditLocationController *controller = [[EditLocationController alloc] initWithStyle: UITableViewStyleGrouped];
 			UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
@@ -179,6 +182,15 @@
 		}
 			 break;
 		case 1:
+			// Edit shape
+		{
+			SingleLocationEditor *controller = [[SingleLocationEditor alloc] initWithNibName:nil bundle:nil];
+			controller.location = overlayView.selectedLocation;
+			[self.navigationController pushViewController:controller animated:YES];
+			[controller release];
+		}
+			break;
+		case 2:
 			// Delete
 			[game removeLocationObject:overlayView.selectedLocation];
 			overlayView.selectedLocation = nil;
@@ -205,7 +217,7 @@
 	// A location has been selected, and clicked again. Show a popup menu for actions
 	MenuPopupController *controller = [[MenuPopupController alloc] initWithStyle: UITableViewStylePlain];
 	controller.delegate = self;
-	controller.menuStrings = [NSArray arrayWithObjects:@"Edit",@"Delete",nil];
+	controller.menuStrings = [NSArray arrayWithObjects:@"Edit Details",@"Edit Shape",@"Delete",nil];
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
 	[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	savedRect.origin = p;

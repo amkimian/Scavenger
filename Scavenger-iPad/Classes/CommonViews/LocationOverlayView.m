@@ -11,6 +11,7 @@
 #import "LocationOverlayView.h"
 #import "LocationObject.h"
 #import "PlayerLocationObject.h"
+#import "LocationPointObject.h"
 
 @implementation LocationOverlayView
 @synthesize game;
@@ -79,13 +80,7 @@
 	MKMapView *mapView = (MKMapView *) [self superview];
 	for(LocationObject *o in locations)
 	{
-		CLLocationCoordinate2D coord;
-		coord.latitude = [o.latitude floatValue];
-		coord.longitude = [o.longitude floatValue];
-		MKCoordinateRegion r = MKCoordinateRegionMakeWithDistance(coord, [o.size floatValue], [o.size floatValue]);
-		
-		CGRect rect = [mapView convertRegion:r toRectToView:self];
-		if (CGRectContainsPoint(rect, p))
+		if ([o pointInLocation:p inMap:mapView andView:self])
 		{
 			return o;
 		}
@@ -106,6 +101,8 @@
 	// If we have a current location move it
 	// If not, pass through the touch
 	NSLog(@"Touch moved");	
+	/* WE DO NOT MOVE HERE ANYMORE
+	 
 	UITouch *touch = [touches anyObject];
 	CGPoint p = [touch locationInView: self];
 	MKMapView *mapView = (MKMapView *) [self superview];
@@ -117,6 +114,7 @@
 		self.selectedLocation.longitude = [NSNumber numberWithFloat: coord.longitude];
 		[self setNeedsDisplay];
 	}
+	 */
 }
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -148,25 +146,7 @@
 			return;
 	
 		MKMapView *mapView = (MKMapView *) self.superview;
-		CLLocationCoordinate2D coord;
-		coord.latitude = [loc.latitude floatValue];
-		coord.longitude = [loc.longitude floatValue];
-		
-		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, [loc.size floatValue],[loc.size floatValue]);
-		CGRect dRect = [mapView convertRegion:cr toRectToView:self];
-		dRect.size.height = dRect.size.width;
-		CGContextRef context = UIGraphicsGetCurrentContext();
-		CGColorRef cRef = CGColorCreateCopyWithAlpha(color.CGColor, 0.5);
-		
-		CGContextSetFillColorWithColor(context, cRef);
-		//	CGContextSetRGBFillColor(context, 0, 127,0,0.5);
-		CGContextFillEllipseInRect(context, dRect);
-	CGColorRelease(cRef);
-		if (loc == self.selectedLocation)
-		{
-			CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
-			CGContextStrokeEllipseInRect(context, dRect);
-		}	
+	[loc drawLocation:mapView andView:self];
 }
 
 - (void)dealloc {
@@ -188,11 +168,9 @@ regionDidChangeAnimated:(BOOL)animated
 {
 	self.hidden = NO; // unhide the view
 	// Update the center location
-	LocationObject *centerLocation = [game addLocationOfType:LTYPE_CENTER];
-	centerLocation.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
-	centerLocation.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];
-	centerLocation.size = [NSNumber numberWithFloat: 50.0f]; // FOR NOW
-	
+	//LocationObject *centerLocation = [game addLocationOfType:LTYPE_CENTER at:mapView.centerCoordinate];
+	//centerLocation.firstPoint.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
+	//centerLocation.firstPoint.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];	
 	[self setNeedsDisplay]; // redraw the view
 } // end method mapview:regionDidChangeAnimated:
 

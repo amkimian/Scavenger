@@ -10,9 +10,10 @@
 #import "LocationObject+Extensions.h"
 #import "GameRouteObject.h"
 #import "LocationOrderObject.h"
+#import "LocationPointObject.h"
 
 @implementation GameObject(Extensions)
--(LocationObject *) addLocationOfType: (LocationType) type
+-(LocationObject *) addLocationOfType: (LocationType) type at:(CLLocationCoordinate2D) coord;
 {
 	// Create new LocationObject, setup its type, and add it to the locations set
 	// Some types can only have one type, so if they are already in the locations set, return
@@ -41,6 +42,15 @@
 	{
 		[self addLocationToDefaultRoute:loc];
 	}
+	
+	// Update the location of the first point (adding it in this case)
+	
+	NSEntityDescription *edesc2 = [NSEntityDescription entityForName:@"LocationPoint" inManagedObjectContext:[self managedObjectContext]];
+	LocationPointObject *lPoint = [[LocationPointObject alloc] initWithEntity:edesc2 insertIntoManagedObjectContext:[self managedObjectContext]];
+	lPoint.latitude = [NSNumber numberWithFloat: coord.latitude];
+	lPoint.longitude = [NSNumber numberWithFloat: coord.longitude];
+	loc.firstPoint = lPoint;
+	
 	return loc;
 }
 
@@ -78,8 +88,8 @@
 {
 	LocationObject *centerPoint = [self getLocationOfType: LTYPE_CENTER];
 	CLLocationCoordinate2D ret;
-	ret.latitude = [centerPoint.latitude floatValue];
-	ret.longitude = [centerPoint.longitude floatValue];
+	ret.latitude = [centerPoint.firstPoint.latitude floatValue];
+	ret.longitude = [centerPoint.firstPoint.longitude floatValue];
 	return ret;
 }
 

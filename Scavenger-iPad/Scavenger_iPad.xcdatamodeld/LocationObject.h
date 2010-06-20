@@ -2,7 +2,7 @@
 //  LocationObject.h
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/16/10.
+//  Created by Alan Moore on 6/20/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -12,6 +12,7 @@
 @class GameObject;
 @class GameRunObject;
 @class LocationOrderObject;
+@class LocationPointObject;
 @class QuestionObject;
 
 @interface LocationObject :  NSManagedObject  
@@ -20,10 +21,6 @@
 
 @property (nonatomic, retain) NSNumber * scoreInterval;
 @property (nonatomic, retain) NSString * enterCommentary;
-@property (nonatomic, retain) NSNumber * longitude;
-@property (nonatomic, retain) NSNumber * affects;
-@property (nonatomic, retain) NSNumber * latitude;
-@property (nonatomic, retain) NSNumber * size;
 @property (nonatomic, retain) NSString * exitCommentary;
 @property (nonatomic, retain) NSNumber * visible;
 @property (nonatomic, retain) NSNumber * locationType;
@@ -31,6 +28,7 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet* activeInGame;
 @property (nonatomic, retain) NSSet* visitedInGame;
+@property (nonatomic, retain) LocationPointObject * firstPoint;
 @property (nonatomic, retain) NSSet* orderInLocationRoute;
 @property (nonatomic, retain) QuestionObject * question;
 @property (nonatomic, retain) GameObject * game;

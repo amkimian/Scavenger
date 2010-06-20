@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 #import "LocationObject.h"
 
 typedef enum
@@ -32,6 +33,11 @@ typedef enum
 @interface LocationObject(Extensions)
 -(UIColor *) locationDisplayColor;
 -(NSString *) locationTypeString;
+
+-(int) countPoints;
+-(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view;
+-(CGMutablePathRef) getPathRef: (MKMapView *) mapView andView: (UIView *) view;
+-(BOOL) pointInLocation: (CGPoint) p inMap: (MKMapView *) mapView andView: (UIView *) view;
 
 @end
 
