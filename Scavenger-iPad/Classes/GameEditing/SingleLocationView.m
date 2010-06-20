@@ -65,6 +65,7 @@
 		{
 			self.selectedLocationPoint.latitude = [NSNumber numberWithFloat: coord.latitude];
 			self.selectedLocationPoint.longitude = [NSNumber numberWithFloat: coord.longitude];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"locationDataChanged" object:self];	
 			[self setNeedsDisplay];
 		}
 	}
@@ -118,6 +119,7 @@
 			
 			// And delete this one
 			[[location managedObjectContext] deleteObject:p];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"locationDataChanged" object:self];	
 			[self setNeedsDisplay];
 			return YES;
 		}
@@ -145,6 +147,8 @@
 			lPoint.latitude = [NSNumber numberWithFloat: coord.latitude];
 			lPoint.longitude = [NSNumber numberWithFloat: coord.longitude];
 		
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"locationDataChanged" object:self];	
+
 			[self setNeedsDisplay];
 			return YES;
 		}

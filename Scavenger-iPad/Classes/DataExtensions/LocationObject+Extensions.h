@@ -39,6 +39,7 @@ typedef enum
 -(CGMutablePathRef) getPathRef: (MKMapView *) mapView andView: (UIView *) view;
 -(BOOL) pointInLocation: (CGPoint) p inMap: (MKMapView *) mapView andView: (UIView *) view;
 
+-(void) moveWithRelativeFrom: (CLLocationCoordinate2D) movingCoord to:(CLLocationCoordinate2D) coord;
 @end
 
 

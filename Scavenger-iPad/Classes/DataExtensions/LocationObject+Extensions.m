@@ -115,7 +115,7 @@
 		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, 50.0f, 50.0f);
 		CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 		dRect.size.height = dRect.size.width;
-		CGColorRef cRef = CGColorCreateCopyWithAlpha([UIColor blueColor].CGColor, 0.2);
+		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, 0.2);
 		CGContextSetFillColorWithColor(context, cRef);
 		CGContextFillEllipseInRect(context, dRect);				
 	}
@@ -138,7 +138,7 @@
 		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, radius, radius);
 		CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 		dRect.size.height = dRect.size.width;
-		CGColorRef cRef = CGColorCreateCopyWithAlpha([UIColor blueColor].CGColor, 0.2);
+		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, 0.2);
 		CGContextSetFillColorWithColor(context, cRef);
 		CGContextFillEllipseInRect(context, dRect);		
 		[loc release];
@@ -149,7 +149,7 @@
 	{
 		// Fill a polygon made up of curves from the points
 		CGMutablePathRef path = [self getPathRef:mapView andView:view];
-		CGColorRef cRef = CGColorCreateCopyWithAlpha([UIColor orangeColor].CGColor, 0.2);
+		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, 0.2);
 		CGContextSetFillColorWithColor(context, cRef);
 		CGContextAddPath(context, path);
 		CGContextFillPath(context);
@@ -247,6 +247,19 @@
 		}
 	}
 	return NO;
+}
+
+-(void) moveWithRelativeFrom: (CLLocationCoordinate2D) movingCoord to:(CLLocationCoordinate2D) coord
+{
+	LocationPointObject *point = self.firstPoint;
+	float latDelta = coord.latitude - movingCoord.latitude;
+	float longDelta = coord.longitude - movingCoord.longitude;
+	while(point)
+	{
+		point.latitude = [NSNumber numberWithFloat: [point.latitude floatValue] + latDelta];
+		point.longitude = [NSNumber numberWithFloat: [point.longitude floatValue] + longDelta];
+		point = point.nextPoint;
+	}
 }
 
 @end

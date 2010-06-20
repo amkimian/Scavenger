@@ -31,8 +31,14 @@
 		self.selectedLocation = nil;
 		playMode = NO;
 		releasedAfterSelection = NO;
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationDataChanged:) name:@"locationDataChanged" object:nil];
     }
     return self;
+}
+
+-(void) locationDataChanged: (NSNotification *) notification
+{
+	[self setNeedsDisplay];
 }
 
 /*
@@ -93,6 +99,11 @@
 	// Is the touch in one of the locations? If so, make it the active touch location
 	// if not, pass through the touch
 	NSLog(@"Touch began");
+	UITouch *touch = [touches anyObject];
+	CGPoint p = [touch locationInView: self];
+	MKMapView *mapView = (MKMapView *) [self superview];
+	// Convert to lat and long
+	movingCoord = [mapView convertPoint:p toCoordinateFromView: self];
 	
 }
 
@@ -101,8 +112,6 @@
 	// If we have a current location move it
 	// If not, pass through the touch
 	NSLog(@"Touch moved");	
-	/* WE DO NOT MOVE HERE ANYMORE
-	 
 	UITouch *touch = [touches anyObject];
 	CGPoint p = [touch locationInView: self];
 	MKMapView *mapView = (MKMapView *) [self superview];
@@ -110,11 +119,10 @@
 	CLLocationCoordinate2D coord = [mapView convertPoint:p toCoordinateFromView: self];
 	if (self.selectedLocation)
 	{
-		self.selectedLocation.latitude = [NSNumber numberWithFloat: coord.latitude];
-		self.selectedLocation.longitude = [NSNumber numberWithFloat: coord.longitude];
+		[self.selectedLocation moveWithRelativeFrom: movingCoord to:coord];
+		movingCoord = coord;
 		[self setNeedsDisplay];
 	}
-	 */
 }
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

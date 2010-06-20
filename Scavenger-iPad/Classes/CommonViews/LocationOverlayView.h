@@ -18,6 +18,7 @@
 	GameObject *game;
 	LocationObject *selectedLocation;
 	CLLocationCoordinate2D snapBackCoord;
+	CLLocationCoordinate2D movingCoord;
 	BOOL hidden;
 	BOOL playMode;
 	BOOL releasedAfterSelection;
@@ -31,6 +32,9 @@
 -(NSMutableSet *) getLocations;
 -(void) drawLocation: (LocationObject *) loc withColor: (UIColor *)color;
 -(LocationObject *) findLocationAtPoint: (CGPoint) p;
+
+-(void) locationDataChanged: (NSNotification *) notification;
+
 @end
 
 @protocol LocationOverlayViewDelegate 
