@@ -8,6 +8,7 @@
 
 #import "LocationListViewController.h"
 #import "LocationObject.h"
+#import "LocationPointObject.h"
 
 @implementation LocationListViewController
 @synthesize managedObjectContext;
@@ -16,6 +17,7 @@
 @synthesize locManager;
 @synthesize currentLocation;
 @synthesize locateButton;
+@synthesize overlayView;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -54,6 +56,11 @@
 	self.locManager.delegate = self;
 	self.locManager.desiredAccuracy = kCLLocationAccuracyBest;
 	self.locManager.distanceFilter = 5.0f;
+	
+	overlayView = [[LocationOverlayView alloc] initWithFrame: mapView.frame];
+	overlayView.delegate = self;
+	[mapView addSubview:overlayView];
+	mapView.delegate = overlayView;
 	
 	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
 																			   target:self
@@ -178,6 +185,26 @@
 	[self.popOver dismissPopoverAnimated:YES];
 	self.popOver = nil;
 	// Need to add first point for this
+	
+	NSEntityDescription *edesc2 = [NSEntityDescription entityForName:@"LocationPoint" inManagedObjectContext:managedObjectContext];
+	LocationPointObject *lPoint = [[LocationPointObject alloc] initWithEntity:edesc2 insertIntoManagedObjectContext:managedObjectContext];
+	lPoint.parentLocation = location;
+	lPoint.latitude = [NSNumber numberWithFloat: mapView.region.center.latitude];
+	lPoint.longitude = [NSNumber numberWithFloat: mapView.region.center.longitude];	
+	
+	[self reloadData];
+	// And redraw overlayView
+	[overlayView setNeedsDisplay];
+}
+
+-(void) reloadData
+{
+	NSError *error;
+
+	if (![[self fetchedResultsController] performFetch: &error])
+	{
+		NSLog(@"Could not load data: %@", [error description ]);
+	}
 }
 
 - (NSFetchedResultsController *)fetchedResultsController
@@ -227,7 +254,46 @@
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
 {
 	[self.popOver dismissPopoverAnimated:YES];
-	self.popOver = nil;			
+	self.popOver = nil;		
+	switch(item)
+	{
+		case 0:
+			// Edit
+			// Push new viewController for editing a location
+			break;
+		case 1:
+			// Delete
+			[managedObjectContext deleteObject:overlayView.selectedLocation];
+			overlayView.selectedLocation = nil;
+			[self reloadData];
+			[overlayView setNeedsDisplay];
+			break;
+	}
+}
+
+-(void) locationSelected: (LocationObject *) loc atPoint:(CGPoint) p
+{
+	// Present menu to edit or delete
+	MenuPopupController *controller = [[MenuPopupController alloc] initWithStyle:UITableViewStylePlain];
+	controller.delegate = self;
+	controller.menuStrings = [NSArray arrayWithObjects: @"Edit",@"Delete",nil];
+	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
+	[self.popOver setPopoverContentSize:controller.view.bounds.size];
+	savedRect.origin = p;
+	savedRect.size.height = 10;
+	savedRect.size.width = 10;
+	[self performSelector:@selector(showIt) withObject:nil afterDelay:0.1];
+}
+
+-(void) showIt
+{
+	[self.popOver presentPopoverFromRect:savedRect inView:overlayView permittedArrowDirections:UIPopoverArrowDirectionAny
+								animated:YES];
+}
+
+-(NSFetchedResultsController *) getLocations
+{
+	return self.fetchedResultsController;
 }
 
 @end

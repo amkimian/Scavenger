@@ -10,23 +10,30 @@
 #import "MapTypePopupController.h"
 #import "MenuPopupController.h"
 #import "GetTextPopupController.h"
+#import "LocationOverlayView.h"
 
 @interface LocationListViewController : UIViewController<UINavigationControllerDelegate,MapTypeChangedDelegate, 
 CLLocationManagerDelegate, 
 NSFetchedResultsControllerDelegate, 
 GetTextPopupDelegate,
 MKMapViewDelegate,
-MenuPopupDelegate> {
+MenuPopupDelegate,
+LocationOverlayViewDelegate> {
 	NSManagedObjectContext *managedObjectContext;
 	NSFetchedResultsController *fetchedResultsController;
 	UIPopoverController *popOver;
 	UIBarButtonItem *locateButton;
+	LocationOverlayView *overlayView;
 	
 	IBOutlet MKMapView* mapView;
 	BOOL scanningForLocation;
 	CLLocationManager *locManager;
 	CLLocation *currentLocation;
+	
+	CGRect savedRect;
 }
+
+-(void) reloadData;
 
 // MapTypeChangeDelegate
 -(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender;
@@ -39,6 +46,7 @@ MenuPopupDelegate> {
 
 - (NSFetchedResultsController *)fetchedResultsController;
 
+-(void) showIt;
 
 -(void) insertNewObject;
 -(IBAction) centerOnLocation: (id) sender;
@@ -52,5 +60,7 @@ MenuPopupDelegate> {
 @property (nonatomic, retain) CLLocation *currentLocation;
 
 @property (nonatomic, retain) UIBarButtonItem *locateButton;
+
+@property (nonatomic, retain) LocationOverlayView *overlayView;
 
 @end
