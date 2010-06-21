@@ -9,6 +9,8 @@
 #import "LocationObject+Extensions.h"
 #import "LocationPointObject.h"
 
+#define SINGLE_SIZE 50.0f
+
 @implementation LocationObject(Extensions)
 -(UIColor *) locationDisplayColor
 {
@@ -112,7 +114,7 @@
 		coord.latitude = [mainPoint.latitude floatValue];
 		coord.longitude = [mainPoint.longitude floatValue];
 		
-		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, 50.0f, 50.0f);
+		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, SINGLE_SIZE, SINGLE_SIZE);
 		CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 		dRect.size.height = dRect.size.width;
 		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, 0.2);
@@ -206,7 +208,7 @@
 		CLLocationCoordinate2D coord;
 		coord.latitude = [self.firstPoint.latitude floatValue];
 		coord.longitude = [self.firstPoint.longitude floatValue];
-		MKCoordinateRegion r = MKCoordinateRegionMakeWithDistance(coord, 10.0f, 10.0f);
+		MKCoordinateRegion r = MKCoordinateRegionMakeWithDistance(coord, SINGLE_SIZE, SINGLE_SIZE);
 		
 		CGRect rect = [mapView convertRegion:r toRectToView:view];
 		if (CGRectContainsPoint(rect, p))
