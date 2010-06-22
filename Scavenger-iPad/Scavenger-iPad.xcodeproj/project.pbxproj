@@ -45,6 +45,7 @@
 		15652EAE11CED4350051E687 /* SingleLocationEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652EAA11CED4350051E687 /* SingleLocationEditor.m */; };
 		15652EAF11CED4350051E687 /* SingleLocationEditor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15652EAB11CED4350051E687 /* SingleLocationEditor.xib */; };
 		15652EB011CED4350051E687 /* SingleLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652EAD11CED4350051E687 /* SingleLocationView.m */; };
+		15B00E8211D1067500757CCE /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00E8111D1067500757CCE /* GameManager.m */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -126,6 +127,8 @@
 		15652EAB11CED4350051E687 /* SingleLocationEditor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SingleLocationEditor.xib; path = GameEditing/SingleLocationEditor.xib; sourceTree = "<group>"; };
 		15652EAC11CED4350051E687 /* SingleLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleLocationView.h; path = GameEditing/SingleLocationView.h; sourceTree = "<group>"; };
 		15652EAD11CED4350051E687 /* SingleLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleLocationView.m; path = GameEditing/SingleLocationView.m; sourceTree = "<group>"; };
+		15B00E8011D1067500757CCE /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = GamePlaying/GameManager.h; sourceTree = "<group>"; };
+		15B00E8111D1067500757CCE /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameManager.m; path = GamePlaying/GameManager.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				15B00E7C11D1023A00757CCE /* GamePlaying */,
 				153E59F711CA6FC800DCDAC0 /* CommonViews */,
 				153E59EB11CA6E9600DCDAC0 /* GameEditing */,
 				153E58DB11C9D10C00DCDAC0 /* DataExtensions */,
@@ -242,6 +246,15 @@
 				15652B2111CE83A40051E687 /* libMDSLib.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		15B00E7C11D1023A00757CCE /* GamePlaying */ = {
+			isa = PBXGroup;
+			children = (
+				15B00E8011D1067500757CCE /* GameManager.h */,
+				15B00E8111D1067500757CCE /* GameManager.m */,
+			);
+			name = GamePlaying;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -411,6 +424,7 @@
 				15652E5211CECFC10051E687 /* LocationPointObject.m in Sources */,
 				15652EAE11CED4350051E687 /* SingleLocationEditor.m in Sources */,
 				15652EB011CED4350051E687 /* SingleLocationView.m in Sources */,
+				15B00E8211D1067500757CCE /* GameManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -306,7 +306,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {275, 823}}</string>
+							<string>{{0, 23}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -355,7 +355,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>15B00E6111D0588900757CCE</string>
+										<string>15B00E6C11D1022300757CCE</string>
 										<key>history</key>
 										<array>
 											<string>153E57A711C9354500DCDAC0</string>
@@ -573,7 +573,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298866825.98149002</real>
+	<real>298910243.16555601</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -590,10 +590,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
+		<string>15B00E6D11D1022300757CCE</string>
+		<string>15B00E6E11D1022300757CCE</string>
 		<string>155BE54711C92BF00019A783</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>2 146 1680 882 0 0 1680 1028 </string>
