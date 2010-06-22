@@ -287,25 +287,27 @@
 								<string>15652B1711CE837F0051E687</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>15B00E7C11D1023A00757CCE</string>
+								<string>153E59F711CA6FC800DCDAC0</string>
 								<string>153E59EB11CA6E9600DCDAC0</string>
 								<string>153E58DB11C9D10C00DCDAC0</string>
 								<string>153E580E11C9563700DCDAC0</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>153E577211C934AB00DCDAC0</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>6</integer>
+									<integer>11</integer>
+									<integer>9</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 51}, {275, 823}}</string>
+							<string>{{0, 102}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -342,7 +344,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameManager.m</string>
+								<string>LocationOverlayView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -350,11 +352,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameManager.m</string>
+										<string>LocationOverlayView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>15B00EB711D10CE900757CCE</string>
+										<string>15B00F0611D1430000757CCE</string>
 										<key>history</key>
 										<array>
 											<string>153E57A711C9354500DCDAC0</string>
@@ -388,15 +390,21 @@
 											<string>15652F0111CEDEB80051E687</string>
 											<string>15652F0311CEDEB80051E687</string>
 											<string>15652F0E11CEE1710051E687</string>
-											<string>15B00E4211D0557600757CCE</string>
-											<string>15B00EAF11D10CE900757CCE</string>
-											<string>15B00EB011D10CE900757CCE</string>
-											<string>15B00EB111D10CE900757CCE</string>
-											<string>15B00EB211D10CE900757CCE</string>
 											<string>15B00EB311D10CE900757CCE</string>
-											<string>15B00EB411D10CE900757CCE</string>
 											<string>15B00EB511D10CE900757CCE</string>
-											<string>15B00EB611D10CE900757CCE</string>
+											<string>15B00EC511D13CEB00757CCE</string>
+											<string>15B00EFB11D1430000757CCE</string>
+											<string>15B00EFC11D1430000757CCE</string>
+											<string>15B00EFD11D1430000757CCE</string>
+											<string>15B00EFE11D1430000757CCE</string>
+											<string>15B00EFF11D1430000757CCE</string>
+											<string>15B00F0011D1430000757CCE</string>
+											<string>15B00F0111D1430000757CCE</string>
+											<string>15B00F0211D1430000757CCE</string>
+											<string>15B00F0311D1430000757CCE</string>
+											<string>15B00F0411D1430000757CCE</string>
+											<string>15B00F0511D1430000757CCE</string>
+											<string>15B00E4211D0557600757CCE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -577,7 +585,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298913001.55586499</real>
+	<real>298926848.99211699</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -620,7 +628,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameManager.m</string>
+								<string>LocationOverlayView.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

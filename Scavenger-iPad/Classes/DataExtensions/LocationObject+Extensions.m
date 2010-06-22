@@ -48,6 +48,26 @@
 	}	
 }
 
+-(BOOL) isHazard
+{
+	LocationType lType = [self.locationType intValue];
+	switch(lType)
+	{
+		case LTYPE_HAZARD_SHIELD:
+		case LTYPE_HAZARD_LIFE:
+		case LTYPE_HAZARD_RADAR:
+		case LTYPE_HAZARD_FIND_HAZARD:
+		case LTYPE_HAZARD_FIND_HAZARD_TYPE:
+		case LTYPE_HAZARD_FIND_RALLY:
+		case LTYPE_HAZARD_FIND_RALLY_TYPE:
+		case LTYPE_HAZARD_SCORE:
+		case LTYPE_HAZARD_LOC_PING:
+		case LTYPE_HAZARD_FIX:
+			return YES;
+	}
+	return NO;
+}
+
 -(NSString *) locationTypeString
 {
 	// Color is based on type
@@ -183,7 +203,7 @@
 
 // Called when we have a current graphics context
 
--(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view
+-(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view andAlpha:(float) alpha
 {
 		[self drawDetails: mapView andView: view];
 	CGContextRef context = UIGraphicsGetCurrentContext();
@@ -198,7 +218,7 @@
 		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, SINGLE_SIZE, SINGLE_SIZE);
 		CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 		dRect.size.height = dRect.size.width;
-		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, OVERLAY_ALPHA);
+		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, alpha);
 		CGContextSetFillColorWithColor(context, cRef);
 		CGContextFillEllipseInRect(context, dRect);				
 	}
@@ -221,7 +241,7 @@
 		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, radius, radius);
 		CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 		dRect.size.height = dRect.size.width;
-		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, OVERLAY_ALPHA);
+		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, alpha);
 		CGContextSetFillColorWithColor(context, cRef);
 		CGContextFillEllipseInRect(context, dRect);		
 		[loc release];
@@ -232,7 +252,7 @@
 	{
 		// Fill a polygon made up of curves from the points
 		CGMutablePathRef path = [self getPathRef:mapView andView:view];
-		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, OVERLAY_ALPHA);
+		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, alpha);
 		CGContextSetFillColorWithColor(context, cRef);
 		CGContextAddPath(context, path);
 		CGContextFillPath(context);

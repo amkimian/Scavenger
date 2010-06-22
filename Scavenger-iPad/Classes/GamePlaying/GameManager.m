@@ -38,6 +38,7 @@
 	}
 	
 	
+	// Setup Route?
 	
 }
 
@@ -58,7 +59,8 @@
 
 -(void) activateGame
 {
-	
+	[gameRun updateGameState: SEEKING_LOCATION];
+	// Setup first location from Route?	
 }
  
 

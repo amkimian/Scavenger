@@ -20,6 +20,7 @@
 @synthesize delegate;
 @synthesize playMode;
 
+
 // initialize the view
 
 - (id)initWithFrame:(CGRect)frame {
@@ -155,7 +156,7 @@
 			return;
 	
 		MKMapView *mapView = (MKMapView *) self.superview;
-	[loc drawLocation:mapView andView:self];
+	[loc drawLocation:mapView andView:self andAlpha:0.5];
 }
 
 - (void)dealloc {

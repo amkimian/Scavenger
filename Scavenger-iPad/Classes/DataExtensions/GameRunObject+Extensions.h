@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GameRunObject.h"
+#import "HardwareObject.h"
 
 typedef enum
 {
@@ -23,4 +24,7 @@ typedef enum
 @interface GameRunObject(Extensions)
 -(GameStateEnum) fromGameState;
 -(void) updateGameState: (GameStateEnum) state;
+
+-(HardwareObject *) getHardwareWithName: (NSString *) name;
+
 @end

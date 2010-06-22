@@ -47,6 +47,8 @@
 		15652EB011CED4350051E687 /* SingleLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652EAD11CED4350051E687 /* SingleLocationView.m */; };
 		15B00E8211D1067500757CCE /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00E8111D1067500757CCE /* GameManager.m */; };
 		15B00E8D11D1091F00757CCE /* GameRunObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00E8C11D1091F00757CCE /* GameRunObject+Extensions.m */; };
+		15B00EC111D13C8C00757CCE /* GamePlayOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00EC011D13C8C00757CCE /* GamePlayOverlayView.m */; };
+		15B00ED911D13EDE00757CCE /* HardwareObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00ED811D13EDE00757CCE /* HardwareObject+Extensions.m */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -132,6 +134,10 @@
 		15B00E8111D1067500757CCE /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameManager.m; path = GamePlaying/GameManager.m; sourceTree = "<group>"; };
 		15B00E8B11D1091F00757CCE /* GameRunObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GameRunObject+Extensions.h"; path = "DataExtensions/GameRunObject+Extensions.h"; sourceTree = "<group>"; };
 		15B00E8C11D1091F00757CCE /* GameRunObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GameRunObject+Extensions.m"; path = "DataExtensions/GameRunObject+Extensions.m"; sourceTree = "<group>"; };
+		15B00EBF11D13C8C00757CCE /* GamePlayOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayOverlayView.h; path = CommonViews/GamePlayOverlayView.h; sourceTree = "<group>"; };
+		15B00EC011D13C8C00757CCE /* GamePlayOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePlayOverlayView.m; path = CommonViews/GamePlayOverlayView.m; sourceTree = "<group>"; };
+		15B00ED711D13EDE00757CCE /* HardwareObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HardwareObject+Extensions.h"; sourceTree = "<group>"; };
+		15B00ED811D13EDE00757CCE /* HardwareObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HardwareObject+Extensions.m"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -208,6 +214,8 @@
 				153E58DD11C9D12D00DCDAC0 /* GameObject+Extensions.m */,
 				15B00E8B11D1091F00757CCE /* GameRunObject+Extensions.h */,
 				15B00E8C11D1091F00757CCE /* GameRunObject+Extensions.m */,
+				15B00ED711D13EDE00757CCE /* HardwareObject+Extensions.h */,
+				15B00ED811D13EDE00757CCE /* HardwareObject+Extensions.m */,
 			);
 			name = DataExtensions;
 			sourceTree = "<group>";
@@ -241,6 +249,8 @@
 			children = (
 				153E5A0111CA704600DCDAC0 /* LocationOverlayView.h */,
 				153E5A0211CA704600DCDAC0 /* LocationOverlayView.m */,
+				15B00EBF11D13C8C00757CCE /* GamePlayOverlayView.h */,
+				15B00EC011D13C8C00757CCE /* GamePlayOverlayView.m */,
 			);
 			name = CommonViews;
 			sourceTree = "<group>";
@@ -431,6 +441,8 @@
 				15652EB011CED4350051E687 /* SingleLocationView.m in Sources */,
 				15B00E8211D1067500757CCE /* GameManager.m in Sources */,
 				15B00E8D11D1091F00757CCE /* GameRunObject+Extensions.m in Sources */,
+				15B00EC111D13C8C00757CCE /* GamePlayOverlayView.m in Sources */,
+				15B00ED911D13EDE00757CCE /* HardwareObject+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

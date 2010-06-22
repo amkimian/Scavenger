@@ -35,9 +35,10 @@ typedef enum
 -(UIColor *) locationDisplayColor;
 -(NSString *) locationTypeString;
 -(NSString *) locationShortTypeString;
+-(BOOL) isHazard;
 
 -(int) countPoints;
--(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view;
+-(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view andAlpha:(float) alpha;
 -(CGMutablePathRef) getPathRef: (MKMapView *) mapView andView: (UIView *) view;
 -(BOOL) pointInLocation: (CGPoint) p inMap: (MKMapView *) mapView andView: (UIView *) view;
 

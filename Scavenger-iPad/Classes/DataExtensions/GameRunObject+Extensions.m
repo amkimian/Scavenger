@@ -20,4 +20,17 @@
 	self.state = [NSNumber numberWithInt: (int) state];
 }
 
+-(HardwareObject *) getHardwareWithName: (NSString *) name
+{
+	for(HardwareObject *h in self.hardware)
+	{
+		if ([h.name isEqualToString:name])
+		{
+			return h;
+		}
+	}
+	
+	return nil;	
+}
+
 @end
