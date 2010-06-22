@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "GameObject.h"
 #import "LocationObject+Extensions.h"
+#import "GameRunObject.h"
 
 @interface GameObject(Extensions) <MKAnnotation>
 -(LocationObject *) addLocationOfType: (LocationType) type at:(CLLocationCoordinate2D) coord;
@@ -17,5 +18,8 @@
 
 -(void) removeLocationObject: (LocationObject *) loc;
 -(void) addLocationToDefaultRoute: (LocationObject *) loc;
+
+-(GameRunObject *) createGameRun;
+
 @end
 

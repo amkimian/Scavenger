@@ -10,6 +10,7 @@
 #import "MapTypePopupController.h"
 #import "GameEditViewController.h"
 #import "MenuPopupController.h"
+#import "GamePlayViewController.h"
 #import "GameObject.h"
 
 @implementation GameListViewController
@@ -311,7 +312,12 @@
 {
 	switch(item)
 	{
-		case 0:
+		case 0: // Play
+		{
+			GamePlayViewController *playController = [[GamePlayViewController alloc] initWithNibName: nil bundle:nil];
+			playController.gameRun = [currentGame createGameRun];
+			[[self navigationController] pushViewController:playController animated:YES];
+		}
 			break;
 		case 1:
 		{
@@ -319,8 +325,8 @@
 			editController.game = currentGame;
 			[[self navigationController] pushViewController:editController animated:YES];
 			[editController release];
-			break;
 		}		
+			break;
 		case 2:
 			break;
 		case 3:

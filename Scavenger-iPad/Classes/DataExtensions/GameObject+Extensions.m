@@ -11,6 +11,8 @@
 #import "GameRouteObject.h"
 #import "LocationOrderObject.h"
 #import "LocationPointObject.h"
+#import "HardwareObject+Extensions.h"
+#import "GameRunObject+Extensions.h"
 
 @implementation GameObject(Extensions)
 -(LocationObject *) addLocationOfType: (LocationType) type at:(CLLocationCoordinate2D) coord;
@@ -124,6 +126,30 @@
 	lo.location = loc;
 	lo.position = [NSNumber numberWithInt: [mainRoute.locations count]];
 	[mainRoute addLocationsObject:lo];	
+}
+
+/*
+ * Create a new gameRun for this game (maybe deleting the old one)
+ */
+
+-(GameRunObject *) createGameRun
+{
+	// Wipe out existing gameRun
+	self.gameRun = nil;
+	// Create a new one
+	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"GameRun" inManagedObjectContext:[self managedObjectContext]];
+	GameRunObject *gameRun = [[GameRunObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[self managedObjectContext]];
+	self.gameRun = gameRun;
+	
+	// Now set it all up (including Hardware etc.)
+	
+	gameRun.life = [NSNumber numberWithInt: 1000];
+	[gameRun updateGameState:NOTSTARTED];
+	[gameRun addHardwareWithName:@"Radar" andPowerUsage:10];
+	[gameRun addHardwareWithName:@"Hazard" andPowerUsage:10];
+	[gameRun addHardwareWithName:@"Bonus" andPowerUsage:10];
+	
+	return gameRun;
 }
 
 @end

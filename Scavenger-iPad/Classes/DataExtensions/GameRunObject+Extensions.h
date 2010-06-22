@@ -26,5 +26,5 @@ typedef enum
 -(void) updateGameState: (GameStateEnum) state;
 
 -(HardwareObject *) getHardwareWithName: (NSString *) name;
-
+-(void) addHardwareWithName: (NSString *) name andPowerUsage: (int) powerUsage;
 @end

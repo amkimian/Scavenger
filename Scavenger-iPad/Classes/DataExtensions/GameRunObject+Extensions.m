@@ -33,4 +33,16 @@
 	return nil;	
 }
 
+-(void) addHardwareWithName: (NSString *) name andPowerUsage: (int) powerUsage
+{
+	// Create hardware and add it to this gameRun object
+	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"Hardware" inManagedObjectContext:[self managedObjectContext]];
+	HardwareObject *hardware = [[HardwareObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[self managedObjectContext]];
+	hardware.name = name;
+	hardware.active = [NSNumber numberWithBool: YES];
+	hardware.damage = [NSNumber numberWithInt: 0];
+	hardware.powerUse = [NSNumber numberWithInt: powerUsage];
+	[self addHardwareObject:hardware];	
+}
+
 @end

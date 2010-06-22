@@ -286,11 +286,9 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>15652B1711CE837F0051E687</string>
 								<string>080E96DDFE201D6D7F000001</string>
-								<string>15B00E7C11D1023A00757CCE</string>
-								<string>153E59F711CA6FC800DCDAC0</string>
-								<string>153E59EB11CA6E9600DCDAC0</string>
 								<string>153E58DB11C9D10C00DCDAC0</string>
 								<string>153E580E11C9563700DCDAC0</string>
+								<string>153E57AF11C944BF00DCDAC0</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>153E577211C934AB00DCDAC0</string>
@@ -300,14 +298,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
+									<integer>13</integer>
 									<integer>9</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 102}, {275, 823}}</string>
+							<string>{{0, 112}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -344,7 +342,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LocationOverlayView.m</string>
+								<string>GameObject+Extensions.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -352,11 +350,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>LocationOverlayView.m</string>
+										<string>GameObject+Extensions.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>15B00F0611D1430000757CCE</string>
+										<string>15B00F4011D147A200757CCE</string>
 										<key>history</key>
 										<array>
 											<string>153E57A711C9354500DCDAC0</string>
@@ -367,7 +365,6 @@
 											<string>153E5CEF11CAE26C00DCDAC0</string>
 											<string>153E5D1C11CAE6B400DCDAC0</string>
 											<string>153E5D5711CB333B00DCDAC0</string>
-											<string>153E5D5A11CB333B00DCDAC0</string>
 											<string>153E5D7F11CB360C00DCDAC0</string>
 											<string>153E5D8011CB360C00DCDAC0</string>
 											<string>153E5D8111CB360C00DCDAC0</string>
@@ -380,8 +377,6 @@
 											<string>15652E9C11CED3FF0051E687</string>
 											<string>15652E9D11CED3FF0051E687</string>
 											<string>15652EA011CED3FF0051E687</string>
-											<string>15652EA311CED3FF0051E687</string>
-											<string>15652EA511CED3FF0051E687</string>
 											<string>15652EC111CED4A20051E687</string>
 											<string>15652EEA11CEDD270051E687</string>
 											<string>15652EFD11CEDEB80051E687</string>
@@ -391,20 +386,24 @@
 											<string>15652F0311CEDEB80051E687</string>
 											<string>15652F0E11CEE1710051E687</string>
 											<string>15B00EB311D10CE900757CCE</string>
-											<string>15B00EB511D10CE900757CCE</string>
 											<string>15B00EC511D13CEB00757CCE</string>
 											<string>15B00EFB11D1430000757CCE</string>
-											<string>15B00EFC11D1430000757CCE</string>
 											<string>15B00EFD11D1430000757CCE</string>
-											<string>15B00EFE11D1430000757CCE</string>
-											<string>15B00EFF11D1430000757CCE</string>
-											<string>15B00F0011D1430000757CCE</string>
-											<string>15B00F0111D1430000757CCE</string>
-											<string>15B00F0211D1430000757CCE</string>
 											<string>15B00F0311D1430000757CCE</string>
-											<string>15B00F0411D1430000757CCE</string>
 											<string>15B00F0511D1430000757CCE</string>
-											<string>15B00E4211D0557600757CCE</string>
+											<string>15B00F3311D147A200757CCE</string>
+											<string>15B00F3411D147A200757CCE</string>
+											<string>15B00F3511D147A200757CCE</string>
+											<string>15B00F3611D147A200757CCE</string>
+											<string>15B00F3711D147A200757CCE</string>
+											<string>15B00F3811D147A200757CCE</string>
+											<string>15B00F3911D147A200757CCE</string>
+											<string>15B00F3A11D147A200757CCE</string>
+											<string>15B00F3B11D147A200757CCE</string>
+											<string>15B00F3C11D147A200757CCE</string>
+											<string>15B00F3D11D147A200757CCE</string>
+											<string>15B00F3E11D147A200757CCE</string>
+											<string>15B00F3F11D147A200757CCE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -585,7 +584,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298926848.99211699</real>
+	<real>298928034.88502198</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -604,6 +603,7 @@
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>155BE54711C92BF00019A783</string>
+		<string>15B00F4111D147A200757CCE</string>
 		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -628,7 +628,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LocationOverlayView.m</string>
+								<string>GameRunObject+Extensions.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

@@ -2,7 +2,7 @@
 //  GameObject.m
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/16/10.
+//  Created by Alan Moore on 6/22/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -15,7 +15,7 @@
 @implementation GameObject 
 
 @dynamic name;
-@dynamic games;
+@dynamic gameRun;
 @dynamic gameRoutes;
 @dynamic locations;
 
