@@ -25,6 +25,7 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
 		self.backgroundColor = [UIColor clearColor]; // set the background
+		
 		self.hidden = NO;
 		self.userInteractionEnabled = YES;
 		self.tag = 1001;

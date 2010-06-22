@@ -10,6 +10,7 @@
 #import "LocationPointObject.h"
 
 #define SINGLE_SIZE 50.0f
+#define OVERLAY_ALPHA 0.5f
 
 @implementation LocationObject(Extensions)
 -(UIColor *) locationDisplayColor
@@ -101,10 +102,85 @@
 	return count;
 }
 
+-(NSString *) locationShortTypeString
+{
+	// Color is based on type
+	LocationType lType = [self.locationType intValue];
+	switch(lType)
+	{
+		case LTYPE_START:
+			return @"Start";
+		case LTYPE_END:
+			return @"Finish";
+		case LTYPE_CENTER:
+			return @"Rubbish";
+		case LTYPE_HAZARD_SHIELD:
+			return @"Shield";
+		case LTYPE_HAZARD_LIFE:
+			return @"Life";
+		case LTYPE_HAZARD_RADAR:
+			return @"Radar";
+		case LTYPE_HAZARD_FIND_HAZARD:
+			return @"Find hazards";
+		case LTYPE_HAZARD_FIND_HAZARD_TYPE:
+			return @"Find Hazard Type";
+		case LTYPE_HAZARD_FIND_RALLY:
+			return @"Find Bonus";
+		case LTYPE_HAZARD_FIND_RALLY_TYPE:
+			return @"Find Bonus Type";
+		case LTYPE_HAZARD_SCORE:
+			return @"Score";
+		case LTYPE_HAZARD_LOC_PING:
+			return @"Location Ping";
+		case LTYPE_HAZARD_FIX:
+			return @"Fix";
+		case LTYPE_RALLY_CHARGE:
+			return @"Recharge";
+		case LTYPE_RALLY_SCORE:
+			return @"Score";
+		case LTYPE_RALLY_FIX:
+			return @"Fix";
+		default:
+			return @"";
+	}
+}
+
+
+-(void) drawDetails: (MKMapView *) mapView andView:(UIView *) view
+{
+	// Draw the text at the first location point
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	LocationPointObject *mainPoint = self.firstPoint;
+	CGPoint where;
+	
+	if ([self countPoints] <= 3)
+	{
+		CLLocationCoordinate2D coord;
+		coord.latitude = [mainPoint.latitude floatValue];
+		coord.longitude = [mainPoint.longitude floatValue];
+		where = [mapView convertCoordinate:coord toPointToView:view];
+	}
+	else
+	{
+		CGPathRef path = [self getPathRef: mapView andView: view];
+		CGRect bounds = CGPathGetBoundingBox(path);
+		where.x = bounds.origin.x + bounds.size.width / 2;
+		where.y = bounds.origin.y + bounds.size.height / 2;
+	}
+	
+	CGColorRef cRef = CGColorCreateCopyWithAlpha([UIColor blueColor].CGColor, OVERLAY_ALPHA);
+	CGContextSetFillColorWithColor(context, cRef);
+	
+	NSString *test = [NSString stringWithFormat: @"%@ - %d/%d", [self locationShortTypeString],[self.score intValue], [self.scoreInterval intValue]];
+	[test drawAtPoint:where withFont:[UIFont systemFontOfSize:12]];
+	
+}
+
 // Called when we have a current graphics context
 
 -(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view
 {
+		[self drawDetails: mapView andView: view];
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	int nPoints = [self countPoints];
 	if (nPoints == 1)
@@ -117,7 +193,7 @@
 		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, SINGLE_SIZE, SINGLE_SIZE);
 		CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 		dRect.size.height = dRect.size.width;
-		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, 0.2);
+		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, OVERLAY_ALPHA);
 		CGContextSetFillColorWithColor(context, cRef);
 		CGContextFillEllipseInRect(context, dRect);				
 	}
@@ -140,7 +216,7 @@
 		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, radius, radius);
 		CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 		dRect.size.height = dRect.size.width;
-		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, 0.2);
+		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, OVERLAY_ALPHA);
 		CGContextSetFillColorWithColor(context, cRef);
 		CGContextFillEllipseInRect(context, dRect);		
 		[loc release];
@@ -151,11 +227,12 @@
 	{
 		// Fill a polygon made up of curves from the points
 		CGMutablePathRef path = [self getPathRef:mapView andView:view];
-		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, 0.2);
+		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, OVERLAY_ALPHA);
 		CGContextSetFillColorWithColor(context, cRef);
 		CGContextAddPath(context, path);
 		CGContextFillPath(context);
 	}	
+
 }
 
 -(CGMutablePathRef) getPathRef: (MKMapView *) mapView andView: (UIView *) view

@@ -59,7 +59,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 15652B1711CE837F0051E687 /* MDSLib.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libMDSLib.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = MDSLib;
 		};
 /* End PBXContainerItemProxy section */

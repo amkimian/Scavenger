@@ -33,6 +33,7 @@ typedef enum
 @interface LocationObject(Extensions)
 -(UIColor *) locationDisplayColor;
 -(NSString *) locationTypeString;
+-(NSString *) locationShortTypeString;
 
 -(int) countPoints;
 -(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view;
@@ -40,6 +41,9 @@ typedef enum
 -(BOOL) pointInLocation: (CGPoint) p inMap: (MKMapView *) mapView andView: (UIView *) view;
 
 -(void) moveWithRelativeFrom: (CLLocationCoordinate2D) movingCoord to:(CLLocationCoordinate2D) coord;
+
+-(void) drawDetails: (MKMapView *) mapView andView:(UIView *) view;
+
 @end
 
 
