@@ -165,6 +165,13 @@
 			sepNavVisRange = "{0, 725}";
 		};
 	};
+	153E578011C934BC00DCDAC0 /* GameRunObject.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 693}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1594}";
+		};
+	};
 	153E578811C934BC00DCDAC0 /* GameObject.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1322, 702}}";
@@ -227,7 +234,7 @@
 	};
 	153E594811C9DB2800DCDAC0 /* LocationObject+Extensions.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 673}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 693}}";
 			sepNavSelRange = "{793, 0}";
 			sepNavVisRange = "{0, 1235}";
 		};
@@ -907,6 +914,20 @@
 		vrLen = 1962;
 		vrLoc = 3575;
 	};
+	15B00E8011D1067500757CCE /* GameManager.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 693}}";
+			sepNavSelRange = "{396, 0}";
+			sepNavVisRange = "{0, 496}";
+		};
+	};
+	15B00E8111D1067500757CCE /* GameManager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 693}}";
+			sepNavSelRange = "{587, 0}";
+			sepNavVisRange = "{0, 674}";
+		};
+	};
 	1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1322, 699}}";
@@ -930,7 +951,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 155BE53311C92A670019A783 /* Scavenger-iPad */;
-		activeSDKPreference = iphoneos3.2;
+		activeSDKPreference = iphonesimulator3.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Scavenger-iPad */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* Scavenger-iPad */,

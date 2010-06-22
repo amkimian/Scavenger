@@ -7,13 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "GameRunObject.h"
 /**
  * Playing a game
  */
 
 @interface GameManager : NSObject {
-
+	GameRunObject *gameRun;
+	NSTimer *gameTimer;
 }
+
+-(void) startNewGame;
+-(void) resumeGame;
+-(void) activateGame;
+
+-(void) gameTimer: (NSTimer *) timer;
+
+@property(nonatomic, retain) GameRunObject *gameRun;
 
 @end
