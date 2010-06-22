@@ -7,7 +7,9 @@
 //
 
 #import "GameManager.h"
-
+#import "GameRunObject+Extensions.h"
+#import "GameObject+Extensions.h"
+#import "HardwareObject.h"
 
 @implementation GameManager
 @synthesize gameRun;
@@ -18,6 +20,24 @@
 
 -(void) startNewGame
 {
+	// Reset the gameRun object to correct initial values
+	gameRun.paused = [NSNumber numberWithBool: NO];
+	[gameRun updateGameState:NOTSTARTED];
+	gameRun.life = [NSNumber numberWithInt: 10000];
+	gameRun.power = [NSNumber numberWithInt: 10000];
+	gameRun.playerName = @"Player";
+	gameRun.shield = [NSNumber numberWithInt: 10000];
+	gameRun.score = [NSNumber numberWithInt: 0];
+	
+	// Reset all of the hardware
+	
+	for(HardwareObject *h in gameRun.hardware)
+	{
+		h.damage = [NSNumber numberWithInt: 0];
+		h.active = [NSNumber numberWithBool: YES];
+	}
+	
+	
 	
 }
 
@@ -27,7 +47,9 @@
 
 -(void) resumeGame
 {
-	
+	// Update state
+	[gameRun updateGameState: SEEKING_RESUME];
+	gameRun.seekingLocation = [gameRun.game getLocationOfType:LTYPE_RESUME]; 
 }
 
 /**

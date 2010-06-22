@@ -20,6 +20,7 @@
 	switch(lType)
 	{
 		case LTYPE_START:
+		case LTYPE_RESUME:
 			return [UIColor greenColor];
 			break;
 		case LTYPE_END:
@@ -55,6 +56,8 @@
 	{
 		case LTYPE_START:
 			return @"Start Location";
+		case LTYPE_RESUME:
+			return @"Resume Location";
 		case LTYPE_END:
 			return @"Finish Location";
 		case LTYPE_CENTER:
@@ -110,6 +113,8 @@
 	{
 		case LTYPE_START:
 			return @"Start";
+		case LTYPE_RESUME:
+			return @"Resume";
 		case LTYPE_END:
 			return @"Finish";
 		case LTYPE_CENTER:

@@ -9,6 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "GameRunObject.h"
 
-@interface GameRunObject(Extensions)
+typedef enum
+{
+	NOTSTARTED = 0,
+	PAUSED = 1,
+	SEEKING_RESUME,
+	SEEKING_START,
+	SEEKING_LOCATION,
+	SEEKING_END,
+	FINISHED
+} GameStateEnum;
 
+@interface GameRunObject(Extensions)
+-(GameStateEnum) fromGameState;
+-(void) updateGameState: (GameStateEnum) state;
 @end

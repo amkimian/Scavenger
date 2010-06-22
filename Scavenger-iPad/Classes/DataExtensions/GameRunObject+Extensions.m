@@ -10,5 +10,14 @@
 
 
 @implementation GameRunObject(Extensions)
+-(GameStateEnum) fromGameState
+{
+	return (GameStateEnum) [self.state intValue];
+}
+
+-(void) updateGameState: (GameStateEnum) state
+{
+	self.state = [NSNumber numberWithInt: (int) state];
+}
 
 @end

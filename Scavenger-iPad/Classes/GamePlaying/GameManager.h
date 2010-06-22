@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GameRunObject.h"
+#import "LocationObject+Extensions.h"
 /**
  * Playing a game
  */
