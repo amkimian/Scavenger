@@ -301,14 +301,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
+									<integer>7</integer>
 									<integer>6</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 535}, {275, 823}}</string>
+							<string>{{0, 189}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -345,7 +345,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GamePlayViewController.m</string>
+								<string>GameManager.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -353,11 +353,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GamePlayViewController.m</string>
+										<string>GameManager.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>15362A6811D2442D00F63E59</string>
+										<string>15362A8511D2582E00F63E59</string>
 										<key>history</key>
 										<array>
 											<string>153E57A711C9354500DCDAC0</string>
@@ -384,17 +384,12 @@
 											<string>15652F0011CEDEB80051E687</string>
 											<string>15652F0111CEDEB80051E687</string>
 											<string>15652F0311CEDEB80051E687</string>
-											<string>15652F0E11CEE1710051E687</string>
 											<string>15B00EFD11D1430000757CCE</string>
-											<string>15B00F0311D1430000757CCE</string>
-											<string>15B00F0511D1430000757CCE</string>
 											<string>15B00F3811D147A200757CCE</string>
 											<string>15B00F3911D147A200757CCE</string>
 											<string>15B00F3A11D147A200757CCE</string>
 											<string>15B00F3B11D147A200757CCE</string>
 											<string>15B00F3C11D147A200757CCE</string>
-											<string>15B00F3D11D147A200757CCE</string>
-											<string>15B00F3E11D147A200757CCE</string>
 											<string>15B00F4711D1AF1A00757CCE</string>
 											<string>15B00F4811D1AF1A00757CCE</string>
 											<string>15362A3111D2407400F63E59</string>
@@ -403,10 +398,15 @@
 											<string>15362A3511D2407400F63E59</string>
 											<string>15362A5611D242FC00F63E59</string>
 											<string>15362A6311D2442D00F63E59</string>
-											<string>15362A6411D2442D00F63E59</string>
 											<string>15362A6511D2442D00F63E59</string>
-											<string>15362A6611D2442D00F63E59</string>
-											<string>15362A6711D2442D00F63E59</string>
+											<string>15362A7D11D2582E00F63E59</string>
+											<string>15362A7E11D2582E00F63E59</string>
+											<string>15362A7F11D2582E00F63E59</string>
+											<string>15362A8011D2582E00F63E59</string>
+											<string>15362A8111D2582E00F63E59</string>
+											<string>15362A8211D2582E00F63E59</string>
+											<string>15362A8311D2582E00F63E59</string>
+											<string>15362A8411D2582E00F63E59</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -587,7 +587,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>298992685.33935499</real>
+	<real>298997806.10171902</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -604,12 +604,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>155BE54711C92BF00019A783</string>
 		<string>15362A3A11D2407400F63E59</string>
 		<string>15362A3B11D2407400F63E59</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
-		<string>155BE54711C92BF00019A783</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 146 1680 882 0 0 1680 1028 </string>
@@ -633,7 +633,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GamePlayViewController.m</string>
+								<string>GameManager.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -704,7 +704,7 @@
 			<key>WindowToolGUID</key>
 			<string>155BE54711C92BF00019A783</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

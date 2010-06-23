@@ -216,7 +216,7 @@
 	CGContextStrokePath(context);
 	
 	// Now draw the location
-	[location drawLocation:mapView andView:self];
+	[location drawLocation:mapView andView:self andAlpha:0.5];
 }
 
 - (void)dealloc {

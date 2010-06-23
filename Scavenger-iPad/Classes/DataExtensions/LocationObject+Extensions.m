@@ -19,6 +19,9 @@
 	LocationType lType = [self.locationType intValue];
 	switch(lType)
 	{
+		case LTYPE_PLAYER:
+			return [UIColor yellowColor];
+			break;
 		case LTYPE_START:
 		case LTYPE_RESUME:
 			return [UIColor greenColor];
@@ -74,6 +77,8 @@
 	LocationType lType = [self.locationType intValue];
 	switch(lType)
 	{
+		case LTYPE_PLAYER:
+			return @"Player position";
 		case LTYPE_START:
 			return @"Start Location";
 		case LTYPE_RESUME:
@@ -131,6 +136,8 @@
 	LocationType lType = [self.locationType intValue];
 	switch(lType)
 	{
+		case LTYPE_PLAYER:
+			return @"Player";
 		case LTYPE_START:
 			return @"Start";
 		case LTYPE_RESUME:

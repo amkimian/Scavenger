@@ -19,8 +19,7 @@
 }
 
 -(void) startNewGame;
--(void) resumeGame;
--(void) activateGame;
+-(void) setupGameFromLoad;
 
 -(void) gameTimer: (NSTimer *) timer;
 
