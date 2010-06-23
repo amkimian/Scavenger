@@ -14,21 +14,23 @@
 @implementation GamePlayViewController
 @synthesize gameRun;
 @synthesize overlayView;
+@synthesize manager;
 
-/*
+
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         // Custom initialization
+		manager = [[GameManager alloc] init];
     }
     return self;
 }
-*/
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	manager.gameRun = self.gameRun;
 	// Start off by zooming in on the location of the game
 	LocationObject *centerLocation = [gameRun.game getLocationOfType:LTYPE_CENTER];
 	if (centerLocation)
