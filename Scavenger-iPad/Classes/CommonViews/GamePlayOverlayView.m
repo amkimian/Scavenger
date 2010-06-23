@@ -19,6 +19,7 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
+		self.backgroundColor = [UIColor clearColor]; // set the background
     }
     return self;
 }
@@ -27,6 +28,7 @@
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
+	MKMapView *mapView = (MKMapView *)[self superview];
 	// Draw locations that are available and visible, depending on hardware states and what is allowed
 	// in the current game state
 	
@@ -85,7 +87,7 @@
 -(void) drawRadarOverlay: (CGRect) rect
 {
 	// Draw radar fields
-	
+	MKMapView *mapView = (MKMapView *)[self superview];	
 	CGContextRef c = UIGraphicsGetCurrentContext();
 	
 #define NGOES 20

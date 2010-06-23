@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "GameRunObject+Extensions.h"
+#import "GamePlayOverlayView.h"
 
 @interface GamePlayViewController : UIViewController {
 	GameRunObject *gameRun;
+	GamePlayOverlayView *overlayView;
+	IBOutlet MKMapView *mapView;
 }
 
 @property(nonatomic, retain) GameRunObject *gameRun;
+@property(nonatomic, readonly) GamePlayOverlayView *overlayView;
 @end

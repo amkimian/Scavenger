@@ -17,8 +17,6 @@
 
 @interface GamePlayOverlayView : UIView {
 	GameRunObject *gameRun;
-	// Associated map view for this overlay
-	IBOutlet MKMapView *mapView;
 }
 
 -(void) drawRadarOverlay: (CGRect) rect;

@@ -7,10 +7,13 @@
 //
 
 #import "GamePlayViewController.h"
-
+#import "GameObject+Extensions.h"
+#import "LocationObject+Extensions.h"
+#import "LocationPointObject.h"
 
 @implementation GamePlayViewController
 @synthesize gameRun;
+@synthesize overlayView;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -22,12 +25,28 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	// Start off by zooming in on the location of the game
+	LocationObject *centerLocation = [gameRun.game getLocationOfType:LTYPE_CENTER];
+	if (centerLocation)
+	{
+		CLLocationCoordinate2D coordinate;
+		coordinate.latitude = [centerLocation.firstPoint.latitude floatValue];
+		coordinate.longitude = [centerLocation.firstPoint.longitude floatValue];
+		
+		MKCoordinateRegion region = MKCoordinateRegionMake(coordinate,
+														   MKCoordinateSpanMake(0.01f, 0.01f));
+		[mapView setRegion:region animated:YES];
+	}	
+	overlayView = [[GamePlayOverlayView alloc] initWithFrame:mapView.frame];
+	[overlayView setAutoresizingMask:( UIViewAutoresizingFlexibleWidth |
+									  UIViewAutoresizingFlexibleHeight )];
+	[mapView setAutoresizesSubviews:YES];
+	[mapView addSubview:overlayView];
 }
-*/
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

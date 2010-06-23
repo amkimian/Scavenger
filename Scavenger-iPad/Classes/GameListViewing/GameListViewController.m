@@ -315,7 +315,13 @@
 		case 0: // Play
 		{
 			GamePlayViewController *playController = [[GamePlayViewController alloc] initWithNibName: nil bundle:nil];
-			playController.gameRun = [currentGame createGameRun];
+			[currentGame createGameRun];
+			playController.gameRun = currentGame.gameRun;
+			playController.overlayView.gameRun = currentGame.gameRun;
+			if (playController.gameRun == nil) // otherwise it's a resume. Or maybe if the game has ended we should recreate
+			{
+				playController.gameRun = [currentGame createGameRun];
+			}
 			[[self navigationController] pushViewController:playController animated:YES];
 		}
 			break;
@@ -328,8 +334,13 @@
 		}		
 			break;
 		case 2:
+			// Transmit
 			break;
 		case 3:
+			// Delete
+			[[self managedObjectContext] deleteObject:currentGame];
+			currentGame = nil;
+			[self addAllAnnotations];
 			break;
 	}
 	[self.popOver dismissPopoverAnimated:YES];
