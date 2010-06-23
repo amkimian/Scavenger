@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "GameRunObject+Extensions.h"
-
+#import "GameStatusHUDView.h"
 /**
  * This overlay view draws the radar screen and appropriate locations
  * depending on the game state
@@ -17,9 +17,11 @@
 
 @interface GamePlayOverlayView : UIView {
 	GameRunObject *gameRun;
+	GameStatusHUDView *hudView;
 }
 
 -(void) drawRadarOverlay: (CGRect) rect;
 
 @property(nonatomic, retain) GameRunObject *gameRun;
+@property(nonatomic, retain) GameStatusHUDView *hudView;
 @end

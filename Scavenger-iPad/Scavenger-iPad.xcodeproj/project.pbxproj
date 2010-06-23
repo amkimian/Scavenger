@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		15362AC811D26A5300F63E59 /* GameRunObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362AC711D26A5300F63E59 /* GameRunObject.m */; };
+		15362BE011D2924B00F63E59 /* GameStatusHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362BDF11D2924B00F63E59 /* GameStatusHUDView.m */; };
+		15362C1411D2955100F63E59 /* HardwareStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */; };
+		15362C1711D2955E00F63E59 /* HardwareObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */; };
 		153E577411C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */; };
 		153E578C11C934BC00DCDAC0 /* ActiveLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577911C934BC00DCDAC0 /* ActiveLocationObject.m */; };
 		153E578D11C934BC00DCDAC0 /* PlayerLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577B11C934BC00DCDAC0 /* PlayerLocationObject.m */; };
@@ -47,7 +50,6 @@
 		15B00E8211D1067500757CCE /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00E8111D1067500757CCE /* GameManager.m */; };
 		15B00E8D11D1091F00757CCE /* GameRunObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00E8C11D1091F00757CCE /* GameRunObject+Extensions.m */; };
 		15B00EC111D13C8C00757CCE /* GamePlayOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00EC011D13C8C00757CCE /* GamePlayOverlayView.m */; };
-		15B00ED911D13EDE00757CCE /* HardwareObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00ED811D13EDE00757CCE /* HardwareObject+Extensions.m */; };
 		15B00F0A11D143CD00757CCE /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */; };
 		15B00F0B11D143CD00757CCE /* GamePlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B00F0911D143CD00757CCE /* GamePlayViewController.xib */; };
 		15B00F1F11D145D700757CCE /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00F1E11D145D700757CCE /* GameObject.m */; };
@@ -80,6 +82,12 @@
 /* Begin PBXFileReference section */
 		15362AC611D26A5300F63E59 /* GameRunObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRunObject.h; sourceTree = "<group>"; };
 		15362AC711D26A5300F63E59 /* GameRunObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRunObject.m; sourceTree = "<group>"; };
+		15362BDE11D2924B00F63E59 /* GameStatusHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameStatusHUDView.h; path = CommonViews/GameStatusHUDView.h; sourceTree = "<group>"; };
+		15362BDF11D2924B00F63E59 /* GameStatusHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameStatusHUDView.m; path = CommonViews/GameStatusHUDView.m; sourceTree = "<group>"; };
+		15362C1211D2955100F63E59 /* HardwareStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HardwareStatusView.h; path = CommonViews/HardwareStatusView.h; sourceTree = "<group>"; };
+		15362C1311D2955100F63E59 /* HardwareStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HardwareStatusView.m; path = CommonViews/HardwareStatusView.m; sourceTree = "<group>"; };
+		15362C1511D2955E00F63E59 /* HardwareObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HardwareObject+Extensions.h"; path = "DataExtensions/HardwareObject+Extensions.h"; sourceTree = "<group>"; };
+		15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "HardwareObject+Extensions.m"; path = "DataExtensions/HardwareObject+Extensions.m"; sourceTree = "<group>"; };
 		153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = "Scavenger-iPad.xcdatamodel"; sourceTree = "<group>"; };
 		153E577811C934BC00DCDAC0 /* ActiveLocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveLocationObject.h; sourceTree = "<group>"; };
 		153E577911C934BC00DCDAC0 /* ActiveLocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveLocationObject.m; sourceTree = "<group>"; };
@@ -143,8 +151,6 @@
 		15B00E8C11D1091F00757CCE /* GameRunObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GameRunObject+Extensions.m"; path = "DataExtensions/GameRunObject+Extensions.m"; sourceTree = "<group>"; };
 		15B00EBF11D13C8C00757CCE /* GamePlayOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayOverlayView.h; path = CommonViews/GamePlayOverlayView.h; sourceTree = "<group>"; };
 		15B00EC011D13C8C00757CCE /* GamePlayOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePlayOverlayView.m; path = CommonViews/GamePlayOverlayView.m; sourceTree = "<group>"; };
-		15B00ED711D13EDE00757CCE /* HardwareObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HardwareObject+Extensions.h"; sourceTree = "<group>"; };
-		15B00ED811D13EDE00757CCE /* HardwareObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HardwareObject+Extensions.m"; sourceTree = "<group>"; };
 		15B00F0711D143CD00757CCE /* GamePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayViewController.h; path = GamePlaying/GamePlayViewController.h; sourceTree = "<group>"; };
 		15B00F0811D143CD00757CCE /* GamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePlayViewController.m; path = GamePlaying/GamePlayViewController.m; sourceTree = "<group>"; };
 		15B00F0911D143CD00757CCE /* GamePlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GamePlayViewController.xib; path = GamePlaying/GamePlayViewController.xib; sourceTree = "<group>"; };
@@ -220,14 +226,14 @@
 		153E58DB11C9D10C00DCDAC0 /* DataExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				15362C1511D2955E00F63E59 /* HardwareObject+Extensions.h */,
+				15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */,
 				153E594811C9DB2800DCDAC0 /* LocationObject+Extensions.h */,
 				153E594911C9DB2800DCDAC0 /* LocationObject+Extensions.m */,
 				153E58DC11C9D12D00DCDAC0 /* GameObject+Extensions.h */,
 				153E58DD11C9D12D00DCDAC0 /* GameObject+Extensions.m */,
 				15B00E8B11D1091F00757CCE /* GameRunObject+Extensions.h */,
 				15B00E8C11D1091F00757CCE /* GameRunObject+Extensions.m */,
-				15B00ED711D13EDE00757CCE /* HardwareObject+Extensions.h */,
-				15B00ED811D13EDE00757CCE /* HardwareObject+Extensions.m */,
 			);
 			name = DataExtensions;
 			sourceTree = "<group>";
@@ -259,10 +265,14 @@
 		153E59F711CA6FC800DCDAC0 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				15362C1211D2955100F63E59 /* HardwareStatusView.h */,
+				15362C1311D2955100F63E59 /* HardwareStatusView.m */,
 				153E5A0111CA704600DCDAC0 /* LocationOverlayView.h */,
 				153E5A0211CA704600DCDAC0 /* LocationOverlayView.m */,
 				15B00EBF11D13C8C00757CCE /* GamePlayOverlayView.h */,
 				15B00EC011D13C8C00757CCE /* GamePlayOverlayView.m */,
+				15362BDE11D2924B00F63E59 /* GameStatusHUDView.h */,
+				15362BDF11D2924B00F63E59 /* GameStatusHUDView.m */,
 			);
 			name = CommonViews;
 			sourceTree = "<group>";
@@ -457,10 +467,12 @@
 				15B00E8211D1067500757CCE /* GameManager.m in Sources */,
 				15B00E8D11D1091F00757CCE /* GameRunObject+Extensions.m in Sources */,
 				15B00EC111D13C8C00757CCE /* GamePlayOverlayView.m in Sources */,
-				15B00ED911D13EDE00757CCE /* HardwareObject+Extensions.m in Sources */,
 				15B00F0A11D143CD00757CCE /* GamePlayViewController.m in Sources */,
 				15B00F1F11D145D700757CCE /* GameObject.m in Sources */,
 				15362AC811D26A5300F63E59 /* GameRunObject.m in Sources */,
+				15362BE011D2924B00F63E59 /* GameStatusHUDView.m in Sources */,
+				15362C1411D2955100F63E59 /* HardwareStatusView.m in Sources */,
+				15362C1711D2955E00F63E59 /* HardwareObject+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

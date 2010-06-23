@@ -21,4 +21,28 @@
 	return ret;
 }
 
+-(UIColor *) getStatusColor
+{
+	// The damage is 0 - 100 where 100 is destroyed
+	
+	if ([self.active boolValue] == NO)
+	{
+		return [UIColor grayColor];
+	}
+	int d = [self.damage intValue];
+	if (d < 50)
+	{
+		return [UIColor greenColor];
+	}
+	if (d < 75)
+	{
+		return [UIColor yellowColor];
+	}
+	if (d < 99)
+	{
+		return [UIColor redColor];
+	}
+	return [UIColor blackColor];
+}
+
 @end

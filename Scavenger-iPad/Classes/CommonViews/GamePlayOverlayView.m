@@ -13,17 +13,32 @@
 #import "LocationObject+Extensions.h"
 
 
+
 @implementation GamePlayOverlayView
 @synthesize gameRun;
+@synthesize hudView;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
 		self.backgroundColor = [UIColor clearColor]; // set the background
+		CGRect gameStatusHUDFrame;
+		gameStatusHUDFrame.origin.x = 0;
+		gameStatusHUDFrame.origin.y = 0;
+		gameStatusHUDFrame.size.width = 200;
+		gameStatusHUDFrame.size.height = 100;
+		
+		hudView = [[GameStatusHUDView alloc] initWithFrame:gameStatusHUDFrame];		
+		[self addSubview: hudView];
     }
     return self;
 }
 
+-(void) setGameRun:(GameRunObject *)gR
+{
+	gameRun = [gR retain];
+	hudView.gameRun = gR;
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

@@ -11,5 +11,5 @@
 
 @interface HardwareObject(Extensions)
 -(float) getRadarRange;
-
+-(UIColor *) getStatusColor;
 @end
