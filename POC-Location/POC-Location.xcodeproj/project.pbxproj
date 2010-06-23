@@ -36,14 +36,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 15652BA611CE89A90051E687 /* MDSLib.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libMDSLib.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = MDSLib;
 		};
 		15652BD911CE8CED0051E687 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 15652BA611CE89A90051E687 /* MDSLib.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* MDSLib */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = MDSLib;
 		};
 /* End PBXContainerItemProxy section */

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15362B1F11D26E2800F63E59 /* ExpandableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15362B1D11D26E2800F63E59 /* ExpandableViewController.h */; };
+		15362B2011D26E2800F63E59 /* ExpandableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362B1E11D26E2800F63E59 /* ExpandableViewController.m */; };
 		15652AC211CE81620051E687 /* UnitsEditCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 15652AC011CE81620051E687 /* UnitsEditCell.h */; };
 		15652AC311CE81620051E687 /* UnitsEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652AC111CE81620051E687 /* UnitsEditCell.m */; };
 		15652B5111CE86380051E687 /* GetTextPopupController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15652B4911CE86380051E687 /* GetTextPopupController.h */; };
@@ -34,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15362B1D11D26E2800F63E59 /* ExpandableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandableViewController.h; sourceTree = "<group>"; };
+		15362B1E11D26E2800F63E59 /* ExpandableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandableViewController.m; sourceTree = "<group>"; };
 		15652AC011CE81620051E687 /* UnitsEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitsEditCell.h; path = CommonViews/UnitsEditCell.h; sourceTree = "<group>"; };
 		15652AC111CE81620051E687 /* UnitsEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnitsEditCell.m; path = CommonViews/UnitsEditCell.m; sourceTree = "<group>"; };
 		15652B4911CE86380051E687 /* GetTextPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetTextPopupController.h; path = CommonControllers/GetTextPopupController.h; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				15652B4E11CE86380051E687 /* MapTypePopupController.xib */,
 				15652B4F11CE86380051E687 /* MenuPopupController.h */,
 				15652B5011CE86380051E687 /* MenuPopupController.m */,
+				15362B1D11D26E2800F63E59 /* ExpandableViewController.h */,
+				15362B1E11D26E2800F63E59 /* ExpandableViewController.m */,
 			);
 			name = CommonControllers;
 			sourceTree = "<group>";
@@ -146,6 +152,7 @@
 				15652B5311CE86380051E687 /* MapTypePopupController.h in Headers */,
 				15652B5511CE86380051E687 /* MenuPopupController.h in Headers */,
 				15652B9211CE89630051E687 /* CheckingMapView.h in Headers */,
+				15362B1F11D26E2800F63E59 /* ExpandableViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +205,7 @@
 				15652B5411CE86380051E687 /* MapTypePopupController.m in Sources */,
 				15652B5611CE86380051E687 /* MenuPopupController.m in Sources */,
 				15652B9311CE89630051E687 /* CheckingMapView.m in Sources */,
+				15362B2011D26E2800F63E59 /* ExpandableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

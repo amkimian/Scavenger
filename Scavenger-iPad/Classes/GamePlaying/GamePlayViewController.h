@@ -10,11 +10,13 @@
 #import "GameRunObject+Extensions.h"
 #import "GamePlayOverlayView.h"
 #import "GameManager.h"
+#import "ExpandableViewController.h"
 
 @interface GamePlayViewController : UIViewController {
 	GameRunObject *gameRun;
 	GamePlayOverlayView *overlayView;
 	GameManager *manager;
+	IBOutlet ExpandableViewController *scoreController;
 	IBOutlet MKMapView *mapView;
 }
 

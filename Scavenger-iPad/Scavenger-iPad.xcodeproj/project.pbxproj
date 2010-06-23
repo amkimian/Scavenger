@@ -61,6 +61,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		15362B0C11D26CC800F63E59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15652B1711CE837F0051E687 /* MDSLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* MDSLib */;
+			remoteInfo = MDSLib;
+		};
 		15652B2011CE83A40051E687 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 15652B1711CE837F0051E687 /* MDSLib.xcodeproj */;
@@ -353,6 +360,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				15362B0D11D26CC800F63E59 /* PBXTargetDependency */,
 			);
 			name = "Scavenger-iPad";
 			productName = "Scavenger-iPad";
@@ -457,6 +465,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15362B0D11D26CC800F63E59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MDSLib;
+			targetProxy = 15362B0C11D26CC800F63E59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
