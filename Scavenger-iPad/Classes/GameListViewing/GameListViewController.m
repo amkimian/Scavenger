@@ -190,6 +190,12 @@
 
 -(void) addAllAnnotations
 {
+	NSError *error;
+	
+	if (![[self fetchedResultsController] performFetch: &error])
+	{
+		NSLog(@"Could not load data: %@", [error description ]);
+	}
 	[mapView removeAnnotations:[mapView annotations]];
 	NSArray *games = [self fetchedResultsController].fetchedObjects;
 	for(GameObject *g in games)
