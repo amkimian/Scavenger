@@ -42,7 +42,7 @@ typedef enum
 -(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view andAlpha:(float) alpha;
 -(CGMutablePathRef) getPathRef: (MKMapView *) mapView andView: (UIView *) view;
 -(BOOL) pointInLocation: (CGPoint) p inMap: (MKMapView *) mapView andView: (UIView *) view;
-
+-(BOOL) coordinateInLocation: (CLLocationCoordinate2D) coord inMap: (MKMapView *) mapView andView: (UIView *) view;
 -(void) moveWithRelativeFrom: (CLLocationCoordinate2D) movingCoord to:(CLLocationCoordinate2D) coord;
 
 -(void) drawDetails: (MKMapView *) mapView andView:(UIView *) view;

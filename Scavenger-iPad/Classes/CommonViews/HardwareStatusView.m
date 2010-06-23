@@ -7,6 +7,7 @@
 //
 
 #import "HardwareStatusView.h"
+#import "GameRunObject.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation HardwareStatusView
@@ -23,6 +24,39 @@
     return self;
 }
 
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	// Is the touch in one of the locations? If so, make it the active touch location
+	// if not, pass through the touch
+	NSLog(@"HUD view Touch began");
+	// A touch in the status view means change from active to not active
+	BOOL currentlyActive = [hardware.active boolValue];
+	if (currentlyActive)
+	{
+		hardware.active = [NSNumber numberWithBool: NO];
+	}
+	else
+	{
+		hardware.active = [NSNumber numberWithBool: YES];
+	}
+	if ([hardware.hudCode isEqualToString:@"PWR"])
+	{
+		NSLog(@"Handling Power");
+		for(HardwareObject *h in hardware.inGame.hardware)
+		{
+			h.hasPower = hardware.active;				
+		}	
+		for(UIView *v in self.superview.subviews)
+		{
+			[v setNeedsDisplay];
+		}
+	}
+	[self setNeedsDisplay];
+}
+
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -34,7 +68,7 @@
 	CGContextSetFillColorWithColor(context, [hardware getStatusColor].CGColor);
 	CGContextFillRect(context, mainRect);
 	// Draw the text on top of that
-	NSString *label = hardware.name;
+	NSString *label = hardware.hudCode;
 	CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
 	mainRect.origin.y = mainRect.size.height / 2;
 	[label drawInRect:mainRect withFont:[UIFont systemFontOfSize:10] lineBreakMode:UILineBreakModeMiddleTruncation alignment:UITextAlignmentCenter];
@@ -49,7 +83,7 @@
 	for(int i=0; i< 10; i++)
 	{
 		float alpha = 1.0;
-		if (i*10 < damage)
+		if (i*10 > damage)
 		{
 			alpha = 0.5;
 		}

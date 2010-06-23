@@ -18,10 +18,16 @@
 @interface GamePlayOverlayView : UIView {
 	GameRunObject *gameRun;
 	GameStatusHUDView *hudView;
+	BOOL hasDesiredLocation;
+	
+	// In simulated mode
+	CLLocationCoordinate2D desiredLocation;
 }
 
 -(void) drawRadarOverlay: (CGRect) rect;
 
 @property(nonatomic, retain) GameRunObject *gameRun;
 @property(nonatomic, retain) GameStatusHUDView *hudView;
+@property(nonatomic, readonly) CLLocationCoordinate2D desiredLocation;
+@property(nonatomic, readonly) BOOL hasDesiredLocation;
 @end

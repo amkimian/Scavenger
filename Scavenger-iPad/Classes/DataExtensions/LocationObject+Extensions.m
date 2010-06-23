@@ -307,6 +307,12 @@
 	return path;
 }
 
+-(BOOL) coordinateInLocation: (CLLocationCoordinate2D) coord inMap: (MKMapView *) mapView andView: (UIView *) view
+{
+	CGPoint p = [mapView convertCoordinate:coord toPointToView:view];
+	return [self pointInLocation: p inMap: mapView andView:view];
+}
+
 // Is this point in this location region?
 
 -(BOOL) pointInLocation: (CGPoint) p inMap: (MKMapView *) mapView andView: (UIView *) view

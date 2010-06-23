@@ -9,18 +9,30 @@
 #import <UIKit/UIKit.h>
 #import "GameRunObject+Extensions.h"
 #import "GamePlayOverlayView.h"
-#import "GameManager.h"
 #import "ExpandableViewController.h"
 
-@interface GamePlayViewController : UIViewController {
+@class GameManager;
+
+@interface GamePlayViewController : UIViewController<CLLocationManagerDelegate> {
 	GameRunObject *gameRun;
 	GamePlayOverlayView *overlayView;
 	GameManager *manager;
 	IBOutlet ExpandableViewController *scoreController;
 	IBOutlet MKMapView *mapView;
+	CLLocationManager *locManager;
+	CLLocation *currentLocation;
+	CLLocationCoordinate2D destination;
+	BOOL simulating;
+	BOOL moving;
 }
+
+-(void) simulateMoveTo: (CLLocationCoordinate2D) destination;
+-(void) tick;
 
 @property(nonatomic, retain) GameRunObject *gameRun;
 @property(nonatomic, readonly) GamePlayOverlayView *overlayView;
 @property(nonatomic, retain)  GameManager *manager;
+@property(nonatomic, retain) CLLocationManager *locManager;
+@property(nonatomic, retain) CLLocation *currentLocation;
+@property(nonatomic, retain) MKMapView *mapView;
 @end

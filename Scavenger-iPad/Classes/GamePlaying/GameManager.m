@@ -9,12 +9,19 @@
 #import "GameManager.h"
 #import "GameRunObject+Extensions.h"
 #import "GameObject+Extensions.h"
+#import "LocationObject+Extensions.h"
 #import "HardwareObject.h"
 #import "LocationPointObject.h"
 
 @implementation GameManager
 @synthesize gameRun;
+@synthesize gamePlayController;
 
+-(void) pause
+{
+	[gameTimer invalidate];
+	gameTimer = nil;
+}
 
 /**
  * This is called whenever we reload a game
@@ -63,6 +70,8 @@
 			loc.visible = [NSNumber numberWithBool:NO];
 		}		
 	}
+	
+	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(gameTimer:) userInfo:nil repeats:YES];
 }
 
 /**
@@ -73,7 +82,7 @@
 {
 	// Reset the gameRun object to correct initial values
 	gameRun.paused = [NSNumber numberWithBool: NO];
-	[gameRun updateGameState:NOTSTARTED];
+	[gameRun updateGameState:SEEKING_START];
 	gameRun.life = [NSNumber numberWithInt: 10000];
 	gameRun.power = [NSNumber numberWithInt: 10000];
 	gameRun.playerName = @"Player";
@@ -100,7 +109,51 @@
 
 -(void) gameTimer: (NSTimer *) timer
 {
+	// This is a game tick, what do we do here?
+	NSLog(@"Game tick");
+	int state = [gameRun.state intValue];
+	// Depends on game state
+	switch([gameRun.state intValue])
+	{
+		case NOTSTARTED:
+		case PAUSED:
+		case FINISHED:			
+			// Do nothing
+			break;
+		case SEEKING_LOCATION:
+		case SEEKING_END:
+			// Update game state with any active power, hazards, etc.
+			
+			// And follow through
+		case SEEKING_RESUME:
+		case SEEKING_START:
+			// Are we at the seeking location yet?
+			// If we are, do the next state
+			if ([gameRun.seekingLocation 
+				 coordinateInLocation:self.gamePlayController.currentLocation.coordinate 
+				 inMap:self.gamePlayController.mapView 
+				 andView:self.gamePlayController.overlayView])
+			{
+				NSLog(@"At seeking location");
+				// Call method to handle this behaviour - usually involves state changes
+				// or the determination of the next location, and hiding existing locations				
+			}
+			break;
+	}
 	
+	// Check for entry or exit from hazards
+	
+	// Handle power drainage and hazard actions
+	
+	// Check for simulation
+	
+	if (gamePlayController.overlayView.hasDesiredLocation)
+	{
+		[gamePlayController simulateMoveTo: gamePlayController.overlayView.desiredLocation];		
+	}
+	
+	[gamePlayController tick];
 }
+
 
 @end

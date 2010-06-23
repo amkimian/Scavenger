@@ -10,11 +10,15 @@
 #import "GameObject+Extensions.h"
 #import "LocationObject+Extensions.h"
 #import "LocationPointObject.h"
+#import "GameManager.h"
 
 @implementation GamePlayViewController
 @synthesize gameRun;
 @synthesize overlayView;
 @synthesize manager;
+@synthesize locManager;
+@synthesize currentLocation;
+@synthesize mapView;
 
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -22,6 +26,9 @@
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         // Custom initialization
 		manager = [[GameManager alloc] init];
+		manager.gamePlayController = self;
+		moving = NO;
+		simulating = NO;
     }
     return self;
 }
@@ -51,6 +58,12 @@
 	[manager setupGameFromLoad];
 	overlayView.gameRun = self.gameRun;
 	[overlayView setNeedsDisplay];
+	
+	self.locManager = [[CLLocationManager alloc] init];
+	self.locManager.delegate = self;
+	self.locManager.desiredAccuracy = kCLLocationAccuracyBest;
+	self.locManager.distanceFilter = 5.0f;
+	[self.locManager startUpdatingLocation];
 }
 
 
@@ -72,11 +85,76 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	NSLog(@"View unloading");
+	[self.manager pause];
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+	NSLog(@"Pausing manager/game");
+	[self.manager pause];	
+}
 
 - (void)dealloc {
     [super dealloc];
+}
+
+/**
+ * Location Manager delegation
+ */
+
+-(void) locationManager:(CLLocationManager *)manager didFailWithError: (NSError *) error
+{
+}
+
+-(void) locationManager:(CLLocationManager *)manager didUpdateToLocation: (CLLocation *) newLocation fromLocation: (CLLocation *) oldLocation
+{
+	NSLog(@"New location");
+	self.currentLocation = newLocation;
+	MKCoordinateRegion region = MKCoordinateRegionMake(newLocation.coordinate,
+													   MKCoordinateSpanMake(0.005f, 0.005f));
+	[mapView setRegion:region animated:YES];
+	[overlayView setNeedsDisplay];
+}
+
+-(void) simulateMoveTo: (CLLocationCoordinate2D) dest
+{
+	destination = dest;
+	moving = YES;
+	if (simulating == NO)
+	{
+		simulating = YES;
+		[self.locManager stopUpdatingLocation];
+	}	
+}
+
+-(void) tick
+{
+	if (simulating && moving)
+	{
+		float latDelta = self.currentLocation.coordinate.latitude - destination.latitude;
+		float longDelta = self.currentLocation.coordinate.longitude - destination.longitude;
+		
+		CLLocationCoordinate2D coord = self.currentLocation.coordinate;
+		if (latDelta < 0.001)
+		{
+			coord.latitude = destination.latitude;
+		}
+		else
+		{
+			coord.latitude -= latDelta / 10;
+		}
+		if (longDelta < 0.001)
+		{
+			coord.longitude = destination.longitude;
+		}
+		else
+		{
+			coord.longitude -= longDelta / 10;
+		}	
+		CLLocation *loc = [[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
+		[self locationManager:nil didUpdateToLocation:loc fromLocation:nil];
+		}	
 }
 
 

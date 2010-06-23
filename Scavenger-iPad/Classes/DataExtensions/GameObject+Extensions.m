@@ -145,10 +145,12 @@
 	
 	gameRun.life = [NSNumber numberWithInt: 1000];
 	[gameRun updateGameState:NOTSTARTED];
-	[gameRun addHardwareWithName:@"Radar" andPowerUsage:10];
-	[gameRun addHardwareWithName:@"Hazard" andPowerUsage:10];
-	[gameRun addHardwareWithName:@"Bonus" andPowerUsage:10];
-	
+	[gameRun addHardwareWithName:@"Radar" andPowerUsage:10 andHudCode:@"RDR"];
+	[gameRun addHardwareWithName:@"Hazard" andPowerUsage:10 andHudCode:@"HZD"];
+	[gameRun addHardwareWithName:@"Bonus" andPowerUsage:10 andHudCode:@"WPR"];
+	[gameRun addHardwareWithName:@"Shield" andPowerUsage:10 andHudCode:@"SHD"];
+	[gameRun addHardwareWithName:@"Power" andPowerUsage:0 andHudCode:@"PWR"];
+	[gameRun addHardwareWithName:@"Ping" andPowerUsage:50 andHudCode:@"PNG"];
 	return gameRun;
 }
 

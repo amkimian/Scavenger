@@ -17,6 +17,8 @@
 @implementation GamePlayOverlayView
 @synthesize gameRun;
 @synthesize hudView;
+@synthesize desiredLocation;
+@synthesize hasDesiredLocation;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -25,8 +27,9 @@
 		CGRect gameStatusHUDFrame;
 		gameStatusHUDFrame.origin.x = 0;
 		gameStatusHUDFrame.origin.y = 0;
-		gameStatusHUDFrame.size.width = 200;
+		gameStatusHUDFrame.size.width = 300;
 		gameStatusHUDFrame.size.height = 100;
+		hasDesiredLocation = NO;
 		
 		hudView = [[GameStatusHUDView alloc] initWithFrame:gameStatusHUDFrame];		
 		[self addSubview: hudView];
@@ -34,6 +37,15 @@
     return self;
 }
 
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	NSLog(@"Touch in game play overlay view");
+	// Need to pass this to the gameManager as a simulated move
+	MKMapView *mapView = (MKMapView *)[self superview];
+	UITouch *touch = [touches anyObject];
+	desiredLocation = [mapView convertPoint:[touch locationInView:self] toCoordinateFromView:self];
+	hasDesiredLocation = YES;
+}
 -(void) setGameRun:(GameRunObject *)gR
 {
 	gameRun = [gR retain];
@@ -102,6 +114,16 @@
 		// If the game has started, draw the radar overlay
 		[self drawRadarOverlay:rect];
 	}
+	// Also draw center
+
+	CLLocationCoordinate2D coord = mapView.centerCoordinate;
+	CGPoint p = [mapView convertCoordinate:coord toPointToView:self];
+	CGRect r;
+	r.origin.x = p.x - 10;
+	r.origin.y = p.y - 10;
+	r.size.width = 20;
+	r.size.height = 20;
+	CGContextFillRect(UIGraphicsGetCurrentContext(), r);
 }
 
 - (void)dealloc {

@@ -2,7 +2,7 @@
 //  HardwareObject.h
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/16/10.
+//  Created by Alan Moore on 6/23/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -14,9 +14,11 @@
 {
 }
 
-@property (nonatomic, retain) NSNumber * powerUse;
 @property (nonatomic, retain) NSNumber * damage;
 @property (nonatomic, retain) NSNumber * active;
+@property (nonatomic, retain) NSNumber * hasPower;
+@property (nonatomic, retain) NSString * hudCode;
+@property (nonatomic, retain) NSNumber * powerUse;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) GameRunObject * inGame;
 

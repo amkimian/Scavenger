@@ -29,6 +29,10 @@
 	{
 		return [UIColor grayColor];
 	}
+	if ([self.hasPower boolValue] == NO)
+	{
+		return [UIColor darkGrayColor];
+	}
 	int d = [self.damage intValue];
 	if (d < 50)
 	{

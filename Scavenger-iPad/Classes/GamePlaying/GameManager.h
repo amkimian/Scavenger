@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GameRunObject.h"
 #import "LocationObject+Extensions.h"
+#import "GamePlayViewController.h"
 /**
  * Playing a game
  */
@@ -16,13 +17,16 @@
 @interface GameManager : NSObject {
 	GameRunObject *gameRun;
 	NSTimer *gameTimer;
+	GamePlayViewController *gamePlayController;
 }
 
 -(void) startNewGame;
 -(void) setupGameFromLoad;
+-(void) pause;
 
 -(void) gameTimer: (NSTimer *) timer;
 
 @property(nonatomic, retain) GameRunObject *gameRun;
+@property(nonatomic, retain) GamePlayViewController *gamePlayController;
 
 @end
