@@ -28,6 +28,7 @@
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
+	NSLog(@"Hello");
 	MKMapView *mapView = (MKMapView *)[self superview];
 	// Draw locations that are available and visible, depending on hardware states and what is allowed
 	// in the current game state
@@ -64,6 +65,7 @@
 	{
 		if ([l.visible boolValue] == YES)
 		{
+			NSLog(@"Loc visible");
 			float realAlphaValue = 0.7;
 			if ([l isHazard])
 			{
@@ -75,9 +77,16 @@
 			}
 			[l drawLocation:mapView andView:self andAlpha:realAlphaValue];			
 		}
+		else
+		{
+			NSLog(@"Loc not visible");
+		}
 	}
-	// If the game has started, draw the radar overlay
-	[self drawRadarOverlay:rect];
+	if ([gameRun isRunning])
+	{
+		// If the game has started, draw the radar overlay
+		[self drawRadarOverlay:rect];
+	}
 }
 
 - (void)dealloc {

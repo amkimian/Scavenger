@@ -33,6 +33,20 @@
 	return nil;	
 }
 
+-(BOOL) isRunning
+{
+	switch([self.state intValue])
+	{
+		case NOTSTARTED:
+		case PAUSED:
+		case SEEKING_RESUME:
+		case SEEKING_START:
+		case FINISHED:
+			return NO;
+	}
+	return YES;
+}
+
 -(void) addHardwareWithName: (NSString *) name andPowerUsage: (int) powerUsage
 {
 	// Create hardware and add it to this gameRun object

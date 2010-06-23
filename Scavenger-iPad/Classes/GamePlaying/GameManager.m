@@ -30,6 +30,7 @@
 	LocationObject *playerLocation = [gameRun.game getLocationOfType:LTYPE_PLAYER];
 	if ( playerLocation != nil)
 	{
+		NSLog(@"Setting up to resume from pause");
 		CLLocationCoordinate2D coord;
 		coord.latitude = [playerLocation.firstPoint.latitude floatValue];
 		coord.longitude = [playerLocation.firstPoint.longitude floatValue];
@@ -45,8 +46,22 @@
 	}
 	else
 	{		
+		NSLog(@"Setting up to start new game");
 		// OK, no player location. We need to start the game
 		[self startNewGame];
+	}
+	
+	// Now setup initial visibility
+	for(LocationObject *loc in gameRun.game.locations)
+	{
+		if (loc == gameRun.seekingLocation)
+		{
+			loc.visible = [NSNumber numberWithBool:YES];
+		}
+		else
+		{
+			loc.visible = [NSNumber numberWithBool:NO];
+		}		
 	}
 }
 
@@ -73,6 +88,7 @@
 		h.active = [NSNumber numberWithBool: YES];
 	}
 	
+	gameRun.seekingLocation = [gameRun.game getLocationOfType:LTYPE_START];
 	
 	// Setup Route?
 	

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15362AC811D26A5300F63E59 /* GameRunObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362AC711D26A5300F63E59 /* GameRunObject.m */; };
 		153E577411C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */; };
 		153E578C11C934BC00DCDAC0 /* ActiveLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577911C934BC00DCDAC0 /* ActiveLocationObject.m */; };
 		153E578D11C934BC00DCDAC0 /* PlayerLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577B11C934BC00DCDAC0 /* PlayerLocationObject.m */; };
 		153E578E11C934BC00DCDAC0 /* QuestionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577D11C934BC00DCDAC0 /* QuestionObject.m */; };
 		153E578F11C934BC00DCDAC0 /* AnswerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577F11C934BC00DCDAC0 /* AnswerObject.m */; };
-		153E579011C934BC00DCDAC0 /* GameRunObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578111C934BC00DCDAC0 /* GameRunObject.m */; };
 		153E579111C934BC00DCDAC0 /* LocationOrderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578311C934BC00DCDAC0 /* LocationOrderObject.m */; };
 		153E579511C934BC00DCDAC0 /* HardwareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578B11C934BC00DCDAC0 /* HardwareObject.m */; };
 		153E57B311C944FE00DCDAC0 /* GameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */; };
@@ -71,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15362AC611D26A5300F63E59 /* GameRunObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRunObject.h; sourceTree = "<group>"; };
+		15362AC711D26A5300F63E59 /* GameRunObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRunObject.m; sourceTree = "<group>"; };
 		153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = "Scavenger-iPad.xcdatamodel"; sourceTree = "<group>"; };
 		153E577811C934BC00DCDAC0 /* ActiveLocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveLocationObject.h; sourceTree = "<group>"; };
 		153E577911C934BC00DCDAC0 /* ActiveLocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveLocationObject.m; sourceTree = "<group>"; };
@@ -80,8 +82,6 @@
 		153E577D11C934BC00DCDAC0 /* QuestionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionObject.m; sourceTree = "<group>"; };
 		153E577E11C934BC00DCDAC0 /* AnswerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerObject.h; sourceTree = "<group>"; };
 		153E577F11C934BC00DCDAC0 /* AnswerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerObject.m; sourceTree = "<group>"; };
-		153E578011C934BC00DCDAC0 /* GameRunObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRunObject.h; sourceTree = "<group>"; };
-		153E578111C934BC00DCDAC0 /* GameRunObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRunObject.m; sourceTree = "<group>"; };
 		153E578211C934BC00DCDAC0 /* LocationOrderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationOrderObject.h; sourceTree = "<group>"; };
 		153E578311C934BC00DCDAC0 /* LocationOrderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationOrderObject.m; sourceTree = "<group>"; };
 		153E578A11C934BC00DCDAC0 /* HardwareObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardwareObject.h; sourceTree = "<group>"; };
@@ -429,7 +429,6 @@
 				153E578D11C934BC00DCDAC0 /* PlayerLocationObject.m in Sources */,
 				153E578E11C934BC00DCDAC0 /* QuestionObject.m in Sources */,
 				153E578F11C934BC00DCDAC0 /* AnswerObject.m in Sources */,
-				153E579011C934BC00DCDAC0 /* GameRunObject.m in Sources */,
 				153E579111C934BC00DCDAC0 /* LocationOrderObject.m in Sources */,
 				153E579511C934BC00DCDAC0 /* HardwareObject.m in Sources */,
 				153E57B311C944FE00DCDAC0 /* GameListViewController.m in Sources */,
@@ -453,6 +452,7 @@
 				15B00ED911D13EDE00757CCE /* HardwareObject+Extensions.m in Sources */,
 				15B00F0A11D143CD00757CCE /* GamePlayViewController.m in Sources */,
 				15B00F1F11D145D700757CCE /* GameObject.m in Sources */,
+				15362AC811D26A5300F63E59 /* GameRunObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +556,8 @@
 		153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				15362AC611D26A5300F63E59 /* GameRunObject.h */,
+				15362AC711D26A5300F63E59 /* GameRunObject.m */,
 				15B00F1D11D145D700757CCE /* GameObject.h */,
 				15B00F1E11D145D700757CCE /* GameObject.m */,
 				15652E4D11CECFC10051E687 /* LocationObject.h */,
@@ -572,8 +574,6 @@
 				153E577D11C934BC00DCDAC0 /* QuestionObject.m */,
 				153E577E11C934BC00DCDAC0 /* AnswerObject.h */,
 				153E577F11C934BC00DCDAC0 /* AnswerObject.m */,
-				153E578011C934BC00DCDAC0 /* GameRunObject.h */,
-				153E578111C934BC00DCDAC0 /* GameRunObject.m */,
 				153E578211C934BC00DCDAC0 /* LocationOrderObject.h */,
 				153E578311C934BC00DCDAC0 /* LocationOrderObject.m */,
 				153E578A11C934BC00DCDAC0 /* HardwareObject.h */,

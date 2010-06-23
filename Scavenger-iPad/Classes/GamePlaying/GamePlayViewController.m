@@ -48,6 +48,9 @@
 									  UIViewAutoresizingFlexibleHeight )];
 	[mapView setAutoresizesSubviews:YES];
 	[mapView addSubview:overlayView];
+	[manager setupGameFromLoad];
+	overlayView.gameRun = self.gameRun;
+	[overlayView setNeedsDisplay];
 }
 
 
