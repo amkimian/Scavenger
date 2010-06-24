@@ -43,6 +43,15 @@
 	if (type == LTYPE_RALLY_CHARGE || type == LTYPE_RALLY_FIX || type == LTYPE_RALLY_SCORE)
 	{
 		[self addLocationToDefaultRoute:loc];
+		// And add some default points
+		loc.maxLevel = [NSNumber numberWithFloat:1000.0];
+		loc.level = [NSNumber numberWithFloat:100.0];
+	}
+	else
+	{
+		// Different defaults
+		loc.maxLevel = [NSNumber numberWithFloat:100.0];
+		loc.level = [NSNumber numberWithFloat:10.0];		
 	}
 	
 	// Update the location of the first point (adding it in this case)
@@ -63,6 +72,10 @@
 	// If this is a LTYPE_RALLY_SCORE, remove it from the Default GameRouteObject
 	// ??? Hmm - will this automatically disappear?
 }
+
+/**
+  * Returns first location of this type
+  */
 
 -(LocationObject *) getLocationOfType: (LocationType) type
 {
