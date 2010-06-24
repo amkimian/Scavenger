@@ -137,6 +137,8 @@
 	[mainRoute addLocationsObject:lo];	
 }
 
+
+
 /*
  * Create a new gameRun for this game (maybe deleting the old one)
  */
@@ -157,7 +159,7 @@
 	[gameRun addHardwareWithName:@"Hazard" active:YES andPowerUsage:10.0 andMaxLevel:100.0 andHudCode:@"HZD"];
 	[gameRun addHardwareWithName:@"Bonus" active:YES andPowerUsage:10.0 andMaxLevel: 100.0 andHudCode:@"WPR"];
 	[gameRun addHardwareWithName:@"Shield" active:YES andPowerUsage:10.0 andMaxLevel: 100.0 andHudCode:@"SHD"];
-	[gameRun addHardwareWithName:@"Power" active:YES andPowerUsage:0.0 andMaxLevel: 100000.0 andHudCode:@"PWR"];
+	[gameRun addHardwareWithName:@"Power" active:YES andPowerUsage:0.0 andMaxLevel: 10000.0 andHudCode:@"PWR"];
 	[gameRun addHardwareWithName:@"Ping" active:NO andPowerUsage:50.0 andMaxLevel: 100.0 andHudCode:@"PNG"];
 	[gameRun addHardwareWithName:@"Fix" active:NO andPowerUsage:50.0 andMaxLevel: 100.0 andHudCode:@"FIX"];
 	

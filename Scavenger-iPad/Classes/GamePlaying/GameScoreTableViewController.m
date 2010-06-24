@@ -126,7 +126,7 @@
 			break;
 		case 2:
 			cell.textLabel.text = @"Total";
-			cell.detailTextLabel.text = @"?????";
+			cell.detailTextLabel.text = [NSString stringWithFormat: @"%@",[gameRun currentScore]];
 			break;
 	}
     // Configure the cell...

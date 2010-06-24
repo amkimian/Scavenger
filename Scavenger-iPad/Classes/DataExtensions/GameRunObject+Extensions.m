@@ -67,6 +67,19 @@
 	[self addHardwareObject:hardware];	
 }
 
+-(float) currentScore
+{
+	float score = [self.score floatValue];
+	score += [self.bonus floatValue];
+	
+	for(HardwareObject *ho in self.hardware)
+	{
+		score += [ho.powerUse floatValue];
+	}
+	return score;
+	
+}
+
 -(LocationObject *) findNextRallyPoint
 {
 	// If we have a routeObject, use that by traversing down the route for the first non-visited object
