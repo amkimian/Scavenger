@@ -26,6 +26,8 @@
 
 -(void) gameTimer: (NSTimer *) timer;
 
+-(void) processAtSoughtLocation;
+
 @property(nonatomic, retain) GameRunObject *gameRun;
 @property(nonatomic, retain) GamePlayViewController *gamePlayController;
 

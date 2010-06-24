@@ -15,10 +15,17 @@
 
 -(float) getRadarRange
 {
-	float ret = 480.0;
-	ret /= 100;
-	ret *= [self.damage intValue];
-	return ret;
+	if ([self.active boolValue] && [self.hasPower boolValue])
+	{
+		float ret = 480.0;
+		ret /= 100;
+		ret *= 100 - [self.damage intValue];
+		return ret;
+	}
+	else
+	{
+		return 15.0f;
+	}
 }
 
 -(UIColor *) getStatusColor

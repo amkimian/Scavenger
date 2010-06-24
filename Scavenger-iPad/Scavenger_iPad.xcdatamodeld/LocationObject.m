@@ -2,7 +2,7 @@
 //  LocationObject.m
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/20/10.
+//  Created by Alan Moore on 6/23/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 

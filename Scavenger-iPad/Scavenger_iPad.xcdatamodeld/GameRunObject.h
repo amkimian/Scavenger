@@ -26,7 +26,7 @@
 @property (nonatomic, retain) NSString * playerName;
 @property (nonatomic, retain) NSNumber * shield;
 @property (nonatomic, retain) NSNumber * score;
-@property (nonatomic, retain) LocationObject * visitedLocation;
+@property (nonatomic, retain) NSSet* visitedLocation;
 @property (nonatomic, retain) NSSet* activeLocations;
 @property (nonatomic, retain) GameRouteObject * gameRoute;
 @property (nonatomic, retain) GameObject * game;
@@ -38,6 +38,11 @@
 
 
 @interface GameRunObject (CoreDataGeneratedAccessors)
+- (void)addVisitedLocationObject:(LocationObject *)value;
+- (void)removeVisitedLocationObject:(LocationObject *)value;
+- (void)addVisitedLocation:(NSSet *)value;
+- (void)removeVisitedLocation:(NSSet *)value;
+
 - (void)addActiveLocationsObject:(ActiveLocationObject *)value;
 - (void)removeActiveLocationsObject:(ActiveLocationObject *)value;
 - (void)addActiveLocations:(NSSet *)value;

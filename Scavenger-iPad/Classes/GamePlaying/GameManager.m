@@ -97,12 +97,54 @@
 		h.active = [NSNumber numberWithBool: YES];
 	}
 	
+	for(LocationObject *l in gameRun.game.locations)
+	{
+		l.visitedInGame = nil;
+	}
+	
+	gameRun.visitedLocation = nil;
 	gameRun.seekingLocation = [gameRun.game getLocationOfType:LTYPE_START];
 	
 	// Setup Route?
 	
 }
  
+-(void) processAtSoughtLocation
+{
+	// We are at the location we are currently seeking.
+	// Do what is necessary for the next steps
+	
+	if ([gameRun.state intValue] == SEEKING_START)
+	{
+		// Turn on all hazards
+		for(LocationObject *l in gameRun.game.locations)
+		{
+			if ([l isHazard])
+			{
+				l.visible = [NSNumber numberWithBool: YES];
+			}
+		}		
+	}
+	
+	gameRun.seekingLocation.visible = [NSNumber numberWithBool: NO];
+	[gameRun addVisitedLocationObject: gameRun.seekingLocation];
+	// This call uses visitedLocation to ensure no dupes
+	gameRun.seekingLocation = [gameRun findNextRallyPoint];
+	if (gameRun.seekingLocation == nil)
+	{
+		[gameRun updateGameState:SEEKING_END];
+		gameRun.seekingLocation = [gameRun.game getLocationOfType:LTYPE_END];
+	}
+	else
+	{
+		[gameRun updateGameState:SEEKING_LOCATION];
+	}	
+	// Make the seekingLocation visible
+	gameRun.seekingLocation.visible = [NSNumber numberWithBool: YES];
+	// Refresh overlayView
+	[self.gamePlayController.overlayView setNeedsDisplay];
+}
+
 /**
  * Do one tick of the game
  */
@@ -111,7 +153,6 @@
 {
 	// This is a game tick, what do we do here?
 	NSLog(@"Game tick");
-	int state = [gameRun.state intValue];
 	// Depends on game state
 	switch([gameRun.state intValue])
 	{
@@ -136,15 +177,47 @@
 			{
 				NSLog(@"At seeking location");
 				// Call method to handle this behaviour - usually involves state changes
-				// or the determination of the next location, and hiding existing locations				
+				// or the determination of the next location, and hiding existing locations	
+				[self processAtSoughtLocation];
 			}
 			break;
 	}
 	
 	// Check for entry or exit from hazards
 	
+	for(LocationObject *l in gameRun.game.locations)
+	{
+		if ([l.visible boolValue])
+		{
+			if ([l isHazard])
+			{
+				if ([l coordinateInLocation:self.gamePlayController.currentLocation.coordinate
+					inMap:self.gamePlayController.mapView
+					andView:self.gamePlayController.overlayView])
+				{
+					[gameRun ensureLocationIsActive: l];
+				}
+				else
+				{
+					[gameRun ensureLocationIsInactive: l];
+				}
+			}			
+		}		
+	}
+		
 	// Handle power drainage and hazard actions
 	
+	// Power drainage
+	// For all active Hardware, take off their power drain value from the power Hardware type
+	
+	// Hazard actions
+	// For all hazards in ActiveLocations
+	// apply the drain to the target depending on the hazard type (affects shield first, then
+	// if shield is out of action, affects actual target by increasing damage
+	// If damage is 100, it's broke.
+	
+	// Then handle the FIX hardware type, if it is active, transfer power from power to damaged items
+		
 	// Check for simulation
 	
 	if (gamePlayController.overlayView.hasDesiredLocation)

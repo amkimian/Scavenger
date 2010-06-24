@@ -29,4 +29,10 @@ typedef enum
 
 -(HardwareObject *) getHardwareWithName: (NSString *) name;
 -(void) addHardwareWithName: (NSString *) name andPowerUsage: (int) powerUsage andHudCode: (NSString *) hud;
+
+-(LocationObject *) findNextRallyPoint;
+
+-(BOOL) ensureLocationIsActive: (LocationObject *) loc;
+-(BOOL) ensureLocationIsInactive: (LocationObject *) loc;
+
 @end

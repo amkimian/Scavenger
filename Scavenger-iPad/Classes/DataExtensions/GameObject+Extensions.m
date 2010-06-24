@@ -67,9 +67,6 @@
 -(LocationObject *) getLocationOfType: (LocationType) type
 {
 	NSMutableSet *locations = [self mutableSetValueForKey: @"locations"];
-	int iType = (int) type;
-	if (iType <= (int) LTYPE_CENTER)
-	{
 		for(LocationObject *loc in [locations allObjects])
 		{
 			if ([loc.locationType intValue] == (int) type)
@@ -77,7 +74,6 @@
 				return loc;
 			}
 		}
-	}
 	return nil;
 }
 
