@@ -2,7 +2,7 @@
 //  LocationObject.m
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/23/10.
+//  Created by Alan Moore on 6/24/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -16,9 +16,7 @@
 
 @implementation LocationObject 
 
-@dynamic enterCommentary;
 @dynamic maxLevel;
-@dynamic exitCommentary;
 @dynamic level;
 @dynamic visible;
 @dynamic locationType;

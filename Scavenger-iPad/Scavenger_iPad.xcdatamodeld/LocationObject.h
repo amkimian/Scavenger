@@ -2,7 +2,7 @@
 //  LocationObject.h
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/23/10.
+//  Created by Alan Moore on 6/24/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -18,9 +18,7 @@
 {
 }
 
-@property (nonatomic, retain) NSString * enterCommentary;
 @property (nonatomic, retain) NSNumber * maxLevel;
-@property (nonatomic, retain) NSString * exitCommentary;
 @property (nonatomic, retain) NSNumber * level;
 @property (nonatomic, retain) NSNumber * visible;
 @property (nonatomic, retain) NSNumber * locationType;

@@ -15,7 +15,6 @@
 		15362E9611D2DD6F00F63E59 /* HardwareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8711D2DD6F00F63E59 /* HardwareObject.m */; };
 		15362E9711D2DD6F00F63E59 /* LocationOrderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */; };
 		15362E9811D2DD6F00F63E59 /* LocationPointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8B11D2DD6F00F63E59 /* LocationPointObject.m */; };
-		15362E9911D2DD6F00F63E59 /* LocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8D11D2DD6F00F63E59 /* LocationObject.m */; };
 		15362E9A11D2DD6F00F63E59 /* GameRouteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */; };
 		15362E9C11D2DD6F00F63E59 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E9311D2DD6F00F63E59 /* GameObject.m */; };
 		15362F8911D2FB9200F63E59 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362F8811D2FB9200F63E59 /* ScoreView.m */; };
@@ -151,6 +150,10 @@
 		1536315D11D3137D00F63E59 /* 129-golf.png in Resources */ = {isa = PBXBuildFile; fileRef = 153630DB11D3137D00F63E59 /* 129-golf.png */; };
 		1536315E11D3137D00F63E59 /* 130-dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 153630DC11D3137D00F63E59 /* 130-dice.png */; };
 		153631AA11D3A21B00F63E59 /* GameRunObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153631A911D3A21B00F63E59 /* GameRunObject.m */; };
+		153631DF11D402C200F63E59 /* GameObject+Export.m in Sources */ = {isa = PBXBuildFile; fileRef = 153631DE11D402C200F63E59 /* GameObject+Export.m */; };
+		153631E711D4048300F63E59 /* LocationObject+Export.m in Sources */ = {isa = PBXBuildFile; fileRef = 153631E611D4048300F63E59 /* LocationObject+Export.m */; };
+		153631F011D4052400F63E59 /* LocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153631EF11D4052400F63E59 /* LocationObject.m */; };
+		153631F611D4061100F63E59 /* LocationPointObject+Export.m in Sources */ = {isa = PBXBuildFile; fileRef = 153631F511D4061100F63E59 /* LocationPointObject+Export.m */; };
 		153E577411C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */; };
 		153E57B311C944FE00DCDAC0 /* GameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */; };
 		153E57B411C944FE00DCDAC0 /* GameListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E57B211C944FE00DCDAC0 /* GameListViewController.xib */; };
@@ -226,8 +229,6 @@
 		15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationOrderObject.m; sourceTree = "<group>"; };
 		15362E8A11D2DD6F00F63E59 /* LocationPointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPointObject.h; sourceTree = "<group>"; };
 		15362E8B11D2DD6F00F63E59 /* LocationPointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPointObject.m; sourceTree = "<group>"; };
-		15362E8C11D2DD6F00F63E59 /* LocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationObject.h; sourceTree = "<group>"; };
-		15362E8D11D2DD6F00F63E59 /* LocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationObject.m; sourceTree = "<group>"; };
 		15362E8E11D2DD6F00F63E59 /* GameRouteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRouteObject.h; sourceTree = "<group>"; };
 		15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRouteObject.m; sourceTree = "<group>"; };
 		15362E9211D2DD6F00F63E59 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
@@ -368,6 +369,14 @@
 		153630DC11D3137D00F63E59 /* 130-dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "130-dice.png"; path = "Resources/Icons/130-dice.png"; sourceTree = "<group>"; };
 		153631A811D3A21B00F63E59 /* GameRunObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRunObject.h; sourceTree = "<group>"; };
 		153631A911D3A21B00F63E59 /* GameRunObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRunObject.m; sourceTree = "<group>"; };
+		153631DD11D402C200F63E59 /* GameObject+Export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GameObject+Export.h"; path = "DataExtensions/GameObject+Export.h"; sourceTree = "<group>"; };
+		153631DE11D402C200F63E59 /* GameObject+Export.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GameObject+Export.m"; path = "DataExtensions/GameObject+Export.m"; sourceTree = "<group>"; };
+		153631E511D4048300F63E59 /* LocationObject+Export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LocationObject+Export.h"; path = "DataExtensions/LocationObject+Export.h"; sourceTree = "<group>"; };
+		153631E611D4048300F63E59 /* LocationObject+Export.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LocationObject+Export.m"; path = "DataExtensions/LocationObject+Export.m"; sourceTree = "<group>"; };
+		153631EE11D4052400F63E59 /* LocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationObject.h; sourceTree = "<group>"; };
+		153631EF11D4052400F63E59 /* LocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationObject.m; sourceTree = "<group>"; };
+		153631F411D4061100F63E59 /* LocationPointObject+Export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LocationPointObject+Export.h"; path = "DataExtensions/LocationPointObject+Export.h"; sourceTree = "<group>"; };
+		153631F511D4061100F63E59 /* LocationPointObject+Export.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LocationPointObject+Export.m"; path = "DataExtensions/LocationPointObject+Export.m"; sourceTree = "<group>"; };
 		153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = "Scavenger-iPad.xcdatamodel"; sourceTree = "<group>"; };
 		153E57B011C944FE00DCDAC0 /* GameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameListViewController.h; path = GameListViewing/GameListViewController.h; sourceTree = "<group>"; };
 		153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameListViewController.m; path = GameListViewing/GameListViewController.m; sourceTree = "<group>"; };
@@ -631,6 +640,12 @@
 				153E58DD11C9D12D00DCDAC0 /* GameObject+Extensions.m */,
 				15B00E8B11D1091F00757CCE /* GameRunObject+Extensions.h */,
 				15B00E8C11D1091F00757CCE /* GameRunObject+Extensions.m */,
+				153631DD11D402C200F63E59 /* GameObject+Export.h */,
+				153631DE11D402C200F63E59 /* GameObject+Export.m */,
+				153631E511D4048300F63E59 /* LocationObject+Export.h */,
+				153631E611D4048300F63E59 /* LocationObject+Export.m */,
+				153631F411D4061100F63E59 /* LocationPointObject+Export.h */,
+				153631F511D4061100F63E59 /* LocationPointObject+Export.m */,
 			);
 			name = DataExtensions;
 			sourceTree = "<group>";
@@ -999,12 +1014,15 @@
 				15362E9611D2DD6F00F63E59 /* HardwareObject.m in Sources */,
 				15362E9711D2DD6F00F63E59 /* LocationOrderObject.m in Sources */,
 				15362E9811D2DD6F00F63E59 /* LocationPointObject.m in Sources */,
-				15362E9911D2DD6F00F63E59 /* LocationObject.m in Sources */,
 				15362E9A11D2DD6F00F63E59 /* GameRouteObject.m in Sources */,
 				15362E9C11D2DD6F00F63E59 /* GameObject.m in Sources */,
 				15362F8911D2FB9200F63E59 /* ScoreView.m in Sources */,
 				1536303711D30CD100F63E59 /* GameScoreTableViewController.m in Sources */,
 				153631AA11D3A21B00F63E59 /* GameRunObject.m in Sources */,
+				153631DF11D402C200F63E59 /* GameObject+Export.m in Sources */,
+				153631E711D4048300F63E59 /* LocationObject+Export.m in Sources */,
+				153631F011D4052400F63E59 /* LocationObject.m in Sources */,
+				153631F611D4061100F63E59 /* LocationPointObject+Export.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1116,6 +1134,8 @@
 		153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				153631EE11D4052400F63E59 /* LocationObject.h */,
+				153631EF11D4052400F63E59 /* LocationObject.m */,
 				153631A811D3A21B00F63E59 /* GameRunObject.h */,
 				153631A911D3A21B00F63E59 /* GameRunObject.m */,
 				15362E8211D2DD6F00F63E59 /* ActiveLocationObject.h */,
@@ -1128,8 +1148,6 @@
 				15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */,
 				15362E8A11D2DD6F00F63E59 /* LocationPointObject.h */,
 				15362E8B11D2DD6F00F63E59 /* LocationPointObject.m */,
-				15362E8C11D2DD6F00F63E59 /* LocationObject.h */,
-				15362E8D11D2DD6F00F63E59 /* LocationObject.m */,
 				15362E8E11D2DD6F00F63E59 /* GameRouteObject.h */,
 				15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */,
 				15362E9211D2DD6F00F63E59 /* GameObject.h */,
