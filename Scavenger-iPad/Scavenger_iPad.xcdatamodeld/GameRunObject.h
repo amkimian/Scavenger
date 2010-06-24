@@ -2,7 +2,7 @@
 //  GameRunObject.h
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/23/10.
+//  Created by Alan Moore on 6/24/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -21,14 +21,16 @@
 
 @property (nonatomic, retain) NSNumber * paused;
 @property (nonatomic, retain) NSNumber * state;
+@property (nonatomic, retain) NSNumber * bonus;
 @property (nonatomic, retain) NSString * playerName;
+@property (nonatomic, retain) NSNumber * score;
 @property (nonatomic, retain) NSSet* visitedLocation;
 @property (nonatomic, retain) NSSet* activeLocations;
 @property (nonatomic, retain) GameRouteObject * gameRoute;
 @property (nonatomic, retain) GameObject * game;
 @property (nonatomic, retain) PlayerLocationObject * playerLocation;
-@property (nonatomic, retain) NSSet* hardware;
 @property (nonatomic, retain) LocationObject * seekingLocation;
+@property (nonatomic, retain) NSSet* hardware;
 
 @end
 

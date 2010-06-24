@@ -125,11 +125,10 @@
 	else if ([gameRun.state intValue] == SEEKING_LOCATION)
 	{
 		// Add on points total
-		LocationObject *startLocation = [gameRun.game getLocationOfType:LTYPE_START];
-		float value = [startLocation.level floatValue];
+		float value = [gameRun.score floatValue];
 		float changeValue = [gameRun.seekingLocation.level floatValue];
 		value+=changeValue;
-		startLocation.level = [NSNumber numberWithFloat: value];		
+		gameRun.score = [NSNumber numberWithFloat: value];		
 	}
 	else
 	{
@@ -290,8 +289,7 @@
 	}
 	
 	// Make sure the gameScore is correct
-	LocationObject *loc = [gameRun.game getLocationOfType: LTYPE_START];
-	float scoreValue = [loc.level floatValue];
+	float scoreValue = [gameRun.score floatValue];
 	if (gamePlayController.overlayView.scoreView.scoreValue != scoreValue)
 	{
 		gamePlayController.overlayView.scoreView.scoreValue = scoreValue;
@@ -299,17 +297,16 @@
 	}
 	
 	// Update endGameBonus and update
-		LocationObject *endLoc = [gameRun.game getLocationOfType: LTYPE_END];
-		scoreValue = [endLoc.maxLevel floatValue];
+		scoreValue = [gameRun.bonus floatValue];
 		if ([gameRun isRunning])
 		{
-			float deltaValue = [endLoc.level floatValue];
+			float deltaValue = 10;
 			scoreValue -= deltaValue;
 			if (scoreValue < 0)
 			{
 				scoreValue = 0.0;
 			}
-			endLoc.maxLevel = [NSNumber numberWithFloat: scoreValue];
+			gameRun.bonus = [NSNumber numberWithFloat: scoreValue];
 		}
 	gamePlayController.overlayView.scoreView.bonusValue = scoreValue;
 	[gamePlayController.overlayView.scoreView setNeedsDisplay];	

@@ -150,6 +150,12 @@
 	
 	// Also setup the route
 	gameRun.gameRoute = [self.gameRoutes anyObject];
+	
+	// Setup the initial score and bonus from the start and end location types
+	LocationObject *startObject = [self getLocationOfType:LTYPE_START];
+	gameRun.score = startObject.maxLevel;
+	LocationObject *endObject = [self getLocationOfType:LTYPE_END];
+	gameRun.bonus = endObject.maxLevel;
 	return gameRun;
 }
 

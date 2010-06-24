@@ -68,7 +68,7 @@
 		case 0:
 			return 2;
 		case 1:
-			return 10;
+			return 5;
 		case 2:
 			return 3;
 	}
@@ -119,33 +119,18 @@
 			switch(indexPath.row)
 			{
 				case 0:
-					cell.textLabel.text = @"Shield";
-					break;
-				case 1:
-					cell.textLabel.text = @"Life";
-					break;
-				case 2:
 					cell.textLabel.text = @"Radar";
 					break;
-				case 3:
+				case 1:
 					cell.textLabel.text = @"Find Hazard";
 					break;
-				case 4:
-					cell.textLabel.text = @"Find Hazard Type";
-					break;
-				case 5:
+				case 2:
 					cell.textLabel.text = @"Find Rally";
 					break;
-				case 6:
-					cell.textLabel.text = @"Find Rally Type";
-					break;
-				case 7:
-					cell.textLabel.text = @"Score";
-					break;
-				case 8:
+				case 3:
 					cell.textLabel.text = @"Location Ping";
 					break;
-				case 9:
+				case 4:
 					cell.textLabel.text = @"Fix";
 					break;
 			}
@@ -241,33 +226,18 @@
 			switch(indexPath.row)
 			{
 				case 0:
-					whichLocType = LTYPE_HAZARD_SHIELD;
-					break;
-				case 1:
-					whichLocType = LTYPE_HAZARD_LIFE;
-					break;
-				case 2:
 					whichLocType = LTYPE_HAZARD_RADAR;
 					break;
-				case 3:
+				case 1:
 					whichLocType = LTYPE_HAZARD_FIND_HAZARD;
 					break;
-				case 4:
-					whichLocType = LTYPE_HAZARD_FIND_HAZARD_TYPE;
-					break;
-				case 5:
+				case 2:
 					whichLocType = LTYPE_HAZARD_FIND_RALLY;
 					break;
-				case 6:
-					whichLocType = LTYPE_HAZARD_FIND_RALLY_TYPE;
-					break;
-				case 7:
-					whichLocType = LTYPE_HAZARD_SCORE;
-					break;
-				case 8:
+				case 3:
 					whichLocType = LTYPE_HAZARD_LOC_PING;
 					break;
-				case 9:
+				case 4:
 					whichLocType = LTYPE_HAZARD_FIX;
 					break;
 			}
