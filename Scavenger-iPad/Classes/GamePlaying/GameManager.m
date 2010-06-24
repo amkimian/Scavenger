@@ -135,22 +135,26 @@
 	{
 		// Must be end?
 		[gameRun updateGameState:FINISHED];
+		[self.gamePlayController showGameOver];
 		// Present nice points dialog
 	}
 	
 	gameRun.seekingLocation.visible = [NSNumber numberWithBool: NO];
 	[gameRun addVisitedLocationObject: gameRun.seekingLocation];
 	// This call uses visitedLocation to ensure no dupes
-	gameRun.seekingLocation = [gameRun findNextRallyPoint];
-	if (gameRun.seekingLocation == nil)
+	if ([gameRun fromGameState] != FINISHED)
 	{
-		[gameRun updateGameState:SEEKING_END];
-		gameRun.seekingLocation = [gameRun.game getLocationOfType:LTYPE_END];
+		gameRun.seekingLocation = [gameRun findNextRallyPoint];
+		if (gameRun.seekingLocation == nil)
+		{
+			[gameRun updateGameState:SEEKING_END];
+			gameRun.seekingLocation = [gameRun.game getLocationOfType:LTYPE_END];
+		}
+		else 
+		{
+			[gameRun updateGameState:SEEKING_LOCATION];
+		}	
 	}
-	else
-	{
-		[gameRun updateGameState:SEEKING_LOCATION];
-	}	
 	// Make the seekingLocation visible
 	gameRun.seekingLocation.visible = [NSNumber numberWithBool: YES];
 	// Refresh overlayView
@@ -170,8 +174,11 @@
 	{
 		case NOTSTARTED:
 		case PAUSED:
+			break;
 		case FINISHED:			
-			// Do nothing
+			NSLog(@"PRESENT FINISH DIALOG");
+			[gameTimer invalidate];
+			gameTimer = nil;
 			break;
 		case SEEKING_LOCATION:
 		case SEEKING_END:

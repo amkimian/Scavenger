@@ -30,6 +30,7 @@
 -(void) simulateMoveTo: (CLLocationCoordinate2D) destination;
 -(void) tick;
 -(void) resetMapView;
+-(void) showGameOver;
 
 @property(nonatomic, retain) GameRunObject *gameRun;
 @property(nonatomic, readonly) GamePlayOverlayView *overlayView;

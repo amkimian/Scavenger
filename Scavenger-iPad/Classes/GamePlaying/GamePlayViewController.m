@@ -11,6 +11,7 @@
 #import "LocationObject+Extensions.h"
 #import "LocationPointObject.h"
 #import "GameManager.h"
+#import "GameScoreTableViewController.h"
 
 @implementation GamePlayViewController
 @synthesize gameRun;
@@ -35,6 +36,14 @@
     return self;
 }
 
+-(void) showGameOver
+{
+	GameScoreTableViewController *tv = [[GameScoreTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	tv.gameRun = self.gameRun;
+	UIView *v = overlayView.hudView;
+	UIPopoverController *popOver = [[UIPopoverController alloc] initWithContentViewController:tv];
+	[popOver presentPopoverFromRect:v.bounds inView:v permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {

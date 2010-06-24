@@ -20,6 +20,7 @@
 		15362E9B11D2DD6F00F63E59 /* GameRunObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E9111D2DD6F00F63E59 /* GameRunObject.m */; };
 		15362E9C11D2DD6F00F63E59 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E9311D2DD6F00F63E59 /* GameObject.m */; };
 		15362F8911D2FB9200F63E59 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362F8811D2FB9200F63E59 /* ScoreView.m */; };
+		1536303711D30CD100F63E59 /* GameScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1536303611D30CD100F63E59 /* GameScoreTableViewController.m */; };
 		153E577411C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */; };
 		153E57B311C944FE00DCDAC0 /* GameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */; };
 		153E57B411C944FE00DCDAC0 /* GameListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E57B211C944FE00DCDAC0 /* GameListViewController.xib */; };
@@ -105,6 +106,8 @@
 		15362E9311D2DD6F00F63E59 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		15362F8711D2FB9200F63E59 /* ScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreView.h; path = CommonViews/ScoreView.h; sourceTree = "<group>"; };
 		15362F8811D2FB9200F63E59 /* ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreView.m; path = CommonViews/ScoreView.m; sourceTree = "<group>"; };
+		1536303511D30CD100F63E59 /* GameScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScoreTableViewController.h; path = GamePlaying/GameScoreTableViewController.h; sourceTree = "<group>"; };
+		1536303611D30CD100F63E59 /* GameScoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScoreTableViewController.m; path = GamePlaying/GameScoreTableViewController.m; sourceTree = "<group>"; };
 		153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = "Scavenger-iPad.xcdatamodel"; sourceTree = "<group>"; };
 		153E57B011C944FE00DCDAC0 /* GameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameListViewController.h; path = GameListViewing/GameListViewController.h; sourceTree = "<group>"; };
 		153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameListViewController.m; path = GameListViewing/GameListViewController.m; sourceTree = "<group>"; };
@@ -292,6 +295,8 @@
 				15B00F0711D143CD00757CCE /* GamePlayViewController.h */,
 				15B00F0811D143CD00757CCE /* GamePlayViewController.m */,
 				15B00F0911D143CD00757CCE /* GamePlayViewController.xib */,
+				1536303511D30CD100F63E59 /* GameScoreTableViewController.h */,
+				1536303611D30CD100F63E59 /* GameScoreTableViewController.m */,
 			);
 			name = GamePlaying;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				15362E9B11D2DD6F00F63E59 /* GameRunObject.m in Sources */,
 				15362E9C11D2DD6F00F63E59 /* GameObject.m in Sources */,
 				15362F8911D2FB9200F63E59 /* ScoreView.m in Sources */,
+				1536303711D30CD100F63E59 /* GameScoreTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
