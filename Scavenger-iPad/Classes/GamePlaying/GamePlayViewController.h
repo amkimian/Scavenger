@@ -24,10 +24,12 @@
 	CLLocationCoordinate2D destination;
 	BOOL simulating;
 	BOOL moving;
+	float mapRadius;
 }
 
 -(void) simulateMoveTo: (CLLocationCoordinate2D) destination;
 -(void) tick;
+-(void) resetMapView;
 
 @property(nonatomic, retain) GameRunObject *gameRun;
 @property(nonatomic, readonly) GamePlayOverlayView *overlayView;
@@ -35,4 +37,5 @@
 @property(nonatomic, retain) CLLocationManager *locManager;
 @property(nonatomic, retain) CLLocation *currentLocation;
 @property(nonatomic, retain) MKMapView *mapView;
+@property(nonatomic) float mapRadius;
 @end

@@ -91,7 +91,7 @@
 	for(HardwareObject *h in gameRun.hardware)
 	{
 		h.level = h.maxLevel;
-		h.active = [NSNumber numberWithBool: YES];
+		//h.active = [NSNumber numberWithBool: YES];
 	}
 	
 	for(LocationObject *l in gameRun.game.locations)
@@ -121,6 +121,21 @@
 				l.visible = [NSNumber numberWithBool: YES];
 			}
 		}		
+	}
+	else if ([gameRun.state intValue] == SEEKING_LOCATION)
+	{
+		// Add on points total
+		LocationObject *startLocation = [gameRun.game getLocationOfType:LTYPE_START];
+		float value = [startLocation.level floatValue];
+		float changeValue = [gameRun.seekingLocation.level floatValue];
+		value+=changeValue;
+		startLocation.level = [NSNumber numberWithFloat: value];		
+	}
+	else
+	{
+		// Must be end?
+		[gameRun updateGameState:FINISHED];
+		// Present nice points dialog
 	}
 	
 	gameRun.seekingLocation.visible = [NSNumber numberWithBool: NO];
@@ -234,6 +249,64 @@
 			[ho updateLevelBy:1.0f];
 		}		
 	}
+	
+	// Check for PING mode
+	
+	HardwareObject *ping = [gameRun getHardwareWithName:@"Ping"];
+	if ([ping.active boolValue] && [ping.hasPower boolValue])
+	{
+		NSLog(@"Is in ping mode");
+		if (!self.gamePlayController.overlayView.isInPingMode)
+		{
+			// Change views to pingMode
+			self.gamePlayController.overlayView.isInPingMode = YES;
+		}		
+		// Work out the radius for the view
+		float radius;
+		float latDelta = [gameRun.seekingLocation.firstPoint.latitude floatValue] - self.gamePlayController.currentLocation.coordinate.latitude;
+		float longDelta = [gameRun.seekingLocation.firstPoint.longitude floatValue] - self.gamePlayController.currentLocation.coordinate.longitude;
+		radius = sqrt((latDelta * latDelta) + (longDelta *longDelta));
+		self.gamePlayController.mapRadius = radius*2;
+		[self.gamePlayController resetMapView];
+	}
+	else
+	{
+		if (self.gamePlayController.overlayView.isInPingMode)
+		{
+			NSLog(@"No longer in ping mode");
+			// Change views from pingMode
+			// This one is easy - move the mapView back to normal
+			self.gamePlayController.mapRadius = 0.005f;
+			self.gamePlayController.overlayView.isInPingMode = NO;
+			[self.gamePlayController resetMapView];
+		}
+	}
+	
+	// Make sure the gameScore is correct
+	LocationObject *loc = [gameRun.game getLocationOfType: LTYPE_START];
+	float scoreValue = [loc.level floatValue];
+	if (gamePlayController.overlayView.scoreView.scoreValue != scoreValue)
+	{
+		gamePlayController.overlayView.scoreView.scoreValue = scoreValue;
+
+	}
+	
+	// Update endGameBonus and update
+		LocationObject *endLoc = [gameRun.game getLocationOfType: LTYPE_END];
+		scoreValue = [endLoc.maxLevel floatValue];
+		if ([gameRun isRunning])
+		{
+			float deltaValue = [endLoc.level floatValue];
+			scoreValue -= deltaValue;
+			if (scoreValue < 0)
+			{
+				scoreValue = 0.0;
+			}
+			endLoc.maxLevel = [NSNumber numberWithFloat: scoreValue];
+		}
+	gamePlayController.overlayView.scoreView.bonusValue = scoreValue;
+	[gamePlayController.overlayView.scoreView setNeedsDisplay];	
+	
 	// Check for simulation
 	
 	if (gamePlayController.overlayView.hasDesiredLocation)

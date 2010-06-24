@@ -19,6 +19,8 @@
 @synthesize hudView;
 @synthesize desiredLocation;
 @synthesize hasDesiredLocation;
+@synthesize isInPingMode;
+@synthesize scoreView;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -27,12 +29,23 @@
 		CGRect gameStatusHUDFrame;
 		gameStatusHUDFrame.origin.x = 0;
 		gameStatusHUDFrame.origin.y = 0;
-		gameStatusHUDFrame.size.width = 300;
-		gameStatusHUDFrame.size.height = 100;
+		gameStatusHUDFrame.size.width = 400;
+		gameStatusHUDFrame.size.height = 55;
 		hasDesiredLocation = NO;
+		isInPingMode = NO;
 		
 		hudView = [[GameStatusHUDView alloc] initWithFrame:gameStatusHUDFrame];		
 		[self addSubview: hudView];
+		
+		CGRect scoreFrame;
+		scoreFrame.origin.x = 0;
+		scoreFrame.size.width = 130;
+		scoreFrame.origin.y = 55;
+		scoreFrame.size.height = 60;
+		scoreView = [[ScoreView alloc] initWithFrame:scoreFrame];
+		scoreView.scoreValue = 0.0;
+		scoreView.bonusValue = 0.0;
+		[self addSubview: scoreView];
     }
     return self;
 }
@@ -41,10 +54,12 @@
 {
 	NSLog(@"Touch in game play overlay view");
 	// Need to pass this to the gameManager as a simulated move
+	
 	MKMapView *mapView = (MKMapView *)[self superview];
 	UITouch *touch = [touches anyObject];
 	desiredLocation = [mapView convertPoint:[touch locationInView:self] toCoordinateFromView:self];
 	hasDesiredLocation = YES;
+	
 }
 -(void) setGameRun:(GameRunObject *)gR
 {
@@ -152,6 +167,13 @@
 	r.size.width = 20;
 	r.size.height = 20;
 	CGContextFillRect(UIGraphicsGetCurrentContext(), r);
+	
+	// Also, if in PingMode, really draw ActiveLocation
+	
+	if (self.isInPingMode)
+	{
+		[gameRun.seekingLocation drawLocation:mapView andView:self andAlpha:1.0];
+	}
 }
 
 - (void)dealloc {

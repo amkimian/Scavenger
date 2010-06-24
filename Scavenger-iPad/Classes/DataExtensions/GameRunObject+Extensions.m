@@ -10,6 +10,8 @@
 #import "LocationObject+Extensions.h"
 #import "GameObject+Extensions.h"
 #import "ActiveLocationObject.h"
+#import "LocationOrderObject.h"
+#import "GameRouteObject.h"
 
 @implementation GameRunObject(Extensions)
 -(GameStateEnum) fromGameState
@@ -49,14 +51,14 @@
 	return YES;
 }
 
--(void) addHardwareWithName: (NSString *) name andPowerUsage: (float) powerUsage andMaxLevel:(float) maxLevel andHudCode: (NSString *) hud;
+-(void) addHardwareWithName: (NSString *) name active: (BOOL) a andPowerUsage: (float) powerUsage andMaxLevel:(float) maxLevel andHudCode: (NSString *) hud;
 
 {
 	// Create hardware and add it to this gameRun object
 	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"Hardware" inManagedObjectContext:[self managedObjectContext]];
 	HardwareObject *hardware = [[HardwareObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[self managedObjectContext]];
 	hardware.name = name;
-	hardware.active = [NSNumber numberWithBool: YES];
+	hardware.active = [NSNumber numberWithBool: a];
 	hardware.maxLevel = [NSNumber numberWithFloat: maxLevel];
 	hardware.level = hardware.maxLevel;
 	hardware.hasPower = [NSNumber numberWithBool: YES];
@@ -71,6 +73,31 @@
 	// otherwise just loop through the locations looking for locations of type LTYPE_RALLY_* that are not visited
 	// and return the first one found
 	
+	if (self.gameRoute)
+	{
+		int maxPosition = -1;
+		for(LocationOrderObject *lo in self.gameRoute.locations)
+		{
+			if (lo.location.visitedInGame)
+			{
+				if (maxPosition < [lo.position intValue])
+				{
+					maxPosition = [lo.position intValue];
+				}
+				continue;
+			}
+		}
+		maxPosition++;
+		// Now find maxPosition
+		for(LocationOrderObject *lo in self.gameRoute.locations)
+		{
+			if ([lo.position intValue] == maxPosition)
+			{
+				return lo.location;
+			}
+		}
+	}
+		
 	for(LocationObject *l in self.game.locations)
 	{
 		switch ([l.locationType intValue])

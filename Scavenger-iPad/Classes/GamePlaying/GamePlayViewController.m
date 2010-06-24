@@ -19,6 +19,7 @@
 @synthesize locManager;
 @synthesize currentLocation;
 @synthesize mapView;
+@synthesize mapRadius;
 
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -29,6 +30,7 @@
 		manager.gamePlayController = self;
 		moving = NO;
 		simulating = NO;
+		mapRadius = 0.005f;
     }
     return self;
 }
@@ -47,7 +49,7 @@
 		coordinate.longitude = [centerLocation.firstPoint.longitude floatValue];
 		
 		MKCoordinateRegion region = MKCoordinateRegionMake(coordinate,
-														   MKCoordinateSpanMake(0.01f, 0.01f));
+														   MKCoordinateSpanMake(mapRadius, mapRadius));
 		[mapView setRegion:region animated:YES];
 	}	
 	overlayView = [[GamePlayOverlayView alloc] initWithFrame:mapView.frame];
@@ -107,14 +109,19 @@
 {
 }
 
+-(void) resetMapView
+{
+	MKCoordinateRegion region = MKCoordinateRegionMake(self.currentLocation.coordinate,
+													   MKCoordinateSpanMake(mapRadius, mapRadius));
+	[mapView setRegion:region animated:YES];
+	[overlayView setNeedsDisplay];
+}
+
 -(void) locationManager:(CLLocationManager *)manager didUpdateToLocation: (CLLocation *) newLocation fromLocation: (CLLocation *) oldLocation
 {
 	NSLog(@"New location");
 	self.currentLocation = newLocation;
-	MKCoordinateRegion region = MKCoordinateRegionMake(newLocation.coordinate,
-													   MKCoordinateSpanMake(0.005f, 0.005f));
-	[mapView setRegion:region animated:YES];
-	[overlayView setNeedsDisplay];
+	[self resetMapView];
 }
 
 -(void) simulateMoveTo: (CLLocationCoordinate2D) dest

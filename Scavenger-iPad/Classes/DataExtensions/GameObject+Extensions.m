@@ -140,13 +140,16 @@
 	// Now set it all up (including Hardware etc.)
 	
 	[gameRun updateGameState:NOTSTARTED];
-	[gameRun addHardwareWithName:@"Radar" andPowerUsage:10.0 andMaxLevel:100.0 andHudCode:@"RDR"];
-	[gameRun addHardwareWithName:@"Hazard" andPowerUsage:10.0 andMaxLevel:100.0 andHudCode:@"HZD"];
-	[gameRun addHardwareWithName:@"Bonus" andPowerUsage:10.0 andMaxLevel: 100.0 andHudCode:@"WPR"];
-	[gameRun addHardwareWithName:@"Shield" andPowerUsage:10.0 andMaxLevel: 100.0 andHudCode:@"SHD"];
-	[gameRun addHardwareWithName:@"Power" andPowerUsage:0.0 andMaxLevel: 100000.0 andHudCode:@"PWR"];
-	[gameRun addHardwareWithName:@"Ping" andPowerUsage:50.0 andMaxLevel: 100.0 andHudCode:@"PNG"];
-	[gameRun addHardwareWithName:@"Fix" andPowerUsage:50.0 andMaxLevel: 100.0 andHudCode:@"FIX"];
+	[gameRun addHardwareWithName:@"Radar" active:YES andPowerUsage:10.0 andMaxLevel:100.0 andHudCode:@"RDR"];
+	[gameRun addHardwareWithName:@"Hazard" active:YES andPowerUsage:10.0 andMaxLevel:100.0 andHudCode:@"HZD"];
+	[gameRun addHardwareWithName:@"Bonus" active:YES andPowerUsage:10.0 andMaxLevel: 100.0 andHudCode:@"WPR"];
+	[gameRun addHardwareWithName:@"Shield" active:YES andPowerUsage:10.0 andMaxLevel: 100.0 andHudCode:@"SHD"];
+	[gameRun addHardwareWithName:@"Power" active:YES andPowerUsage:0.0 andMaxLevel: 100000.0 andHudCode:@"PWR"];
+	[gameRun addHardwareWithName:@"Ping" active:NO andPowerUsage:50.0 andMaxLevel: 100.0 andHudCode:@"PNG"];
+	[gameRun addHardwareWithName:@"Fix" active:NO andPowerUsage:50.0 andMaxLevel: 100.0 andHudCode:@"FIX"];
+	
+	// Also setup the route
+	gameRun.gameRoute = [self.gameRoutes anyObject];
 	return gameRun;
 }
 
