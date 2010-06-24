@@ -30,6 +30,40 @@
 	}
 }
 
+-(UIImage *) getImage
+{
+	
+	if ([self.hudCode isEqualToString:@"RDR"])
+	{
+		return [UIImage imageNamed: @"73-radar.png"];
+	}
+	else if ([self.hudCode isEqualToString:@"HZD"])
+	{
+		return [UIImage imageNamed: @"25-weather.png"];
+	}
+	else if ([self.hudCode isEqualToString:@"WPR"])
+	{
+		return [UIImage imageNamed: @"07-map-marker.png"];
+	}
+	else if ([self.hudCode isEqualToString:@"SHD"])
+	{
+		return [UIImage imageNamed: @"99-umbrella.png"];
+	}
+	else if ([self.hudCode isEqualToString:@"PWR"])
+	{
+		return [UIImage imageNamed: @"49-battery.png"];
+	}
+	else if ([self.hudCode isEqualToString:@"PNG"])
+	{
+		return [UIImage imageNamed: @"12-eye.png"];
+	}
+	else if ([self.hudCode isEqualToString:@"FIX"])
+	{
+		return [UIImage imageNamed: @"10-medical.png"];
+	}
+	return nil;	
+}
+
 -(UIColor *) getStatusColor
 {
 	// The damage is 0 - 100 where 100 is destroyed

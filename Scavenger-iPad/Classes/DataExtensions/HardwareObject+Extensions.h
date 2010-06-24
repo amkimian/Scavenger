@@ -14,5 +14,5 @@
 -(UIColor *) getStatusColor;
 -(float) getPercentage;
 -(void) updateLevelBy: (float) amount;
-
+-(UIImage *) getImage;
 @end

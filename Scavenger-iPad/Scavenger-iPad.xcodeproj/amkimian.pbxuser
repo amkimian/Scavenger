@@ -983,7 +983,7 @@
 	};
 	15362BDE11D2924B00F63E59 /* GameStatusHUDView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 690}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 667}}";
 			sepNavSelRange = "{387, 0}";
 			sepNavVisRange = "{0, 393}";
 		};
@@ -992,7 +992,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1322, 741}}";
 			sepNavSelRange = "{687, 0}";
-			sepNavVisRange = "{0, 1135}";
+			sepNavVisRange = "{0, 1132}";
 		};
 	};
 	15362BE311D292AE00F63E59 /* PBXTextBookmark */ = {
@@ -1266,30 +1266,30 @@
 	};
 	15362C1211D2955100F63E59 /* HardwareStatusView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 690}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 667}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 452}";
 		};
 	};
 	15362C1311D2955100F63E59 /* HardwareStatusView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 1586}}";
-			sepNavSelRange = "{1603, 55}";
-			sepNavVisRange = "{1551, 1506}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 1729}}";
+			sepNavSelRange = "{2179, 0}";
+			sepNavVisRange = "{1418, 1682}";
 		};
 	};
 	15362C1511D2955E00F63E59 /* HardwareObject+Extensions.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1322, 690}}";
-			sepNavSelRange = "{352, 38}";
-			sepNavVisRange = "{0, 397}";
+			sepNavSelRange = "{391, 22}";
+			sepNavVisRange = "{0, 419}";
 		};
 	};
 	15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 949}}";
-			sepNavSelRange = "{1257, 0}";
-			sepNavVisRange = "{410, 856}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 1339}}";
+			sepNavSelRange = "{1001, 0}";
+			sepNavVisRange = "{410, 1047}";
 		};
 	};
 	15362C1A11D2956300F63E59 /* PBXTextBookmark */ = {
@@ -1391,7 +1391,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 38";
 		rLen = 0;
-		rLoc = 2049;
+		rLoc = 2381;
 		rType = 0;
 		vrLen = 1463;
 		vrLoc = 0;
@@ -1422,7 +1422,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 105;
+		rLoc = 117;
 		rType = 1;
 	};
 	15362C3711D2978300F63E59 /* PBXTextBookmark */ = {
@@ -1430,7 +1430,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 71";
 		rLen = 0;
-		rLoc = 2895;
+		rLoc = 3229;
 		rType = 0;
 		vrLen = 1531;
 		vrLoc = 527;
@@ -1440,7 +1440,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 72";
 		rLen = 0;
-		rLoc = 2973;
+		rLoc = 3307;
 		rType = 0;
 		vrLen = 1496;
 		vrLoc = 739;
@@ -1450,7 +1450,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 72";
 		rLen = 0;
-		rLoc = 2973;
+		rLoc = 3307;
 		rType = 0;
 		vrLen = 1496;
 		vrLoc = 739;
@@ -1500,7 +1500,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 71";
 		rLen = 0;
-		rLoc = 2897;
+		rLoc = 3231;
 		rType = 0;
 		vrLen = 1457;
 		vrLoc = 794;
@@ -1510,7 +1510,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 82";
 		rLen = 0;
-		rLoc = 3121;
+		rLoc = 3455;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 794;
@@ -1520,7 +1520,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 82";
 		rLen = 0;
-		rLoc = 3122;
+		rLoc = 3456;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 794;
@@ -1530,7 +1530,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 45";
 		rLen = 0;
-		rLoc = 2376;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 1523;
 		vrLoc = 612;
@@ -1540,7 +1540,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 39";
 		rLen = 0;
-		rLoc = 2021;
+		rLoc = 2353;
 		rType = 0;
 		vrLen = 1580;
 		vrLoc = 553;
@@ -1560,7 +1560,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 40";
 		rLen = 10;
-		rLoc = 2058;
+		rLoc = 2392;
 		rType = 0;
 		vrLen = 1142;
 		vrLoc = 552;
@@ -1570,7 +1570,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 39";
 		rLen = 0;
-		rLoc = 2021;
+		rLoc = 2353;
 		rType = 0;
 		vrLen = 1609;
 		vrLoc = 553;
@@ -1580,7 +1580,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 39";
 		rLen = 0;
-		rLoc = 2021;
+		rLoc = 2353;
 		rType = 0;
 		vrLen = 1609;
 		vrLoc = 553;
@@ -1793,7 +1793,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 40";
 		rLen = 10;
-		rLoc = 2058;
+		rLoc = 2392;
 		rType = 0;
 		vrLen = 1142;
 		vrLoc = 552;
@@ -1842,7 +1842,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 38";
 		rLen = 0;
-		rLoc = 1932;
+		rLoc = 2262;
 		rType = 0;
 		vrLen = 1583;
 		vrLoc = 553;
@@ -1882,7 +1882,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 38";
 		rLen = 0;
-		rLoc = 1932;
+		rLoc = 2262;
 		rType = 0;
 		vrLen = 1612;
 		vrLoc = 553;
@@ -2171,7 +2171,7 @@
 		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
 		name = "HardwareObject+Extensions.m: 34";
 		rLen = 0;
-		rLoc = 796;
+		rLoc = 1567;
 		rType = 0;
 		vrLen = 871;
 		vrLoc = 0;
@@ -2181,7 +2181,7 @@
 		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
 		name = "HardwareObject+Extensions.m: 34";
 		rLen = 0;
-		rLoc = 796;
+		rLoc = 1567;
 		rType = 0;
 		vrLen = 871;
 		vrLoc = 0;
@@ -2191,7 +2191,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 86";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2822;
 		rType = 0;
 		vrLen = 917;
 		vrLoc = 2050;
@@ -2201,7 +2201,7 @@
 		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
 		name = "HardwareObject+Extensions.m: 34";
 		rLen = 0;
-		rLoc = 796;
+		rLoc = 1567;
 		rType = 0;
 		vrLen = 871;
 		vrLoc = 0;
@@ -2331,7 +2331,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 86";
 		rLen = 0;
-		rLoc = 2488;
+		rLoc = 2822;
 		rType = 0;
 		vrLen = 917;
 		vrLoc = 2050;
@@ -3590,11 +3590,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 15B00E8111D1067500757CCE /* GameManager.m */;
 		functionName = "-processAtSoughtLocation";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 142;
 		location = "Scavenger-iPad";
-		modificationTime = 299029804.230865;
+		modificationTime = 299045957.118992;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -3823,6 +3823,13 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1322, 690}}";
 			sepNavSelRange = "{229, 0}";
 			sepNavVisRange = "{0, 725}";
+		};
+	};
+	15362E8611D2DD6F00F63E59 /* HardwareObject.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 690}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 663}";
 		};
 	};
 	15362E8811D2DD6F00F63E59 /* LocationOrderObject.h */ = {
@@ -4064,7 +4071,7 @@
 		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
 		name = "HardwareObject+Extensions.m: 57";
 		rLen = 0;
-		rLoc = 980;
+		rLoc = 1751;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 174;
@@ -4214,7 +4221,7 @@
 		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
 		name = "HardwareStatusView.m: 112";
 		rLen = 0;
-		rLoc = 3009;
+		rLoc = 3343;
 		rType = 0;
 		vrLen = 787;
 		vrLoc = 2223;
@@ -4225,7 +4232,7 @@
 		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 45;
+		rLoc = 79;
 		rType = 1;
 	};
 	15362ECB11D2E16400F63E59 /* PBXTextBookmark */ = {
@@ -4233,7 +4240,7 @@
 		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
 		name = "HardwareObject+Extensions.m: 54";
 		rLen = 0;
-		rLoc = 940;
+		rLoc = 1711;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 495;
@@ -4283,7 +4290,7 @@
 		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
 		name = "HardwareObject+Extensions.m: 54";
 		rLen = 0;
-		rLoc = 940;
+		rLoc = 1711;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 495;
@@ -4631,7 +4638,7 @@
 		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
 		name = "HardwareObject+Extensions.m: 69";
 		rLen = 0;
-		rLoc = 1257;
+		rLoc = 2028;
 		rType = 0;
 		vrLen = 856;
 		vrLoc = 410;
@@ -6035,6 +6042,312 @@
 		vrLen = 2115;
 		vrLoc = 466;
 	};
+	1536316311D313D600F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */;
+		name = "GamePlayViewController.m: 45";
+		rLen = 0;
+		rLoc = 1431;
+		rType = 0;
+		vrLen = 2146;
+		vrLoc = 584;
+	};
+	1536316411D313D600F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362BDE11D2924B00F63E59 /* GameStatusHUDView.h */;
+		name = "GameStatusHUDView.h: 17";
+		rLen = 0;
+		rLoc = 387;
+		rType = 0;
+		vrLen = 393;
+		vrLoc = 0;
+	};
+	1536316511D313D600F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362BDF11D2924B00F63E59 /* GameStatusHUDView.m */;
+		name = "GameStatusHUDView.m: 32";
+		rLen = 0;
+		rLoc = 687;
+		rType = 0;
+		vrLen = 1132;
+		vrLoc = 0;
+	};
+	1536316611D313D600F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1211D2955100F63E59 /* HardwareStatusView.h */;
+		name = "HardwareStatusView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 452;
+		vrLoc = 0;
+	};
+	1536316711D313D600F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
+		name = "HardwareStatusView.m: 72";
+		rLen = 0;
+		rLoc = 1764;
+		rType = 0;
+		vrLen = 1658;
+		vrLoc = 1418;
+	};
+	1536316811D313F400F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1536303611D30CD100F63E59 /* GameScoreTableViewController.m */;
+		name = "GameScoreTableViewController.m: 122";
+		rLen = 0;
+		rLoc = 3120;
+		rType = 0;
+		vrLen = 1211;
+		vrLoc = 2195;
+	};
+	1536316911D313F400F63E59 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Request for member 'contentView' in something not a structure or union";
+		fRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 44;
+		rType = 1;
+	};
+	1536316A11D313F400F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */;
+		name = "GamePlayViewController.m: 47";
+		rLen = 0;
+		rLoc = 1518;
+		rType = 0;
+		vrLen = 1435;
+		vrLoc = 1518;
+	};
+	1536316B11D313F400F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */;
+		name = "GamePlayViewController.m: 47";
+		rLen = 0;
+		rLoc = 1518;
+		rType = 0;
+		vrLen = 1435;
+		vrLoc = 1518;
+	};
+	1536316C11D3143C00F63E59 /* HardwareStatusView.m:71 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
+		functionName = "-drawRect:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 71;
+		location = "Scavenger-iPad";
+		modificationTime = 299045985.108903;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	1536317011D3143E00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
+		name = "HardwareStatusView.m: 71";
+		rLen = 0;
+		rLoc = 1764;
+		rType = 0;
+		vrLen = 1663;
+		vrLoc = 1418;
+	};
+	1536317111D3143E00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
+		name = "HardwareStatusView.m: 71";
+		rLen = 0;
+		rLoc = 1764;
+		rType = 0;
+		vrLen = 1658;
+		vrLoc = 1418;
+	};
+	1536317511D3147900F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
+		name = "HardwareStatusView.m: 71";
+		rLen = 0;
+		rLoc = 1764;
+		rType = 0;
+		vrLen = 1581;
+		vrLoc = 1418;
+	};
+	1536317611D3149000F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */;
+		name = "GamePlayViewController.m: 47";
+		rLen = 0;
+		rLoc = 1518;
+		rType = 0;
+		vrLen = 1435;
+		vrLoc = 1518;
+	};
+	1536317B11D315B300F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */;
+		name = "GamePlayViewController.m: 47";
+		rLen = 0;
+		rLoc = 1518;
+		rType = 0;
+		vrLen = 1435;
+		vrLoc = 1518;
+	};
+	1536317C11D315B300F63E59 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'hudCode' undeclared (first use in this function)";
+		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 35;
+		rType = 1;
+	};
+	1536317D11D315B300F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
+		name = "HardwareObject+Extensions.m: 36";
+		rLen = 0;
+		rLoc = 595;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 410;
+	};
+	1536318211D315DE00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */;
+		name = "GamePlayViewController.m: 45";
+		rLen = 0;
+		rLoc = 1431;
+		rType = 0;
+		vrLen = 1211;
+		vrLoc = 3313;
+	};
+	1536318311D315DE00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E58DD11C9D12D00DCDAC0 /* GameObject+Extensions.m */;
+		name = "GameObject+Extensions.m: 143";
+		rLen = 753;
+		rLoc = 4698;
+		rType = 0;
+		vrLen = 2356;
+		vrLoc = 3197;
+	};
+	1536318411D315DE00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362E8611D2DD6F00F63E59 /* HardwareObject.h */;
+		name = "HardwareObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 663;
+		vrLoc = 0;
+	};
+	1536318511D315DE00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
+		name = "HardwareObject+Extensions.m: 60";
+		rLen = 0;
+		rLoc = 1234;
+		rType = 0;
+		vrLen = 1079;
+		vrLoc = 410;
+	};
+	1536318611D315DE00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1511D2955E00F63E59 /* HardwareObject+Extensions.h */;
+		name = "HardwareObject+Extensions.h: 17";
+		rLen = 22;
+		rLoc = 391;
+		rType = 0;
+		vrLen = 419;
+		vrLoc = 0;
+	};
+	1536318711D315DE00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
+		name = "HardwareStatusView.m: 74";
+		rLen = 0;
+		rLoc = 1909;
+		rType = 0;
+		vrLen = 1635;
+		vrLoc = 1418;
+	};
+	1536318811D315DE00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
+		name = "HardwareStatusView.m: 81";
+		rLen = 0;
+		rLoc = 2384;
+		rType = 0;
+		vrLen = 1572;
+		vrLoc = 1418;
+	};
+	1536318F11D3169C00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
+		name = "HardwareStatusView.m: 80";
+		rLen = 0;
+		rLoc = 2179;
+		rType = 0;
+		vrLen = 1671;
+		vrLoc = 1418;
+	};
+	1536319011D316B200F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
+		name = "HardwareObject+Extensions.m: 36";
+		rLen = 0;
+		rLoc = 595;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 410;
+	};
+	1536319111D316B300F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
+		name = "HardwareObject+Extensions.m: 36";
+		rLen = 0;
+		rLoc = 595;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 410;
+	};
+	1536319611D316CE00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */;
+		name = "HardwareStatusView.m: 80";
+		rLen = 0;
+		rLoc = 2179;
+		rType = 0;
+		vrLen = 1682;
+		vrLoc = 1418;
+	};
+	1536319711D316CE00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
+		name = "HardwareObject+Extensions.m: 60";
+		rLen = 0;
+		rLoc = 1234;
+		rType = 0;
+		vrLen = 1079;
+		vrLoc = 410;
+	};
+	1536319811D316CE00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */;
+		name = "HardwareObject+Extensions.m: 50";
+		rLen = 0;
+		rLoc = 1001;
+		rType = 0;
+		vrLen = 1047;
+		vrLoc = 410;
+	};
 	153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */ = {
 		uiCtxt = {
 			"Xdesign Model Editor Bookmark Key" = {
@@ -6296,9 +6609,9 @@
 	};
 	153E58DD11C9D12D00DCDAC0 /* GameObject+Extensions.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 2028}}";
-			sepNavSelRange = "{5527, 0}";
-			sepNavVisRange = "{3195, 2353}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 2041}}";
+			sepNavSelRange = "{4698, 753}";
+			sepNavVisRange = "{3197, 2356}";
 		};
 	};
 	153E593611C9D86A00DCDAC0 /* XDModelBookmark */ = {
@@ -7025,9 +7338,9 @@
 	};
 	15B00E8C11D1091F00757CCE /* GameRunObject+Extensions.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1104, 2171}}";
-			sepNavSelRange = "{2543, 0}";
-			sepNavVisRange = "{2089, 711}";
+			sepNavIntBoundsRect = "{{0, 0}, {1105, 2236}}";
+			sepNavSelRange = "{3731, 0}";
+			sepNavVisRange = "{2606, 460}";
 		};
 	};
 	15B00EA311D10BD300757CCE /* PBXTextBookmark */ = {
@@ -7547,9 +7860,9 @@
 	};
 	15B00F0811D143CD00757CCE /* GamePlayViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 2067}}";
-			sepNavSelRange = "{1431, 0}";
-			sepNavVisRange = "{466, 2115}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 2067}}";
+			sepNavSelRange = "{1518, 0}";
+			sepNavVisRange = "{1518, 1435}";
 		};
 	};
 	15B00F0E11D1440300757CCE /* PBXTextBookmark */ = {
@@ -7908,6 +8221,7 @@
 		);
 		breakpoints = (
 			15362E3311D2D3C400F63E59 /* GameManager.m:142 */,
+			1536316C11D3143C00F63E59 /* HardwareStatusView.m:71 */,
 		);
 		codeSenseManager = 155BE54111C92A870019A783 /* Code sense */;
 		executables = (
@@ -8540,6 +8854,35 @@
 			1536305611D310B100F63E59 /* PBXTextBookmark */ = 1536305611D310B100F63E59 /* PBXTextBookmark */;
 			1536305711D310B100F63E59 /* PBXTextBookmark */ = 1536305711D310B100F63E59 /* PBXTextBookmark */;
 			1536305811D310B100F63E59 /* PBXTextBookmark */ = 1536305811D310B100F63E59 /* PBXTextBookmark */;
+			1536316311D313D600F63E59 /* PBXTextBookmark */ = 1536316311D313D600F63E59 /* PBXTextBookmark */;
+			1536316411D313D600F63E59 /* PBXTextBookmark */ = 1536316411D313D600F63E59 /* PBXTextBookmark */;
+			1536316511D313D600F63E59 /* PBXTextBookmark */ = 1536316511D313D600F63E59 /* PBXTextBookmark */;
+			1536316611D313D600F63E59 /* PBXTextBookmark */ = 1536316611D313D600F63E59 /* PBXTextBookmark */;
+			1536316711D313D600F63E59 /* PBXTextBookmark */ = 1536316711D313D600F63E59 /* PBXTextBookmark */;
+			1536316811D313F400F63E59 /* PBXTextBookmark */ = 1536316811D313F400F63E59 /* PBXTextBookmark */;
+			1536316911D313F400F63E59 /* XCBuildMessageTextBookmark */ = 1536316911D313F400F63E59 /* XCBuildMessageTextBookmark */;
+			1536316A11D313F400F63E59 /* PBXTextBookmark */ = 1536316A11D313F400F63E59 /* PBXTextBookmark */;
+			1536316B11D313F400F63E59 /* PBXTextBookmark */ = 1536316B11D313F400F63E59 /* PBXTextBookmark */;
+			1536317011D3143E00F63E59 /* PBXTextBookmark */ = 1536317011D3143E00F63E59 /* PBXTextBookmark */;
+			1536317111D3143E00F63E59 /* PBXTextBookmark */ = 1536317111D3143E00F63E59 /* PBXTextBookmark */;
+			1536317511D3147900F63E59 /* PBXTextBookmark */ = 1536317511D3147900F63E59 /* PBXTextBookmark */;
+			1536317611D3149000F63E59 /* PBXTextBookmark */ = 1536317611D3149000F63E59 /* PBXTextBookmark */;
+			1536317B11D315B300F63E59 /* PBXTextBookmark */ = 1536317B11D315B300F63E59 /* PBXTextBookmark */;
+			1536317C11D315B300F63E59 /* XCBuildMessageTextBookmark */ = 1536317C11D315B300F63E59 /* XCBuildMessageTextBookmark */;
+			1536317D11D315B300F63E59 /* PBXTextBookmark */ = 1536317D11D315B300F63E59 /* PBXTextBookmark */;
+			1536318211D315DE00F63E59 /* PBXTextBookmark */ = 1536318211D315DE00F63E59 /* PBXTextBookmark */;
+			1536318311D315DE00F63E59 /* PBXTextBookmark */ = 1536318311D315DE00F63E59 /* PBXTextBookmark */;
+			1536318411D315DE00F63E59 /* PBXTextBookmark */ = 1536318411D315DE00F63E59 /* PBXTextBookmark */;
+			1536318511D315DE00F63E59 /* PBXTextBookmark */ = 1536318511D315DE00F63E59 /* PBXTextBookmark */;
+			1536318611D315DE00F63E59 /* PBXTextBookmark */ = 1536318611D315DE00F63E59 /* PBXTextBookmark */;
+			1536318711D315DE00F63E59 /* PBXTextBookmark */ = 1536318711D315DE00F63E59 /* PBXTextBookmark */;
+			1536318811D315DE00F63E59 /* PBXTextBookmark */ = 1536318811D315DE00F63E59 /* PBXTextBookmark */;
+			1536318F11D3169C00F63E59 /* PBXTextBookmark */ = 1536318F11D3169C00F63E59 /* PBXTextBookmark */;
+			1536319011D316B200F63E59 /* PBXTextBookmark */ = 1536319011D316B200F63E59 /* PBXTextBookmark */;
+			1536319111D316B300F63E59 /* PBXTextBookmark */ = 1536319111D316B300F63E59 /* PBXTextBookmark */;
+			1536319611D316CE00F63E59 /* PBXTextBookmark */ = 1536319611D316CE00F63E59 /* PBXTextBookmark */;
+			1536319711D316CE00F63E59 /* PBXTextBookmark */ = 1536319711D316CE00F63E59 /* PBXTextBookmark */;
+			1536319811D316CE00F63E59 /* PBXTextBookmark */ = 1536319811D316CE00F63E59 /* PBXTextBookmark */;
 			153E57A711C9354500DCDAC0 = 153E57A711C9354500DCDAC0 /* PBXTextBookmark */;
 			153E57A811C9354500DCDAC0 = 153E57A811C9354500DCDAC0 /* PBXTextBookmark */;
 			153E593611C9D86A00DCDAC0 = 153E593611C9D86A00DCDAC0 /* XDModelBookmark */;

@@ -65,13 +65,25 @@
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	// Draw the main rectangle for the status
 	CGRect mainRect = [self getMainRectangle];
+	
+	// Draw image
+	
 	CGContextSetFillColorWithColor(context, [hardware getStatusColor].CGColor);
 	CGContextFillRect(context, mainRect);
+	
+	UIImage *img = [hardware getImage];
+	CGRect drawRect = mainRect;
+	drawRect.size.width = img.size.width;
+	drawRect.size.height = img.size.height;
+	drawRect.origin.x += (mainRect.size.width - img.size.width)/2;
+	drawRect.origin.y += (mainRect.size.height - img.size.height)/2;
+	[img drawInRect:drawRect];
+
 	// Draw the text on top of that
-	NSString *label = hardware.hudCode;
-	CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
-	mainRect.origin.y = mainRect.size.height / 2;
-	[label drawInRect:mainRect withFont:[UIFont systemFontOfSize:10] lineBreakMode:UILineBreakModeMiddleTruncation alignment:UITextAlignmentCenter];
+//	NSString *label = hardware.hudCode;
+//	CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+//	mainRect.origin.y = mainRect.size.height / 2;
+//	[label drawInRect:mainRect withFont:[UIFont systemFontOfSize:10] lineBreakMode:UILineBreakModeMiddleTruncation alignment:UITextAlignmentCenter];
 	
 	CGRect startDamageRect;
 	startDamageRect.origin.x = 5;
