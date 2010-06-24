@@ -85,7 +85,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 4;
+    return 2;
 }
 
 
@@ -97,8 +97,6 @@
 			return 2;
 		case 1:
 			return 2;
-		case 2:
-			return 3;
 	}
 	return 0;
 }
@@ -111,8 +109,6 @@
 			return @"General";
 		case 1:
 			return @"Effect";
-		case 2:
-			return @"Commentary";
 	}
 	return nil;
 }
@@ -188,8 +184,8 @@
 					UnitsEditCell *unitsCell = [self getUnitsCell];
 					[unitsCell setLabelText:@"Amount"];
 					[unitsCell setUnitsText:@"points"];
-					unitsCell.textField.text = [NSString stringWithFormat: @"%d", [location.score intValue]];
-					unitsCell.tag = @"score";
+					unitsCell.textField.text = [NSString stringWithFormat: @"%.2f", [location.level floatValue]];
+					unitsCell.tag = @"level";
 					unitsCell.textField.keyboardType = UIKeyboardTypePhonePad;
 					cell = unitsCell;
 				}
@@ -197,32 +193,13 @@
 				case 1:
 				{
 					UnitsEditCell *unitsCell = [self getUnitsCell];
-					[unitsCell setLabelText:@"Rate"];
+					[unitsCell setLabelText:@"Max"];
 					[unitsCell setUnitsText:@"points"];
-					unitsCell.textField.text = [NSString stringWithFormat:@"%d", [location.scoreInterval intValue]];
+					unitsCell.textField.text = [NSString stringWithFormat:@"%.2f", [location.maxLevel floatValue]];
 					unitsCell.textField.keyboardType = UIKeyboardTypePhonePad;
-					unitsCell.tag = @"scoreInterval";
+					unitsCell.tag = @"maxLevel";
 					cell = unitsCell;
 				}
-					break;
-			}
-			break;
-		case 2: // Commentary
-			cell = [self getSubtitleCell];
-			cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-			switch(indexPath.row)
-			{
-				case 0:
-					cell.textLabel.text = @"Enter commentary";
-					cell.detailTextLabel.text = @"Text shown when you enter the location";
-					break;
-				case 1:
-					cell.textLabel.text = @"Exit commentary";
-					cell.detailTextLabel.text = @"Text shown when you leave the location";
-					break;
-				case 2:
-					cell.textLabel.text = @"Question";
-					cell.detailTextLabel.text = @"The question that must be answered";
 					break;
 			}
 			break;
@@ -284,28 +261,6 @@
 	keyboardShown = NO; // hide the keyboard	
 }
 
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
-{
-		if (indexPath.section == 3)
-		{
-			if (indexPath.row == 0)
-			{
-				TextEditController *controller = [[TextEditController alloc] initWithNibName:nil bundle:nil];
-				controller.tagToEdit = @"enterCommentary";
-				controller.location = location;
-				controller.labelText = @"Commentary when entering location";
-				[[self navigationController] pushViewController: controller animated:YES];
-			}
-			else if (indexPath.row == 1)
-			{
-				TextEditController *controller = [[TextEditController alloc] initWithNibName:nil bundle:nil];
-				controller.tagToEdit = @"exitCommentary";
-				controller.location = location;
-				controller.labelText = @"Commentary when leaving location";
-				[[self navigationController] pushViewController: controller animated:YES];
-			}
-		}
-}
 
 /*
  // Override to support conditional editing of the table view.

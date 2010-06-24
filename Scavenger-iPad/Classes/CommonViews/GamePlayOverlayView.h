@@ -25,6 +25,7 @@
 }
 
 -(void) drawRadarOverlay: (CGRect) rect;
+-(void) refreshHud;
 
 @property(nonatomic, retain) GameRunObject *gameRun;
 @property(nonatomic, retain) GameStatusHUDView *hudView;

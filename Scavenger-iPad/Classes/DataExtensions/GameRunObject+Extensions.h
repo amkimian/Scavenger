@@ -28,7 +28,7 @@ typedef enum
 -(BOOL) isRunning;
 
 -(HardwareObject *) getHardwareWithName: (NSString *) name;
--(void) addHardwareWithName: (NSString *) name andPowerUsage: (int) powerUsage andHudCode: (NSString *) hud;
+-(void) addHardwareWithName: (NSString *) name andPowerUsage: (float) powerUsage andMaxLevel:(float) maxLevel andHudCode: (NSString *) hud;
 
 -(LocationObject *) findNextRallyPoint;
 

@@ -13,24 +13,22 @@
 @class GameRunObject;
 @class LocationOrderObject;
 @class LocationPointObject;
-@class QuestionObject;
 
 @interface LocationObject :  NSManagedObject  
 {
 }
 
-@property (nonatomic, retain) NSNumber * scoreInterval;
 @property (nonatomic, retain) NSString * enterCommentary;
+@property (nonatomic, retain) NSNumber * maxLevel;
 @property (nonatomic, retain) NSString * exitCommentary;
+@property (nonatomic, retain) NSNumber * level;
 @property (nonatomic, retain) NSNumber * visible;
 @property (nonatomic, retain) NSNumber * locationType;
-@property (nonatomic, retain) NSNumber * score;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet* activeInGame;
 @property (nonatomic, retain) GameRunObject * visitedInGame;
 @property (nonatomic, retain) LocationPointObject * firstPoint;
 @property (nonatomic, retain) NSSet* orderInLocationRoute;
-@property (nonatomic, retain) QuestionObject * question;
 @property (nonatomic, retain) GameObject * game;
 @property (nonatomic, retain) NSSet* soughtInGame;
 

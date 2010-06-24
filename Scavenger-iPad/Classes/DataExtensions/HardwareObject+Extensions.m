@@ -13,14 +13,16 @@
 
 // Assumes that this hardware object has name "Radar"
 
+-(float) getPercentage
+{
+	return 100 * [self.level floatValue] / [self.maxLevel floatValue];	
+}
+
 -(float) getRadarRange
 {
 	if ([self.active boolValue] && [self.hasPower boolValue])
 	{
-		float ret = 480.0;
-		ret /= 100;
-		ret *= 100 - [self.damage intValue];
-		return ret;
+		return 4.8 * [self getPercentage];
 	}
 	else
 	{
@@ -40,20 +42,31 @@
 	{
 		return [UIColor darkGrayColor];
 	}
-	int d = [self.damage intValue];
-	if (d < 50)
+	float p = [self getPercentage];
+	if (p > 50)
 	{
 		return [UIColor greenColor];
 	}
-	if (d < 75)
+	if (p > 25)
 	{
 		return [UIColor yellowColor];
 	}
-	if (d < 99)
+	if (p > 0)
 	{
 		return [UIColor redColor];
 	}
 	return [UIColor blackColor];
+}
+
+-(void) updateLevelBy: (float) amount
+{
+	float current = [self.level floatValue];
+	current += amount;
+	if (current > [self.maxLevel floatValue])		
+	{
+		current = [self.maxLevel floatValue];
+	}
+	self.level = [NSNumber numberWithFloat: current];
 }
 
 @end

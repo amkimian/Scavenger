@@ -10,15 +10,16 @@
 		15362BE011D2924B00F63E59 /* GameStatusHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362BDF11D2924B00F63E59 /* GameStatusHUDView.m */; };
 		15362C1411D2955100F63E59 /* HardwareStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */; };
 		15362C1711D2955E00F63E59 /* HardwareObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */; };
-		15362CBF11D29E5600F63E59 /* HardwareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362CBE11D29E5600F63E59 /* HardwareObject.m */; };
-		15362E0C11D2D09200F63E59 /* GameRunObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E0B11D2D09200F63E59 /* GameRunObject.m */; };
-		15362E5A11D2D5B800F63E59 /* LocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E5911D2D5B800F63E59 /* LocationObject.m */; };
+		15362E9411D2DD6F00F63E59 /* ActiveLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8311D2DD6F00F63E59 /* ActiveLocationObject.m */; };
+		15362E9511D2DD6F00F63E59 /* PlayerLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8511D2DD6F00F63E59 /* PlayerLocationObject.m */; };
+		15362E9611D2DD6F00F63E59 /* HardwareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8711D2DD6F00F63E59 /* HardwareObject.m */; };
+		15362E9711D2DD6F00F63E59 /* LocationOrderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */; };
+		15362E9811D2DD6F00F63E59 /* LocationPointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8B11D2DD6F00F63E59 /* LocationPointObject.m */; };
+		15362E9911D2DD6F00F63E59 /* LocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8D11D2DD6F00F63E59 /* LocationObject.m */; };
+		15362E9A11D2DD6F00F63E59 /* GameRouteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */; };
+		15362E9B11D2DD6F00F63E59 /* GameRunObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E9111D2DD6F00F63E59 /* GameRunObject.m */; };
+		15362E9C11D2DD6F00F63E59 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E9311D2DD6F00F63E59 /* GameObject.m */; };
 		153E577411C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */; };
-		153E578C11C934BC00DCDAC0 /* ActiveLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577911C934BC00DCDAC0 /* ActiveLocationObject.m */; };
-		153E578D11C934BC00DCDAC0 /* PlayerLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577B11C934BC00DCDAC0 /* PlayerLocationObject.m */; };
-		153E578E11C934BC00DCDAC0 /* QuestionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577D11C934BC00DCDAC0 /* QuestionObject.m */; };
-		153E578F11C934BC00DCDAC0 /* AnswerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E577F11C934BC00DCDAC0 /* AnswerObject.m */; };
-		153E579111C934BC00DCDAC0 /* LocationOrderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E578311C934BC00DCDAC0 /* LocationOrderObject.m */; };
 		153E57B311C944FE00DCDAC0 /* GameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */; };
 		153E57B411C944FE00DCDAC0 /* GameListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E57B211C944FE00DCDAC0 /* GameListViewController.xib */; };
 		153E57CE11C9478A00DCDAC0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E57CD11C9478A00DCDAC0 /* MapKit.framework */; };
@@ -36,12 +37,10 @@
 		153E5CA311CADCA000DCDAC0 /* TextEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5CA111CADCA000DCDAC0 /* TextEditController.m */; };
 		153E5CA411CADCA000DCDAC0 /* TextEditController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E5CA211CADCA000DCDAC0 /* TextEditController.xib */; };
 		153E5CFB11CAE2EC00DCDAC0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */; };
-		153E5D2D11CB2FEE00DCDAC0 /* GameRouteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5D2C11CB2FEE00DCDAC0 /* GameRouteObject.m */; };
 		153E5D4411CB31EE00DCDAC0 /* RouteListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5D4311CB31EE00DCDAC0 /* RouteListController.m */; };
 		153E5D8A11CB39B200DCDAC0 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */; };
 		15652A9411CB3D4E0051E687 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 15652A9311CB3D4E0051E687 /* Default-Portrait.png */; };
 		15652B3D11CE84F70051E687 /* libMDSLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15652B2111CE83A40051E687 /* libMDSLib.a */; };
-		15652E5211CECFC10051E687 /* LocationPointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652E5011CECFC10051E687 /* LocationPointObject.m */; };
 		15652E8811CED37D0051E687 /* GetTextPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15652E8611CED37D0051E687 /* GetTextPopupController.xib */; };
 		15652E8911CED37D0051E687 /* MapTypePopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15652E8711CED37D0051E687 /* MapTypePopupController.xib */; };
 		15652EAE11CED4350051E687 /* SingleLocationEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 15652EAA11CED4350051E687 /* SingleLocationEditor.m */; };
@@ -52,7 +51,6 @@
 		15B00EC111D13C8C00757CCE /* GamePlayOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00EC011D13C8C00757CCE /* GamePlayOverlayView.m */; };
 		15B00F0A11D143CD00757CCE /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */; };
 		15B00F0B11D143CD00757CCE /* GamePlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B00F0911D143CD00757CCE /* GamePlayViewController.xib */; };
-		15B00F1F11D145D700757CCE /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00F1E11D145D700757CCE /* GameObject.m */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -86,23 +84,25 @@
 		15362C1311D2955100F63E59 /* HardwareStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HardwareStatusView.m; path = CommonViews/HardwareStatusView.m; sourceTree = "<group>"; };
 		15362C1511D2955E00F63E59 /* HardwareObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HardwareObject+Extensions.h"; path = "DataExtensions/HardwareObject+Extensions.h"; sourceTree = "<group>"; };
 		15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "HardwareObject+Extensions.m"; path = "DataExtensions/HardwareObject+Extensions.m"; sourceTree = "<group>"; };
-		15362CBD11D29E5600F63E59 /* HardwareObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardwareObject.h; sourceTree = "<group>"; };
-		15362CBE11D29E5600F63E59 /* HardwareObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardwareObject.m; sourceTree = "<group>"; };
-		15362E0A11D2D09200F63E59 /* GameRunObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRunObject.h; sourceTree = "<group>"; };
-		15362E0B11D2D09200F63E59 /* GameRunObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRunObject.m; sourceTree = "<group>"; };
-		15362E5811D2D5B800F63E59 /* LocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationObject.h; sourceTree = "<group>"; };
-		15362E5911D2D5B800F63E59 /* LocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationObject.m; sourceTree = "<group>"; };
+		15362E8211D2DD6F00F63E59 /* ActiveLocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveLocationObject.h; sourceTree = "<group>"; };
+		15362E8311D2DD6F00F63E59 /* ActiveLocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveLocationObject.m; sourceTree = "<group>"; };
+		15362E8411D2DD6F00F63E59 /* PlayerLocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerLocationObject.h; sourceTree = "<group>"; };
+		15362E8511D2DD6F00F63E59 /* PlayerLocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerLocationObject.m; sourceTree = "<group>"; };
+		15362E8611D2DD6F00F63E59 /* HardwareObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardwareObject.h; sourceTree = "<group>"; };
+		15362E8711D2DD6F00F63E59 /* HardwareObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardwareObject.m; sourceTree = "<group>"; };
+		15362E8811D2DD6F00F63E59 /* LocationOrderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationOrderObject.h; sourceTree = "<group>"; };
+		15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationOrderObject.m; sourceTree = "<group>"; };
+		15362E8A11D2DD6F00F63E59 /* LocationPointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPointObject.h; sourceTree = "<group>"; };
+		15362E8B11D2DD6F00F63E59 /* LocationPointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPointObject.m; sourceTree = "<group>"; };
+		15362E8C11D2DD6F00F63E59 /* LocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationObject.h; sourceTree = "<group>"; };
+		15362E8D11D2DD6F00F63E59 /* LocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationObject.m; sourceTree = "<group>"; };
+		15362E8E11D2DD6F00F63E59 /* GameRouteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRouteObject.h; sourceTree = "<group>"; };
+		15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRouteObject.m; sourceTree = "<group>"; };
+		15362E9011D2DD6F00F63E59 /* GameRunObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRunObject.h; sourceTree = "<group>"; };
+		15362E9111D2DD6F00F63E59 /* GameRunObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRunObject.m; sourceTree = "<group>"; };
+		15362E9211D2DD6F00F63E59 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		15362E9311D2DD6F00F63E59 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = "Scavenger-iPad.xcdatamodel"; sourceTree = "<group>"; };
-		153E577811C934BC00DCDAC0 /* ActiveLocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveLocationObject.h; sourceTree = "<group>"; };
-		153E577911C934BC00DCDAC0 /* ActiveLocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveLocationObject.m; sourceTree = "<group>"; };
-		153E577A11C934BC00DCDAC0 /* PlayerLocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerLocationObject.h; sourceTree = "<group>"; };
-		153E577B11C934BC00DCDAC0 /* PlayerLocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerLocationObject.m; sourceTree = "<group>"; };
-		153E577C11C934BC00DCDAC0 /* QuestionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionObject.h; sourceTree = "<group>"; };
-		153E577D11C934BC00DCDAC0 /* QuestionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionObject.m; sourceTree = "<group>"; };
-		153E577E11C934BC00DCDAC0 /* AnswerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerObject.h; sourceTree = "<group>"; };
-		153E577F11C934BC00DCDAC0 /* AnswerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerObject.m; sourceTree = "<group>"; };
-		153E578211C934BC00DCDAC0 /* LocationOrderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationOrderObject.h; sourceTree = "<group>"; };
-		153E578311C934BC00DCDAC0 /* LocationOrderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationOrderObject.m; sourceTree = "<group>"; };
 		153E57B011C944FE00DCDAC0 /* GameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameListViewController.h; path = GameListViewing/GameListViewController.h; sourceTree = "<group>"; };
 		153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameListViewController.m; path = GameListViewing/GameListViewController.m; sourceTree = "<group>"; };
 		153E57B211C944FE00DCDAC0 /* GameListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GameListViewController.xib; path = GameListViewing/GameListViewController.xib; sourceTree = "<group>"; };
@@ -129,15 +129,11 @@
 		153E5CA111CADCA000DCDAC0 /* TextEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextEditController.m; path = GameEditing/TextEditController.m; sourceTree = "<group>"; };
 		153E5CA211CADCA000DCDAC0 /* TextEditController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TextEditController.xib; path = GameEditing/TextEditController.xib; sourceTree = "<group>"; };
 		153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		153E5D2B11CB2FEE00DCDAC0 /* GameRouteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRouteObject.h; sourceTree = "<group>"; };
-		153E5D2C11CB2FEE00DCDAC0 /* GameRouteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRouteObject.m; sourceTree = "<group>"; };
 		153E5D4211CB31EE00DCDAC0 /* RouteListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteListController.h; sourceTree = "<group>"; };
 		153E5D4311CB31EE00DCDAC0 /* RouteListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteListController.m; sourceTree = "<group>"; };
 		153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		15652A9311CB3D4E0051E687 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		15652B1711CE837F0051E687 /* MDSLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MDSLib.xcodeproj; sourceTree = MDS_SRC; };
-		15652E4F11CECFC10051E687 /* LocationPointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPointObject.h; sourceTree = "<group>"; };
-		15652E5011CECFC10051E687 /* LocationPointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPointObject.m; sourceTree = "<group>"; };
 		15652E8611CED37D0051E687 /* GetTextPopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GetTextPopupController.xib; path = ../MDSLib/CommonControllers/GetTextPopupController.xib; sourceTree = SOURCE_ROOT; };
 		15652E8711CED37D0051E687 /* MapTypePopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapTypePopupController.xib; path = ../MDSLib/CommonControllers/MapTypePopupController.xib; sourceTree = SOURCE_ROOT; };
 		15652EA911CED4350051E687 /* SingleLocationEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleLocationEditor.h; path = GameEditing/SingleLocationEditor.h; sourceTree = "<group>"; };
@@ -154,8 +150,6 @@
 		15B00F0711D143CD00757CCE /* GamePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayViewController.h; path = GamePlaying/GamePlayViewController.h; sourceTree = "<group>"; };
 		15B00F0811D143CD00757CCE /* GamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePlayViewController.m; path = GamePlaying/GamePlayViewController.m; sourceTree = "<group>"; };
 		15B00F0911D143CD00757CCE /* GamePlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GamePlayViewController.xib; path = GamePlaying/GamePlayViewController.xib; sourceTree = "<group>"; };
-		15B00F1D11D145D700757CCE /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
-		15B00F1E11D145D700757CCE /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -443,11 +437,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */,
 				153E577411C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld in Sources */,
-				153E578C11C934BC00DCDAC0 /* ActiveLocationObject.m in Sources */,
-				153E578D11C934BC00DCDAC0 /* PlayerLocationObject.m in Sources */,
-				153E578E11C934BC00DCDAC0 /* QuestionObject.m in Sources */,
-				153E578F11C934BC00DCDAC0 /* AnswerObject.m in Sources */,
-				153E579111C934BC00DCDAC0 /* LocationOrderObject.m in Sources */,
 				153E57B311C944FE00DCDAC0 /* GameListViewController.m in Sources */,
 				153E58DE11C9D12D00DCDAC0 /* GameObject+Extensions.m in Sources */,
 				153E594A11C9DB2800DCDAC0 /* LocationObject+Extensions.m in Sources */,
@@ -457,22 +446,25 @@
 				153E5AF211CA939E00DCDAC0 /* LocationListView.m in Sources */,
 				153E5BE611CAC85300DCDAC0 /* EditLocationController.m in Sources */,
 				153E5CA311CADCA000DCDAC0 /* TextEditController.m in Sources */,
-				153E5D2D11CB2FEE00DCDAC0 /* GameRouteObject.m in Sources */,
 				153E5D4411CB31EE00DCDAC0 /* RouteListController.m in Sources */,
-				15652E5211CECFC10051E687 /* LocationPointObject.m in Sources */,
 				15652EAE11CED4350051E687 /* SingleLocationEditor.m in Sources */,
 				15652EB011CED4350051E687 /* SingleLocationView.m in Sources */,
 				15B00E8211D1067500757CCE /* GameManager.m in Sources */,
 				15B00E8D11D1091F00757CCE /* GameRunObject+Extensions.m in Sources */,
 				15B00EC111D13C8C00757CCE /* GamePlayOverlayView.m in Sources */,
 				15B00F0A11D143CD00757CCE /* GamePlayViewController.m in Sources */,
-				15B00F1F11D145D700757CCE /* GameObject.m in Sources */,
 				15362BE011D2924B00F63E59 /* GameStatusHUDView.m in Sources */,
 				15362C1411D2955100F63E59 /* HardwareStatusView.m in Sources */,
 				15362C1711D2955E00F63E59 /* HardwareObject+Extensions.m in Sources */,
-				15362CBF11D29E5600F63E59 /* HardwareObject.m in Sources */,
-				15362E0C11D2D09200F63E59 /* GameRunObject.m in Sources */,
-				15362E5A11D2D5B800F63E59 /* LocationObject.m in Sources */,
+				15362E9411D2DD6F00F63E59 /* ActiveLocationObject.m in Sources */,
+				15362E9511D2DD6F00F63E59 /* PlayerLocationObject.m in Sources */,
+				15362E9611D2DD6F00F63E59 /* HardwareObject.m in Sources */,
+				15362E9711D2DD6F00F63E59 /* LocationOrderObject.m in Sources */,
+				15362E9811D2DD6F00F63E59 /* LocationPointObject.m in Sources */,
+				15362E9911D2DD6F00F63E59 /* LocationObject.m in Sources */,
+				15362E9A11D2DD6F00F63E59 /* GameRouteObject.m in Sources */,
+				15362E9B11D2DD6F00F63E59 /* GameRunObject.m in Sources */,
+				15362E9C11D2DD6F00F63E59 /* GameObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,28 +576,24 @@
 		153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				15362E5811D2D5B800F63E59 /* LocationObject.h */,
-				15362E5911D2D5B800F63E59 /* LocationObject.m */,
-				15362E0A11D2D09200F63E59 /* GameRunObject.h */,
-				15362E0B11D2D09200F63E59 /* GameRunObject.m */,
-				15362CBD11D29E5600F63E59 /* HardwareObject.h */,
-				15362CBE11D29E5600F63E59 /* HardwareObject.m */,
-				15B00F1D11D145D700757CCE /* GameObject.h */,
-				15B00F1E11D145D700757CCE /* GameObject.m */,
-				15652E4F11CECFC10051E687 /* LocationPointObject.h */,
-				15652E5011CECFC10051E687 /* LocationPointObject.m */,
-				153E5D2B11CB2FEE00DCDAC0 /* GameRouteObject.h */,
-				153E5D2C11CB2FEE00DCDAC0 /* GameRouteObject.m */,
-				153E577811C934BC00DCDAC0 /* ActiveLocationObject.h */,
-				153E577911C934BC00DCDAC0 /* ActiveLocationObject.m */,
-				153E577A11C934BC00DCDAC0 /* PlayerLocationObject.h */,
-				153E577B11C934BC00DCDAC0 /* PlayerLocationObject.m */,
-				153E577C11C934BC00DCDAC0 /* QuestionObject.h */,
-				153E577D11C934BC00DCDAC0 /* QuestionObject.m */,
-				153E577E11C934BC00DCDAC0 /* AnswerObject.h */,
-				153E577F11C934BC00DCDAC0 /* AnswerObject.m */,
-				153E578211C934BC00DCDAC0 /* LocationOrderObject.h */,
-				153E578311C934BC00DCDAC0 /* LocationOrderObject.m */,
+				15362E8211D2DD6F00F63E59 /* ActiveLocationObject.h */,
+				15362E8311D2DD6F00F63E59 /* ActiveLocationObject.m */,
+				15362E8411D2DD6F00F63E59 /* PlayerLocationObject.h */,
+				15362E8511D2DD6F00F63E59 /* PlayerLocationObject.m */,
+				15362E8611D2DD6F00F63E59 /* HardwareObject.h */,
+				15362E8711D2DD6F00F63E59 /* HardwareObject.m */,
+				15362E8811D2DD6F00F63E59 /* LocationOrderObject.h */,
+				15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */,
+				15362E8A11D2DD6F00F63E59 /* LocationPointObject.h */,
+				15362E8B11D2DD6F00F63E59 /* LocationPointObject.m */,
+				15362E8C11D2DD6F00F63E59 /* LocationObject.h */,
+				15362E8D11D2DD6F00F63E59 /* LocationObject.m */,
+				15362E8E11D2DD6F00F63E59 /* GameRouteObject.h */,
+				15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */,
+				15362E9011D2DD6F00F63E59 /* GameRunObject.h */,
+				15362E9111D2DD6F00F63E59 /* GameRunObject.m */,
+				15362E9211D2DD6F00F63E59 /* GameObject.h */,
+				15362E9311D2DD6F00F63E59 /* GameObject.m */,
 				153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */,
 			);
 			currentVersion = 153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */;

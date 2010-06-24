@@ -14,10 +14,11 @@
 {
 }
 
-@property (nonatomic, retain) NSNumber * damage;
+@property (nonatomic, retain) NSNumber * maxLevel;
 @property (nonatomic, retain) NSNumber * active;
 @property (nonatomic, retain) NSNumber * hasPower;
 @property (nonatomic, retain) NSString * hudCode;
+@property (nonatomic, retain) NSNumber * level;
 @property (nonatomic, retain) NSNumber * powerUse;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) GameRunObject * inGame;

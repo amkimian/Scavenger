@@ -12,10 +12,11 @@
 
 @implementation HardwareObject 
 
-@dynamic damage;
+@dynamic maxLevel;
 @dynamic active;
 @dynamic hasPower;
 @dynamic hudCode;
+@dynamic level;
 @dynamic powerUse;
 @dynamic name;
 @dynamic inGame;

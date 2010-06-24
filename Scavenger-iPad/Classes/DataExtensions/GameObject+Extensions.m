@@ -139,14 +139,14 @@
 	
 	// Now set it all up (including Hardware etc.)
 	
-	gameRun.life = [NSNumber numberWithInt: 1000];
 	[gameRun updateGameState:NOTSTARTED];
-	[gameRun addHardwareWithName:@"Radar" andPowerUsage:10 andHudCode:@"RDR"];
-	[gameRun addHardwareWithName:@"Hazard" andPowerUsage:10 andHudCode:@"HZD"];
-	[gameRun addHardwareWithName:@"Bonus" andPowerUsage:10 andHudCode:@"WPR"];
-	[gameRun addHardwareWithName:@"Shield" andPowerUsage:10 andHudCode:@"SHD"];
-	[gameRun addHardwareWithName:@"Power" andPowerUsage:0 andHudCode:@"PWR"];
-	[gameRun addHardwareWithName:@"Ping" andPowerUsage:50 andHudCode:@"PNG"];
+	[gameRun addHardwareWithName:@"Radar" andPowerUsage:10.0 andMaxLevel:100.0 andHudCode:@"RDR"];
+	[gameRun addHardwareWithName:@"Hazard" andPowerUsage:10.0 andMaxLevel:100.0 andHudCode:@"HZD"];
+	[gameRun addHardwareWithName:@"Bonus" andPowerUsage:10.0 andMaxLevel: 100.0 andHudCode:@"WPR"];
+	[gameRun addHardwareWithName:@"Shield" andPowerUsage:10.0 andMaxLevel: 100.0 andHudCode:@"SHD"];
+	[gameRun addHardwareWithName:@"Power" andPowerUsage:0.0 andMaxLevel: 100000.0 andHudCode:@"PWR"];
+	[gameRun addHardwareWithName:@"Ping" andPowerUsage:50.0 andMaxLevel: 100.0 andHudCode:@"PNG"];
+	[gameRun addHardwareWithName:@"Fix" andPowerUsage:50.0 andMaxLevel: 100.0 andHudCode:@"FIX"];
 	return gameRun;
 }
 

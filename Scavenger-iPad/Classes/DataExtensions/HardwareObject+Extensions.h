@@ -12,4 +12,7 @@
 @interface HardwareObject(Extensions)
 -(float) getRadarRange;
 -(UIColor *) getStatusColor;
+-(float) getPercentage;
+-(void) updateLevelBy: (float) amount;
+
 @end

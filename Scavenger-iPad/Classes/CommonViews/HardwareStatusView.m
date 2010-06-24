@@ -79,11 +79,11 @@
 	startDamageRect.size.width = 3;
 	startDamageRect.size.height = 3;
 	
-	int damage = [hardware.damage intValue];
+	float percentage = [hardware getPercentage];
 	for(int i=0; i< 10; i++)
 	{
 		float alpha = 1.0;
-		if (i*10 > damage)
+		if (i*10 < percentage)
 		{
 			alpha = 0.5;
 		}

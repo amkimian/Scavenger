@@ -12,6 +12,7 @@
 #import "LocationObject+Extensions.h"
 #import "HardwareObject.h"
 #import "LocationPointObject.h"
+#import "ActiveLocationObject.h"
 
 @implementation GameManager
 @synthesize gameRun;
@@ -83,17 +84,13 @@
 	// Reset the gameRun object to correct initial values
 	gameRun.paused = [NSNumber numberWithBool: NO];
 	[gameRun updateGameState:SEEKING_START];
-	gameRun.life = [NSNumber numberWithInt: 10000];
-	gameRun.power = [NSNumber numberWithInt: 10000];
 	gameRun.playerName = @"Player";
-	gameRun.shield = [NSNumber numberWithInt: 10000];
-	gameRun.score = [NSNumber numberWithInt: 0];
 	
 	// Reset all of the hardware
 	
 	for(HardwareObject *h in gameRun.hardware)
 	{
-		h.damage = [NSNumber numberWithInt: 0];
+		h.level = h.maxLevel;
 		h.active = [NSNumber numberWithBool: YES];
 	}
 	
@@ -210,14 +207,33 @@
 	// Power drainage
 	// For all active Hardware, take off their power drain value from the power Hardware type
 	
+	[self powerDrain];
+	
 	// Hazard actions
 	// For all hazards in ActiveLocations
 	// apply the drain to the target depending on the hazard type (affects shield first, then
 	// if shield is out of action, affects actual target by increasing damage
 	// If damage is 100, it's broke.
 	
+	[self hazardAction];
+	
+	// Handle shield recharge
+	
+	HardwareObject *shield = [gameRun getHardwareWithName:@"Shield"];
+	[shield updateLevelBy: 1.0f];
+	
+	[gamePlayController.overlayView refreshHud];
+	
 	// Then handle the FIX hardware type, if it is active, transfer power from power to damaged items
 		
+	HardwareObject *fixer = [gameRun getHardwareWithName:@"Fix"];
+	if ([fixer.active boolValue] && [fixer.hasPower boolValue])
+	{
+		for(HardwareObject *ho in gameRun.hardware)
+		{
+			[ho updateLevelBy:1.0f];
+		}		
+	}
 	// Check for simulation
 	
 	if (gamePlayController.overlayView.hasDesiredLocation)
@@ -228,5 +244,89 @@
 	[gamePlayController tick];
 }
 
+-(void) hazardAction
+{
+	for(ActiveLocationObject *alo in gameRun.activeLocations)
+	{
+		if ([alo.active boolValue])
+		{
+			float changeValue = [alo.amountRate floatValue];
+			HardwareObject *shieldHardware = [gameRun getHardwareWithName:@"Shield"];
+			if ([shieldHardware.level floatValue] > 0.1)
+			{
+				NSLog(@"Shield damage");
+				float currentLevel = [shieldHardware.level floatValue];
+				float newLevel = currentLevel - changeValue;
+				if (newLevel < 0.1)
+				{
+					newLevel = 0.0;
+					changeValue -= currentLevel;
+				}
+				else
+				{
+					changeValue = 0.0;
+				}
+				shieldHardware.level = [NSNumber numberWithFloat: newLevel];
+			}
+			if (changeValue > 0.0)
+			{
+				// Still more to go
+				HardwareObject *whichHardware = nil;
+				switch([alo.targetModifies intValue])
+				{
+					case LTYPE_HAZARD_FIND_HAZARD:
+						whichHardware = [gameRun getHardwareWithName:@"Hazard"];
+						break;
+					case LTYPE_HAZARD_RADAR:
+						whichHardware = [gameRun getHardwareWithName:@"Radar"];
+						break;
+					case LTYPE_HAZARD_LOC_PING:
+						whichHardware = [gameRun getHardwareWithName:@"Ping"];
+						break;
+					case LTYPE_HAZARD_FIND_RALLY:
+						whichHardware = [gameRun getHardwareWithName:@"Bonus"];
+						break;
+				}
+				if (whichHardware)
+				{
+					float currentLevel = [whichHardware.level floatValue];
+					currentLevel -= changeValue;
+					if (currentLevel < 0)
+					{
+						currentLevel = 0;
+					}
+					whichHardware.level = [NSNumber numberWithFloat: currentLevel];					
+				}
+			}
+		}		
+	}
+}
+
+
+-(void) powerDrain
+{
+	HardwareObject *power = [gameRun getHardwareWithName:@"Power"];
+	BOOL powerExhausted = NO;
+	for(HardwareObject *ho in gameRun.hardware)
+	{
+		if ([ho.active boolValue] && [ho.hasPower boolValue])
+		{
+			double existingPower = [power.level floatValue];
+			double newPower = existingPower - [ho.powerUse floatValue];
+			if (newPower < 0.0)
+			{
+				newPower = 0.0;
+				powerExhausted = YES;
+			}
+			NSLog(@"Power change %f -> %f", existingPower, newPower);
+			power.level = [NSNumber numberWithFloat: newPower];
+		}
+	}							   
+	if (powerExhausted)
+	{
+		// Do something
+		
+	}
+}
 
 @end

@@ -19,11 +19,7 @@
 
 @dynamic paused;
 @dynamic state;
-@dynamic life;
-@dynamic power;
 @dynamic playerName;
-@dynamic shield;
-@dynamic score;
 @dynamic visitedLocation;
 @dynamic activeLocations;
 @dynamic gameRoute;

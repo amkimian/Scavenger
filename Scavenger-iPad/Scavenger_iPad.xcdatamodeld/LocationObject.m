@@ -13,22 +13,20 @@
 #import "GameRunObject.h"
 #import "LocationOrderObject.h"
 #import "LocationPointObject.h"
-#import "QuestionObject.h"
 
 @implementation LocationObject 
 
-@dynamic scoreInterval;
 @dynamic enterCommentary;
+@dynamic maxLevel;
 @dynamic exitCommentary;
+@dynamic level;
 @dynamic visible;
 @dynamic locationType;
-@dynamic score;
 @dynamic name;
 @dynamic activeInGame;
 @dynamic visitedInGame;
 @dynamic firstPoint;
 @dynamic orderInLocationRoute;
-@dynamic question;
 @dynamic game;
 @dynamic soughtInGame;
 

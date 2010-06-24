@@ -52,6 +52,15 @@
 	hudView.gameRun = gR;
 }
 
+-(void) refreshHud
+{
+	[self.hudView setNeedsDisplay];
+	for(UIView *subView in self.hudView.subviews)
+	{
+		[subView setNeedsDisplay];
+	}	
+}
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
@@ -67,25 +76,40 @@
 	float bonusAlphaValue = 0.7; // The default
 	
 	HardwareObject *hazardCheck = [gameRun getHardwareWithName:@"Hazard"];
+	BOOL noHazards = NO;
+	BOOL noLocations = NO;
+	
 	if (hazardCheck)
 	{
-		int damage = [hazardCheck.damage intValue];
-		if (damage > 50)
+		if ([hazardCheck.active boolValue] && [hazardCheck.hasPower boolValue])
 		{
-			float percentageDamage = (100 - damage) / 50.0;
-			hazardAlphaValue = (1 - percentageDamage) * 0.7;
+			float perc = [hazardCheck getPercentage];
+			if (perc < 50)
+			{
+				hazardAlphaValue = perc/100 * 0.7;
+			}
+		}
+		else
+		{
+			noHazards = YES;
 		}
 	}
 	HardwareObject *bonusCheck = [gameRun getHardwareWithName:@"Bonus"];
 	if (bonusCheck)
 	{
-		int damage = [bonusCheck.damage intValue];
-		if (damage > 50)
+		if ([bonusCheck.active boolValue] && [bonusCheck.hasPower boolValue])
 		{
-			float percentageDamage = (100 - damage) / 50.0;
-			bonusAlphaValue = (1 - percentageDamage) * 0.7;
+			float perc = [bonusCheck getPercentage];
+			if (perc < 50)
+			{
+				bonusAlphaValue = perc/100 * 0.7;
+			}
 		}
-	}
+		else
+		{
+			noLocations = YES;
+		}
+	}	
 	
 	// Draw locations
 	for(LocationObject * l in gameRun.game.locations)
@@ -102,7 +126,11 @@
 			{
 				realAlphaValue = bonusAlphaValue;
 			}
-			[l drawLocation:mapView andView:self andAlpha:realAlphaValue];			
+			if (([l isHazard] && noHazards == NO)
+				|| (![l isHazard] && noLocations == NO))
+			{
+				[l drawLocation:mapView andView:self andAlpha:realAlphaValue];			
+			}
 		}
 		else
 		{

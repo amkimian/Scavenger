@@ -203,7 +203,7 @@
 	CGColorRef cRef = CGColorCreateCopyWithAlpha([UIColor blueColor].CGColor, OVERLAY_ALPHA);
 	CGContextSetFillColorWithColor(context, cRef);
 	
-	NSString *test = [NSString stringWithFormat: @"%@ - %d/%d", [self locationShortTypeString],[self.score intValue], [self.scoreInterval intValue]];
+	NSString *test = [NSString stringWithFormat: @"%@ - %.2f/%.2f", [self locationShortTypeString],[self.level floatValue], [self.maxLevel floatValue]];
 	[test drawAtPoint:where withFont:[UIFont systemFontOfSize:12]];
 	
 }

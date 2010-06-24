@@ -49,7 +49,7 @@
 	return YES;
 }
 
--(void) addHardwareWithName: (NSString *) name andPowerUsage: (int) powerUsage  andHudCode: (NSString *) hud;
+-(void) addHardwareWithName: (NSString *) name andPowerUsage: (float) powerUsage andMaxLevel:(float) maxLevel andHudCode: (NSString *) hud;
 
 {
 	// Create hardware and add it to this gameRun object
@@ -57,10 +57,11 @@
 	HardwareObject *hardware = [[HardwareObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[self managedObjectContext]];
 	hardware.name = name;
 	hardware.active = [NSNumber numberWithBool: YES];
-	hardware.damage = [NSNumber numberWithInt: 0];
-	hardware.powerUse = [NSNumber numberWithInt: powerUsage];
+	hardware.maxLevel = [NSNumber numberWithFloat: maxLevel];
+	hardware.level = hardware.maxLevel;
 	hardware.hasPower = [NSNumber numberWithBool: YES];
 	hardware.hudCode = hud;
+	hardware.powerUse = [NSNumber numberWithFloat:powerUsage];
 	[self addHardwareObject:hardware];	
 }
 
@@ -107,8 +108,8 @@
 	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"ActiveLocation" inManagedObjectContext:[self managedObjectContext]];
 	ActiveLocationObject *alo = [[ActiveLocationObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[self managedObjectContext]];
 	alo.active = [NSNumber numberWithBool: YES];
-	alo.maxAmount = loc.score;
-	alo.amountRate = loc.scoreInterval;
+	alo.maxAmount = loc.maxLevel;
+	alo.amountRate = loc.level;
 	alo.currentAmount = [NSNumber numberWithInt: 0];
 	alo.targetModifies = loc.locationType;
 	alo.location = loc;

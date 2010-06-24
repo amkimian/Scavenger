@@ -303,14 +303,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>6</integer>
+									<integer>45</integer>
+									<integer>39</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {275, 823}}</string>
+							<string>{{0, 26}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -347,7 +347,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameManager.m</string>
+								<string>GameObject+Extensions.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -355,14 +355,13 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameManager.m</string>
+										<string>GameObject+Extensions.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>15362E6F11D2D74700F63E59</string>
+										<string>15362F1D11D2EB5200F63E59</string>
 										<key>history</key>
 										<array>
-											<string>153E57A711C9354500DCDAC0</string>
 											<string>153E5B2011CA991400DCDAC0</string>
 											<string>153E5CEE11CAE26C00DCDAC0</string>
 											<string>153E5CEF11CAE26C00DCDAC0</string>
@@ -380,38 +379,39 @@
 											<string>15652EFD11CEDEB80051E687</string>
 											<string>15652F0011CEDEB80051E687</string>
 											<string>15652F0111CEDEB80051E687</string>
-											<string>15B00EFD11D1430000757CCE</string>
 											<string>15362A8111D2582E00F63E59</string>
 											<string>15362A8211D2582E00F63E59</string>
 											<string>15362BA111D279E300F63E59</string>
 											<string>15362C0911D294D300F63E59</string>
-											<string>15362C7211D29A8000F63E59</string>
-											<string>15362CC611D29EEF00F63E59</string>
 											<string>15362CC811D29EEF00F63E59</string>
 											<string>15362CE211D2A7A100F63E59</string>
 											<string>15362CE311D2A7A100F63E59</string>
-											<string>15362CE411D2A7A100F63E59</string>
 											<string>15362CE511D2A7A100F63E59</string>
 											<string>15362CE611D2A7A100F63E59</string>
 											<string>15362CE711D2A7A100F63E59</string>
 											<string>15362D2E11D2AD6300F63E59</string>
-											<string>15362D7B11D2B3C700F63E59</string>
-											<string>15362D7C11D2B3C700F63E59</string>
 											<string>15362D7D11D2B3C700F63E59</string>
-											<string>15362DC211D2BAD100F63E59</string>
-											<string>15362DD211D2BB0000F63E59</string>
-											<string>15362DF811D2BD0D00F63E59</string>
-											<string>15362E1511D2D22400F63E59</string>
-											<string>15362E1611D2D22400F63E59</string>
-											<string>15362E1711D2D22400F63E59</string>
-											<string>15362E1811D2D22400F63E59</string>
-											<string>15362E2311D2D28B00F63E59</string>
-											<string>15362E2E11D2D38800F63E59</string>
-											<string>15362E3D11D2D3C800F63E59</string>
 											<string>15362E4B11D2D4E600F63E59</string>
-											<string>15362E6611D2D6E500F63E59</string>
-											<string>15362E6D11D2D74700F63E59</string>
-											<string>15362E6E11D2D74700F63E59</string>
+											<string>15362EB011D2E09700F63E59</string>
+											<string>15362EB111D2E09700F63E59</string>
+											<string>15362EB311D2E09700F63E59</string>
+											<string>15362EF011D2E71A00F63E59</string>
+											<string>15362EFB11D2E83200F63E59</string>
+											<string>15362EFC11D2E83200F63E59</string>
+											<string>15362EFD11D2E83200F63E59</string>
+											<string>15362EFE11D2E83200F63E59</string>
+											<string>15362EFF11D2E83200F63E59</string>
+											<string>15362F0011D2E83200F63E59</string>
+											<string>15362F0111D2E83200F63E59</string>
+											<string>15362F1411D2EB5200F63E59</string>
+											<string>15362F1511D2EB5200F63E59</string>
+											<string>15362F1611D2EB5200F63E59</string>
+											<string>15362F1711D2EB5200F63E59</string>
+											<string>15362F1811D2EB5200F63E59</string>
+											<string>15362F1911D2EB5200F63E59</string>
+											<string>15362F1A11D2EB5200F63E59</string>
+											<string>15362F1B11D2EB5200F63E59</string>
+											<string>15362F1C11D2EB5200F63E59</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -592,7 +592,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>299030343.57734799</real>
+	<real>299035474.96835399</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -611,18 +611,17 @@
 	<array>
 		<string>15362D6B11D2B07C00F63E59</string>
 		<string>15362D6D11D2B07C00F63E59</string>
-		<string>15362C7711D29A8000F63E59</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>15362CED11D2A7A100F63E59</string>
 		<string>15362CEE11D2A7A100F63E59</string>
 		<string>15362DC711D2BAD100F63E59</string>
 		<string>15362DFB11D2BD0D00F63E59</string>
 		<string>15362E2611D2D28B00F63E59</string>
-		<string>15362DCC11D2BAE600F63E59</string>
 		<string>15362AD711D26AE000F63E59</string>
-		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
-		<string>155BE54711C92BF00019A783</string>
+		<string>15362DCC11D2BAE600F63E59</string>
 		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
+		<string>155BE54711C92BF00019A783</string>
+		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>-1 137 1680 882 0 0 1680 1028 </string>
@@ -841,7 +840,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

@@ -21,11 +21,7 @@
 
 @property (nonatomic, retain) NSNumber * paused;
 @property (nonatomic, retain) NSNumber * state;
-@property (nonatomic, retain) NSNumber * life;
-@property (nonatomic, retain) NSNumber * power;
 @property (nonatomic, retain) NSString * playerName;
-@property (nonatomic, retain) NSNumber * shield;
-@property (nonatomic, retain) NSNumber * score;
 @property (nonatomic, retain) NSSet* visitedLocation;
 @property (nonatomic, retain) NSSet* activeLocations;
 @property (nonatomic, retain) GameRouteObject * gameRoute;
