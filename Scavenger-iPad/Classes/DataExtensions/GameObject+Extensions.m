@@ -44,7 +44,9 @@
 			{
 				NSLog(@"Updating existing entity");
 				loc.firstPoint.latitude = [NSNumber numberWithFloat: coord.latitude];
+				loc.firstPoint.gameLatitude = loc.firstPoint.latitude;
 				loc.firstPoint.longitude = [NSNumber numberWithFloat: coord.longitude];
+				loc.firstPoint.gameLongitude = loc.firstPoint.longitude;
 				return loc;
 			}
 		}
