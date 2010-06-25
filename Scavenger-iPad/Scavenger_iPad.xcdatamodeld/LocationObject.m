@@ -19,6 +19,8 @@
 @dynamic maxLevel;
 @dynamic level;
 @dynamic visible;
+@dynamic drift;
+@dynamic driftSpeed;
 @dynamic locationType;
 @dynamic name;
 @dynamic activeInGame;

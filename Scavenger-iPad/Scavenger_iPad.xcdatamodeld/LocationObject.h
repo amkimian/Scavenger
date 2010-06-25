@@ -21,6 +21,8 @@
 @property (nonatomic, retain) NSNumber * maxLevel;
 @property (nonatomic, retain) NSNumber * level;
 @property (nonatomic, retain) NSNumber * visible;
+@property (nonatomic, retain) NSNumber * drift;
+@property (nonatomic, retain) NSNumber * driftSpeed;
 @property (nonatomic, retain) NSNumber * locationType;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet* activeInGame;

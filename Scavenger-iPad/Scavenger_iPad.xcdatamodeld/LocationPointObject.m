@@ -2,7 +2,7 @@
 //  LocationPointObject.m
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/23/10.
+//  Created by Alan Moore on 6/24/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -12,10 +12,12 @@
 
 @implementation LocationPointObject 
 
-@dynamic latitude;
+@dynamic gameLatitude;
 @dynamic longitude;
-@dynamic nextPoint;
+@dynamic latitude;
+@dynamic gameLongitude;
 @dynamic previousPoint;
 @dynamic parentLocation;
+@dynamic nextPoint;
 
 @end
