@@ -164,18 +164,11 @@
 	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:managedObjectContext];
 	GameObject *game = [[GameObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:managedObjectContext];
 	game.name = sender.textField.text;
-	// And add a location of type "Center", centered on the current map position with size the range of the mapView
 
 	[self.popOver dismissPopoverAnimated:YES];
 	self.popOver = nil;
 
-	LocationObject *centerLocation = [game addLocationOfType:LTYPE_CENTER at:mapView.centerCoordinate];
-	
-	/*
-	centerLocation.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
-	centerLocation.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];
-	centerLocation.size = [NSNumber numberWithFloat: 50.0f]; // FOR NOW
-	*/
+	[game addLocationOfType:LTYPE_START at:mapView.centerCoordinate];
 	
 	[self addGameAnnotation: game];
 }
@@ -308,8 +301,16 @@
 	NSLog(@"Disclosure tapped");
 	MenuPopupController *controller = [[MenuPopupController alloc] initWithNibName:nil bundle:nil];
 	controller.delegate = self;
-	controller.menuStrings = [[NSArray alloc] initWithObjects:@"Play",@"Edit",@"Transmit",@"Mail",@"Delete", nil];
 	self.currentGame = (GameObject *) view.annotation;	
+	if ([currentGame canResume])
+	{
+		controller.menuStrings = [[NSArray alloc] initWithObjects:@"Resume",@"Play",@"Edit",@"Transmit",@"Mail",@"Delete", nil];
+	}
+	else
+	{
+		controller.menuStrings = [[NSArray alloc] initWithObjects:@"Play",@"Edit",@"Transmit",@"Mail",@"Delete", nil];
+	}
+	
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
 	[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	[self.popOver presentPopoverFromRect:control.bounds inView:control permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
@@ -322,9 +323,18 @@
 
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
 {
+	if (![self.currentGame canResume])
+	{
+		item++;
+	}
 	switch(item)
 	{
-		case 0: // Play
+		case 1:
+			// Play
+			[currentGame removeLocationOfType: LTYPE_PLAYER];
+			// Drop through
+		case 0:
+			// Resume
 		{
 			GamePlayViewController *playController = [[GamePlayViewController alloc] initWithNibName: nil bundle:nil];
 			[currentGame createGameRun];
@@ -337,7 +347,7 @@
 			[[self navigationController] pushViewController:playController animated:YES];
 		}
 			break;
-		case 1:
+		case 2:
 		{
 			GameEditViewController *editController = [[GameEditViewController alloc] initWithNibName:nil bundle:nil];
 			editController.game = currentGame;
@@ -345,10 +355,10 @@
 			[editController release];
 		}		
 			break;
-		case 2:
+		case 3:
 			// Transmit
 			break;
-		case 3:
+		case 4:
 			// Email
 		{
 			NSString *error;
@@ -366,7 +376,7 @@
 			}
 		}
 			break;
-		case 4:
+		case 5:
 			// Delete
 			[[self managedObjectContext] deleteObject:currentGame];
 			currentGame = nil;

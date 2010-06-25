@@ -50,7 +50,7 @@
     [super viewDidLoad];
 	manager.gameRun = self.gameRun;
 	// Start off by zooming in on the location of the game
-	LocationObject *centerLocation = [gameRun.game getLocationOfType:LTYPE_CENTER];
+	LocationObject *centerLocation = [gameRun.game getLocationOfType:LTYPE_START];
 	if (centerLocation)
 	{
 		CLLocationCoordinate2D coordinate;

@@ -143,7 +143,7 @@
 	
 	// Look for the CENTER location type and scale the mapView to that
 	
-	LocationObject *centerLocation = [game getLocationOfType:LTYPE_CENTER];
+	LocationObject *centerLocation = [game getLocationOfType:LTYPE_START];
 	if (centerLocation)
 	{
 		CLLocationCoordinate2D coordinate;

@@ -35,14 +35,10 @@
 			return [UIColor yellowColor];
 			break;
 		case LTYPE_START:
-		case LTYPE_RESUME:
 			return [UIColor greenColor];
 			break;
 		case LTYPE_END:
 			return [UIColor redColor];
-			break;
-		case LTYPE_CENTER:
-			return [UIColor clearColor];
 			break;
 		case LTYPE_HAZARD_RADAR:
 		case LTYPE_HAZARD_FIND_HAZARD:
@@ -83,12 +79,8 @@
 			return @"Player position";
 		case LTYPE_START:
 			return @"Start Location";
-		case LTYPE_RESUME:
-			return @"Resume Location";
 		case LTYPE_END:
 			return @"Finish Location";
-		case LTYPE_CENTER:
-			return @"Display center";
 		case LTYPE_HAZARD_RADAR:
 			return @"Hazard that attacks radar";
 		case LTYPE_HAZARD_FIND_HAZARD:
@@ -154,12 +146,8 @@
 			return @"Player";
 		case LTYPE_START:
 			return @"Start";
-		case LTYPE_RESUME:
-			return @"Resume";
 		case LTYPE_END:
 			return @"Finish";
-		case LTYPE_CENTER:
-			return @"Rubbish";
 		case LTYPE_HAZARD_RADAR:
 			return @"Radar";
 		case LTYPE_HAZARD_FIND_HAZARD:

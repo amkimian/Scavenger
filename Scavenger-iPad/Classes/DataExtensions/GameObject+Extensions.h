@@ -16,11 +16,12 @@
 -(LocationObject *) addLocationOfType: (LocationType) type at:(CLLocationCoordinate2D) coord;
 -(LocationObject *) getLocationOfType: (LocationType) type;
 
+-(void) removeLocationOfType: (LocationType) type;
 -(void) removeLocationObject: (LocationObject *) loc;
 -(void) addLocationToDefaultRoute: (LocationObject *) loc;
 
 -(GameRunObject *) createGameRun;
-
+-(BOOL) canResume;
 
 @end
 

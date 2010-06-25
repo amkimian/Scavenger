@@ -41,17 +41,7 @@
 	if ( playerLocation != nil)
 	{
 		NSLog(@"Setting up to resume from pause");
-		CLLocationCoordinate2D coord;
-		coord.latitude = [playerLocation.firstPoint.latitude floatValue];
-		coord.longitude = [playerLocation.firstPoint.longitude floatValue];
-		gameRun.seekingLocation = [gameRun.game addLocationOfType:LTYPE_RESUME at:coord];
-
-		// And also remove the LTYPE_PLAYER
-		
-		[gameRun.game removeLocationObject: playerLocation];
-		
-		// and set state
-		
+		gameRun.seekingLocation = playerLocation;		
 		[gameRun updateGameState: SEEKING_RESUME];
 	}
 	else
@@ -115,7 +105,9 @@
 	// We are at the location we are currently seeking.
 	// Do what is necessary for the next steps
 	
-	if ([gameRun.state intValue] == SEEKING_START)
+	int state = [gameRun.state intValue];
+	
+	if ((state == SEEKING_START) || (state == SEEKING_RESUME))
 	{
 		// Turn on all hazards
 		for(LocationObject *l in gameRun.game.locations)
@@ -133,8 +125,7 @@
 		float changeValue = [gameRun.seekingLocation.level floatValue];
 		value+=changeValue;
 		gameRun.score = [NSNumber numberWithFloat: value];		
-	}
-	else
+	} else
 	{
 		// Must be end?
 		[gameRun updateGameState:FINISHED];
@@ -325,6 +316,12 @@
 	}
 	
 	[gamePlayController tick];
+	
+	// Update the LOCATION_PLAYER location
+	if ([gameRun isRunning])
+	{
+		[gameRun.game addLocationOfType:LTYPE_PLAYER at:gamePlayController.currentLocation.coordinate];
+	}
 }
 
 -(void) hazardAction

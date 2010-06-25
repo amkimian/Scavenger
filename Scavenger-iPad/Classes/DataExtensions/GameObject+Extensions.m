@@ -15,6 +15,19 @@
 #import "GameRunObject+Extensions.h"
 
 @implementation GameObject(Extensions)
+
+-(BOOL) canResume
+{
+	for(LocationObject *l in self.locations)
+	{
+		if ([l.locationType intValue] == LTYPE_PLAYER)
+		{
+			return YES;
+		}
+	}
+	return NO;
+}
+
 -(LocationObject *) addLocationOfType: (LocationType) type at:(CLLocationCoordinate2D) coord;
 {
 	// Create new LocationObject, setup its type, and add it to the locations set
@@ -23,12 +36,15 @@
 	
 	NSMutableSet *locations = [self mutableSetValueForKey: @"locations"];
 	int iType = (int) type;
-	if (iType <= (int) LTYPE_CENTER)
+	if (iType <= (int) LTYPE_END_SINGLE_INSTANCE)
 	{
 		for(LocationObject *loc in [locations allObjects])
 		{
 			if ([loc.locationType intValue] == (int) type)
 			{
+				NSLog(@"Updating existing entity");
+				loc.firstPoint.latitude = [NSNumber numberWithFloat: coord.latitude];
+				loc.firstPoint.longitude = [NSNumber numberWithFloat: coord.longitude];
 				return loc;
 			}
 		}
@@ -65,6 +81,18 @@
 	return loc;
 }
 
+-(void) removeLocationOfType: (LocationType) type
+{
+	for(LocationObject *l in self.locations)
+	{
+		if ([l.locationType intValue] == type)
+		{
+			[self removeLocationObject: l];
+			return;
+		}
+	}
+}
+
 -(void) removeLocationObject: (LocationObject *) loc
 {
     NSMutableSet *l = [self mutableSetValueForKey:@"locations"];
@@ -95,9 +123,13 @@
 	return self.name;
 }
 
+/**
+ * This is the annotation protocol implementation
+ */
+
 -(CLLocationCoordinate2D) coordinate
 {
-	LocationObject *centerPoint = [self getLocationOfType: LTYPE_CENTER];
+	LocationObject *centerPoint = [self getLocationOfType: LTYPE_START];
 	CLLocationCoordinate2D ret;
 	ret.latitude = [centerPoint.firstPoint.latitude floatValue];
 	ret.longitude = [centerPoint.firstPoint.longitude floatValue];
