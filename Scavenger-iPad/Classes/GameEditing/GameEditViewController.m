@@ -14,6 +14,7 @@
 #import "LocationPointObject.h"
 #import "SingleLocationEditor.h"
 
+#define ADDLOCTYPEHEIGHT 600
 
 @implementation GameEditViewController
 @synthesize game;
@@ -34,6 +35,9 @@
 {
 	ChooseListPopupController *controller = [[ChooseListPopupController alloc] initWithStyle: UITableViewStyleGrouped] ;
 	controller.delegate = self;
+	CGRect bounds = controller.view.bounds;
+	bounds.size.height = ADDLOCTYPEHEIGHT;
+	controller.view.bounds = bounds;
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
 	[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	[self.popOver presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny
@@ -44,7 +48,7 @@
 {
 	// Create new location
 	
-	LocationObject *loc = [game addLocationOfType:type at:mapView.centerCoordinate];
+	[game addLocationOfType:type at:mapView.centerCoordinate];
 	
 	[self.popOver dismissPopoverAnimated:YES];
 	self.popOver = nil;
