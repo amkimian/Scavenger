@@ -79,6 +79,7 @@
 	drawRect.origin.y += (mainRect.size.height - img.size.height)/2;
 	[img drawInRect:drawRect];
 
+
 	// Draw the text on top of that
 //	NSString *label = hardware.hudCode;
 //	CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);

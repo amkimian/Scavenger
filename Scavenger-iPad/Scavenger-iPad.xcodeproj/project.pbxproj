@@ -154,6 +154,10 @@
 		153631E711D4048300F63E59 /* LocationObject+Export.m in Sources */ = {isa = PBXBuildFile; fileRef = 153631E611D4048300F63E59 /* LocationObject+Export.m */; };
 		153631F011D4052400F63E59 /* LocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153631EF11D4052400F63E59 /* LocationObject.m */; };
 		153631F611D4061100F63E59 /* LocationPointObject+Export.m in Sources */ = {isa = PBXBuildFile; fileRef = 153631F511D4061100F63E59 /* LocationPointObject+Export.m */; };
+		1536321411D4212C00F63E59 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1536321311D4212C00F63E59 /* MessageUI.framework */; };
+		1536326711D453D400F63E59 /* GameSounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 1536326611D453D400F63E59 /* GameSounds.m */; };
+		1536326C11D454D700F63E59 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1536326B11D454D700F63E59 /* AVFoundation.framework */; };
+		1536327211D454F400F63E59 /* alert.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1536327111D454F400F63E59 /* alert.m4a */; };
 		153E577411C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */; };
 		153E57B311C944FE00DCDAC0 /* GameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */; };
 		153E57B411C944FE00DCDAC0 /* GameListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E57B211C944FE00DCDAC0 /* GameListViewController.xib */; };
@@ -377,6 +381,11 @@
 		153631EF11D4052400F63E59 /* LocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationObject.m; sourceTree = "<group>"; };
 		153631F411D4061100F63E59 /* LocationPointObject+Export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LocationPointObject+Export.h"; path = "DataExtensions/LocationPointObject+Export.h"; sourceTree = "<group>"; };
 		153631F511D4061100F63E59 /* LocationPointObject+Export.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LocationPointObject+Export.m"; path = "DataExtensions/LocationPointObject+Export.m"; sourceTree = "<group>"; };
+		1536321311D4212C00F63E59 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1536326511D453D400F63E59 /* GameSounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSounds.h; sourceTree = "<group>"; };
+		1536326611D453D400F63E59 /* GameSounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSounds.m; sourceTree = "<group>"; };
+		1536326B11D454D700F63E59 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1536327111D454F400F63E59 /* alert.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = alert.m4a; path = Resources/sounds/alert.m4a; sourceTree = "<group>"; };
 		153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = "Scavenger-iPad.xcdatamodel"; sourceTree = "<group>"; };
 		153E57B011C944FE00DCDAC0 /* GameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameListViewController.h; path = GameListViewing/GameListViewController.h; sourceTree = "<group>"; };
 		153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameListViewController.m; path = GameListViewing/GameListViewController.m; sourceTree = "<group>"; };
@@ -451,6 +460,8 @@
 				153E57CE11C9478A00DCDAC0 /* MapKit.framework in Frameworks */,
 				153E58A211C9666C00DCDAC0 /* CoreLocation.framework in Frameworks */,
 				153E5CFB11CAE2EC00DCDAC0 /* QuartzCore.framework in Frameworks */,
+				1536321411D4212C00F63E59 /* MessageUI.framework in Frameworks */,
+				1536326C11D454D700F63E59 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +620,14 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
+		1536327011D454E500F63E59 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1536327111D454F400F63E59 /* alert.m4a */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		153E57AF11C944BF00DCDAC0 /* GameListViewing */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,6 +728,8 @@
 				15B00F0911D143CD00757CCE /* GamePlayViewController.xib */,
 				1536303511D30CD100F63E59 /* GameScoreTableViewController.h */,
 				1536303611D30CD100F63E59 /* GameScoreTableViewController.m */,
+				1536326511D453D400F63E59 /* GameSounds.h */,
+				1536326611D453D400F63E59 /* GameSounds.m */,
 			);
 			name = GamePlaying;
 			sourceTree = "<group>";
@@ -736,6 +757,8 @@
 				153E58A111C9666B00DCDAC0 /* CoreLocation.framework */,
 				153E5AEE11CA911700DCDAC0 /* LocationCell.xib */,
 				153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */,
+				1536321311D4212C00F63E59 /* MessageUI.framework */,
+				1536326B11D454D700F63E59 /* AVFoundation.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -752,6 +775,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1536327011D454E500F63E59 /* Sounds */,
 				1536305A11D3136B00F63E59 /* Icons */,
 				15652A9311CB3D4E0051E687 /* Default-Portrait.png */,
 				153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */,
@@ -977,6 +1001,7 @@
 				1536315C11D3137D00F63E59 /* 128-bone.png in Resources */,
 				1536315D11D3137D00F63E59 /* 129-golf.png in Resources */,
 				1536315E11D3137D00F63E59 /* 130-dice.png in Resources */,
+				1536327211D454F400F63E59 /* alert.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,6 +1048,7 @@
 				153631E711D4048300F63E59 /* LocationObject+Export.m in Sources */,
 				153631F011D4052400F63E59 /* LocationObject.m in Sources */,
 				153631F611D4061100F63E59 /* LocationPointObject+Export.m in Sources */,
+				1536326711D453D400F63E59 /* GameSounds.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

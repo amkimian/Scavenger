@@ -15,6 +15,10 @@
 	NSMutableDictionary *ret = [[NSMutableDictionary alloc] init];
 	[ret setObject:self.level forKey:@"level"];
 	[ret setObject:self.locationType forKey:@"locationType"];
+	if (self.name == nil)
+	{
+		self.name = @"Name";
+	}
 	[ret setObject:self.name forKey:@"name"];
 	[ret setObject:self.maxLevel forKey:@"maxLevel"];
 	// And also the locationPoint objects
@@ -24,6 +28,7 @@
 	while(p)
 	{
 		[locs addObject:[p getAsExportDictionary]];
+		p = p.nextPoint;
 	}
 	[ret setObject:locs forKey:@"locationPoints"];
 	return ret;	

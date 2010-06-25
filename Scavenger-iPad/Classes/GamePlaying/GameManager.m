@@ -17,6 +17,7 @@
 @implementation GameManager
 @synthesize gameRun;
 @synthesize gamePlayController;
+@synthesize gameSounds;
 
 -(void) pause
 {
@@ -35,6 +36,7 @@
 {
 	// 1. Do we have a playerLocation? If we have we have been playing a game and we should resume that game
 	
+	gameSounds = [[GameSounds alloc] init];
 	LocationObject *playerLocation = [gameRun.game getLocationOfType:LTYPE_PLAYER];
 	if ( playerLocation != nil)
 	{
@@ -214,6 +216,7 @@
 					andView:self.gamePlayController.overlayView])
 				{
 					[gameRun ensureLocationIsActive: l];
+					[gameSounds playAlert];
 				}
 				else
 				{

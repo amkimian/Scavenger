@@ -12,6 +12,7 @@
 #import "MenuPopupController.h"
 #import "GamePlayViewController.h"
 #import "GameObject.h"
+#import "GameObject+Export.h"
 
 @implementation GameListViewController
 @synthesize managedObjectContext;
@@ -307,11 +308,16 @@
 	NSLog(@"Disclosure tapped");
 	MenuPopupController *controller = [[MenuPopupController alloc] initWithNibName:nil bundle:nil];
 	controller.delegate = self;
-	controller.menuStrings = [[NSArray alloc] initWithObjects:@"Play",@"Edit",@"Transmit",@"Delete", nil];
+	controller.menuStrings = [[NSArray alloc] initWithObjects:@"Play",@"Edit",@"Transmit",@"Mail",@"Delete", nil];
 	self.currentGame = (GameObject *) view.annotation;	
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
 	[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	[self.popOver presentPopoverFromRect:control.bounds inView:control permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error 
+{   
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
@@ -343,6 +349,24 @@
 			// Transmit
 			break;
 		case 3:
+			// Email
+		{
+			NSString *error;
+			NSDictionary *gameDict = [currentGame getAsExportDictionary];
+			NSData *gameData = [NSPropertyListSerialization dataFromPropertyList:gameDict
+																		  format:NSPropertyListXMLFormat_v1_0
+																errorDescription:&error];
+			if (gameData)
+			{
+				MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+				mail.delegate = self;
+				[mail setSubject:currentGame.name];
+				[mail addAttachmentData:gameData mimeType:@"application/xml" fileName:@"game.xml"];
+				[self presentModalViewController:mail animated:YES];				
+			}
+		}
+			break;
+		case 4:
 			// Delete
 			[[self managedObjectContext] deleteObject:currentGame];
 			currentGame = nil;

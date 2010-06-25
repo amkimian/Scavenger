@@ -10,6 +10,8 @@
 #import "GameRunObject.h"
 #import "LocationObject+Extensions.h"
 #import "GamePlayViewController.h"
+#import "GameSounds.h"
+
 /**
  * Playing a game
  */
@@ -18,6 +20,7 @@
 	GameRunObject *gameRun;
 	NSTimer *gameTimer;
 	GamePlayViewController *gamePlayController;
+	GameSounds *gameSounds;
 }
 
 -(void) startNewGame;
@@ -32,5 +35,5 @@
 
 @property(nonatomic, retain) GameRunObject *gameRun;
 @property(nonatomic, retain) GamePlayViewController *gamePlayController;
-
+@property(nonatomic, retain) GameSounds *gameSounds;
 @end

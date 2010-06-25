@@ -11,7 +11,8 @@
 #import "GameObject+Extensions.h"
 #import "GetTextPopupController.h"
 #import "MenuPopupController.h"
-
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 /**
  * This view controller handles the first view that gets shown from application
@@ -27,7 +28,8 @@
 								GetTextPopupDelegate,
 								MKMapViewDelegate,
 								MenuPopupDelegate,
-								UINavigationControllerDelegate> {
+								UINavigationControllerDelegate,
+								MFMailComposeViewControllerDelegate> {
 	NSManagedObjectContext *managedObjectContext;
 	NSFetchedResultsController *fetchedResultsController;
 	UIPopoverController *popOver;
