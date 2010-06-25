@@ -85,7 +85,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 
@@ -96,6 +96,8 @@
 		case 0:
 			return 2;
 		case 1:
+			return 2;
+		case 2:
 			return 2;
 	}
 	return 0;
@@ -109,6 +111,8 @@
 			return @"General";
 		case 1:
 			return @"Effect";
+		case 2:
+			return @"Drift";
 	}
 	return nil;
 }
@@ -203,6 +207,33 @@
 					break;
 			}
 			break;
+		case 2: // Drift
+			switch(indexPath.row)
+			{
+				case 0:
+				{
+					UnitsEditCell *unitsCell = [self getUnitsCell];
+					[unitsCell setLabelText:@"Drift"];
+					[unitsCell setUnitsText:@"on/off"];
+					unitsCell.textField.text = [NSString stringWithFormat: @"%@", location.drift];
+					unitsCell.tag = @"drift";
+					unitsCell.textField.keyboardType = UIKeyboardTypePhonePad;
+					cell = unitsCell;
+				}
+					break;
+				case 1:
+				{
+					UnitsEditCell *unitsCell = [self getUnitsCell];
+					[unitsCell setLabelText:@"Drift Rate"];
+					[unitsCell setUnitsText:@"degrees"];
+					unitsCell.textField.text = [NSString stringWithFormat:@"%.2f", [location.driftSpeed floatValue]];
+					unitsCell.textField.keyboardType = UIKeyboardTypePhonePad;
+					unitsCell.tag = @"driftSpeed";
+					cell = unitsCell;
+				}
+					break;
+			}
+			break;			
 	}	
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -244,6 +275,17 @@
 	if ([cell.tag isEqualToString:@"name"])
 	{
 		[location setValue:newText forKey:cell.tag];
+	}
+	else if ([cell.tag isEqualToString:@"drift"])
+	{
+		if ([newText isEqualToString:@"0"])
+		{
+			location.drift = [NSNumber numberWithBool: NO];
+		}
+		else
+		{
+			location.drift = [NSNumber numberWithBool:YES];
+		}
 	}
 	else
 	{

@@ -99,6 +99,8 @@
 	for(LocationObject *l in gameRun.game.locations)
 	{
 		l.visitedInGame = nil;
+		// This sets up the gameLongitude and gameLatitude
+		[l setupForGame];
 	}
 	
 	gameRun.visitedLocation = nil;
@@ -169,7 +171,7 @@
 -(void) gameTimer: (NSTimer *) timer
 {
 	// This is a game tick, what do we do here?
-	NSLog(@"Game tick");
+
 	// Depends on game state
 	switch([gameRun.state intValue])
 	{
@@ -203,12 +205,13 @@
 			break;
 	}
 	
-	// Check for entry or exit from hazards
+	// Check for entry or exit from hazards and do drift
 	
 	for(LocationObject *l in gameRun.game.locations)
 	{
 		if ([l.visible boolValue])
 		{
+			[l performDrift];
 			if ([l isHazard])
 			{
 				if ([l coordinateInLocation:self.gamePlayController.currentLocation.coordinate
@@ -398,7 +401,6 @@
 				newPower = 0.0;
 				powerExhausted = YES;
 			}
-			NSLog(@"Power change %f -> %f", existingPower, newPower);
 			power.level = [NSNumber numberWithFloat: newPower];
 		}
 	}							   

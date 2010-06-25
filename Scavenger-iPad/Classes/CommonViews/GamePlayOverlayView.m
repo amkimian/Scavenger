@@ -131,7 +131,6 @@
 	{
 		if ([l.visible boolValue] == YES)
 		{
-			NSLog(@"Loc visible");
 			float realAlphaValue = 0.7;
 			if ([l isHazard])
 			{
@@ -144,12 +143,11 @@
 			if (([l isHazard] && noHazards == NO)
 				|| (![l isHazard] && noLocations == NO))
 			{
-				[l drawLocation:mapView andView:self andAlpha:realAlphaValue];			
+				[l drawLocation:mapView andView:self andAlpha:realAlphaValue inGame:YES];			
 			}
 		}
 		else
 		{
-			NSLog(@"Loc not visible");
 		}
 	}
 	if ([gameRun isRunning])
@@ -172,7 +170,7 @@
 	
 	if (self.isInPingMode)
 	{
-		[gameRun.seekingLocation drawLocation:mapView andView:self andAlpha:1.0];
+		[gameRun.seekingLocation drawLocation:mapView andView:self andAlpha:1.0 inGame:YES];
 	}
 }
 

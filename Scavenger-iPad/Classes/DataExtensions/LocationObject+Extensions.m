@@ -13,6 +13,18 @@
 #define OVERLAY_ALPHA 0.5f
 
 @implementation LocationObject(Extensions)
+
+-(void) setupForGame
+{
+	LocationPointObject *p = self.firstPoint;
+	while(p)
+	{
+		p.gameLatitude = p.latitude;
+		p.gameLongitude = p.longitude;
+		p = p.nextPoint;
+	}
+}
+
 -(UIColor *) locationDisplayColor
 {
 	// Color is based on type
@@ -110,6 +122,28 @@
 	return count;
 }
 
+-(void) performDrift
+{
+	if ([self.drift boolValue])
+	{
+		float driftRate = [self.driftSpeed floatValue] / 100000;
+		LocationPointObject *p = self.firstPoint;
+		while(p)
+		{
+			// Drift this point by anything from +- driftRate in lat and long
+			float driftLat = -driftRate + driftRate * 2 * ((float)(random() % 1000)) / 1000;
+			float driftLong = -driftRate + driftRate * 2 * ((float)(random() % 1000)) / 1000;
+			float currentLat = [p.gameLatitude floatValue];
+			currentLat += driftLat;
+			p.gameLatitude = [NSNumber numberWithFloat: currentLat];
+			float currentLong = [p.gameLongitude floatValue];
+			currentLong += driftLong;
+			p.gameLongitude = [NSNumber numberWithFloat: currentLong];
+			p = p.nextPoint;
+		}
+	}	
+}
+
 -(NSString *) locationShortTypeString
 {
 	// Color is based on type
@@ -164,7 +198,7 @@
 	}
 	else
 	{
-		CGPathRef path = [self getPathRef: mapView andView: view];
+		CGPathRef path = [self getPathRef: mapView andView: view inGame:NO];
 		CGRect bounds = CGPathGetBoundingBox(path);
 		where.x = bounds.origin.x + bounds.size.width / 2;
 		where.y = bounds.origin.y + bounds.size.height / 2;
@@ -180,18 +214,28 @@
 
 // Called when we have a current graphics context
 
--(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view andAlpha:(float) alpha
+-(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view andAlpha:(float) alpha inGame:(BOOL) inGame
 {
+	if (!inGame)
+	{
 		[self drawDetails: mapView andView: view];
+	}
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	int nPoints = [self countPoints];
 	if (nPoints == 1)
 	{
 		LocationPointObject *mainPoint = self.firstPoint;
 		CLLocationCoordinate2D coord;
-		coord.latitude = [mainPoint.latitude floatValue];
-		coord.longitude = [mainPoint.longitude floatValue];
-		
+		if (inGame)
+		{
+			coord.latitude = [mainPoint.gameLatitude floatValue];
+			coord.longitude = [mainPoint.gameLongitude floatValue];
+		}
+		else
+		{
+			coord.latitude = [mainPoint.latitude floatValue];
+			coord.longitude = [mainPoint.longitude floatValue];
+		}
 		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, SINGLE_SIZE, SINGLE_SIZE);
 		CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 		dRect.size.height = dRect.size.width;
@@ -203,11 +247,27 @@
 	{
 		LocationPointObject *mainPoint = self.firstPoint;
 		CLLocationCoordinate2D coord;
-		coord.latitude = [mainPoint.latitude floatValue];
-		coord.longitude = [mainPoint.longitude floatValue];
+		if (inGame)
+		{
+			coord.latitude = [mainPoint.gameLatitude floatValue];
+			coord.longitude = [mainPoint.gameLongitude floatValue];
+		}
+		else
+		{
+			coord.latitude = [mainPoint.latitude floatValue];
+			coord.longitude = [mainPoint.longitude floatValue];
+		}
 		CLLocationCoordinate2D coord2;
-		coord2.latitude = [mainPoint.nextPoint.latitude floatValue];
-		coord2.longitude = [mainPoint.nextPoint.longitude floatValue];
+		if (inGame)
+		{
+			coord2.latitude = [mainPoint.nextPoint.gameLatitude floatValue];
+			coord2.longitude = [mainPoint.nextPoint.gameLongitude floatValue];
+		}
+		else
+		{
+			coord2.latitude = [mainPoint.nextPoint.latitude floatValue];
+			coord2.longitude = [mainPoint.nextPoint.longitude floatValue];
+		}
 		
 		// The radius is the distance between these two points
 		CLLocation *loc = [[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
@@ -228,7 +288,7 @@
 	else
 	{
 		// Fill a polygon made up of curves from the points
-		CGMutablePathRef path = [self getPathRef:mapView andView:view];
+		CGMutablePathRef path = [self getPathRef:mapView andView:view inGame:inGame];
 		CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, alpha);
 		CGContextSetFillColorWithColor(context, cRef);
 		CGContextAddPath(context, path);
@@ -237,13 +297,21 @@
 
 }
 
--(CGMutablePathRef) getPathRef: (MKMapView *) mapView andView: (UIView *) view
+-(CGMutablePathRef) getPathRef: (MKMapView *) mapView andView: (UIView *) view inGame: (BOOL) inGame
 {
 	CGMutablePathRef path = CGPathCreateMutable();
 	LocationPointObject *point = self.firstPoint;
 	CLLocationCoordinate2D coord;
-	coord.latitude = [point.latitude floatValue];
-	coord.longitude = [point.longitude floatValue];		
+	if (inGame)
+	{
+		coord.latitude = [point.gameLatitude floatValue];
+		coord.longitude = [point.gameLongitude floatValue];		
+	}
+	else
+	{
+		coord.latitude = [point.latitude floatValue];
+		coord.longitude = [point.longitude floatValue];		
+	}
 	CGPoint firstPoint = [mapView convertCoordinate:coord toPointToView:mapView];
 	CGPoint controlPoint;
 	CGPoint endPoint;
@@ -253,8 +321,16 @@
 	BOOL ready = NO;
 	while(point)
 	{
-		coord.latitude = [point.latitude floatValue];
-		coord.longitude = [point.longitude floatValue];		
+		if (inGame)
+		{
+			coord.latitude = [point.gameLatitude floatValue];
+			coord.longitude = [point.gameLongitude floatValue];		
+		}
+		else
+		{
+			coord.latitude = [point.latitude floatValue];
+			coord.longitude = [point.longitude floatValue];		
+		}
 		CGPoint thisPoint = [mapView convertCoordinate:coord toPointToView:mapView];
 		if (ready == NO)
 		{
@@ -280,19 +356,28 @@
 -(BOOL) coordinateInLocation: (CLLocationCoordinate2D) coord inMap: (MKMapView *) mapView andView: (UIView *) view
 {
 	CGPoint p = [mapView convertCoordinate:coord toPointToView:view];
-	return [self pointInLocation: p inMap: mapView andView:view];
+	return [self pointInLocation: p inMap: mapView andView:view inGame:NO];
 }
 
 // Is this point in this location region?
 
--(BOOL) pointInLocation: (CGPoint) p inMap: (MKMapView *) mapView andView: (UIView *) view
+-(BOOL) pointInLocation: (CGPoint) p inMap: (MKMapView *) mapView andView: (UIView *) view inGame:(BOOL) inGame
 {
 	int nPoints = [self countPoints];
 	if (nPoints == 1)
 	{
 		CLLocationCoordinate2D coord;
-		coord.latitude = [self.firstPoint.latitude floatValue];
-		coord.longitude = [self.firstPoint.longitude floatValue];
+		if (inGame)
+		{
+			coord.latitude = [self.firstPoint.gameLatitude floatValue];
+			coord.longitude = [self.firstPoint.gameLongitude floatValue];
+		}
+		else
+		{
+			coord.latitude = [self.firstPoint.latitude floatValue];
+			coord.longitude = [self.firstPoint.longitude floatValue];
+		}
+		
 		MKCoordinateRegion r = MKCoordinateRegionMakeWithDistance(coord, SINGLE_SIZE, SINGLE_SIZE);
 		
 		CGRect rect = [mapView convertRegion:r toRectToView:view];
@@ -305,11 +390,21 @@
 	{
 		LocationPointObject *mainPoint = self.firstPoint;
 		CLLocationCoordinate2D coord;
-		coord.latitude = [mainPoint.latitude floatValue];
-		coord.longitude = [mainPoint.longitude floatValue];
 		CLLocationCoordinate2D coord2;
-		coord2.latitude = [mainPoint.nextPoint.latitude floatValue];
-		coord2.longitude = [mainPoint.nextPoint.longitude floatValue];
+		if (inGame)
+		{
+			coord.latitude = [mainPoint.gameLatitude floatValue];
+			coord.longitude = [mainPoint.gameLongitude floatValue];
+			coord2.latitude = [mainPoint.nextPoint.gameLatitude floatValue];
+			coord2.longitude = [mainPoint.nextPoint.gameLongitude floatValue];
+		}
+		else
+		{
+			coord.latitude = [mainPoint.latitude floatValue];
+			coord.longitude = [mainPoint.longitude floatValue];
+			coord2.latitude = [mainPoint.nextPoint.latitude floatValue];
+			coord2.longitude = [mainPoint.nextPoint.longitude floatValue];
+		}
 		
 		// The radius is the distance between these two points
 		CLLocation *loc = [[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
@@ -327,7 +422,7 @@
 	}
 	else
 	{
-		CGMutablePathRef pRef = [self getPathRef: mapView andView:view];
+		CGMutablePathRef pRef = [self getPathRef: mapView andView:view inGame:inGame];
 		if (CGPathContainsPoint(pRef, nil, p, true))
 		{
 			return YES;

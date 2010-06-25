@@ -88,7 +88,7 @@
 	MKMapView *mapView = (MKMapView *) [self superview];
 	for(LocationObject *o in locations)
 	{
-		if ([o pointInLocation:p inMap:mapView andView:self])
+		if ([o pointInLocation:p inMap:mapView andView:self inGame:NO])
 		{
 			return o;
 		}
@@ -156,7 +156,7 @@
 			return;
 	
 		MKMapView *mapView = (MKMapView *) self.superview;
-	[loc drawLocation:mapView andView:self andAlpha:0.5];
+	[loc drawLocation:mapView andView:self andAlpha:0.5 inGame:NO];
 }
 
 - (void)dealloc {

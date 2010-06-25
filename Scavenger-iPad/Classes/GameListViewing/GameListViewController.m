@@ -359,7 +359,7 @@
 			if (gameData)
 			{
 				MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
-				mail.delegate = self;
+				mail.mailComposeDelegate = self;
 				[mail setSubject:currentGame.name];
 				[mail addAttachmentData:gameData mimeType:@"application/xml" fileName:@"game.xml"];
 				[self presentModalViewController:mail animated:YES];				
