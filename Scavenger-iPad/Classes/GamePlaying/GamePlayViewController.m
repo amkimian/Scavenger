@@ -66,6 +66,7 @@
 									  UIViewAutoresizingFlexibleHeight )];
 	[mapView setAutoresizesSubviews:YES];
 	[mapView addSubview:overlayView];
+	mapView.delegate = overlayView;
 	[manager setupGameFromLoad];
 	overlayView.gameRun = self.gameRun;
 	[overlayView setNeedsDisplay];
@@ -120,6 +121,10 @@
 
 -(void) resetMapView
 {
+	// This is how you would handle compass heading...
+	// [mapView setTransform:CGAffineTransformMakeRotation(-1 * currentHeading.magneticHeading * 3.14159 / 180)];
+	// with also the transform for the GamePlayOverlayView
+	
 	MKCoordinateRegion region = MKCoordinateRegionMake(self.currentLocation.coordinate,
 													   MKCoordinateSpanMake(mapRadius, mapRadius));
 	[mapView setRegion:region animated:YES];

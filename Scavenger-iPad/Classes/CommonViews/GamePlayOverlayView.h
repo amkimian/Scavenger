@@ -16,12 +16,13 @@
  * depending on the game state
  */
 
-@interface GamePlayOverlayView : UIView {
+@interface GamePlayOverlayView : UIView<MKMapViewDelegate> {
 	GameRunObject *gameRun;
 	GameStatusHUDView *hudView;
 	ScoreView *scoreView;
 	BOOL hasDesiredLocation;
 	BOOL isInPingMode;
+	BOOL hidden;
 	
 	// In simulated mode
 	CLLocationCoordinate2D desiredLocation;
@@ -35,5 +36,6 @@
 @property(nonatomic, retain) ScoreView *scoreView;
 @property(nonatomic, readonly) CLLocationCoordinate2D desiredLocation;
 @property(nonatomic, readonly) BOOL hasDesiredLocation;
+@property(nonatomic) BOOL hidden;
 @property(nonatomic) BOOL isInPingMode;
 @end

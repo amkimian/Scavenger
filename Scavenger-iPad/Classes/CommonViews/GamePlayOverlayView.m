@@ -21,6 +21,7 @@
 @synthesize hasDesiredLocation;
 @synthesize isInPingMode;
 @synthesize scoreView;
+@synthesize hidden;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -33,6 +34,7 @@
 		gameStatusHUDFrame.size.height = 55;
 		hasDesiredLocation = NO;
 		isInPingMode = NO;
+		self.hidden = NO;
 		
 		hudView = [[GameStatusHUDView alloc] initWithFrame:gameStatusHUDFrame];		
 		[self addSubview: hudView];
@@ -79,7 +81,6 @@
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-	NSLog(@"Hello");
 	MKMapView *mapView = (MKMapView *)[self superview];
 	// Draw locations that are available and visible, depending on hardware states and what is allowed
 	// in the current game state
@@ -87,67 +88,70 @@
 	// (1) we draw hazards if the "Hazard" hardware damage is < 50. Anything greater than 50 alters the alpha value of our display
 	// (2) we draw locations (that have visible set) if the "Bonus" hardware damage is < 50. Anything greater than 50 alters the alpha value of our display
 	
-	float hazardAlphaValue = 0.7; // The default
-	float bonusAlphaValue = 0.7; // The default
-	
-	HardwareObject *hazardCheck = [gameRun getHardwareWithName:@"Hazard"];
-	BOOL noHazards = NO;
-	BOOL noLocations = NO;
-	
-	if (hazardCheck)
+	if (self.hidden == NO)
 	{
-		if ([hazardCheck.active boolValue] && [hazardCheck.hasPower boolValue])
-		{
-			float perc = [hazardCheck getPercentage];
-			if (perc < 50)
-			{
-				hazardAlphaValue = perc/100 * 0.7;
-			}
-		}
-		else
-		{
-			noHazards = YES;
-		}
-	}
-	HardwareObject *bonusCheck = [gameRun getHardwareWithName:@"Bonus"];
-	if (bonusCheck)
-	{
-		if ([bonusCheck.active boolValue] && [bonusCheck.hasPower boolValue])
-		{
-			float perc = [bonusCheck getPercentage];
-			if (perc < 50)
-			{
-				bonusAlphaValue = perc/100 * 0.7;
-			}
-		}
-		else
-		{
-			noLocations = YES;
-		}
-	}	
+		float hazardAlphaValue = 0.7; // The default
+		float bonusAlphaValue = 0.7; // The default
 	
-	// Draw locations
-	for(LocationObject * l in gameRun.game.locations)
-	{
-		if ([l.visible boolValue] == YES)
+		HardwareObject *hazardCheck = [gameRun getHardwareWithName:@"Hazard"];
+		BOOL noHazards = NO;
+		BOOL noLocations = NO;
+	
+		if (hazardCheck)
 		{
-			float realAlphaValue = 0.7;
-			if ([l isHazard])
+			if ([hazardCheck.active boolValue] && [hazardCheck.hasPower boolValue])
 			{
-				realAlphaValue = hazardAlphaValue;
+				float perc = [hazardCheck getPercentage];
+				if (perc < 50)
+				{
+					hazardAlphaValue = perc/100 * 0.7;
+				}
 			}
 			else
 			{
-				realAlphaValue = bonusAlphaValue;
-			}
-			if (([l isHazard] && noHazards == NO)
-				|| (![l isHazard] && noLocations == NO))
-			{
-				[l drawLocation:mapView andView:self andAlpha:realAlphaValue inGame:YES];			
+				noHazards = YES;
 			}
 		}
-		else
+		HardwareObject *bonusCheck = [gameRun getHardwareWithName:@"Bonus"];
+		if (bonusCheck)
 		{
+			if ([bonusCheck.active boolValue] && [bonusCheck.hasPower boolValue])
+			{
+				float perc = [bonusCheck getPercentage];
+				if (perc < 50)
+				{
+					bonusAlphaValue = perc/100 * 0.7;
+				}
+			}
+			else
+			{
+				noLocations = YES;
+			}
+		}	
+	
+		// Draw locations
+		for(LocationObject * l in gameRun.game.locations)
+		{
+			if ([l.visible boolValue] == YES)
+			{
+				float realAlphaValue = 0.7;
+				if ([l isHazard])
+				{
+					realAlphaValue = hazardAlphaValue;
+				}
+				else
+				{
+					realAlphaValue = bonusAlphaValue;
+				}
+				if (([l isHazard] && noHazards == NO)
+				|| (![l isHazard] && noLocations == NO))
+				{
+					[l drawLocation:mapView andView:self andAlpha:realAlphaValue inGame:YES];			
+				}
+			}
+			else
+			{
+			}
 		}
 	}
 	if ([gameRun isRunning])
@@ -225,5 +229,25 @@
 		CGContextStrokePath(c);
 	}	
 }
+
+// called by the MKMapView when the region is going to change
+- (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:
+(BOOL)animated
+{
+	self.hidden = YES; // hide the view during the transition
+	[self setNeedsDisplay];
+} // end method mapView:regionWillChangeAnimated:
+
+// called by the MKMapView when the region has finished changing
+- (void)mapView:(MKMapView *)mapView
+regionDidChangeAnimated:(BOOL)animated
+{
+	self.hidden = NO; // unhide the view
+	// Update the center location
+	//LocationObject *centerLocation = [game addLocationOfType:LTYPE_CENTER at:mapView.centerCoordinate];
+	//centerLocation.firstPoint.longitude = [NSNumber numberWithFloat: mapView.centerCoordinate.longitude];
+	//centerLocation.firstPoint.latitude = [NSNumber numberWithFloat: mapView.centerCoordinate.latitude];	
+	[self setNeedsDisplay]; // redraw the view
+} // end method mapview:regionDidChangeAnimated:
 
 @end
