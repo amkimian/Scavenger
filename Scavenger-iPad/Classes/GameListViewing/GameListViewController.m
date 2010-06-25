@@ -272,7 +272,16 @@
             // if an existing pin view was not available, create one
             MKPinAnnotationView* customPinView = [[[MKPinAnnotationView alloc]
 												   initWithAnnotation:annotation reuseIdentifier:BridgeAnnotationIdentifier] autorelease];
-            customPinView.pinColor = MKPinAnnotationColorPurple;
+			GameObject *g = (GameObject *) annotation;
+			if ([g canResume])
+			{
+				customPinView.pinColor = MKPinAnnotationColorGreen;
+			}
+			else
+			{
+				customPinView.pinColor = MKPinAnnotationColorPurple;
+			}
+			
             customPinView.animatesDrop = YES;
             customPinView.canShowCallout = YES;
             

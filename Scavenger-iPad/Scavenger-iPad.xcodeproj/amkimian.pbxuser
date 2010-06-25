@@ -74,7 +74,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 339";
 		rLen = 0;
-		rLoc = 13732;
+		rLoc = 13880;
 		rType = 0;
 		vrLen = 2007;
 		vrLoc = 7982;
@@ -144,7 +144,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 318";
 		rLen = 0;
-		rLoc = 12388;
+		rLoc = 12536;
 		rType = 0;
 		vrLen = 1905;
 		vrLoc = 10828;
@@ -154,7 +154,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 340";
 		rLen = 0;
-		rLoc = 13647;
+		rLoc = 13795;
 		rType = 0;
 		vrLen = 2118;
 		vrLoc = 1142;
@@ -204,7 +204,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 340";
 		rLen = 0;
-		rLoc = 13647;
+		rLoc = 13795;
 		rType = 0;
 		vrLen = 2177;
 		vrLoc = 1142;
@@ -214,7 +214,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 320";
 		rLen = 0;
-		rLoc = 12272;
+		rLoc = 12420;
 		rType = 0;
 		vrLen = 1935;
 		vrLoc = 10828;
@@ -7047,7 +7047,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 372;
+		rLoc = 381;
 		rType = 1;
 	};
 	1536322411D4220F00F63E59 /* PBXTextBookmark */ = {
@@ -7055,7 +7055,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 359";
 		rLen = 0;
-		rLoc = 13307;
+		rLoc = 13455;
 		rType = 0;
 		vrLen = 2049;
 		vrLoc = 11409;
@@ -7065,7 +7065,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 359";
 		rLen = 0;
-		rLoc = 13307;
+		rLoc = 13455;
 		rType = 0;
 		vrLen = 2049;
 		vrLoc = 11409;
@@ -7085,7 +7085,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 360";
 		rLen = 0;
-		rLoc = 13392;
+		rLoc = 13540;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 12759;
@@ -7113,7 +7113,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 359";
 		rLen = 0;
-		rLoc = 13307;
+		rLoc = 13455;
 		rType = 0;
 		vrLen = 2072;
 		vrLoc = 11409;
@@ -7143,7 +7143,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 360";
 		rLen = 0;
-		rLoc = 13392;
+		rLoc = 13540;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 12759;
@@ -7153,7 +7153,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 360";
 		rLen = 0;
-		rLoc = 13392;
+		rLoc = 13540;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 12759;
@@ -7193,7 +7193,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 360";
 		rLen = 0;
-		rLoc = 13392;
+		rLoc = 13540;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 12759;
@@ -7213,7 +7213,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 360";
 		rLen = 0;
-		rLoc = 13392;
+		rLoc = 13540;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 12759;
@@ -7233,7 +7233,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 359";
 		rLen = 0;
-		rLoc = 13307;
+		rLoc = 13455;
 		rType = 0;
 		vrLen = 2072;
 		vrLoc = 11409;
@@ -7243,7 +7243,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 361";
 		rLen = 0;
-		rLoc = 13472;
+		rLoc = 13620;
 		rType = 0;
 		vrLen = 2044;
 		vrLoc = 11409;
@@ -7253,7 +7253,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 360";
 		rLen = 0;
-		rLoc = 13392;
+		rLoc = 13540;
 		rType = 0;
 		vrLen = 1090;
 		vrLoc = 12759;
@@ -7263,7 +7263,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 360";
 		rLen = 0;
-		rLoc = 13392;
+		rLoc = 13540;
 		rType = 0;
 		vrLen = 1090;
 		vrLoc = 12759;
@@ -7284,7 +7284,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 323;
+		rLoc = 332;
 		rType = 1;
 	};
 	1536326111D4249F00F63E59 /* PBXTextBookmark */ = {
@@ -7292,7 +7292,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 2165;
 		vrLoc = 11041;
@@ -7302,7 +7302,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1071;
 		vrLoc = 11933;
@@ -7326,7 +7326,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7336,7 +7336,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7346,7 +7346,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 2224;
 		vrLoc = 11041;
@@ -7406,7 +7406,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7416,7 +7416,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7466,7 +7466,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7476,7 +7476,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7486,7 +7486,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7536,7 +7536,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7546,7 +7546,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7566,7 +7566,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7586,7 +7586,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7596,7 +7596,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7644,7 +7644,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7698,7 +7698,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -7708,7 +7708,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 11933;
@@ -8152,7 +8152,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 323";
 		rLen = 0;
-		rLoc = 11753;
+		rLoc = 11901;
 		rType = 0;
 		vrLen = 2224;
 		vrLoc = 11041;
@@ -8162,7 +8162,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 362";
 		rLen = 0;
-		rLoc = 13291;
+		rLoc = 13439;
 		rType = 0;
 		vrLen = 1895;
 		vrLoc = 11786;
@@ -8372,7 +8372,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 349;
+		rLoc = 358;
 		rType = 1;
 	};
 	1536336C11D53F6C00F63E59 /* PBXTextBookmark */ = {
@@ -8380,7 +8380,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 350";
 		rLen = 0;
-		rLoc = 12552;
+		rLoc = 12700;
 		rType = 0;
 		vrLen = 1683;
 		vrLoc = 11752;
@@ -8390,7 +8390,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 350";
 		rLen = 0;
-		rLoc = 12552;
+		rLoc = 12700;
 		rType = 0;
 		vrLen = 1861;
 		vrLoc = 10528;
@@ -8580,7 +8580,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 372";
 		rLen = 0;
-		rLoc = 13292;
+		rLoc = 13440;
 		rType = 0;
 		vrLen = 1096;
 		vrLoc = 12794;
@@ -8600,7 +8600,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 372";
 		rLen = 0;
-		rLoc = 13292;
+		rLoc = 13440;
 		rType = 0;
 		vrLen = 1096;
 		vrLoc = 12794;
@@ -8726,7 +8726,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 372";
 		rLen = 0;
-		rLoc = 13292;
+		rLoc = 13440;
 		rType = 0;
 		vrLen = 1096;
 		vrLoc = 12794;
@@ -8790,6 +8790,36 @@
 		rType = 0;
 		vrLen = 2249;
 		vrLoc = 605;
+	};
+	153633BC11D56BCF00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E58DD11C9D12D00DCDAC0 /* GameObject+Extensions.m */;
+		name = "GameObject+Extensions.m: 49";
+		rLen = 0;
+		rLoc = 1454;
+		rType = 0;
+		vrLen = 2249;
+		vrLoc = 605;
+	};
+	153633BD11D56BCF00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
+		name = "GameListViewController.m: 350";
+		rLen = 0;
+		rLoc = 12700;
+		rType = 0;
+		vrLen = 1861;
+		vrLoc = 10528;
+	};
+	153633BE11D56BCF00F63E59 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
+		name = "GameListViewController.m: 282";
+		rLen = 0;
+		rLoc = 9787;
+		rType = 0;
+		vrLen = 2153;
+		vrLoc = 8756;
 	};
 	153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */ = {
 		uiCtxt = {
@@ -9038,9 +9068,9 @@
 	};
 	153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1111, 5278}}";
-			sepNavSelRange = "{13292, 0}";
-			sepNavVisRange = "{12794, 1096}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 5317}}";
+			sepNavSelRange = "{9787, 0}";
+			sepNavVisRange = "{8756, 2153}";
 		};
 	};
 	153E58DC11C9D12D00DCDAC0 /* GameObject+Extensions.h */ = {
@@ -9774,8 +9804,8 @@
 	};
 	15B00E8B11D1091F00757CCE /* GameRunObject+Extensions.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 720}}";
-			sepNavSelRange = "{784, 40}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 697}}";
+			sepNavSelRange = "{323, 0}";
 			sepNavVisRange = "{0, 945}";
 		};
 	};
@@ -10333,7 +10363,7 @@
 		comments = "'navigationController' undeclared (first use in this function)";
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		rLen = 1;
-		rLoc = 389;
+		rLoc = 398;
 		rType = 1;
 	};
 	15B00F1611D144F700757CCE /* PBXTextBookmark */ = {
@@ -10341,7 +10371,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 329";
 		rLen = 0;
-		rLoc = 12829;
+		rLoc = 12977;
 		rType = 0;
 		vrLen = 935;
 		vrLoc = 11679;
@@ -10351,7 +10381,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 329";
 		rLen = 0;
-		rLoc = 12829;
+		rLoc = 12977;
 		rType = 0;
 		vrLen = 935;
 		vrLoc = 11679;
@@ -10361,7 +10391,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 329";
 		rLen = 0;
-		rLoc = 12829;
+		rLoc = 12977;
 		rType = 0;
 		vrLen = 935;
 		vrLoc = 11679;
@@ -10371,7 +10401,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 329";
 		rLen = 0;
-		rLoc = 12829;
+		rLoc = 12977;
 		rType = 0;
 		vrLen = 935;
 		vrLoc = 11679;
@@ -10469,7 +10499,7 @@
 		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
 		name = "GameListViewController.m: 339";
 		rLen = 0;
-		rLoc = 13732;
+		rLoc = 13880;
 		rType = 0;
 		vrLen = 1841;
 		vrLoc = 10773;
@@ -11553,6 +11583,9 @@
 			153633B711D56AB600F63E59 /* PBXTextBookmark */ = 153633B711D56AB600F63E59 /* PBXTextBookmark */;
 			153633B811D56AB600F63E59 /* PBXTextBookmark */ = 153633B811D56AB600F63E59 /* PBXTextBookmark */;
 			153633B911D56AB600F63E59 /* PBXTextBookmark */ = 153633B911D56AB600F63E59 /* PBXTextBookmark */;
+			153633BC11D56BCF00F63E59 /* PBXTextBookmark */ = 153633BC11D56BCF00F63E59 /* PBXTextBookmark */;
+			153633BD11D56BCF00F63E59 /* PBXTextBookmark */ = 153633BD11D56BCF00F63E59 /* PBXTextBookmark */;
+			153633BE11D56BCF00F63E59 /* PBXTextBookmark */ = 153633BE11D56BCF00F63E59 /* PBXTextBookmark */;
 			153E57A711C9354500DCDAC0 = 153E57A711C9354500DCDAC0 /* PBXTextBookmark */;
 			153E57A811C9354500DCDAC0 = 153E57A811C9354500DCDAC0 /* PBXTextBookmark */;
 			153E593611C9D86A00DCDAC0 = 153E593611C9D86A00DCDAC0 /* XDModelBookmark */;
