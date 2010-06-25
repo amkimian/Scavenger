@@ -171,8 +171,9 @@
 	CGPoint previousPoint;
 	CGPoint firstPoint;
 	BOOL isFirst = YES;
+	int count = 1;
 	CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0);
-	CGContextSetRGBFillColor(context, 0.0, 1.0, 0.0, 1.0);
+	UIFont *textFont = [UIFont boldSystemFontOfSize:12];
 	while(!done)
 	{
 		// Find out the local coords for this point
@@ -184,17 +185,9 @@
 
 		// Now draw circle for the actual point, and line from the previous point
 		
-		CGRect rect;
-		rect.origin.x = centerPoint.x - 10.0;
-		rect.origin.y = centerPoint.y - 10.0;
-		rect.size.width = 20.0;
-		rect.size.height = 20.0;
-		CGContextFillEllipseInRect(context, rect);
-		
 		if (!isFirst)
 		{
 			// Draw a line from the last point to this point
-			NSLog(@"Draw line");
 			CGContextMoveToPoint(context, previousPoint.x, previousPoint.y);
 			CGContextAddLineToPoint(context, centerPoint.x, centerPoint.y);
 			CGContextStrokePath(context);
@@ -205,6 +198,20 @@
 			firstPoint = centerPoint;
 		}
 		previousPoint = centerPoint;
+		
+		CGRect rect;
+		rect.origin.x = centerPoint.x - 10.0;
+		rect.origin.y = centerPoint.y - 10.0;
+		rect.size.width = 20.0;
+		rect.size.height = 20.0;
+		
+		CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 0.7);
+		CGContextFillEllipseInRect(context, rect);
+		NSString *countString = [NSString stringWithFormat:@"%d", count];
+		CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 1.0);	
+		rect.origin.y += (rect.size.height - 12) / 2;
+		[countString drawInRect:rect withFont:textFont lineBreakMode: UILineBreakModeClip alignment:UITextAlignmentCenter];
+		count++;
 		point = point.nextPoint;
 		if (point == nil)
 		{
