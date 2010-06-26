@@ -249,6 +249,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -301,7 +303,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>30</integer>
+									<integer>29</integer>
 									<integer>26</integer>
 									<integer>5</integer>
 									<integer>0</integer>
@@ -338,14 +340,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LocationObject+Extensions.m</string>
+								<string>GameObject+Extensions.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -353,11 +353,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>LocationObject+Extensions.m</string>
+										<string>GameObject+Extensions.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1524309B11D6792500F4E9FA</string>
+										<string>152430C911D67E1A00F4E9FA</string>
 										<key>history</key>
 										<array>
 											<string>153E5B2011CA991400DCDAC0</string>
@@ -415,7 +415,6 @@
 											<string>1536336811D53F6C00F63E59</string>
 											<string>1536337511D55A4800F63E59</string>
 											<string>1536338411D55D1E00F63E59</string>
-											<string>1536338811D55D1E00F63E59</string>
 											<string>153633A711D569BC00F63E59</string>
 											<string>153633A811D569BC00F63E59</string>
 											<string>153633A911D569BC00F63E59</string>
@@ -431,12 +430,13 @@
 											<string>153633DF11D5702300F63E59</string>
 											<string>153633F811D5714600F63E59</string>
 											<string>1524308311D677B600F4E9FA</string>
-											<string>1524309611D6792500F4E9FA</string>
 											<string>1524309711D6792500F4E9FA</string>
 											<string>1524309811D6792500F4E9FA</string>
 											<string>1524309911D6792500F4E9FA</string>
 											<string>1524309A11D6792500F4E9FA</string>
-											<string>153633A611D569BC00F63E59</string>
+											<string>152430B311D67D3500F4E9FA</string>
+											<string>152430B411D67D3500F4E9FA</string>
+											<string>1536338811D55D1E00F63E59</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -617,7 +617,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>299268389.68045902</real>
+	<real>299269658.03923202</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -635,6 +635,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
+		<string>152430B611D67D3500F4E9FA</string>
 		<string>155BE54711C92BF00019A783</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -670,7 +671,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1078, 489}}</string>
 								<key>RubberWindowFrame</key>
-								<string>602 172 1078 771 0 0 1680 1028 </string>
+								<string>803 168 1078 771 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -696,7 +697,7 @@
 								<key>Frame</key>
 								<string>{{0, 494}, {1078, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>602 172 1078 771 0 0 1680 1028 </string>
+								<string>803 168 1078 771 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -728,7 +729,7 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>602 172 1078 771 0 0 1680 1028 </string>
+			<string>803 168 1078 771 0 0 1680 1028 </string>
 			<key>WindowToolGUID</key>
 			<string>155BE54711C92BF00019A783</string>
 			<key>WindowToolIsVisible</key>
