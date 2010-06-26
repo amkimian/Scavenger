@@ -46,9 +46,7 @@
 		case LTYPE_HAZARD_LOC_PING:
 		case LTYPE_HAZARD_FIX:
 			return [UIColor orangeColor];
-		case LTYPE_RALLY_CHARGE:
 		case LTYPE_RALLY_SCORE:
-		case LTYPE_RALLY_FIX:
 		default:
 			return [UIColor blueColor];
 	}	
@@ -91,12 +89,8 @@
 			return @"Degrades ability to ping location";
 		case LTYPE_HAZARD_FIX:
 			return @"Degrades ability to fix things";
-		case LTYPE_RALLY_CHARGE:
-			return @"Recharges";
 		case LTYPE_RALLY_SCORE:
 			return @"Score";
-		case LTYPE_RALLY_FIX:
-			return @"Improves the ability to fix";
 		default:
 			return @"";
 	}
@@ -158,12 +152,8 @@
 			return @"Location Ping";
 		case LTYPE_HAZARD_FIX:
 			return @"Fix";
-		case LTYPE_RALLY_CHARGE:
-			return @"Recharge";
 		case LTYPE_RALLY_SCORE:
 			return @"Score";
-		case LTYPE_RALLY_FIX:
-			return @"Fix";
 		default:
 			return @"";
 	}

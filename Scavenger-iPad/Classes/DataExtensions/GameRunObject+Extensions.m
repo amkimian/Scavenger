@@ -116,8 +116,6 @@
 		switch ([l.locationType intValue])
 		{
 			case LTYPE_RALLY_SCORE:
-			case LTYPE_RALLY_FIX:
-			case LTYPE_RALLY_CHARGE:
 				if (l.visitedInGame == nil)
 				{
 					return l;

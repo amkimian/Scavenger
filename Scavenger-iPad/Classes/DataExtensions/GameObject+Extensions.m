@@ -36,7 +36,7 @@
 	
 	NSMutableSet *locations = [self mutableSetValueForKey: @"locations"];
 	int iType = (int) type;
-	if (iType <= (int) LTYPE_END_SINGLE_INSTANCE)
+	if (IS_SINGLE(iType))
 	{
 		for(LocationObject *loc in [locations allObjects])
 		{
@@ -58,7 +58,7 @@
 	[locations addObject:loc];
 	
 	// If this is a LTYPE_RALLY_SCORE, add it to the Default GameRouteObject
-	if (type == LTYPE_RALLY_CHARGE || type == LTYPE_RALLY_FIX || type == LTYPE_RALLY_SCORE)
+	if (type == LTYPE_RALLY_SCORE)
 	{
 		[self addLocationToDefaultRoute:loc];
 		// And add some default points

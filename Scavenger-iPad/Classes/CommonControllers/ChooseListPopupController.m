@@ -141,13 +141,7 @@
 			switch(indexPath.row)
 			{
 				case 0:
-					cell.textLabel.text = @"Charge";
-					break;
-				case 1:
 					cell.textLabel.text = @"Score";
-					break;
-				case 2:
-					cell.textLabel.text = @"Fix";
 					break;
 			}
 		}
@@ -248,13 +242,7 @@
 			switch(indexPath.row)
 			{
 				case 0:
-					whichLocType = LTYPE_RALLY_CHARGE;
-					break;
-				case 1:
 					whichLocType = LTYPE_RALLY_SCORE;
-					break;
-				case 2:
-					whichLocType = LTYPE_RALLY_FIX;
 					break;
 			}
 			break;
