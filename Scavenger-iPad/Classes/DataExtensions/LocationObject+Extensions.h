@@ -63,6 +63,8 @@
 
 #define LTYPE_RALLY_SCORE			(LOCTYPE_NORMAL | AFFECTS_SCORE)
 
+#define LTYPE_TOWER_SCORE			(LOCTYPE_TOWER | AFFECTS_SCORE)
+
 #define LocationType int
 
 @interface LocationObject(Extensions)

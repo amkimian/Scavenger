@@ -57,7 +57,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 3;
+    return 4;
 }
 
 
@@ -70,7 +70,9 @@
 		case 1:
 			return 5;
 		case 2:
-			return 3;
+			return 1;
+		case 3:
+			return 1;
 	}
 	return 0;
 }
@@ -82,8 +84,10 @@
 		case 0:
 			return @"Standard Locations";
 		case 1:
-			return @"Hazards";
+			return @"Area Hazards";
 		case 2:
+			return @"Tower Hazards";
+		case 3:
 			return @"Bonuses";
 	}
 	return nil;
@@ -137,6 +141,16 @@
 		}
 			break;
 		case 2:
+		{
+			switch(indexPath.row)
+			{
+				case 0:
+					cell.textLabel.text = @"Tower";
+					break;
+			}
+		}
+			break;
+		case 3:
 		{
 			switch(indexPath.row)
 			{
@@ -238,6 +252,16 @@
 			break;
 		}
 		case 2:
+		{
+			switch(indexPath.row)
+			{
+				case 0:
+					whichLocType = LTYPE_TOWER_SCORE;
+					break;
+			}
+			break;
+		}								
+		case 3:
 		{
 			switch(indexPath.row)
 			{

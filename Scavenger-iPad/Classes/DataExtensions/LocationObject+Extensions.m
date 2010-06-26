@@ -46,6 +46,8 @@
 		case LTYPE_HAZARD_LOC_PING:
 		case LTYPE_HAZARD_FIX:
 			return [UIColor orangeColor];
+		case LTYPE_TOWER_SCORE:
+			return [UIColor purpleColor];
 		case LTYPE_RALLY_SCORE:
 		default:
 			return [UIColor blueColor];
