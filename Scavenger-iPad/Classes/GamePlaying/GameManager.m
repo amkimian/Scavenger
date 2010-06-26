@@ -12,7 +12,8 @@
 #import "LocationObject+Extensions.h"
 #import "HardwareObject.h"
 #import "LocationPointObject.h"
-#import "ActiveLocationObject.h"
+#import "ActiveLocationObject+Extensions.h"
+#import "MissileObject+Extensions.h"
 
 @implementation GameManager
 @synthesize gameRun;
@@ -210,7 +211,7 @@
 					andView:self.gamePlayController.overlayView])
 				{
 					[gameRun ensureLocationIsActive: l];
-					[gameSounds playAlert];
+					//[gameSounds playAlert];
 				}
 				else
 				{
@@ -219,6 +220,32 @@
 			}			
 		}		
 	}
+	
+	LocationObject *playerLoc = [gameRun.game getLocationOfType:LTYPE_PLAYER];
+	// Check for missile move, and missile hits
+	NSMutableArray *endMissiles = [[NSMutableArray alloc] init];
+	
+	for(MissileObject *m in gameRun.missiles)
+	{
+		[m move];
+		if ([m checkHit: playerLoc inMap:self.gamePlayController.mapView andView:self.gamePlayController.overlayView])
+		{
+			// Perform action
+			[endMissiles addObject:m];
+			NSLog(@"Player hit by missile!");
+		}
+		if ([m finished])
+		{
+			[endMissiles addObject:m];
+		}
+	}
+	
+	for(MissileObject *m in endMissiles)
+	{
+		[gameRun removeMissilesObject:m];
+	}
+	[endMissiles release];
+	
 		
 	// Handle power drainage and hazard actions
 	
@@ -330,52 +357,69 @@
 	{
 		if ([alo.active boolValue])
 		{
-			float changeValue = [alo.amountRate floatValue];
-			HardwareObject *shieldHardware = [gameRun getHardwareWithName:@"Shield"];
-			if ([shieldHardware.level floatValue] > 0.1)
+			if (IS_TOWER([alo.location.locationType intValue]))
 			{
-				NSLog(@"Shield damage");
-				float currentLevel = [shieldHardware.level floatValue];
-				float newLevel = currentLevel - changeValue;
-				if (newLevel < 0.1)
+				// Handle maybe firing a missile
+				if ([alo.delayBeforeFire intValue] == 0)
 				{
-					newLevel = 0.0;
-					changeValue -= currentLevel;
+						// FIRE!
+					[alo fireTowerAtLocation:[gameRun.game getLocationOfType:LTYPE_PLAYER]];
+					alo.delayBeforeFire = [NSNumber numberWithInt: 5];
 				}
 				else
 				{
-					changeValue = 0.0;
+					alo.delayBeforeFire = [NSNumber numberWithInt: [alo.delayBeforeFire intValue] -1 ];
 				}
-				shieldHardware.level = [NSNumber numberWithFloat: newLevel];
 			}
-			if (changeValue > 0.0)
+			else
 			{
-				// Still more to go
-				HardwareObject *whichHardware = nil;
-				switch([alo.targetModifies intValue])
+				float changeValue = [alo.amountRate floatValue];
+				HardwareObject *shieldHardware = [gameRun getHardwareWithName:@"Shield"];
+				if ([shieldHardware.level floatValue] > 0.1)
 				{
-					case LTYPE_HAZARD_FIND_HAZARD:
-						whichHardware = [gameRun getHardwareWithName:@"Hazard"];
-						break;
-					case LTYPE_HAZARD_RADAR:
-						whichHardware = [gameRun getHardwareWithName:@"Radar"];
-						break;
-					case LTYPE_HAZARD_LOC_PING:
-						whichHardware = [gameRun getHardwareWithName:@"Ping"];
-						break;
-					case LTYPE_HAZARD_FIND_RALLY:
-						whichHardware = [gameRun getHardwareWithName:@"Bonus"];
-						break;
-				}
-				if (whichHardware)
-				{
-					float currentLevel = [whichHardware.level floatValue];
-					currentLevel -= changeValue;
-					if (currentLevel < 0)
+					NSLog(@"Shield damage");
+					float currentLevel = [shieldHardware.level floatValue];
+					float newLevel = currentLevel - changeValue;
+					if (newLevel < 0.1)
 					{
-						currentLevel = 0;
+						newLevel = 0.0;
+						changeValue -= currentLevel;
 					}
-					whichHardware.level = [NSNumber numberWithFloat: currentLevel];					
+					else
+					{
+						changeValue = 0.0;
+					}
+					shieldHardware.level = [NSNumber numberWithFloat: newLevel];
+				}
+				if (changeValue > 0.0)
+				{
+					// Still more to go
+					HardwareObject *whichHardware = nil;
+					switch([alo.targetModifies intValue])
+					{
+						case LTYPE_HAZARD_FIND_HAZARD:
+							whichHardware = [gameRun getHardwareWithName:@"Hazard"];
+							break;
+						case LTYPE_HAZARD_RADAR:
+							whichHardware = [gameRun getHardwareWithName:@"Radar"];
+							break;
+						case LTYPE_HAZARD_LOC_PING:
+							whichHardware = [gameRun getHardwareWithName:@"Ping"];
+							break;
+						case LTYPE_HAZARD_FIND_RALLY:
+							whichHardware = [gameRun getHardwareWithName:@"Bonus"];
+							break;
+					}
+					if (whichHardware)
+					{
+						float currentLevel = [whichHardware.level floatValue];
+						currentLevel -= changeValue;
+						if (currentLevel < 0)
+						{
+							currentLevel = 0;
+						}
+						whichHardware.level = [NSNumber numberWithFloat: currentLevel];					
+					}
 				}
 			}
 		}		

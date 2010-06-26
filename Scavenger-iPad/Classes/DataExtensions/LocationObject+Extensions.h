@@ -43,10 +43,10 @@
 #define LOCTYPE_PLAYER		0x011000
 
 #define IS_SINGLE(x)		((x & 0x100000) == 0) 
-#define IS_HAZARD(x)		(LOCTYPE_HAZARD & x)
+#define IS_HAZARD(x)		(LOCTYPE_HAZARD == LOCTYPE_HAZARD & x)
 #define IS_NORMAL(x)		(!IS_HAZARD(x))
-#define IS_TOWER(x)			(LOCTYPE_TOWER & x)
-#define IS_AREA(x)			(LOCTYPE_AREA & x)
+#define IS_TOWER(x)			(LOCTYPE_TOWER == LOCTYPE_TOWER & x)
+#define IS_AREA(x)			(LOCTYPE_AREA == LOCTYPE_AREA & x)
 
 #define LTYPE_AFFECTS(x)	(x & 0x111)
 

@@ -2,7 +2,7 @@
 //  GameRunObject.m
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/24/10.
+//  Created by Alan Moore on 6/26/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,16 +13,18 @@
 #import "GameRouteObject.h"
 #import "HardwareObject.h"
 #import "LocationObject.h"
+#import "MissileObject.h"
 #import "PlayerLocationObject.h"
 
 @implementation GameRunObject 
 
 @dynamic paused;
 @dynamic state;
-@dynamic bonus;
-@dynamic playerName;
 @dynamic score;
+@dynamic playerName;
+@dynamic bonus;
 @dynamic visitedLocation;
+@dynamic missiles;
 @dynamic activeLocations;
 @dynamic gameRoute;
 @dynamic game;

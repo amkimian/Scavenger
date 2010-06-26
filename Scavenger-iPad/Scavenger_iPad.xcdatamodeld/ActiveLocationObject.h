@@ -2,7 +2,7 @@
 //  ActiveLocationObject.h
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/23/10.
+//  Created by Alan Moore on 6/26/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -21,6 +21,7 @@
 @property (nonatomic, retain) NSNumber * targetModifies;
 @property (nonatomic, retain) NSNumber * maxAmount;
 @property (nonatomic, retain) NSNumber * active;
+@property (nonatomic, retain) NSNumber * delayBeforeFire;
 @property (nonatomic, retain) LocationObject * location;
 @property (nonatomic, retain) GameRunObject * gameRun;
 

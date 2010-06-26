@@ -11,7 +11,7 @@
 #import "GameRunObject+Extensions.h"
 #import "HardwareObject+Extensions.h"
 #import "LocationObject+Extensions.h"
-
+#import "MissileObject+Extensions.h"
 
 
 @implementation GamePlayOverlayView
@@ -153,6 +153,11 @@
 			{
 			}
 		}
+		// And draw missiles
+		for(MissileObject *m in gameRun.missiles)
+		{
+			[m drawMissile:mapView andView:self];			
+		}
 	}
 	if ([gameRun isRunning])
 	{
@@ -161,6 +166,7 @@
 	}
 	// Also draw center
 
+	/* (Comment out - eventually should be an image)
 	CLLocationCoordinate2D coord = mapView.centerCoordinate;
 	CGPoint p = [mapView convertCoordinate:coord toPointToView:self];
 	CGRect r;
@@ -169,13 +175,15 @@
 	r.size.width = 20;
 	r.size.height = 20;
 	CGContextFillRect(UIGraphicsGetCurrentContext(), r);
-	
+	*/
 	// Also, if in PingMode, really draw ActiveLocation
 	
 	if (self.isInPingMode)
 	{
 		[gameRun.seekingLocation drawLocation:mapView andView:self andAlpha:1.0 inGame:YES];
 	}
+	
+
 }
 
 - (void)dealloc {

@@ -2,7 +2,7 @@
 //  GameRunObject.h
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/24/10.
+//  Created by Alan Moore on 6/26/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,6 +13,7 @@
 @class GameRouteObject;
 @class HardwareObject;
 @class LocationObject;
+@class MissileObject;
 @class PlayerLocationObject;
 
 @interface GameRunObject :  NSManagedObject  
@@ -21,10 +22,11 @@
 
 @property (nonatomic, retain) NSNumber * paused;
 @property (nonatomic, retain) NSNumber * state;
-@property (nonatomic, retain) NSNumber * bonus;
-@property (nonatomic, retain) NSString * playerName;
 @property (nonatomic, retain) NSNumber * score;
+@property (nonatomic, retain) NSString * playerName;
+@property (nonatomic, retain) NSNumber * bonus;
 @property (nonatomic, retain) NSSet* visitedLocation;
+@property (nonatomic, retain) NSSet* missiles;
 @property (nonatomic, retain) NSSet* activeLocations;
 @property (nonatomic, retain) GameRouteObject * gameRoute;
 @property (nonatomic, retain) GameObject * game;
@@ -40,6 +42,11 @@
 - (void)removeVisitedLocationObject:(LocationObject *)value;
 - (void)addVisitedLocation:(NSSet *)value;
 - (void)removeVisitedLocation:(NSSet *)value;
+
+- (void)addMissilesObject:(MissileObject *)value;
+- (void)removeMissilesObject:(MissileObject *)value;
+- (void)addMissiles:(NSSet *)value;
+- (void)removeMissiles:(NSSet *)value;
 
 - (void)addActiveLocationsObject:(ActiveLocationObject *)value;
 - (void)removeActiveLocationsObject:(ActiveLocationObject *)value;

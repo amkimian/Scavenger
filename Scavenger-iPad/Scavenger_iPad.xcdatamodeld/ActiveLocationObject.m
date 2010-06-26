@@ -2,7 +2,7 @@
 //  ActiveLocationObject.m
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/23/10.
+//  Created by Alan Moore on 6/26/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -19,6 +19,7 @@
 @dynamic targetModifies;
 @dynamic maxAmount;
 @dynamic active;
+@dynamic delayBeforeFire;
 @dynamic location;
 @dynamic gameRun;
 

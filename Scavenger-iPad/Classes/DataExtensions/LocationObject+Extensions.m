@@ -9,7 +9,9 @@
 #import "LocationObject+Extensions.h"
 #import "LocationPointObject.h"
 
-#define SINGLE_SIZE 50.0f
+#define SINGLE_SIZE_PLAYER 10.0f
+#define SINGLE_SIZE_TOWER 50.0f
+#define SINGLE_SIZE_REST 25.0f
 #define OVERLAY_ALPHA 0.5f
 
 @implementation LocationObject(Extensions)
@@ -202,7 +204,17 @@
 		coord.latitude = [mainPoint.latitude floatValue];
 		coord.longitude = [mainPoint.longitude floatValue];
 	}
-	MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, SINGLE_SIZE, SINGLE_SIZE);
+	float size = SINGLE_SIZE_REST;
+	if (IS_TOWER([self.locationType intValue]))
+	{
+		size = SINGLE_SIZE_TOWER;
+	}
+	else if ([self.locationType intValue] == LTYPE_PLAYER)
+	{
+		size = SINGLE_SIZE_PLAYER;
+	}
+			
+	MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, size, size);
 	CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 	dRect.size.height = dRect.size.width;
 	CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, alpha);
@@ -380,7 +392,16 @@
 			coord.longitude = [self.firstPoint.longitude floatValue];
 		}
 		
-		MKCoordinateRegion r = MKCoordinateRegionMakeWithDistance(coord, SINGLE_SIZE, SINGLE_SIZE);
+		float size = SINGLE_SIZE_REST;
+		if (IS_TOWER([self.locationType intValue]))
+		{
+			size = SINGLE_SIZE_TOWER;
+		}
+		else if ([self.locationType intValue] == LTYPE_PLAYER)
+		{
+			size = SINGLE_SIZE_PLAYER;
+		}
+		MKCoordinateRegion r = MKCoordinateRegionMakeWithDistance(coord, size, size);
 		
 		CGRect rect = [mapView convertRegion:r toRectToView:view];
 		if (CGRectContainsPoint(rect, p))
