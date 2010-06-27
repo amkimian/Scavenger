@@ -89,13 +89,18 @@
 	dRect.size.height = dRect.size.width;
 	// What is the angle? - it is a measure of the direction between the start and end
 	
+	// Convert these to real coordinates
+	CLLocationCoordinate2D startCoord;
+	startCoord.latitude = [self.currentLatitude floatValue];
+	startCoord.longitude = [self.currentLongitude floatValue];
+	CLLocationCoordinate2D endCoord;
+	endCoord.latitude = [self.targetLatitude floatValue];
+	endCoord.longitude = [self.targetLongitude floatValue];
+	
 	CGPoint start;
-	start.y = [self.currentLatitude floatValue];
-	start.x = [self.currentLongitude floatValue];
-	CGPoint end;
-	end.y = [self.targetLatitude floatValue];
-	end.x = [self.targetLongitude floatValue];
-	float angle = angleBetweenPoints(end,start);
+	start = [mapView convertCoordinate:startCoord toPointToView:view];
+	CGPoint end = [mapView convertCoordinate:endCoord toPointToView:view];
+	float angle = angleBetweenPoints(start,end);
 	UIImage *theImage = [MissileObject getMissileImageAtAngle: angle];
 	[theImage drawInRect:dRect];
 }
