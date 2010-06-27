@@ -12,6 +12,7 @@
 		152430E511D6A68F00F4E9FA /* ActiveLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 152430E411D6A68F00F4E9FA /* ActiveLocationObject.m */; };
 		152430F211D6A78D00F4E9FA /* ActiveLocationObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 152430F111D6A78D00F4E9FA /* ActiveLocationObject+Extensions.m */; };
 		1524310B11D6A99000F4E9FA /* MissileObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1524310A11D6A99000F4E9FA /* MissileObject+Extensions.m */; };
+		152431B211D6CE7D00F4E9FA /* CGPointUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 152431B111D6CE7D00F4E9FA /* CGPointUtils.m */; };
 		15362BE011D2924B00F63E59 /* GameStatusHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362BDF11D2924B00F63E59 /* GameStatusHUDView.m */; };
 		15362C1411D2955100F63E59 /* HardwareStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362C1311D2955100F63E59 /* HardwareStatusView.m */; };
 		15362C1711D2955E00F63E59 /* HardwareObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362C1611D2955E00F63E59 /* HardwareObject+Extensions.m */; };
@@ -230,6 +231,8 @@
 		152430F111D6A78D00F4E9FA /* ActiveLocationObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ActiveLocationObject+Extensions.m"; path = "DataExtensions/ActiveLocationObject+Extensions.m"; sourceTree = "<group>"; };
 		1524310911D6A99000F4E9FA /* MissileObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MissileObject+Extensions.h"; path = "DataExtensions/MissileObject+Extensions.h"; sourceTree = "<group>"; };
 		1524310A11D6A99000F4E9FA /* MissileObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MissileObject+Extensions.m"; path = "DataExtensions/MissileObject+Extensions.m"; sourceTree = "<group>"; };
+		152431B011D6CE7D00F4E9FA /* CGPointUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointUtils.h; sourceTree = "<group>"; };
+		152431B111D6CE7D00F4E9FA /* CGPointUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPointUtils.m; sourceTree = "<group>"; };
 		15362BDE11D2924B00F63E59 /* GameStatusHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameStatusHUDView.h; path = CommonViews/GameStatusHUDView.h; sourceTree = "<group>"; };
 		15362BDF11D2924B00F63E59 /* GameStatusHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameStatusHUDView.m; path = CommonViews/GameStatusHUDView.m; sourceTree = "<group>"; };
 		15362C1211D2955100F63E59 /* HardwareStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HardwareStatusView.h; path = CommonViews/HardwareStatusView.h; sourceTree = "<group>"; };
@@ -488,6 +491,8 @@
 				153E57AF11C944BF00DCDAC0 /* GameListViewing */,
 				1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */,
 				1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */,
+				152431B011D6CE7D00F4E9FA /* CGPointUtils.h */,
+				152431B111D6CE7D00F4E9FA /* CGPointUtils.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1065,6 +1070,7 @@
 				152430E511D6A68F00F4E9FA /* ActiveLocationObject.m in Sources */,
 				152430F211D6A78D00F4E9FA /* ActiveLocationObject+Extensions.m in Sources */,
 				1524310B11D6A99000F4E9FA /* MissileObject+Extensions.m in Sources */,
+				152431B211D6CE7D00F4E9FA /* CGPointUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,25 +8,96 @@
 
 #import "MissileObject+Extensions.h"
 #import "LocationObject+Extensions.h"
+#import "CGPointUtils.h"
 
 @implementation MissileObject(Extensions)
-#define MISSILE_SIZE 10
+#define MISSILE_SIZE 20
 #define MISSILE_VELOCITY 0.00005
 /*
  * Draw the missile in the game
  */
+
++(UIImage *) getMissileImageAtAngle: (float) angle
+{
+	UIGraphicsBeginImageContext(CGSizeMake(20.0, 20.0));
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	
+	CGPoint leftFin[] =
+	{
+		CGPointMake(6.0,2.0),
+		CGPointMake(6.0,6.0),
+		CGPointMake(8.0,8.0),
+		CGPointMake(8.0,4.0),
+		CGPointMake(6.0,2.0)
+	};
+	
+	CGPoint rightFin[] =
+	{
+		CGPointMake(14.0,2.0),
+		CGPointMake(14.0,6.0),
+		CGPointMake(12.0,8.0),
+		CGPointMake(12.0,8.0),
+		CGPointMake(14.0,2.0)
+	};
+	
+	CGPoint mainBody[] =
+	{
+		CGPointMake(8.0,4.0),
+		CGPointMake(8.0,14.0),
+		CGPointMake(10.0,18.0),
+		CGPointMake(12.0,14.0),
+		CGPointMake(12.0,4.0),
+		CGPointMake(8.0,4.0)
+	};
+	
+	CGContextSetLineWidth(context, 1);
+	CGContextAddLines(context, leftFin, sizeof(leftFin)/sizeof(leftFin[0]));
+    CGContextStrokePath(context);
+	CGContextAddLines(context, rightFin, sizeof(rightFin)/sizeof(rightFin[0]));
+    CGContextStrokePath(context);
+	CGContextAddLines(context, mainBody, sizeof(mainBody)/sizeof(mainBody[0]));
+    CGContextStrokePath(context);
+	
+	UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	UIGraphicsBeginImageContext(CGSizeMake(20.0, 20.0));
+	context = UIGraphicsGetCurrentContext();
+	CGAffineTransform transform = CGAffineTransformIdentity;
+	transform = CGAffineTransformTranslate(transform, MISSILE_SIZE/2, MISSILE_SIZE/2);
+	transform = CGAffineTransformRotate(transform, angle);
+	transform = CGAffineTransformScale(transform, 1.0, -1.0);
+	
+	CGContextConcatCTM(context, transform);
+	
+	// Draw the image into the context
+	CGContextDrawImage(context, CGRectMake(-MISSILE_SIZE/2, -MISSILE_SIZE/2, MISSILE_SIZE, MISSILE_SIZE), theImage.CGImage);
+	
+	// Get an image from the context
+	UIImage *ret = [UIImage imageWithCGImage: CGBitmapContextCreateImage(context)];
+	UIGraphicsEndImageContext();
+	return ret;
+}
+
 -(void) drawMissile:(MKMapView *)mapView andView:(UIView *) view
 {
-	CGContextRef context = UIGraphicsGetCurrentContext();
+	//CGContextRef context = UIGraphicsGetCurrentContext();
 	CLLocationCoordinate2D coord;
 	coord.latitude = [self.currentLatitude floatValue];
 	coord.longitude = [self.currentLongitude floatValue];
 	MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, MISSILE_SIZE, MISSILE_SIZE);
 	CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 	dRect.size.height = dRect.size.width;
-	CGColorRef cRef = CGColorCreateCopyWithAlpha([UIColor redColor].CGColor, 0.8);
-	CGContextSetFillColorWithColor(context, cRef);
-	CGContextFillEllipseInRect(context, dRect);					
+	// What is the angle? - it is a measure of the direction between the start and end
+	
+	CGPoint start;
+	start.y = [self.currentLatitude floatValue];
+	start.x = [self.currentLongitude floatValue];
+	CGPoint end;
+	end.y = [self.targetLatitude floatValue];
+	end.x = [self.targetLongitude floatValue];
+	float angle = angleBetweenPoints(end,start);
+	UIImage *theImage = [MissileObject getMissileImageAtAngle: angle];
+	[theImage drawInRect:dRect];
 }
 
 -(BOOL) checkHit: (LocationObject *) other inMap:(MKMapView *) mapView andView: (UIView *) view
@@ -62,11 +133,11 @@
 	float xDelta = MISSILE_VELOCITY * xDistance / vectorDistance;
 	float yDelta = MISSILE_VELOCITY * yDistance / vectorDistance;
 	
-	if (xDistance < xDelta)
+	if (fabs(xDistance) < fabs(xDelta))
 	{
 		xDelta = xDistance;
 	}
-	if (yDistance < yDelta)
+	if (fabs(yDistance) < fabs(yDelta))
 	{
 		yDelta = yDistance;
 	}
