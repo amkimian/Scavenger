@@ -196,6 +196,16 @@
 		15B00F0B11D143CD00757CCE /* GamePlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B00F0911D143CD00757CCE /* GamePlayViewController.xib */; };
 		15DA8A4B11DA3B6A0023942B /* GameListOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */; };
 		15DA8A4C11DA3B6A0023942B /* GameListOnlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DA8A4A11DA3B6A0023942B /* GameListOnlineViewController.xib */; };
+		15DA8B0611DA49810023942B /* CreateDomainResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AF311DA49810023942B /* CreateDomainResponse.m */; };
+		15DA8B0711DA49810023942B /* ListDomainsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AF511DA49810023942B /* ListDomainsResponse.m */; };
+		15DA8B0811DA49810023942B /* NSDataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AF711DA49810023942B /* NSDataExtensions.m */; };
+		15DA8B0911DA49810023942B /* PutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AF911DA49810023942B /* PutAttributes.m */; };
+		15DA8B0A11DA49810023942B /* PutAttributesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AFB11DA49810023942B /* PutAttributesResponse.m */; };
+		15DA8B0B11DA49810023942B /* QueryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AFD11DA49810023942B /* QueryResponse.m */; };
+		15DA8B0C11DA49810023942B /* QueryWithAttributesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AFF11DA49810023942B /* QueryWithAttributesResponse.m */; };
+		15DA8B0D11DA49810023942B /* SimpleDb.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0111DA49810023942B /* SimpleDb.m */; };
+		15DA8B0E11DA49810023942B /* SimpleDbAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0311DA49810023942B /* SimpleDbAttribute.m */; };
+		15DA8B0F11DA49810023942B /* SimpleDbItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0511DA49810023942B /* SimpleDbItem.m */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -451,6 +461,26 @@
 		15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameListOnlineViewController.h; sourceTree = "<group>"; };
 		15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameListOnlineViewController.m; sourceTree = "<group>"; };
 		15DA8A4A11DA3B6A0023942B /* GameListOnlineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameListOnlineViewController.xib; sourceTree = "<group>"; };
+		15DA8AF211DA49810023942B /* CreateDomainResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDomainResponse.h; path = AWS/CreateDomainResponse.h; sourceTree = "<group>"; };
+		15DA8AF311DA49810023942B /* CreateDomainResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDomainResponse.m; path = AWS/CreateDomainResponse.m; sourceTree = "<group>"; };
+		15DA8AF411DA49810023942B /* ListDomainsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListDomainsResponse.h; path = AWS/ListDomainsResponse.h; sourceTree = "<group>"; };
+		15DA8AF511DA49810023942B /* ListDomainsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListDomainsResponse.m; path = AWS/ListDomainsResponse.m; sourceTree = "<group>"; };
+		15DA8AF611DA49810023942B /* NSDataExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDataExtensions.h; path = AWS/NSDataExtensions.h; sourceTree = "<group>"; };
+		15DA8AF711DA49810023942B /* NSDataExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataExtensions.m; path = AWS/NSDataExtensions.m; sourceTree = "<group>"; };
+		15DA8AF811DA49810023942B /* PutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PutAttributes.h; path = AWS/PutAttributes.h; sourceTree = "<group>"; };
+		15DA8AF911DA49810023942B /* PutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PutAttributes.m; path = AWS/PutAttributes.m; sourceTree = "<group>"; };
+		15DA8AFA11DA49810023942B /* PutAttributesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PutAttributesResponse.h; path = AWS/PutAttributesResponse.h; sourceTree = "<group>"; };
+		15DA8AFB11DA49810023942B /* PutAttributesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PutAttributesResponse.m; path = AWS/PutAttributesResponse.m; sourceTree = "<group>"; };
+		15DA8AFC11DA49810023942B /* QueryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryResponse.h; path = AWS/QueryResponse.h; sourceTree = "<group>"; };
+		15DA8AFD11DA49810023942B /* QueryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryResponse.m; path = AWS/QueryResponse.m; sourceTree = "<group>"; };
+		15DA8AFE11DA49810023942B /* QueryWithAttributesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryWithAttributesResponse.h; path = AWS/QueryWithAttributesResponse.h; sourceTree = "<group>"; };
+		15DA8AFF11DA49810023942B /* QueryWithAttributesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryWithAttributesResponse.m; path = AWS/QueryWithAttributesResponse.m; sourceTree = "<group>"; };
+		15DA8B0011DA49810023942B /* SimpleDb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleDb.h; path = AWS/SimpleDb.h; sourceTree = "<group>"; };
+		15DA8B0111DA49810023942B /* SimpleDb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleDb.m; path = AWS/SimpleDb.m; sourceTree = "<group>"; };
+		15DA8B0211DA49810023942B /* SimpleDbAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleDbAttribute.h; path = AWS/SimpleDbAttribute.h; sourceTree = "<group>"; };
+		15DA8B0311DA49810023942B /* SimpleDbAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleDbAttribute.m; path = AWS/SimpleDbAttribute.m; sourceTree = "<group>"; };
+		15DA8B0411DA49810023942B /* SimpleDbItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleDbItem.h; path = AWS/SimpleDbItem.h; sourceTree = "<group>"; };
+		15DA8B0511DA49810023942B /* SimpleDbItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleDbItem.m; path = AWS/SimpleDbItem.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -488,6 +518,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				15DA8AED11DA491E0023942B /* AWS */,
 				15B00E7C11D1023A00757CCE /* GamePlaying */,
 				153E59F711CA6FC800DCDAC0 /* CommonViews */,
 				153E59EB11CA6E9600DCDAC0 /* GameEditing */,
@@ -758,6 +789,33 @@
 				1536326611D453D400F63E59 /* GameSounds.m */,
 			);
 			name = GamePlaying;
+			sourceTree = "<group>";
+		};
+		15DA8AED11DA491E0023942B /* AWS */ = {
+			isa = PBXGroup;
+			children = (
+				15DA8AF211DA49810023942B /* CreateDomainResponse.h */,
+				15DA8AF311DA49810023942B /* CreateDomainResponse.m */,
+				15DA8AF411DA49810023942B /* ListDomainsResponse.h */,
+				15DA8AF511DA49810023942B /* ListDomainsResponse.m */,
+				15DA8AF611DA49810023942B /* NSDataExtensions.h */,
+				15DA8AF711DA49810023942B /* NSDataExtensions.m */,
+				15DA8AF811DA49810023942B /* PutAttributes.h */,
+				15DA8AF911DA49810023942B /* PutAttributes.m */,
+				15DA8AFA11DA49810023942B /* PutAttributesResponse.h */,
+				15DA8AFB11DA49810023942B /* PutAttributesResponse.m */,
+				15DA8AFC11DA49810023942B /* QueryResponse.h */,
+				15DA8AFD11DA49810023942B /* QueryResponse.m */,
+				15DA8AFE11DA49810023942B /* QueryWithAttributesResponse.h */,
+				15DA8AFF11DA49810023942B /* QueryWithAttributesResponse.m */,
+				15DA8B0011DA49810023942B /* SimpleDb.h */,
+				15DA8B0111DA49810023942B /* SimpleDb.m */,
+				15DA8B0211DA49810023942B /* SimpleDbAttribute.h */,
+				15DA8B0311DA49810023942B /* SimpleDbAttribute.m */,
+				15DA8B0411DA49810023942B /* SimpleDbItem.h */,
+				15DA8B0511DA49810023942B /* SimpleDbItem.m */,
+			);
+			name = AWS;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -1081,6 +1139,16 @@
 				1524310B11D6A99000F4E9FA /* MissileObject+Extensions.m in Sources */,
 				152431B211D6CE7D00F4E9FA /* CGPointUtils.m in Sources */,
 				15DA8A4B11DA3B6A0023942B /* GameListOnlineViewController.m in Sources */,
+				15DA8B0611DA49810023942B /* CreateDomainResponse.m in Sources */,
+				15DA8B0711DA49810023942B /* ListDomainsResponse.m in Sources */,
+				15DA8B0811DA49810023942B /* NSDataExtensions.m in Sources */,
+				15DA8B0911DA49810023942B /* PutAttributes.m in Sources */,
+				15DA8B0A11DA49810023942B /* PutAttributesResponse.m in Sources */,
+				15DA8B0B11DA49810023942B /* QueryResponse.m in Sources */,
+				15DA8B0C11DA49810023942B /* QueryWithAttributesResponse.m in Sources */,
+				15DA8B0D11DA49810023942B /* SimpleDb.m in Sources */,
+				15DA8B0E11DA49810023942B /* SimpleDbAttribute.m in Sources */,
+				15DA8B0F11DA49810023942B /* SimpleDbItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
