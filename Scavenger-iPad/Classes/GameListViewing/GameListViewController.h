@@ -51,6 +51,9 @@
 -(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender;
 -(void) textChangedFrom: (GetTextPopupController *) sender;
 
+-(IBAction) goOnline: (id) sender;
+-(void) finishedOnline;
+
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender;
 
 - (NSFetchedResultsController *)fetchedResultsController;

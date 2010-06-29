@@ -194,6 +194,8 @@
 		15B00EC111D13C8C00757CCE /* GamePlayOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00EC011D13C8C00757CCE /* GamePlayOverlayView.m */; };
 		15B00F0A11D143CD00757CCE /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */; };
 		15B00F0B11D143CD00757CCE /* GamePlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B00F0911D143CD00757CCE /* GamePlayViewController.xib */; };
+		15DA8A4B11DA3B6A0023942B /* GameListOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */; };
+		15DA8A4C11DA3B6A0023942B /* GameListOnlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DA8A4A11DA3B6A0023942B /* GameListOnlineViewController.xib */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -446,6 +448,9 @@
 		15B00F0711D143CD00757CCE /* GamePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayViewController.h; path = GamePlaying/GamePlayViewController.h; sourceTree = "<group>"; };
 		15B00F0811D143CD00757CCE /* GamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePlayViewController.m; path = GamePlaying/GamePlayViewController.m; sourceTree = "<group>"; };
 		15B00F0911D143CD00757CCE /* GamePlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GamePlayViewController.xib; path = GamePlaying/GamePlayViewController.xib; sourceTree = "<group>"; };
+		15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameListOnlineViewController.h; sourceTree = "<group>"; };
+		15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameListOnlineViewController.m; sourceTree = "<group>"; };
+		15DA8A4A11DA3B6A0023942B /* GameListOnlineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameListOnlineViewController.xib; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -648,6 +653,9 @@
 				153E57B011C944FE00DCDAC0 /* GameListViewController.h */,
 				153E57B111C944FE00DCDAC0 /* GameListViewController.m */,
 				153E57B211C944FE00DCDAC0 /* GameListViewController.xib */,
+				15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */,
+				15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */,
+				15DA8A4A11DA3B6A0023942B /* GameListOnlineViewController.xib */,
 			);
 			name = GameListViewing;
 			sourceTree = "<group>";
@@ -1020,6 +1028,7 @@
 				1536315D11D3137D00F63E59 /* 129-golf.png in Resources */,
 				1536315E11D3137D00F63E59 /* 130-dice.png in Resources */,
 				1536327211D454F400F63E59 /* alert.m4a in Resources */,
+				15DA8A4C11DA3B6A0023942B /* GameListOnlineViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1071,6 +1080,7 @@
 				152430F211D6A78D00F4E9FA /* ActiveLocationObject+Extensions.m in Sources */,
 				1524310B11D6A99000F4E9FA /* MissileObject+Extensions.m in Sources */,
 				152431B211D6CE7D00F4E9FA /* CGPointUtils.m in Sources */,
+				15DA8A4B11DA3B6A0023942B /* GameListOnlineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
