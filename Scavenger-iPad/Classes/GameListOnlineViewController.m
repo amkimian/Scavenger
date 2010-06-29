@@ -78,7 +78,7 @@
 		case 1:
 			if (placemark)
 			{
-				return 5;
+				return 4;
 			}
 			else
 			{
@@ -129,21 +129,17 @@
 			switch(indexPath.row)
 			{
 				case 0:
-					cell.textLabel.text = placemark.country;
+					cell.textLabel.text = placemark.thoroughfare;
 					break;
 				case 1:
 					cell.textLabel.text = placemark.locality;
 					break;
 				case 2:
-					cell.textLabel.text = placemark.subLocality;
+					cell.textLabel.text = placemark.administrativeArea;
 					break;
 				case 3:
-					cell.textLabel.text = placemark.thoroughfare;
+					cell.textLabel.text = placemark.country;
 					break;
-				case 4:
-					cell.textLabel.text = placemark.subThoroughfare;
-					break;
-					
 			}
 			break;
 		}

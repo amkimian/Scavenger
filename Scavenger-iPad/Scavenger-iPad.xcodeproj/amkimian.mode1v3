@@ -249,6 +249,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -302,7 +304,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>73</integer>
+									<integer>74</integer>
 									<integer>68</integer>
 									<integer>5</integer>
 									<integer>0</integer>
@@ -339,14 +341,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameListOnlineViewController.m</string>
+								<string>Scavenger_iPadAppDelegate.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -354,11 +354,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameListOnlineViewController.m</string>
+										<string>Scavenger_iPadAppDelegate.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>15DA8AC111DA44640023942B</string>
+										<string>15DA8AC911DA45470023942B</string>
 										<key>history</key>
 										<array>
 											<string>153E5B2011CA991400DCDAC0</string>
@@ -436,12 +436,12 @@
 											<string>1524320611D6E0EE00F4E9FA</string>
 											<string>15DA89E711D7AF300023942B</string>
 											<string>15DA8A6011DA3DBE0023942B</string>
-											<string>15DA8A6111DA3DBE0023942B</string>
 											<string>15DA8A7411DA3E890023942B</string>
 											<string>15DA8A8611DA3F880023942B</string>
 											<string>15DA8A9D11DA422D0023942B</string>
 											<string>15DA8ABF11DA44640023942B</string>
-											<string>15DA8AC011DA44640023942B</string>
+											<string>15DA8AC711DA45470023942B</string>
+											<string>15DA8AC811DA45470023942B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -622,7 +622,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>299517028.04497099</real>
+	<real>299517255.778808</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -640,10 +640,10 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>15DA8A8911DA3F880023942B</string>
-		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 		<string>155BE54711C92BF00019A783</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>1 80 1680 882 0 0 1680 1028 </string>
