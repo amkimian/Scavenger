@@ -2724,7 +2724,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1322, 962}}";
 			sepNavSelRange = "{1675, 24}";
-			sepNavVisRange = "{579, 1766}";
+			sepNavVisRange = "{634, 1717}";
 		};
 	};
 	153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {
@@ -3134,16 +3134,16 @@
 	15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1322, 681}}";
-			sepNavSelRange = "{339, 0}";
-			sepNavVisRange = "{0, 491}";
+			sepNavSelRange = "{500, 0}";
+			sepNavVisRange = "{0, 744}";
 		};
 	};
 	15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4444, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4495, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4545, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5241}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 2704}}";
-			sepNavSelRange = "{1490, 0}";
-			sepNavVisRange = "{1320, 1376}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{5014, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{5065, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{5115, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 6121}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 3029}}";
+			sepNavSelRange = "{6041, 0}";
+			sepNavVisRange = "{4780, 1278}";
 		};
 	};
 	15DA8A6011DA3DBE0023942B /* PBXTextBookmark */ = {
@@ -3181,7 +3181,7 @@
 		fRef = 15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */;
 		name = "GameListOnlineViewController.h: 16";
 		rLen = 30;
-		rLoc = 386;
+		rLoc = 528;
 		rType = 0;
 		vrLen = 453;
 		vrLoc = 0;
@@ -3191,7 +3191,7 @@
 		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
 		name = "GameListOnlineViewController.m: 60";
 		rLen = 0;
-		rLoc = 1316;
+		rLoc = 1388;
 		rType = 0;
 		vrLen = 1263;
 		vrLoc = 390;
@@ -3231,7 +3231,7 @@
 		fRef = 15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */;
 		name = "GameListOnlineViewController.h: 12";
 		rLen = 0;
-		rLoc = 283;
+		rLoc = 309;
 		rType = 0;
 		vrLen = 448;
 		vrLoc = 0;
@@ -3251,7 +3251,7 @@
 		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
 		name = "GameListOnlineViewController.m: 60";
 		rLen = 0;
-		rLoc = 1316;
+		rLoc = 1388;
 		rType = 0;
 		vrLen = 1181;
 		vrLoc = 472;
@@ -3261,7 +3261,7 @@
 		fRef = 15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */;
 		name = "GameListOnlineViewController.h: 12";
 		rLen = 0;
-		rLoc = 283;
+		rLoc = 309;
 		rType = 0;
 		vrLen = 448;
 		vrLoc = 0;
@@ -3271,7 +3271,7 @@
 		fRef = 15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */;
 		name = "GameListOnlineViewController.h: 12";
 		rLen = 0;
-		rLoc = 339;
+		rLoc = 392;
 		rType = 0;
 		vrLen = 491;
 		vrLoc = 0;
@@ -3281,7 +3281,7 @@
 		fRef = 15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */;
 		name = "GameListOnlineViewController.h: 12";
 		rLen = 0;
-		rLoc = 339;
+		rLoc = 392;
 		rType = 0;
 		vrLen = 491;
 		vrLoc = 0;
@@ -3301,7 +3301,7 @@
 		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
 		name = "GameListOnlineViewController.m: 60";
 		rLen = 0;
-		rLoc = 1316;
+		rLoc = 1388;
 		rType = 0;
 		vrLen = 1376;
 		vrLoc = 1010;
@@ -3311,7 +3311,7 @@
 		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
 		name = "GameListOnlineViewController.m: 79";
 		rLen = 0;
-		rLoc = 1799;
+		rLoc = 1932;
 		rType = 0;
 		vrLen = 1362;
 		vrLoc = 1320;
@@ -3321,10 +3321,138 @@
 		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
 		name = "GameListOnlineViewController.m: 68";
 		rLen = 0;
-		rLoc = 1490;
+		rLoc = 1562;
 		rType = 0;
 		vrLen = 1376;
 		vrLoc = 1320;
+	};
+	15DA8A9D11DA422D0023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E57B011C944FE00DCDAC0 /* GameListViewController.h */;
+		name = "GameListViewController.h: 55";
+		rLen = 24;
+		rLoc = 1675;
+		rType = 0;
+		vrLen = 1717;
+		vrLoc = 634;
+	};
+	15DA8A9E11DA422D0023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */;
+		name = "GameListOnlineViewController.h: 15";
+		rLen = 0;
+		rLoc = 456;
+		rType = 0;
+		vrLen = 710;
+		vrLoc = 0;
+	};
+	15DA8A9F11DA422D0023942B /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Request for member 'clearsSelectionOnViewWillAppear' in something not a structure or union";
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 25;
+		rType = 1;
+	};
+	15DA8AA011DA422D0023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		name = "GameListOnlineViewController.m: 23";
+		rLen = 0;
+		rLoc = 595;
+		rType = 0;
+		vrLen = 1062;
+		vrLoc = 219;
+	};
+	15DA8AA711DA430F0023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		name = "GameListOnlineViewController.m: 145";
+		rLen = 0;
+		rLoc = 3420;
+		rType = 0;
+		vrLen = 1226;
+		vrLoc = 2493;
+	};
+	15DA8AAC11DA43620023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		name = "GameListOnlineViewController.m: 231";
+		rLen = 0;
+		rLoc = 5933;
+		rType = 0;
+		vrLen = 1356;
+		vrLoc = 4764;
+	};
+	15DA8AB311DA442B0023942B /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Local declaration of 'placemark' hides instance variable";
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 236;
+		rType = 1;
+	};
+	15DA8AB411DA442B0023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		name = "GameListOnlineViewController.m: 237";
+		rLen = 0;
+		rLoc = 6086;
+		rType = 0;
+		vrLen = 1018;
+		vrLoc = 4785;
+	};
+	15DA8AB711DA44470023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		name = "GameListOnlineViewController.m: 237";
+		rLen = 0;
+		rLoc = 6086;
+		rType = 0;
+		vrLen = 1018;
+		vrLoc = 4785;
+	};
+	15DA8ABC11DA44600023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		name = "GameListOnlineViewController.m: 237";
+		rLen = 0;
+		rLoc = 6086;
+		rType = 0;
+		vrLen = 1018;
+		vrLoc = 4785;
+	};
+	15DA8ABF11DA44640023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */;
+		name = "GameListOnlineViewController.h: 17";
+		rLen = 0;
+		rLoc = 500;
+		rType = 0;
+		vrLen = 744;
+		vrLoc = 0;
+	};
+	15DA8AC011DA44640023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		name = "GameListOnlineViewController.m: 238";
+		rLen = 0;
+		rLoc = 6111;
+		rType = 0;
+		vrLen = 1339;
+		vrLoc = 4782;
+	};
+	15DA8AC111DA44640023942B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		name = "GameListOnlineViewController.m: 238";
+		rLen = 0;
+		rLoc = 6098;
+		rType = 0;
+		vrLen = 1335;
+		vrLoc = 4780;
 	};
 	1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {
 		uiCtxt = {
@@ -3688,6 +3816,19 @@
 			15DA8A8711DA3F880023942B /* PBXTextBookmark */ = 15DA8A8711DA3F880023942B /* PBXTextBookmark */;
 			15DA8A8811DA3F880023942B /* PBXTextBookmark */ = 15DA8A8811DA3F880023942B /* PBXTextBookmark */;
 			15DA8A8C11DA3FAE0023942B /* PBXTextBookmark */ = 15DA8A8C11DA3FAE0023942B /* PBXTextBookmark */;
+			15DA8A9D11DA422D0023942B /* PBXTextBookmark */ = 15DA8A9D11DA422D0023942B /* PBXTextBookmark */;
+			15DA8A9E11DA422D0023942B /* PBXTextBookmark */ = 15DA8A9E11DA422D0023942B /* PBXTextBookmark */;
+			15DA8A9F11DA422D0023942B /* XCBuildMessageTextBookmark */ = 15DA8A9F11DA422D0023942B /* XCBuildMessageTextBookmark */;
+			15DA8AA011DA422D0023942B /* PBXTextBookmark */ = 15DA8AA011DA422D0023942B /* PBXTextBookmark */;
+			15DA8AA711DA430F0023942B /* PBXTextBookmark */ = 15DA8AA711DA430F0023942B /* PBXTextBookmark */;
+			15DA8AAC11DA43620023942B /* PBXTextBookmark */ = 15DA8AAC11DA43620023942B /* PBXTextBookmark */;
+			15DA8AB311DA442B0023942B /* XCBuildMessageTextBookmark */ = 15DA8AB311DA442B0023942B /* XCBuildMessageTextBookmark */;
+			15DA8AB411DA442B0023942B /* PBXTextBookmark */ = 15DA8AB411DA442B0023942B /* PBXTextBookmark */;
+			15DA8AB711DA44470023942B /* PBXTextBookmark */ = 15DA8AB711DA44470023942B /* PBXTextBookmark */;
+			15DA8ABC11DA44600023942B /* PBXTextBookmark */ = 15DA8ABC11DA44600023942B /* PBXTextBookmark */;
+			15DA8ABF11DA44640023942B /* PBXTextBookmark */ = 15DA8ABF11DA44640023942B /* PBXTextBookmark */;
+			15DA8AC011DA44640023942B /* PBXTextBookmark */ = 15DA8AC011DA44640023942B /* PBXTextBookmark */;
+			15DA8AC111DA44640023942B /* PBXTextBookmark */ = 15DA8AC111DA44640023942B /* PBXTextBookmark */;
 		};
 		sourceControlManager = 155BE54011C92A870019A783 /* Source Control */;
 		userBuildSettings = {

@@ -358,7 +358,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>15DA8A8C11DA3FAE0023942B</string>
+										<string>15DA8AC111DA44640023942B</string>
 										<key>history</key>
 										<array>
 											<string>153E5B2011CA991400DCDAC0</string>
@@ -438,10 +438,10 @@
 											<string>15DA8A6011DA3DBE0023942B</string>
 											<string>15DA8A6111DA3DBE0023942B</string>
 											<string>15DA8A7411DA3E890023942B</string>
-											<string>15DA8A7C11DA3EDE0023942B</string>
-											<string>15DA8A8511DA3F880023942B</string>
 											<string>15DA8A8611DA3F880023942B</string>
-											<string>15DA8A8711DA3F880023942B</string>
+											<string>15DA8A9D11DA422D0023942B</string>
+											<string>15DA8ABF11DA44640023942B</string>
+											<string>15DA8AC011DA44640023942B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -622,7 +622,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>299515822.084427</real>
+	<real>299517028.04497099</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -639,11 +639,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>155BE54711C92BF00019A783</string>
 		<string>15DA8A8911DA3F880023942B</string>
+		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
+		<string>155BE54711C92BF00019A783</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>1 80 1680 882 0 0 1680 1028 </string>
@@ -667,7 +667,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>GameListOnlineViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -738,7 +738,7 @@
 			<key>WindowToolGUID</key>
 			<string>155BE54711C92BF00019A783</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

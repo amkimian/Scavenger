@@ -11,22 +11,22 @@
 
 @implementation GameListOnlineViewController
 @synthesize rootController;
-
+@synthesize placemark;
+@synthesize geocoder;
 
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
- 
+	self.geocoder = [[MKReverseGeocoder alloc] initWithCoordinate:rootController.currentLocation.coordinate];
+	self.geocoder.delegate = self;
+	[self.geocoder start];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -76,7 +76,14 @@
 		case 0:
 			return [[self.rootController.fetchedResultsController fetchedObjects] count];
 		case 1:
-			return 0; // Until we find our location
+			if (placemark)
+			{
+				return 5;
+			}
+			else
+			{
+				return 0; // Until we find our location
+			}
 		case 2:
 			return 0;	// For now, until we learn how to load the remote games
 	}
@@ -115,6 +122,29 @@
 		{
 			GameObject *game = (GameObject *) [[self.rootController.fetchedResultsController fetchedObjects] objectAtIndex:indexPath.row];
 			cell.textLabel.text = game.name;
+			break;
+		}
+		case 1:
+		{
+			switch(indexPath.row)
+			{
+				case 0:
+					cell.textLabel.text = placemark.country;
+					break;
+				case 1:
+					cell.textLabel.text = placemark.locality;
+					break;
+				case 2:
+					cell.textLabel.text = placemark.subLocality;
+					break;
+				case 3:
+					cell.textLabel.text = placemark.thoroughfare;
+					break;
+				case 4:
+					cell.textLabel.text = placemark.subThoroughfare;
+					break;
+					
+			}
 			break;
 		}
 	}
@@ -196,6 +226,17 @@
     [super dealloc];
 }
 
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error
+{
+	NSLog(@"Failed to do reverse lookup");
+}
+
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)pl
+{
+	NSLog(@"Found location placemark");
+	self.placemark = pl;
+	[mainTable reloadData];
+}
 
 @end
 
