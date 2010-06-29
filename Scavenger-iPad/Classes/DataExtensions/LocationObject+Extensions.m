@@ -219,7 +219,12 @@
 	dRect.size.height = dRect.size.width;
 	CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, alpha);
 	CGContextSetFillColorWithColor(context, cRef);
-	CGContextFillEllipseInRect(context, dRect);				
+	CGContextFillEllipseInRect(context, dRect);	
+	// Now draw a line around that circle, a little bit darker
+	CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+	CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+	CGContextSetLineWidth(context, 3.0);
+	CGContextAddEllipseInRect(context, dRect);
 }
 
 -(void) drawLocationAsCircle2: (MKMapView *) mapView andView:(UIView *) view andAlpha:(float) alpha inGame:(BOOL) inGame
