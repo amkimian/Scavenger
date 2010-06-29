@@ -206,6 +206,7 @@
 		15DA8B0D11DA49810023942B /* SimpleDb.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0111DA49810023942B /* SimpleDb.m */; };
 		15DA8B0E11DA49810023942B /* SimpleDbAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0311DA49810023942B /* SimpleDbAttribute.m */; };
 		15DA8B0F11DA49810023942B /* SimpleDbItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0511DA49810023942B /* SimpleDbItem.m */; };
+		15DA8B3911DA52BF0023942B /* AWSScavenger.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B3811DA52BF0023942B /* AWSScavenger.m */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -481,6 +482,8 @@
 		15DA8B0311DA49810023942B /* SimpleDbAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleDbAttribute.m; path = AWS/SimpleDbAttribute.m; sourceTree = "<group>"; };
 		15DA8B0411DA49810023942B /* SimpleDbItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleDbItem.h; path = AWS/SimpleDbItem.h; sourceTree = "<group>"; };
 		15DA8B0511DA49810023942B /* SimpleDbItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleDbItem.m; path = AWS/SimpleDbItem.m; sourceTree = "<group>"; };
+		15DA8B3711DA52BF0023942B /* AWSScavenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSScavenger.h; path = AWSScavenger/AWSScavenger.h; sourceTree = "<group>"; };
+		15DA8B3811DA52BF0023942B /* AWSScavenger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSScavenger.m; path = AWSScavenger/AWSScavenger.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -518,6 +521,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				15DA8B2911DA52330023942B /* AWSScavenger */,
 				15DA8AED11DA491E0023942B /* AWS */,
 				15B00E7C11D1023A00757CCE /* GamePlaying */,
 				153E59F711CA6FC800DCDAC0 /* CommonViews */,
@@ -816,6 +820,15 @@
 				15DA8B0511DA49810023942B /* SimpleDbItem.m */,
 			);
 			name = AWS;
+			sourceTree = "<group>";
+		};
+		15DA8B2911DA52330023942B /* AWSScavenger */ = {
+			isa = PBXGroup;
+			children = (
+				15DA8B3711DA52BF0023942B /* AWSScavenger.h */,
+				15DA8B3811DA52BF0023942B /* AWSScavenger.m */,
+			);
+			name = AWSScavenger;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -1149,6 +1162,7 @@
 				15DA8B0D11DA49810023942B /* SimpleDb.m in Sources */,
 				15DA8B0E11DA49810023942B /* SimpleDbAttribute.m in Sources */,
 				15DA8B0F11DA49810023942B /* SimpleDbItem.m in Sources */,
+				15DA8B3911DA52BF0023942B /* AWSScavenger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -69,8 +69,10 @@
 	// Construct our entire URL
 	//
 	NSString *urlAsString = [NSString stringWithFormat:@"http://sdb.amazonaws.com?%@", queryParams];
+	
 	NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL: [NSURL URLWithString:urlAsString]];
 	
+	NSLog(@"Parser result = %@", parser);
 	//	
     // Set self as the delegate of the parser so that it will receive the parser delegate methods callbacks.
 	//
@@ -423,7 +425,7 @@
 	time_t rawtime;
 	struct tm * timeinfo;
 	time(&rawtime);
-	timeinfo = localtime(&rawtime);
+	timeinfo = gmtime(&rawtime);
 	strftime(buffer, 80, format, timeinfo);
 	return [NSString  stringWithCString:buffer encoding:NSUTF8StringEncoding];
 }

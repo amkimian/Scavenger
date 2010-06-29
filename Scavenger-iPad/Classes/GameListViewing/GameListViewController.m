@@ -14,6 +14,7 @@
 #import "GameObject.h"
 #import "GameObject+Export.h"
 #import "GameListOnlineViewController.h"
+#import "AWSScavenger.h"
 
 @implementation GameListViewController
 @synthesize managedObjectContext;
@@ -146,6 +147,8 @@
 
 -(IBAction) goOnline: (id) sender
 {
+	AWSScavenger *s = [[AWSScavenger alloc] init];
+	[s listDomains];
 	GameListOnlineViewController *onlineController = [[GameListOnlineViewController alloc] initWithNibName:nil bundle:nil];
 	onlineController.rootController = self;
 	[self presentModalViewController:onlineController animated:YES];

@@ -7,12 +7,14 @@
 //
 
 #import "GameListOnlineViewController.h"
-
+#import "MenuPopupController.h"
 
 @implementation GameListOnlineViewController
 @synthesize rootController;
 @synthesize placemark;
 @synthesize geocoder;
+@synthesize currentGame;
+@synthesize popOver;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -23,7 +25,7 @@
 
 	self.geocoder = [[MKReverseGeocoder alloc] initWithCoordinate:rootController.currentLocation.coordinate];
 	self.geocoder.delegate = self;
-	[self.geocoder start];
+//	[self.geocoder start];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -122,6 +124,7 @@
 		{
 			GameObject *game = (GameObject *) [[self.rootController.fetchedResultsController fetchedObjects] objectAtIndex:indexPath.row];
 			cell.textLabel.text = game.name;
+			cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 			break;
 		}
 		case 1:
@@ -232,6 +235,39 @@
 	NSLog(@"Found location placemark");
 	self.placemark = pl;
 	[mainTable reloadData];
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+	// Clicked on detail view for local game
+	if (indexPath.section == 0)
+	{
+		NSLog(@"Selected local game");
+		MenuPopupController *controller = [[MenuPopupController alloc] initWithNibName:nil bundle:nil];
+		controller.delegate = self;
+		self.currentGame = (GameObject *) [[self.rootController.fetchedResultsController fetchedObjects] objectAtIndex: indexPath.row];	
+		controller.menuStrings = [[NSArray alloc] initWithObjects:@"Publish",@"Unpublish", nil];
+		controller.modalPresentationStyle = UIModalPresentationFormSheet;
+		[self presentModalViewController:controller animated:YES];
+		//self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
+		//[self.popOver setPopoverContentSize:controller.view.bounds.size];
+//		UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];		
+//		[self.popOver presentPopoverFromRect:[cell convertRect:button.frame fromView:button] inView:cell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];		
+	}	
+}
+
+-(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
+{
+	switch(item)
+	{
+		case 0:
+			// Publish
+			break;
+		case 1:
+			// Unpublish
+			break;
+	}
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 @end
