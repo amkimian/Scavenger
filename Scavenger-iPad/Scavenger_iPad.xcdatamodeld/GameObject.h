@@ -2,7 +2,7 @@
 //  GameObject.h
 //  Scavenger-iPad
 //
-//  Created by Alan Moore on 6/23/10.
+//  Created by Alan Moore on 6/29/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -11,12 +11,14 @@
 @class GameRouteObject;
 @class GameRunObject;
 @class LocationObject;
+@class PlaceMarkObject;
 
 @interface GameObject :  NSManagedObject  
 {
 }
 
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) PlaceMarkObject * placeMark;
 @property (nonatomic, retain) GameRunObject * gameRun;
 @property (nonatomic, retain) NSSet* gameRoutes;
 @property (nonatomic, retain) NSSet* locations;

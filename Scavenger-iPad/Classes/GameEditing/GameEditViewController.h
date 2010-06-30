@@ -17,17 +17,19 @@
 #import "RouteListController.h"
 
 @interface GameEditViewController : UIViewController<LocationOverlayViewDelegate,MapTypeChangedDelegate,ChooseListDidChooseDelegate,MenuPopupDelegate,EditLocationEndDelegate,
-RouteListDoneDelegate> {
+RouteListDoneDelegate, MKReverseGeocoderDelegate> {
 	IBOutlet MKMapView *mapView;
 	GameObject *game;
 	LocationOverlayView *overlayView;
 	UIPopoverController *popOver;
 	CGRect savedRect;
+	MKReverseGeocoder *geocoder;
 }
 
 @property(nonatomic, retain) GameObject *game;
 @property(nonatomic, retain) LocationOverlayView *overlayView;
 @property(nonatomic, retain) UIPopoverController *popOver;
+@property(nonatomic, retain) MKReverseGeocoder *geocoder;
 
 -(void) locationSelected: (LocationObject *) loc;
 -(void) locationSelectedAgain: (LocationObject *) loc atPoint: (CGPoint) p;

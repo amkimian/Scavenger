@@ -13,6 +13,7 @@
 #import "RouteListController.h"
 #import "LocationPointObject.h"
 #import "SingleLocationEditor.h"
+#import "PlaceMarkObject.h"
 
 #define ADDLOCTYPEHEIGHT 600
 
@@ -20,6 +21,7 @@
 @synthesize game;
 @synthesize overlayView;
 @synthesize popOver;
+@synthesize geocoder;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -157,7 +159,35 @@
 		MKCoordinateRegion region = MKCoordinateRegionMake(coordinate,
 													   MKCoordinateSpanMake(0.01f, 0.01f));
 		[mapView setRegion:region animated:YES];
+		// If the Game doesn't have a PlaceMark object attached, start a ReverseGeoCoder to get one
+		
+		if (game.placeMark == nil)
+		{
+			self.geocoder = [[MKReverseGeocoder alloc] initWithCoordinate:coordinate];
+			self.geocoder.delegate = self;
+			[self.geocoder start];
+		}	
 	}
+}
+
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error
+{
+	NSLog(@"Failed to do reverse lookup, error was %@", [error description]);
+}
+
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)pl
+{
+	NSLog(@"Found location placemark");
+	// Add a placemark
+	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"PlaceMark" inManagedObjectContext:[game managedObjectContext]];
+	PlaceMarkObject *placeMark = [[PlaceMarkObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[game managedObjectContext]];
+	placeMark.administrativeArea = pl.administrativeArea;
+	placeMark.country = pl.country;
+	placeMark.locality = pl.locality;
+	placeMark.postalCode = pl.postalCode;
+	placeMark.subAdministrativeArea = pl.subAdministrativeArea;
+	game.placeMark = placeMark;
+	self.geocoder = nil;
 }
 
 -(void) editLocationDidFinishEditing:(EditLocationController *) controller

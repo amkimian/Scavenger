@@ -17,6 +17,7 @@
 -(void) listDomains;
 - (void) listDomainsComplete:(NSMutableArray*) domains;
 -(void) publishGame: (GameObject *) game;
+-(void) addAttribute: (NSString *) name withValue: (NSString *) value intoArray: (NSMutableArray *) array;
 
 @property(nonatomic, retain) SimpleDb *simpleDb;
 @end

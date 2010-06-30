@@ -20,7 +20,6 @@
 		15362E9611D2DD6F00F63E59 /* HardwareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8711D2DD6F00F63E59 /* HardwareObject.m */; };
 		15362E9711D2DD6F00F63E59 /* LocationOrderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */; };
 		15362E9A11D2DD6F00F63E59 /* GameRouteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */; };
-		15362E9C11D2DD6F00F63E59 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E9311D2DD6F00F63E59 /* GameObject.m */; };
 		15362F8911D2FB9200F63E59 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362F8811D2FB9200F63E59 /* ScoreView.m */; };
 		1536303711D30CD100F63E59 /* GameScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1536303611D30CD100F63E59 /* GameScoreTableViewController.m */; };
 		153630DD11D3137D00F63E59 /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 1536305B11D3137D00F63E59 /* 01-refresh.png */; };
@@ -207,6 +206,8 @@
 		15DA8B0E11DA49810023942B /* SimpleDbAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0311DA49810023942B /* SimpleDbAttribute.m */; };
 		15DA8B0F11DA49810023942B /* SimpleDbItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0511DA49810023942B /* SimpleDbItem.m */; };
 		15DA8B3911DA52BF0023942B /* AWSScavenger.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B3811DA52BF0023942B /* AWSScavenger.m */; };
+		15DA8C6F11DAF55D0023942B /* PlaceMarkObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8C6C11DAF55D0023942B /* PlaceMarkObject.m */; };
+		15DA8C7011DAF55D0023942B /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8C6E11DAF55D0023942B /* GameObject.m */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -260,8 +261,6 @@
 		15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationOrderObject.m; sourceTree = "<group>"; };
 		15362E8E11D2DD6F00F63E59 /* GameRouteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRouteObject.h; sourceTree = "<group>"; };
 		15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRouteObject.m; sourceTree = "<group>"; };
-		15362E9211D2DD6F00F63E59 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
-		15362E9311D2DD6F00F63E59 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		15362F8711D2FB9200F63E59 /* ScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreView.h; path = CommonViews/ScoreView.h; sourceTree = "<group>"; };
 		15362F8811D2FB9200F63E59 /* ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreView.m; path = CommonViews/ScoreView.m; sourceTree = "<group>"; };
 		1536303511D30CD100F63E59 /* GameScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScoreTableViewController.h; path = GamePlaying/GameScoreTableViewController.h; sourceTree = "<group>"; };
@@ -484,6 +483,10 @@
 		15DA8B0511DA49810023942B /* SimpleDbItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleDbItem.m; path = AWS/SimpleDbItem.m; sourceTree = "<group>"; };
 		15DA8B3711DA52BF0023942B /* AWSScavenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSScavenger.h; path = AWSScavenger/AWSScavenger.h; sourceTree = "<group>"; };
 		15DA8B3811DA52BF0023942B /* AWSScavenger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSScavenger.m; path = AWSScavenger/AWSScavenger.m; sourceTree = "<group>"; };
+		15DA8C6B11DAF55D0023942B /* PlaceMarkObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMarkObject.h; sourceTree = "<group>"; };
+		15DA8C6C11DAF55D0023942B /* PlaceMarkObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMarkObject.m; sourceTree = "<group>"; };
+		15DA8C6D11DAF55D0023942B /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		15DA8C6E11DAF55D0023942B /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -1136,7 +1139,6 @@
 				15362E9611D2DD6F00F63E59 /* HardwareObject.m in Sources */,
 				15362E9711D2DD6F00F63E59 /* LocationOrderObject.m in Sources */,
 				15362E9A11D2DD6F00F63E59 /* GameRouteObject.m in Sources */,
-				15362E9C11D2DD6F00F63E59 /* GameObject.m in Sources */,
 				15362F8911D2FB9200F63E59 /* ScoreView.m in Sources */,
 				1536303711D30CD100F63E59 /* GameScoreTableViewController.m in Sources */,
 				153631DF11D402C200F63E59 /* GameObject+Export.m in Sources */,
@@ -1163,6 +1165,8 @@
 				15DA8B0E11DA49810023942B /* SimpleDbAttribute.m in Sources */,
 				15DA8B0F11DA49810023942B /* SimpleDbItem.m in Sources */,
 				15DA8B3911DA52BF0023942B /* AWSScavenger.m in Sources */,
+				15DA8C6F11DAF55D0023942B /* PlaceMarkObject.m in Sources */,
+				15DA8C7011DAF55D0023942B /* GameObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1274,6 +1278,10 @@
 		153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				15DA8C6B11DAF55D0023942B /* PlaceMarkObject.h */,
+				15DA8C6C11DAF55D0023942B /* PlaceMarkObject.m */,
+				15DA8C6D11DAF55D0023942B /* GameObject.h */,
+				15DA8C6E11DAF55D0023942B /* GameObject.m */,
 				152430E311D6A68F00F4E9FA /* ActiveLocationObject.h */,
 				152430E411D6A68F00F4E9FA /* ActiveLocationObject.m */,
 				152430DA11D6A60200F4E9FA /* GameRunObject.h */,
@@ -1292,8 +1300,6 @@
 				15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */,
 				15362E8E11D2DD6F00F63E59 /* GameRouteObject.h */,
 				15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */,
-				15362E9211D2DD6F00F63E59 /* GameObject.h */,
-				15362E9311D2DD6F00F63E59 /* GameObject.m */,
 				153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */,
 			);
 			currentVersion = 153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */;
