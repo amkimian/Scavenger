@@ -44,5 +44,6 @@ RouteListDoneDelegate, MKReverseGeocoderDelegate> {
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender;
 
 -(void) editLocationDidFinishEditing:(EditLocationController *) controller;
+-(void) alternateReverse: (CLLocationCoordinate2D) coordinate;
 
 @end

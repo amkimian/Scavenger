@@ -53,18 +53,21 @@
 	
 	[self addAttribute: @"Country" withValue: game.placeMark.country intoArray:attributes];
 	[self addAttribute: @"Locality" withValue: game.placeMark.locality intoArray:attributes];
-	[self addAttribute: @"AdministrativeArea" withValue: game.placeMark.administrativeArea intoArray:attributes];
-	[self addAttribute: @"SubAdminArea" withValue: game.placeMark.subAdministrativeArea intoArray:attributes];
+	[self addAttribute: @"AdminArea" withValue: game.placeMark.administrativeArea intoArray:attributes];
+	[self addAttribute: @"SubArea" withValue: game.placeMark.subAdministrativeArea intoArray:attributes];
 	[self addAttribute: @"PostalCode" withValue: game.placeMark.postalCode intoArray:attributes];
 	[self.simpleDb putAttributes:@"Scavenger-Games" itemName:itemName attributes:attributes];	
 }
 
 -(void) addAttribute: (NSString *) name withValue: (NSString *) value intoArray: (NSMutableArray *) array
 {
-	SimpleDbAttribute *attr = [[SimpleDbAttribute alloc] init];
-	attr.name = name;
-	attr.value = value;
-	[array addObject: attr];	
+	if (value)
+	{
+		SimpleDbAttribute *attr = [[SimpleDbAttribute alloc] init];
+		attr.name = name;
+		attr.value = value;
+		[array addObject: attr];	
+	}
 }
 
 @end
