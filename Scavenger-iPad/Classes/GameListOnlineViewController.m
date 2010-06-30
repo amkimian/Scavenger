@@ -269,6 +269,7 @@
 			break;
 		case 1:
 			// Unpublish
+			[awsScavenger unpublishGame:self.currentGame];
 			break;
 	}
 	[self dismissModalViewControllerAnimated:YES];

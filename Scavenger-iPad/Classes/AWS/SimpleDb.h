@@ -14,6 +14,7 @@
 #import "ListDomainsResponse.h"
 #import "CreateDomainResponse.h"
 #import "PutAttributesResponse.h"
+#import "DeleteAttributesResponse.h"
 #import "SimpleDbAttribute.h"
 #import "QueryResponse.h"
 #import "QueryWithAttributesResponse.h"
@@ -25,6 +26,7 @@
 - (void) listDomainsComplete:(NSMutableArray*) domains;
 - (void) createDomainComplete;
 - (void) putAttributesComplete;
+- (void) deleteAttributesComplete;
 - (void) queryComplete:(NSMutableArray*) items;
 - (void) queryWithAttributesComplete:(NSMutableArray*) items;
 
@@ -39,6 +41,7 @@
 	ListDomainsResponse *listDomainsResponse;
 	CreateDomainResponse *createDomainResponse;
 	PutAttributesResponse *putAttributesResponse;
+	DeleteAttributesResponse *deleteAttributesResponse;
 	QueryResponse *queryResponse;
 	QueryWithAttributesResponse *queryWithAttributesResponse;
 }
@@ -49,6 +52,7 @@
 @property (nonatomic, retain) ListDomainsResponse* listDomainsResponse;
 @property (nonatomic, retain) CreateDomainResponse* createDomainResponse;
 @property (nonatomic, retain) PutAttributesResponse* putAttributesResponse;
+@property (nonatomic, retain) DeleteAttributesResponse* deleteAttributesResponse;
 @property (nonatomic, retain) QueryResponse* queryResponse;
 @property (nonatomic, retain) QueryWithAttributesResponse *queryWithAttributesResponse;
 
@@ -66,6 +70,7 @@
 //
 // attributes must be a NSMutableArray of SimpleDbAttribute
 //
+- (void) deleteAttributes: (NSString*) domainName itemName:(NSString*) itemName attributes:(NSMutableArray*) attributes;
 - (void) putAttributes:(NSString*)domainName itemName:(NSString*)itemName attributes:(NSMutableArray*)attributes;
 
 //
@@ -87,6 +92,7 @@
 - (void) putAttributesParseComplete;
 - (void) queryParseComplete;
 - (void) queryWithAttributesParseComplete;
+- (void) deleteAttributesParseComplete;
 
 //
 // Helper methods for making SimpleDb API calls

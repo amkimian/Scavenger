@@ -11,7 +11,7 @@
 
 @implementation SimpleDb
 
-@synthesize key, secret, delegate, listDomainsResponse, createDomainResponse, putAttributesResponse, queryResponse, queryWithAttributesResponse;
+@synthesize key, secret, delegate, listDomainsResponse, createDomainResponse, putAttributesResponse, deleteAttributesResponse, queryResponse, queryWithAttributesResponse;
 
 - (void) setAWSAccount:(NSString*) _key secret:(NSString*) _secret 
 {	
@@ -121,6 +121,55 @@
 	
 	[parser parse];
 	[parser release];
+}
+
+- (void) deleteAttributes: (NSString*) domainName itemName:(NSString*) itemName attributes:(NSMutableArray*) attributes
+{
+	//
+	// Name our attributes from 0 to n as Attribute.X.Name/Attribute.X.Value
+	//
+	NSMutableDictionary *restReadyParameters = [[NSMutableDictionary alloc] init];
+	
+	if (attributes != nil)
+	{
+		NSEnumerator *e = [attributes objectEnumerator];
+		SimpleDbAttribute *replaceableAttribute;
+		int i = 0;
+	
+		while (replaceableAttribute = [e nextObject]) 
+		{
+			NSString *attributeNName = [NSString stringWithFormat:@"Attribute.%d.Name", i];
+			NSString *attributeNValue = [NSString stringWithFormat:@"Attribute.%d.Value", i];
+			NSString *attributeNReplace = [NSString stringWithFormat:@"Attribute.%d.Replace", i];
+		
+			[restReadyParameters setValue:replaceableAttribute.name forKey:attributeNName];
+			[restReadyParameters setValue:replaceableAttribute.value forKey:attributeNValue];
+			[restReadyParameters setValue:replaceableAttribute.replace forKey:attributeNReplace];
+			i++;
+		}
+	}
+	
+	[restReadyParameters setValue:domainName forKey:@"DomainName"];	
+	[restReadyParameters setValue:itemName forKey:@"ItemName"];
+	
+	//
+	// Invoke our method
+	//
+	NSXMLParser *parser = [self invoke:@"DeleteAttributes" invokeParameters:restReadyParameters];
+	
+	//	
+    // Set self as the delegate of the parser so that it will receive the parser delegate methods callbacks.
+	//
+	if (self.deleteAttributesResponse == nil)
+	{
+		deleteAttributesResponse = [[DeleteAttributesResponse alloc] init];
+		[deleteAttributesResponse setDelegate:self];
+	}
+	
+    [parser setDelegate:deleteAttributesResponse];
+	
+	[parser parse];
+	[parser release];	
 }
 
 - (void) putAttributes:(NSString*)domainName itemName:(NSString*)itemName attributes:(NSMutableArray*)attributes {
@@ -261,6 +310,13 @@
 	{		
 		[self.delegate putAttributesComplete];
     }	
+}
+
+- (void) deleteAttributesParseComplete {
+	if ([self.delegate respondsToSelector:@selector(deleteAttributesComplete)])
+	{
+		[self.delegate deleteAttributesComplete];
+	}
 }
 
 - (void) createDomainParseComplete {

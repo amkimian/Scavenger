@@ -181,6 +181,7 @@
 		153E5CFB11CAE2EC00DCDAC0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */; };
 		153E5D4411CB31EE00DCDAC0 /* RouteListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5D4311CB31EE00DCDAC0 /* RouteListController.m */; };
 		153E5D8A11CB39B200DCDAC0 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */; };
+		153E939C11DBD03E009D9BE4 /* DeleteAttributesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E939B11DBD03E009D9BE4 /* DeleteAttributesResponse.m */; };
 		15652A9411CB3D4E0051E687 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 15652A9311CB3D4E0051E687 /* Default-Portrait.png */; };
 		15652B3D11CE84F70051E687 /* libMDSLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15652B2111CE83A40051E687 /* libMDSLib.a */; };
 		15652E8811CED37D0051E687 /* GetTextPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15652E8611CED37D0051E687 /* GetTextPopupController.xib */; };
@@ -440,6 +441,8 @@
 		153E5D4211CB31EE00DCDAC0 /* RouteListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteListController.h; sourceTree = "<group>"; };
 		153E5D4311CB31EE00DCDAC0 /* RouteListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteListController.m; sourceTree = "<group>"; };
 		153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		153E939A11DBD03E009D9BE4 /* DeleteAttributesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeleteAttributesResponse.h; path = AWS/DeleteAttributesResponse.h; sourceTree = "<group>"; };
+		153E939B11DBD03E009D9BE4 /* DeleteAttributesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeleteAttributesResponse.m; path = AWS/DeleteAttributesResponse.m; sourceTree = "<group>"; };
 		15652A9311CB3D4E0051E687 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		15652B1711CE837F0051E687 /* MDSLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MDSLib.xcodeproj; sourceTree = MDS_SRC; };
 		15652E8611CED37D0051E687 /* GetTextPopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GetTextPopupController.xib; path = ../MDSLib/CommonControllers/GetTextPopupController.xib; sourceTree = SOURCE_ROOT; };
@@ -810,6 +813,8 @@
 				15DA8AF811DA49810023942B /* PutAttributes.h */,
 				15DA8AF911DA49810023942B /* PutAttributes.m */,
 				15DA8AFA11DA49810023942B /* PutAttributesResponse.h */,
+				153E939A11DBD03E009D9BE4 /* DeleteAttributesResponse.h */,
+				153E939B11DBD03E009D9BE4 /* DeleteAttributesResponse.m */,
 				15DA8AFB11DA49810023942B /* PutAttributesResponse.m */,
 				15DA8AFC11DA49810023942B /* QueryResponse.h */,
 				15DA8AFD11DA49810023942B /* QueryResponse.m */,
@@ -1167,6 +1172,7 @@
 				15DA8B3911DA52BF0023942B /* AWSScavenger.m in Sources */,
 				15DA8C6F11DAF55D0023942B /* PlaceMarkObject.m in Sources */,
 				15DA8C7011DAF55D0023942B /* GameObject.m in Sources */,
+				153E939C11DBD03E009D9BE4 /* DeleteAttributesResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,6 +36,12 @@
 	}
 }
 
+-(void) unpublishGame: (GameObject *) game
+{
+	NSString *itemName = [NSString stringWithFormat:@"%@-%@", [UIDevice currentDevice].uniqueIdentifier, game.name];
+	[self.simpleDb deleteAttributes:@"Scavenger-Games" itemName:itemName attributes:nil];
+}
+
 -(void) publishGame: (GameObject *) game
 {
 	// Get the attributes for this game
@@ -45,7 +51,11 @@
 	// Name is deviceId + Name
 	// Attributes...
 	
+	[self unpublishGame: game];
+	
 	NSString *itemName = [NSString stringWithFormat:@"%@-%@", [UIDevice currentDevice].uniqueIdentifier, game.name];
+	
+	
 	NSMutableArray *attributes = [[NSMutableArray alloc] init];
 	
 	// Get coordinate of first location of type "Start"	
@@ -56,7 +66,15 @@
 	[self addAttribute: @"AdminArea" withValue: game.placeMark.administrativeArea intoArray:attributes];
 	[self addAttribute: @"SubArea" withValue: game.placeMark.subAdministrativeArea intoArray:attributes];
 	[self addAttribute: @"PostalCode" withValue: game.placeMark.postalCode intoArray:attributes];
-	[self.simpleDb putAttributes:@"Scavenger-Games" itemName:itemName attributes:attributes];	
+	
+	if ([attributes count] > 0)
+	{
+		[self.simpleDb putAttributes:@"Scavenger-Games" itemName:itemName attributes:attributes];	
+	}
+	else
+	{
+		NSLog(@"There is nothing to publish!");
+	}
 }
 
 -(void) addAttribute: (NSString *) name withValue: (NSString *) value intoArray: (NSMutableArray *) array
