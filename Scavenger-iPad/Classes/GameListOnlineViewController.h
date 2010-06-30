@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "GameListViewController.h"
 #import "GameObject.h"
+#import "AWSScavenger.h"
 
 @interface GameListOnlineViewController : UIViewController<UITableViewDelegate,UITableViewDataSource, MKReverseGeocoderDelegate, MenuPopupDelegate> {
 	GameListViewController *rootController;
@@ -18,6 +19,7 @@
 	IBOutlet UITableView *mainTable;
 	GameObject *currentGame;
 	UIPopoverController *popOver;
+	AWSScavenger *awsScavenger;
 }
 
 -(IBAction) done:(id) sender;
@@ -27,4 +29,5 @@
 @property(nonatomic, retain) MKReverseGeocoder *geocoder;
 @property(nonatomic, retain) GameObject *currentGame;
 @property (nonatomic, retain) UIPopoverController *popOver;
+@property (nonatomic, retain) AWSScavenger *awsScavenger;
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SimpleDb.h"
+#import "GameObject.h"
 
 @interface AWSScavenger : NSObject {
 	SimpleDb *simpleDb;
@@ -15,6 +16,7 @@
 
 -(void) listDomains;
 - (void) listDomainsComplete:(NSMutableArray*) domains;
+-(void) publishGame: (GameObject *) game;
 
 @property(nonatomic, retain) SimpleDb *simpleDb;
 @end

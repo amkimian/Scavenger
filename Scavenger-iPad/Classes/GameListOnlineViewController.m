@@ -15,6 +15,7 @@
 @synthesize geocoder;
 @synthesize currentGame;
 @synthesize popOver;
+@synthesize awsScavenger;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -25,6 +26,8 @@
 
 	self.geocoder = [[MKReverseGeocoder alloc] initWithCoordinate:rootController.currentLocation.coordinate];
 	self.geocoder.delegate = self;
+	self.awsScavenger = [[AWSScavenger alloc] init];
+	
 //	[self.geocoder start];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -262,6 +265,7 @@
 	{
 		case 0:
 			// Publish
+			[awsScavenger publishGame:self.currentGame];
 			break;
 		case 1:
 			// Unpublish
