@@ -67,6 +67,22 @@
 	[self addAttribute: @"SubArea" withValue: game.placeMark.subAdministrativeArea intoArray:attributes];
 	[self addAttribute: @"PostalCode" withValue: game.placeMark.postalCode intoArray:attributes];
 	
+	// Need to add DeviceID
+	// Game name
+	// Latitude
+	// Longitude
+	// Stars
+	// Description (new field in Game object)
+	
+	LocationObject *startLocation = [game getLocationOfType:LTYPE_START];
+	
+	[self addAttribute: @"Name" withValue: game.name intoArray:attributes];
+	[self addAttribute: @"Latitude" withValue: [NSString stringWithFormat: @"%@", startLocation.firstPoint.latitude] intoArray:attributes];
+	[self addAttribute: @"Longitude" withValue: [NSString stringWithFormat: @"%@", startLocation.firstPoint.longitude] intoArray:attributes];
+	[self addAttribute: @"DeviceID" withValue: [UIDevice currentDevice].uniqueIdentifier intoArray:attributes];
+	
+	// And description when we have it
+	
 	if ([attributes count] > 0)
 	{
 		[self.simpleDb putAttributes:@"Scavenger-Games" itemName:itemName attributes:attributes];	

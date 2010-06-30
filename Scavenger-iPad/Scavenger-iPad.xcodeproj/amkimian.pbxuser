@@ -1778,10 +1778,29 @@
 		fRef = 15DA8B3811DA52BF0023942B /* AWSScavenger.m */;
 		name = "AWSScavenger.m: 77";
 		rLen = 0;
-		rLoc = 2228;
+		rLoc = 2920;
 		rType = 0;
 		vrLen = 1658;
 		vrLoc = 694;
+	};
+	153E93CC11DBD343009D9BE4 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected ':' before ']' token";
+		fRef = 15DA8B3811DA52BF0023942B /* AWSScavenger.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 79;
+		rType = 1;
+	};
+	153E93CD11DBD343009D9BE4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8B3811DA52BF0023942B /* AWSScavenger.m */;
+		name = "AWSScavenger.m: 80";
+		rLen = 0;
+		rLoc = 2314;
+		rType = 0;
+		vrLen = 2058;
+		vrLoc = 818;
 	};
 	155BE53311C92A670019A783 /* Scavenger-iPad */ = {
 		isa = PBXExecutable;
@@ -2187,9 +2206,9 @@
 	};
 	15DA8B3811DA52BF0023942B /* AWSScavenger.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 1157}}";
-			sepNavSelRange = "{2228, 0}";
-			sepNavVisRange = "{694, 1658}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 1339}}";
+			sepNavSelRange = "{2314, 0}";
+			sepNavVisRange = "{818, 2058}";
 		};
 	};
 	15DA8B5511DA55100023942B /* PBXTextBookmark */ = {
@@ -2702,6 +2721,8 @@
 			153E93BD11DBD170009D9BE4 /* PBXTextBookmark */ = 153E93BD11DBD170009D9BE4 /* PBXTextBookmark */;
 			153E93BE11DBD170009D9BE4 /* PBXTextBookmark */ = 153E93BE11DBD170009D9BE4 /* PBXTextBookmark */;
 			153E93BF11DBD170009D9BE4 /* PBXTextBookmark */ = 153E93BF11DBD170009D9BE4 /* PBXTextBookmark */;
+			153E93CC11DBD343009D9BE4 /* XCBuildMessageTextBookmark */ = 153E93CC11DBD343009D9BE4 /* XCBuildMessageTextBookmark */;
+			153E93CD11DBD343009D9BE4 /* PBXTextBookmark */ = 153E93CD11DBD343009D9BE4 /* PBXTextBookmark */;
 			15652E9611CED3FF0051E687 = 15652E9611CED3FF0051E687 /* PBXBookmark */;
 			15652EC111CED4A20051E687 = 15652EC111CED4A20051E687 /* PBXTextBookmark */;
 			15DA8A6011DA3DBE0023942B = 15DA8A6011DA3DBE0023942B /* PBXTextBookmark */;
