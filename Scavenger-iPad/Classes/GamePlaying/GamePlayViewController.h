@@ -39,4 +39,5 @@
 @property(nonatomic, retain) CLLocation *currentLocation;
 @property(nonatomic, retain) MKMapView *mapView;
 @property(nonatomic) float mapRadius;
+
 @end

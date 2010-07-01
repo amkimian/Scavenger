@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "ExpandableViewController.h"
 #import "CGPointUtils.h"
+#import "AWSScavenger.h"
 
 int main(int argc, char *argv[]) {
  	[ExpandableViewController _keepAtLinkTime];   
-	
 	/*
 	CGPoint one;
 	CGPoint two;

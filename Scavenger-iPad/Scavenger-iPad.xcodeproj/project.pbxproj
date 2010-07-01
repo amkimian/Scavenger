@@ -20,7 +20,6 @@
 		15362E9611D2DD6F00F63E59 /* HardwareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8711D2DD6F00F63E59 /* HardwareObject.m */; };
 		15362E9711D2DD6F00F63E59 /* LocationOrderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */; };
 		15362E9A11D2DD6F00F63E59 /* GameRouteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */; };
-		15362E9C11D2DD6F00F63E59 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362E9311D2DD6F00F63E59 /* GameObject.m */; };
 		15362F8911D2FB9200F63E59 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362F8811D2FB9200F63E59 /* ScoreView.m */; };
 		1536303711D30CD100F63E59 /* GameScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1536303611D30CD100F63E59 /* GameScoreTableViewController.m */; };
 		153630DD11D3137D00F63E59 /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 1536305B11D3137D00F63E59 /* 01-refresh.png */; };
@@ -182,6 +181,24 @@
 		153E5CFB11CAE2EC00DCDAC0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */; };
 		153E5D4411CB31EE00DCDAC0 /* RouteListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E5D4311CB31EE00DCDAC0 /* RouteListController.m */; };
 		153E5D8A11CB39B200DCDAC0 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */; };
+		153E939C11DBD03E009D9BE4 /* DeleteAttributesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E939B11DBD03E009D9BE4 /* DeleteAttributesResponse.m */; };
+		153E93DF11DC4381009D9BE4 /* ASIS3Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E93D211DC4381009D9BE4 /* ASIS3Bucket.m */; };
+		153E93E011DC4381009D9BE4 /* ASIS3BucketObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E93D411DC4381009D9BE4 /* ASIS3BucketObject.m */; };
+		153E93E111DC4381009D9BE4 /* ASIS3BucketRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E93D611DC4381009D9BE4 /* ASIS3BucketRequest.m */; };
+		153E93E211DC4381009D9BE4 /* ASIS3ObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E93D811DC4381009D9BE4 /* ASIS3ObjectRequest.m */; };
+		153E93E311DC4381009D9BE4 /* ASIS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E93DA11DC4381009D9BE4 /* ASIS3Request.m */; };
+		153E93E411DC4381009D9BE4 /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E93DC11DC4381009D9BE4 /* ASIS3ServiceRequest.m */; };
+		153E93E511DC4381009D9BE4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E93DE11DC4381009D9BE4 /* Reachability.m */; };
+		153E93F911DC438F009D9BE4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E93F811DC438F009D9BE4 /* CFNetwork.framework */; };
+		153E941111DC43B6009D9BE4 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E940211DC43B6009D9BE4 /* ASIAuthenticationDialog.m */; };
+		153E941211DC43B6009D9BE4 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E940511DC43B6009D9BE4 /* ASIDownloadCache.m */; };
+		153E941311DC43B6009D9BE4 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E940711DC43B6009D9BE4 /* ASIFormDataRequest.m */; };
+		153E941411DC43B6009D9BE4 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E940911DC43B6009D9BE4 /* ASIHTTPRequest.m */; };
+		153E941511DC43B6009D9BE4 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E940D11DC43B6009D9BE4 /* ASIInputStream.m */; };
+		153E941611DC43B6009D9BE4 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 153E940F11DC43B6009D9BE4 /* ASINetworkQueue.m */; };
+		153E941A11DC43F0009D9BE4 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E941911DC43F0009D9BE4 /* libz.1.2.3.dylib */; };
+		153E941E11DC4411009D9BE4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E941D11DC4411009D9BE4 /* SystemConfiguration.framework */; };
+		153E942211DC441B009D9BE4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153E942111DC441B009D9BE4 /* MobileCoreServices.framework */; };
 		15652A9411CB3D4E0051E687 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 15652A9311CB3D4E0051E687 /* Default-Portrait.png */; };
 		15652B3D11CE84F70051E687 /* libMDSLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15652B2111CE83A40051E687 /* libMDSLib.a */; };
 		15652E8811CED37D0051E687 /* GetTextPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15652E8611CED37D0051E687 /* GetTextPopupController.xib */; };
@@ -194,6 +211,21 @@
 		15B00EC111D13C8C00757CCE /* GamePlayOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00EC011D13C8C00757CCE /* GamePlayOverlayView.m */; };
 		15B00F0A11D143CD00757CCE /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */; };
 		15B00F0B11D143CD00757CCE /* GamePlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B00F0911D143CD00757CCE /* GamePlayViewController.xib */; };
+		15DA8A4B11DA3B6A0023942B /* GameListOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */; };
+		15DA8A4C11DA3B6A0023942B /* GameListOnlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DA8A4A11DA3B6A0023942B /* GameListOnlineViewController.xib */; };
+		15DA8B0611DA49810023942B /* CreateDomainResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AF311DA49810023942B /* CreateDomainResponse.m */; };
+		15DA8B0711DA49810023942B /* ListDomainsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AF511DA49810023942B /* ListDomainsResponse.m */; };
+		15DA8B0811DA49810023942B /* NSDataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AF711DA49810023942B /* NSDataExtensions.m */; };
+		15DA8B0911DA49810023942B /* PutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AF911DA49810023942B /* PutAttributes.m */; };
+		15DA8B0A11DA49810023942B /* PutAttributesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AFB11DA49810023942B /* PutAttributesResponse.m */; };
+		15DA8B0B11DA49810023942B /* QueryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AFD11DA49810023942B /* QueryResponse.m */; };
+		15DA8B0C11DA49810023942B /* QueryWithAttributesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AFF11DA49810023942B /* QueryWithAttributesResponse.m */; };
+		15DA8B0D11DA49810023942B /* SimpleDb.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0111DA49810023942B /* SimpleDb.m */; };
+		15DA8B0E11DA49810023942B /* SimpleDbAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0311DA49810023942B /* SimpleDbAttribute.m */; };
+		15DA8B0F11DA49810023942B /* SimpleDbItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B0511DA49810023942B /* SimpleDbItem.m */; };
+		15DA8B3911DA52BF0023942B /* AWSScavenger.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B3811DA52BF0023942B /* AWSScavenger.m */; };
+		15DA8C6F11DAF55D0023942B /* PlaceMarkObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8C6C11DAF55D0023942B /* PlaceMarkObject.m */; };
+		15DA8C7011DAF55D0023942B /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8C6E11DAF55D0023942B /* GameObject.m */; };
 		1D3623260D0F684500981E51 /* Scavenger_iPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -247,8 +279,6 @@
 		15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationOrderObject.m; sourceTree = "<group>"; };
 		15362E8E11D2DD6F00F63E59 /* GameRouteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRouteObject.h; sourceTree = "<group>"; };
 		15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRouteObject.m; sourceTree = "<group>"; };
-		15362E9211D2DD6F00F63E59 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
-		15362E9311D2DD6F00F63E59 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		15362F8711D2FB9200F63E59 /* ScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreView.h; path = CommonViews/ScoreView.h; sourceTree = "<group>"; };
 		15362F8811D2FB9200F63E59 /* ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreView.m; path = CommonViews/ScoreView.m; sourceTree = "<group>"; };
 		1536303511D30CD100F63E59 /* GameScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScoreTableViewController.h; path = GamePlaying/GameScoreTableViewController.h; sourceTree = "<group>"; };
@@ -428,6 +458,43 @@
 		153E5D4211CB31EE00DCDAC0 /* RouteListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteListController.h; sourceTree = "<group>"; };
 		153E5D4311CB31EE00DCDAC0 /* RouteListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteListController.m; sourceTree = "<group>"; };
 		153E5D8911CB39B200DCDAC0 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		153E939A11DBD03E009D9BE4 /* DeleteAttributesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeleteAttributesResponse.h; path = AWS/DeleteAttributesResponse.h; sourceTree = "<group>"; };
+		153E939B11DBD03E009D9BE4 /* DeleteAttributesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeleteAttributesResponse.m; path = AWS/DeleteAttributesResponse.m; sourceTree = "<group>"; };
+		153E93D011DC4381009D9BE4 /* ASINSXMLParserCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINSXMLParserCompat.h; path = S3/ASINSXMLParserCompat.h; sourceTree = "<group>"; };
+		153E93D111DC4381009D9BE4 /* ASIS3Bucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIS3Bucket.h; path = S3/ASIS3Bucket.h; sourceTree = "<group>"; };
+		153E93D211DC4381009D9BE4 /* ASIS3Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIS3Bucket.m; path = S3/ASIS3Bucket.m; sourceTree = "<group>"; };
+		153E93D311DC4381009D9BE4 /* ASIS3BucketObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIS3BucketObject.h; path = S3/ASIS3BucketObject.h; sourceTree = "<group>"; };
+		153E93D411DC4381009D9BE4 /* ASIS3BucketObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIS3BucketObject.m; path = S3/ASIS3BucketObject.m; sourceTree = "<group>"; };
+		153E93D511DC4381009D9BE4 /* ASIS3BucketRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIS3BucketRequest.h; path = S3/ASIS3BucketRequest.h; sourceTree = "<group>"; };
+		153E93D611DC4381009D9BE4 /* ASIS3BucketRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIS3BucketRequest.m; path = S3/ASIS3BucketRequest.m; sourceTree = "<group>"; };
+		153E93D711DC4381009D9BE4 /* ASIS3ObjectRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIS3ObjectRequest.h; path = S3/ASIS3ObjectRequest.h; sourceTree = "<group>"; };
+		153E93D811DC4381009D9BE4 /* ASIS3ObjectRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIS3ObjectRequest.m; path = S3/ASIS3ObjectRequest.m; sourceTree = "<group>"; };
+		153E93D911DC4381009D9BE4 /* ASIS3Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIS3Request.h; path = S3/ASIS3Request.h; sourceTree = "<group>"; };
+		153E93DA11DC4381009D9BE4 /* ASIS3Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIS3Request.m; path = S3/ASIS3Request.m; sourceTree = "<group>"; };
+		153E93DB11DC4381009D9BE4 /* ASIS3ServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIS3ServiceRequest.h; path = S3/ASIS3ServiceRequest.h; sourceTree = "<group>"; };
+		153E93DC11DC4381009D9BE4 /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIS3ServiceRequest.m; path = S3/ASIS3ServiceRequest.m; sourceTree = "<group>"; };
+		153E93DD11DC4381009D9BE4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = S3/Reachability.h; sourceTree = "<group>"; };
+		153E93DE11DC4381009D9BE4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = S3/Reachability.m; sourceTree = "<group>"; };
+		153E93F811DC438F009D9BE4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		153E940111DC43B6009D9BE4 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = S3/ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		153E940211DC43B6009D9BE4 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = S3/ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		153E940311DC43B6009D9BE4 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = S3/ASICacheDelegate.h; sourceTree = "<group>"; };
+		153E940411DC43B6009D9BE4 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = S3/ASIDownloadCache.h; sourceTree = "<group>"; };
+		153E940511DC43B6009D9BE4 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = S3/ASIDownloadCache.m; sourceTree = "<group>"; };
+		153E940611DC43B6009D9BE4 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = S3/ASIFormDataRequest.h; sourceTree = "<group>"; };
+		153E940711DC43B6009D9BE4 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = S3/ASIFormDataRequest.m; sourceTree = "<group>"; };
+		153E940811DC43B6009D9BE4 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = S3/ASIHTTPRequest.h; sourceTree = "<group>"; };
+		153E940911DC43B6009D9BE4 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = S3/ASIHTTPRequest.m; sourceTree = "<group>"; };
+		153E940A11DC43B6009D9BE4 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = S3/ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		153E940B11DC43B6009D9BE4 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = S3/ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		153E940C11DC43B6009D9BE4 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = S3/ASIInputStream.h; sourceTree = "<group>"; };
+		153E940D11DC43B6009D9BE4 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = S3/ASIInputStream.m; sourceTree = "<group>"; };
+		153E940E11DC43B6009D9BE4 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = S3/ASINetworkQueue.h; sourceTree = "<group>"; };
+		153E940F11DC43B6009D9BE4 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = S3/ASINetworkQueue.m; sourceTree = "<group>"; };
+		153E941011DC43B6009D9BE4 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = S3/ASIProgressDelegate.h; sourceTree = "<group>"; };
+		153E941911DC43F0009D9BE4 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		153E941D11DC4411009D9BE4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		153E942111DC441B009D9BE4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		15652A9311CB3D4E0051E687 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		15652B1711CE837F0051E687 /* MDSLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MDSLib.xcodeproj; sourceTree = MDS_SRC; };
 		15652E8611CED37D0051E687 /* GetTextPopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GetTextPopupController.xib; path = ../MDSLib/CommonControllers/GetTextPopupController.xib; sourceTree = SOURCE_ROOT; };
@@ -446,6 +513,35 @@
 		15B00F0711D143CD00757CCE /* GamePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayViewController.h; path = GamePlaying/GamePlayViewController.h; sourceTree = "<group>"; };
 		15B00F0811D143CD00757CCE /* GamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePlayViewController.m; path = GamePlaying/GamePlayViewController.m; sourceTree = "<group>"; };
 		15B00F0911D143CD00757CCE /* GamePlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GamePlayViewController.xib; path = GamePlaying/GamePlayViewController.xib; sourceTree = "<group>"; };
+		15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameListOnlineViewController.h; sourceTree = "<group>"; };
+		15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameListOnlineViewController.m; sourceTree = "<group>"; };
+		15DA8A4A11DA3B6A0023942B /* GameListOnlineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameListOnlineViewController.xib; sourceTree = "<group>"; };
+		15DA8AF211DA49810023942B /* CreateDomainResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDomainResponse.h; path = AWS/CreateDomainResponse.h; sourceTree = "<group>"; };
+		15DA8AF311DA49810023942B /* CreateDomainResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDomainResponse.m; path = AWS/CreateDomainResponse.m; sourceTree = "<group>"; };
+		15DA8AF411DA49810023942B /* ListDomainsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListDomainsResponse.h; path = AWS/ListDomainsResponse.h; sourceTree = "<group>"; };
+		15DA8AF511DA49810023942B /* ListDomainsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListDomainsResponse.m; path = AWS/ListDomainsResponse.m; sourceTree = "<group>"; };
+		15DA8AF611DA49810023942B /* NSDataExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDataExtensions.h; path = AWS/NSDataExtensions.h; sourceTree = "<group>"; };
+		15DA8AF711DA49810023942B /* NSDataExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataExtensions.m; path = AWS/NSDataExtensions.m; sourceTree = "<group>"; };
+		15DA8AF811DA49810023942B /* PutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PutAttributes.h; path = AWS/PutAttributes.h; sourceTree = "<group>"; };
+		15DA8AF911DA49810023942B /* PutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PutAttributes.m; path = AWS/PutAttributes.m; sourceTree = "<group>"; };
+		15DA8AFA11DA49810023942B /* PutAttributesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PutAttributesResponse.h; path = AWS/PutAttributesResponse.h; sourceTree = "<group>"; };
+		15DA8AFB11DA49810023942B /* PutAttributesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PutAttributesResponse.m; path = AWS/PutAttributesResponse.m; sourceTree = "<group>"; };
+		15DA8AFC11DA49810023942B /* QueryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryResponse.h; path = AWS/QueryResponse.h; sourceTree = "<group>"; };
+		15DA8AFD11DA49810023942B /* QueryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryResponse.m; path = AWS/QueryResponse.m; sourceTree = "<group>"; };
+		15DA8AFE11DA49810023942B /* QueryWithAttributesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryWithAttributesResponse.h; path = AWS/QueryWithAttributesResponse.h; sourceTree = "<group>"; };
+		15DA8AFF11DA49810023942B /* QueryWithAttributesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryWithAttributesResponse.m; path = AWS/QueryWithAttributesResponse.m; sourceTree = "<group>"; };
+		15DA8B0011DA49810023942B /* SimpleDb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleDb.h; path = AWS/SimpleDb.h; sourceTree = "<group>"; };
+		15DA8B0111DA49810023942B /* SimpleDb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleDb.m; path = AWS/SimpleDb.m; sourceTree = "<group>"; };
+		15DA8B0211DA49810023942B /* SimpleDbAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleDbAttribute.h; path = AWS/SimpleDbAttribute.h; sourceTree = "<group>"; };
+		15DA8B0311DA49810023942B /* SimpleDbAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleDbAttribute.m; path = AWS/SimpleDbAttribute.m; sourceTree = "<group>"; };
+		15DA8B0411DA49810023942B /* SimpleDbItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleDbItem.h; path = AWS/SimpleDbItem.h; sourceTree = "<group>"; };
+		15DA8B0511DA49810023942B /* SimpleDbItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleDbItem.m; path = AWS/SimpleDbItem.m; sourceTree = "<group>"; };
+		15DA8B3711DA52BF0023942B /* AWSScavenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSScavenger.h; path = AWSScavenger/AWSScavenger.h; sourceTree = "<group>"; };
+		15DA8B3811DA52BF0023942B /* AWSScavenger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSScavenger.m; path = AWSScavenger/AWSScavenger.m; sourceTree = "<group>"; };
+		15DA8C6B11DAF55D0023942B /* PlaceMarkObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMarkObject.h; sourceTree = "<group>"; };
+		15DA8C6C11DAF55D0023942B /* PlaceMarkObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMarkObject.m; sourceTree = "<group>"; };
+		15DA8C6D11DAF55D0023942B /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		15DA8C6E11DAF55D0023942B /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Scavenger_iPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scavenger_iPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Scavenger_iPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scavenger_iPadAppDelegate.m; sourceTree = "<group>"; };
@@ -474,6 +570,10 @@
 				153E5CFB11CAE2EC00DCDAC0 /* QuartzCore.framework in Frameworks */,
 				1536321411D4212C00F63E59 /* MessageUI.framework in Frameworks */,
 				1536326C11D454D700F63E59 /* AVFoundation.framework in Frameworks */,
+				153E93F911DC438F009D9BE4 /* CFNetwork.framework in Frameworks */,
+				153E941A11DC43F0009D9BE4 /* libz.1.2.3.dylib in Frameworks */,
+				153E941E11DC4411009D9BE4 /* SystemConfiguration.framework in Frameworks */,
+				153E942211DC441B009D9BE4 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +583,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				15DA8B2911DA52330023942B /* AWSScavenger */,
+				15DA8AED11DA491E0023942B /* AWS */,
 				15B00E7C11D1023A00757CCE /* GamePlaying */,
 				153E59F711CA6FC800DCDAC0 /* CommonViews */,
 				153E59EB11CA6E9600DCDAC0 /* GameEditing */,
@@ -648,6 +750,9 @@
 				153E57B011C944FE00DCDAC0 /* GameListViewController.h */,
 				153E57B111C944FE00DCDAC0 /* GameListViewController.m */,
 				153E57B211C944FE00DCDAC0 /* GameListViewController.xib */,
+				15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */,
+				15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */,
+				15DA8A4A11DA3B6A0023942B /* GameListOnlineViewController.xib */,
 			);
 			name = GameListViewing;
 			sourceTree = "<group>";
@@ -728,6 +833,44 @@
 			name = CommonViews;
 			sourceTree = "<group>";
 		};
+		153E93CF11DC4368009D9BE4 /* S3 */ = {
+			isa = PBXGroup;
+			children = (
+				153E940111DC43B6009D9BE4 /* ASIAuthenticationDialog.h */,
+				153E940211DC43B6009D9BE4 /* ASIAuthenticationDialog.m */,
+				153E940311DC43B6009D9BE4 /* ASICacheDelegate.h */,
+				153E940411DC43B6009D9BE4 /* ASIDownloadCache.h */,
+				153E940511DC43B6009D9BE4 /* ASIDownloadCache.m */,
+				153E940611DC43B6009D9BE4 /* ASIFormDataRequest.h */,
+				153E940711DC43B6009D9BE4 /* ASIFormDataRequest.m */,
+				153E940811DC43B6009D9BE4 /* ASIHTTPRequest.h */,
+				153E940911DC43B6009D9BE4 /* ASIHTTPRequest.m */,
+				153E940A11DC43B6009D9BE4 /* ASIHTTPRequestConfig.h */,
+				153E940B11DC43B6009D9BE4 /* ASIHTTPRequestDelegate.h */,
+				153E940C11DC43B6009D9BE4 /* ASIInputStream.h */,
+				153E940D11DC43B6009D9BE4 /* ASIInputStream.m */,
+				153E940E11DC43B6009D9BE4 /* ASINetworkQueue.h */,
+				153E940F11DC43B6009D9BE4 /* ASINetworkQueue.m */,
+				153E941011DC43B6009D9BE4 /* ASIProgressDelegate.h */,
+				153E93D011DC4381009D9BE4 /* ASINSXMLParserCompat.h */,
+				153E93D111DC4381009D9BE4 /* ASIS3Bucket.h */,
+				153E93D211DC4381009D9BE4 /* ASIS3Bucket.m */,
+				153E93D311DC4381009D9BE4 /* ASIS3BucketObject.h */,
+				153E93D411DC4381009D9BE4 /* ASIS3BucketObject.m */,
+				153E93D511DC4381009D9BE4 /* ASIS3BucketRequest.h */,
+				153E93D611DC4381009D9BE4 /* ASIS3BucketRequest.m */,
+				153E93D711DC4381009D9BE4 /* ASIS3ObjectRequest.h */,
+				153E93D811DC4381009D9BE4 /* ASIS3ObjectRequest.m */,
+				153E93D911DC4381009D9BE4 /* ASIS3Request.h */,
+				153E93DA11DC4381009D9BE4 /* ASIS3Request.m */,
+				153E93DB11DC4381009D9BE4 /* ASIS3ServiceRequest.h */,
+				153E93DC11DC4381009D9BE4 /* ASIS3ServiceRequest.m */,
+				153E93DD11DC4381009D9BE4 /* Reachability.h */,
+				153E93DE11DC4381009D9BE4 /* Reachability.m */,
+			);
+			name = S3;
+			sourceTree = "<group>";
+		};
 		15652B1D11CE83A40051E687 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,6 +893,45 @@
 				1536326611D453D400F63E59 /* GameSounds.m */,
 			);
 			name = GamePlaying;
+			sourceTree = "<group>";
+		};
+		15DA8AED11DA491E0023942B /* AWS */ = {
+			isa = PBXGroup;
+			children = (
+				153E93CF11DC4368009D9BE4 /* S3 */,
+				15DA8AF211DA49810023942B /* CreateDomainResponse.h */,
+				15DA8AF311DA49810023942B /* CreateDomainResponse.m */,
+				15DA8AF411DA49810023942B /* ListDomainsResponse.h */,
+				15DA8AF511DA49810023942B /* ListDomainsResponse.m */,
+				15DA8AF611DA49810023942B /* NSDataExtensions.h */,
+				15DA8AF711DA49810023942B /* NSDataExtensions.m */,
+				15DA8AF811DA49810023942B /* PutAttributes.h */,
+				15DA8AF911DA49810023942B /* PutAttributes.m */,
+				15DA8AFA11DA49810023942B /* PutAttributesResponse.h */,
+				153E939A11DBD03E009D9BE4 /* DeleteAttributesResponse.h */,
+				153E939B11DBD03E009D9BE4 /* DeleteAttributesResponse.m */,
+				15DA8AFB11DA49810023942B /* PutAttributesResponse.m */,
+				15DA8AFC11DA49810023942B /* QueryResponse.h */,
+				15DA8AFD11DA49810023942B /* QueryResponse.m */,
+				15DA8AFE11DA49810023942B /* QueryWithAttributesResponse.h */,
+				15DA8AFF11DA49810023942B /* QueryWithAttributesResponse.m */,
+				15DA8B0011DA49810023942B /* SimpleDb.h */,
+				15DA8B0111DA49810023942B /* SimpleDb.m */,
+				15DA8B0211DA49810023942B /* SimpleDbAttribute.h */,
+				15DA8B0311DA49810023942B /* SimpleDbAttribute.m */,
+				15DA8B0411DA49810023942B /* SimpleDbItem.h */,
+				15DA8B0511DA49810023942B /* SimpleDbItem.m */,
+			);
+			name = AWS;
+			sourceTree = "<group>";
+		};
+		15DA8B2911DA52330023942B /* AWSScavenger */ = {
+			isa = PBXGroup;
+			children = (
+				15DA8B3711DA52BF0023942B /* AWSScavenger.h */,
+				15DA8B3811DA52BF0023942B /* AWSScavenger.m */,
+			);
+			name = AWSScavenger;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -777,6 +959,10 @@
 				153E5CFA11CAE2EC00DCDAC0 /* QuartzCore.framework */,
 				1536321311D4212C00F63E59 /* MessageUI.framework */,
 				1536326B11D454D700F63E59 /* AVFoundation.framework */,
+				153E93F811DC438F009D9BE4 /* CFNetwork.framework */,
+				153E941911DC43F0009D9BE4 /* libz.1.2.3.dylib */,
+				153E941D11DC4411009D9BE4 /* SystemConfiguration.framework */,
+				153E942111DC441B009D9BE4 /* MobileCoreServices.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -1020,6 +1206,7 @@
 				1536315D11D3137D00F63E59 /* 129-golf.png in Resources */,
 				1536315E11D3137D00F63E59 /* 130-dice.png in Resources */,
 				1536327211D454F400F63E59 /* alert.m4a in Resources */,
+				15DA8A4C11DA3B6A0023942B /* GameListOnlineViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,7 +1243,6 @@
 				15362E9611D2DD6F00F63E59 /* HardwareObject.m in Sources */,
 				15362E9711D2DD6F00F63E59 /* LocationOrderObject.m in Sources */,
 				15362E9A11D2DD6F00F63E59 /* GameRouteObject.m in Sources */,
-				15362E9C11D2DD6F00F63E59 /* GameObject.m in Sources */,
 				15362F8911D2FB9200F63E59 /* ScoreView.m in Sources */,
 				1536303711D30CD100F63E59 /* GameScoreTableViewController.m in Sources */,
 				153631DF11D402C200F63E59 /* GameObject+Export.m in Sources */,
@@ -1071,6 +1257,34 @@
 				152430F211D6A78D00F4E9FA /* ActiveLocationObject+Extensions.m in Sources */,
 				1524310B11D6A99000F4E9FA /* MissileObject+Extensions.m in Sources */,
 				152431B211D6CE7D00F4E9FA /* CGPointUtils.m in Sources */,
+				15DA8A4B11DA3B6A0023942B /* GameListOnlineViewController.m in Sources */,
+				15DA8B0611DA49810023942B /* CreateDomainResponse.m in Sources */,
+				15DA8B0711DA49810023942B /* ListDomainsResponse.m in Sources */,
+				15DA8B0811DA49810023942B /* NSDataExtensions.m in Sources */,
+				15DA8B0911DA49810023942B /* PutAttributes.m in Sources */,
+				15DA8B0A11DA49810023942B /* PutAttributesResponse.m in Sources */,
+				15DA8B0B11DA49810023942B /* QueryResponse.m in Sources */,
+				15DA8B0C11DA49810023942B /* QueryWithAttributesResponse.m in Sources */,
+				15DA8B0D11DA49810023942B /* SimpleDb.m in Sources */,
+				15DA8B0E11DA49810023942B /* SimpleDbAttribute.m in Sources */,
+				15DA8B0F11DA49810023942B /* SimpleDbItem.m in Sources */,
+				15DA8B3911DA52BF0023942B /* AWSScavenger.m in Sources */,
+				15DA8C6F11DAF55D0023942B /* PlaceMarkObject.m in Sources */,
+				15DA8C7011DAF55D0023942B /* GameObject.m in Sources */,
+				153E939C11DBD03E009D9BE4 /* DeleteAttributesResponse.m in Sources */,
+				153E93DF11DC4381009D9BE4 /* ASIS3Bucket.m in Sources */,
+				153E93E011DC4381009D9BE4 /* ASIS3BucketObject.m in Sources */,
+				153E93E111DC4381009D9BE4 /* ASIS3BucketRequest.m in Sources */,
+				153E93E211DC4381009D9BE4 /* ASIS3ObjectRequest.m in Sources */,
+				153E93E311DC4381009D9BE4 /* ASIS3Request.m in Sources */,
+				153E93E411DC4381009D9BE4 /* ASIS3ServiceRequest.m in Sources */,
+				153E93E511DC4381009D9BE4 /* Reachability.m in Sources */,
+				153E941111DC43B6009D9BE4 /* ASIAuthenticationDialog.m in Sources */,
+				153E941211DC43B6009D9BE4 /* ASIDownloadCache.m in Sources */,
+				153E941311DC43B6009D9BE4 /* ASIFormDataRequest.m in Sources */,
+				153E941411DC43B6009D9BE4 /* ASIHTTPRequest.m in Sources */,
+				153E941511DC43B6009D9BE4 /* ASIInputStream.m in Sources */,
+				153E941611DC43B6009D9BE4 /* ASINetworkQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1182,6 +1396,10 @@
 		153E577211C934AB00DCDAC0 /* Scavenger_iPad.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				15DA8C6B11DAF55D0023942B /* PlaceMarkObject.h */,
+				15DA8C6C11DAF55D0023942B /* PlaceMarkObject.m */,
+				15DA8C6D11DAF55D0023942B /* GameObject.h */,
+				15DA8C6E11DAF55D0023942B /* GameObject.m */,
 				152430E311D6A68F00F4E9FA /* ActiveLocationObject.h */,
 				152430E411D6A68F00F4E9FA /* ActiveLocationObject.m */,
 				152430DA11D6A60200F4E9FA /* GameRunObject.h */,
@@ -1200,8 +1418,6 @@
 				15362E8911D2DD6F00F63E59 /* LocationOrderObject.m */,
 				15362E8E11D2DD6F00F63E59 /* GameRouteObject.h */,
 				15362E8F11D2DD6F00F63E59 /* GameRouteObject.m */,
-				15362E9211D2DD6F00F63E59 /* GameObject.h */,
-				15362E9311D2DD6F00F63E59 /* GameObject.m */,
 				153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */,
 			);
 			currentVersion = 153E577311C934AB00DCDAC0 /* Scavenger-iPad.xcdatamodel */;

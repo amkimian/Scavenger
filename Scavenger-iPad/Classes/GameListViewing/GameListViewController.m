@@ -13,6 +13,8 @@
 #import "GamePlayViewController.h"
 #import "GameObject.h"
 #import "GameObject+Export.h"
+#import "GameListOnlineViewController.h"
+#import "AWSScavenger.h"
 
 @implementation GameListViewController
 @synthesize managedObjectContext;
@@ -72,16 +74,18 @@
 	// Also setup the toolbar items (we do it this way programattically...)
 	
 	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(chooseMapType:)];
+	UIBarButtonItem *onlineButton = [[UIBarButtonItem alloc] initWithTitle:@"Online" style:UIBarButtonItemStyleBordered target:self action:@selector(goOnline:)];
 	self.locateButton = [[UIBarButtonItem alloc] initWithTitle:@"Locate"  style:UIBarButtonItemStyleBordered target:self action:@selector(centerOnLocation:)];
 	UIBarButtonItem *flexibleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
 																			   target:nil
 																			   action:nil];
 	
-	NSArray *array = [[NSArray alloc] initWithObjects:flexibleButton,mapButton,self.locateButton, nil];	
+	NSArray *array = [[NSArray alloc] initWithObjects:flexibleButton,onlineButton,mapButton,self.locateButton, nil];	
 	self.toolbarItems = array;
 	
 	[mapButton release];
 	[flexibleButton release];
+	[onlineButton release];
 	[array release];
 	
 	// Now need to fetch the games and put out the annotations...
@@ -135,6 +139,22 @@
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:mapTypeController];
 	[self.popOver setPopoverContentSize:mapTypeController.view.bounds.size];
 	[self.popOver presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+
+/**
+ * Show dialog to manage uploading of games, downloading of near games, deletion of existing online games
+ */
+
+-(IBAction) goOnline: (id) sender
+{
+	GameListOnlineViewController *onlineController = [[GameListOnlineViewController alloc] initWithNibName:nil bundle:nil];
+	onlineController.rootController = self;
+	[self presentModalViewController:onlineController animated:YES];
+}
+
+-(void) finishedOnline
+{
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 -(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender

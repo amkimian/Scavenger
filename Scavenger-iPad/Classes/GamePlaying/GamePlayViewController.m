@@ -23,6 +23,7 @@
 @synthesize mapRadius;
 
 
+
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
@@ -76,6 +77,7 @@
 	self.locManager.desiredAccuracy = kCLLocationAccuracyBest;
 	self.locManager.distanceFilter = 5.0f;
 	[self.locManager startUpdatingLocation];
+	
 }
 
 
