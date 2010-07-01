@@ -11,6 +11,8 @@
 #import "LocationObject+Extensions.h"
 #import "LocationPointObject.h"
 #import "PlaceMarkObject.h"
+#import "ASIS3Request.h"
+#import "ASIS3ObjectRequest.h"
 
 @implementation AWSScavenger
 @synthesize simpleDb;
@@ -20,6 +22,8 @@
 	self.simpleDb = [[SimpleDb alloc] init];
 	self.simpleDb.delegate = self;
 	[self.simpleDb setAWSAccount:@"0289QDXAHCXX0JH9GXR2" secret: @"o3Nw5NnnamrywCy7m6gIEBEQiKZrnROP/cxuvvLy"];
+	[ASIS3Request setSharedSecretAccessKey:@"o3Nw5NnnamrywCy7m6gIEBEQiKZrnROP/cxuvvLy"];
+	[ASIS3Request setSharedAccessKey:@"0289QDXAHCXX0JH9GXR2"];
 	return self;
 }
 
@@ -85,12 +89,26 @@
 	
 	if ([attributes count] > 0)
 	{
-		[self.simpleDb putAttributes:@"Scavenger-Games" itemName:itemName attributes:attributes];	
+		[self.simpleDb putAttributes:@"Scavenger-Games" itemName:itemName attributes:attributes];
+		// And write the configuration string to S3
+		[self pushGameToS3:game withId:itemName];
 	}
 	else
 	{
 		NSLog(@"There is nothing to publish!");
 	}
+}
+
+-(void) pushGameToS3: (GameObject *) game withId: (NSString *) gameId
+{
+	NSString *error;
+	NSDictionary *gameDict = [game getAsExportDictionary];
+	NSData *gameData = [NSPropertyListSerialization dataFromPropertyList:gameDict
+																  format:NSPropertyListXMLFormat_v1_0
+														errorDescription:&error];
+	ASIS3ObjectRequest *request = 
+	[ASIS3ObjectRequest PUTRequestForData:gameData withBucket:@"scavenger-games" key:gameId];
+	[request startSynchronous];
 }
 
 -(void) addAttribute: (NSString *) name withValue: (NSString *) value intoArray: (NSMutableArray *) array
