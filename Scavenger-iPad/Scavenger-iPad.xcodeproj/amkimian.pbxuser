@@ -1030,9 +1030,9 @@
 	};
 	153E57B111C944FE00DCDAC0 /* GameListViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 5577}}";
-			sepNavSelRange = "{702, 0}";
-			sepNavVisRange = "{0, 1094}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 5551}}";
+			sepNavSelRange = "{13869, 0}";
+			sepNavVisRange = "{12421, 1634}";
 		};
 	};
 	153E58DC11C9D12D00DCDAC0 /* GameObject+Extensions.h */ = {
@@ -1065,16 +1065,16 @@
 	};
 	153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 652}}";
-			sepNavSelRange = "{1577, 0}";
-			sepNavVisRange = "{0, 1583}";
+			sepNavIntBoundsRect = "{{0, 0}, {1230, 650}}";
+			sepNavSelRange = "{1537, 0}";
+			sepNavVisRange = "{361, 1183}";
 		};
 	};
 	153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 4264}}";
-			sepNavSelRange = "{6590, 2025}";
-			sepNavVisRange = "{6738, 2177}";
+			sepNavIntBoundsRect = "{{0, 0}, {1322, 3419}}";
+			sepNavSelRange = "{6476, 0}";
+			sepNavVisRange = "{5569, 1855}";
 		};
 	};
 	153E5A0111CA704600DCDAC0 /* LocationOverlayView.h */ = {
@@ -1194,7 +1194,7 @@
 		vrLen = 647;
 		vrLoc = 0;
 	};
-	153E934111DB0C3B009D9BE4 /* GameEditViewController.m:192 */ = {
+	153E934111DB0C3B009D9BE4 /* GameEditViewController.m:172 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1206,7 +1206,7 @@
 		functionName = "-alternateReverse:";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 192;
+		lineNumber = 172;
 		location = "Scavenger-iPad";
 		modificationTime = 299570099.59627;
 		originalNumberOfMultipleMatches = 1;
@@ -1216,8 +1216,8 @@
 		isa = PBXTextBookmark;
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 174";
-		rLen = 61;
-		rLoc = 6526;
+		rLen = 0;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 1990;
 		vrLoc = 5753;
@@ -1227,7 +1227,7 @@
 		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
 		name = "GameEditViewController.h: 20";
 		rLen = 0;
-		rLoc = 684;
+		rLoc = 706;
 		rType = 0;
 		vrLen = 1520;
 		vrLoc = 0;
@@ -1237,7 +1237,7 @@
 		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
 		name = "GameEditViewController.h: 48";
 		rLen = 0;
-		rLoc = 1577;
+		rLoc = 1538;
 		rType = 0;
 		vrLen = 1583;
 		vrLoc = 0;
@@ -1247,7 +1247,7 @@
 		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
 		name = "GameEditViewController.h: 48";
 		rLen = 0;
-		rLoc = 1577;
+		rLoc = 1538;
 		rType = 0;
 		vrLen = 1583;
 		vrLoc = 0;
@@ -1257,7 +1257,7 @@
 		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
 		name = "GameEditViewController.h: 48";
 		rLen = 0;
-		rLoc = 1577;
+		rLoc = 1538;
 		rType = 0;
 		vrLen = 1583;
 		vrLoc = 0;
@@ -1267,7 +1267,7 @@
 		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
 		name = "GameEditViewController.h: 48";
 		rLen = 0;
-		rLoc = 1577;
+		rLoc = 1538;
 		rType = 0;
 		vrLen = 1583;
 		vrLoc = 0;
@@ -1277,12 +1277,12 @@
 		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
 		name = "GameEditViewController.h: 48";
 		rLen = 0;
-		rLoc = 1577;
+		rLoc = 1538;
 		rType = 0;
 		vrLen = 1583;
 		vrLoc = 0;
 	};
-	153E936B11DB125F009D9BE4 /* GameEditViewController.m:203 */ = {
+	153E936B11DB125F009D9BE4 /* GameEditViewController.m:172 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1294,7 +1294,7 @@
 		functionName = "-alternateReverse:";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 203;
+		lineNumber = 172;
 		location = "Scavenger-iPad";
 		modificationTime = 299570105.628672;
 		originalNumberOfMultipleMatches = 1;
@@ -1304,8 +1304,8 @@
 		isa = PBXTextBookmark;
 		comments = "'substring' undeclared (first use in this function)";
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
-		rLen = 1;
-		rLoc = 204;
+		rLen = 0;
+		rLoc = 171;
 		rType = 1;
 	};
 	153E936F11DB1264009D9BE4 /* PBXTextBookmark */ = {
@@ -1313,7 +1313,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 204";
 		rLen = 0;
-		rLoc = 7773;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 1635;
 		vrLoc = 6763;
@@ -1323,7 +1323,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 204";
 		rLen = 0;
-		rLoc = 7773;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 1635;
 		vrLoc = 6763;
@@ -1333,7 +1333,7 @@
 		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
 		name = "GameEditViewController.h: 48";
 		rLen = 0;
-		rLoc = 1577;
+		rLoc = 1538;
 		rType = 0;
 		vrLen = 1583;
 		vrLoc = 0;
@@ -1361,7 +1361,7 @@
 		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
 		name = "GameEditViewController.h: 48";
 		rLen = 0;
-		rLoc = 1577;
+		rLoc = 1538;
 		rType = 0;
 		vrLen = 1583;
 		vrLoc = 0;
@@ -1391,7 +1391,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 204";
 		rLen = 0;
-		rLoc = 7773;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 1731;
 		vrLoc = 6763;
@@ -1401,7 +1401,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 189";
 		rLen = 0;
-		rLoc = 7206;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 1731;
 		vrLoc = 6763;
@@ -1533,7 +1533,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 213";
 		rLen = 0;
-		rLoc = 8395;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 1762;
 		vrLoc = 7603;
@@ -1543,7 +1543,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 213";
 		rLen = 0;
-		rLoc = 8395;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 1762;
 		vrLoc = 7603;
@@ -1553,7 +1553,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 213";
 		rLen = 0;
-		rLoc = 8395;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 1762;
 		vrLoc = 7603;
@@ -1577,7 +1577,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 213";
 		rLen = 0;
-		rLoc = 8395;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 1762;
 		vrLoc = 7603;
@@ -2275,8 +2275,8 @@
 		isa = PBXTextBookmark;
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 176";
-		rLen = 2025;
-		rLoc = 6590;
+		rLen = 0;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 2177;
 		vrLoc = 6738;
@@ -2340,6 +2340,130 @@
 		vrLen = 955;
 		vrLoc = 219;
 	};
+	15C4629F11DD61F000FD11FF /* GameEditViewController.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		functionName = "-viewDidLoad";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		modificationTime = 299721200.13364;
+		originalNumberOfMultipleMatches = 0;
+		state = 1;
+	};
+	15C462A511DD622800FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15C4624E11DCFD0700FD11FF /* LocationTools.h */;
+		name = "LocationTools.h: 35";
+		rLen = 0;
+		rLoc = 1008;
+		rType = 0;
+		vrLen = 940;
+		vrLoc = 222;
+	};
+	15C462A611DD622800FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */;
+		name = "GameListOnlineViewController.h: 16";
+		rLen = 0;
+		rLoc = 462;
+		rType = 0;
+		vrLen = 1122;
+		vrLoc = 0;
+	};
+	15C462A711DD622800FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		name = "GameListOnlineViewController.m: 36";
+		rLen = 0;
+		rLoc = 807;
+		rType = 0;
+		vrLen = 670;
+		vrLoc = 416;
+	};
+	15C462A811DD622800FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 172";
+		rLen = 0;
+		rLoc = 6486;
+		rType = 0;
+		vrLen = 1456;
+		vrLoc = 5856;
+	};
+	15C462A911DD622800FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
+		rLen = 0;
+		rLoc = 9223372036854775744;
+		rType = 0;
+	};
+	15C462AA11DD622800FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
+		name = "GameEditViewController.h: 47";
+		rLen = 0;
+		rLoc = 1537;
+		rType = 0;
+		vrLen = 1183;
+		vrLoc = 361;
+	};
+	15C462AB11DD622B00FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */;
+		name = "GameListOnlineViewController.m: 36";
+		rLen = 0;
+		rLoc = 796;
+		rType = 0;
+		vrLen = 1132;
+		vrLoc = 219;
+	};
+	15C462AC11DD622B00FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E57B111C944FE00DCDAC0 /* GameListViewController.m */;
+		name = "GameListViewController.m: 395";
+		rLen = 0;
+		rLoc = 13869;
+		rType = 0;
+		vrLen = 1634;
+		vrLoc = 12421;
+	};
+	15C462AD11DD622B00FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
+		name = "GameEditViewController.h: 47";
+		rLen = 0;
+		rLoc = 1497;
+		rType = 0;
+		vrLen = 1607;
+		vrLoc = 0;
+	};
+	15C462AE11DD622B00FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 176";
+		rLen = 0;
+		rLoc = 6486;
+		rType = 0;
+		vrLen = 2140;
+		vrLoc = 6738;
+	};
+	15C462AF11DD622B00FD11FF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
+		name = "GameEditViewController.m: 169";
+		rLen = 0;
+		rLoc = 6476;
+		rType = 0;
+		vrLen = 1855;
+		vrLoc = 5569;
+	};
 	15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1027, 468}}";
@@ -2350,9 +2474,9 @@
 	15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{5079, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{5130, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{5180, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 7305}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1322, 3679}}";
-			sepNavSelRange = "{796, 0}";
-			sepNavVisRange = "{219, 955}";
+			sepNavIntBoundsRect = "{{0, 0}, {1017, 3705}}";
+			sepNavSelRange = "{807, 0}";
+			sepNavVisRange = "{416, 670}";
 		};
 	};
 	15DA8A6011DA3DBE0023942B /* PBXTextBookmark */ = {
@@ -2760,7 +2884,7 @@
 		fRef = 153E59EC11CA6EC900DCDAC0 /* GameEditViewController.h */;
 		name = "GameEditViewController.h: 20";
 		rLen = 0;
-		rLoc = 684;
+		rLoc = 706;
 		rType = 0;
 		vrLen = 1520;
 		vrLoc = 0;
@@ -2868,7 +2992,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 31";
 		rLen = 0;
-		rLoc = 958;
+		rLoc = 963;
 		rType = 0;
 		vrLen = 2080;
 		vrLoc = 4535;
@@ -2878,7 +3002,7 @@
 		fRef = 153E59ED11CA6EC900DCDAC0 /* GameEditViewController.m */;
 		name = "GameEditViewController.m: 175";
 		rLen = 0;
-		rLoc = 8781;
+		rLoc = 6486;
 		rType = 0;
 		vrLen = 2178;
 		vrLoc = 4597;
@@ -2913,13 +3037,14 @@
 		);
 		breakpoints = (
 			15DA8C9511DAF8F00023942B /* GameEditViewController.m:155 */,
-			153E934111DB0C3B009D9BE4 /* GameEditViewController.m:192 */,
-			153E936B11DB125F009D9BE4 /* GameEditViewController.m:203 */,
+			153E934111DB0C3B009D9BE4 /* GameEditViewController.m:172 */,
+			153E936B11DB125F009D9BE4 /* GameEditViewController.m:172 */,
 			153E937311DB127A009D9BE4 /* GameListOnlineViewController.m:260 */,
 			153E938111DB1347009D9BE4 /* PutAttributesResponse.m:18 */,
 			153E938311DB134C009D9BE4 /* PutAttributesResponse.m:28 */,
 			153E938511DB1354009D9BE4 /* PutAttributesResponse.m:36 */,
 			153E938711DB1356009D9BE4 /* PutAttributesResponse.m:43 */,
+			15C4629F11DD61F000FD11FF /* GameEditViewController.m:169 */,
 		);
 		codeSenseManager = 155BE54111C92A870019A783 /* Code sense */;
 		executables = (
@@ -3142,6 +3267,17 @@
 			15C4628B11DD5FD600FD11FF /* PBXTextBookmark */ = 15C4628B11DD5FD600FD11FF /* PBXTextBookmark */;
 			15C4628C11DD5FD600FD11FF /* XCBuildMessageTextBookmark */ = 15C4628C11DD5FD600FD11FF /* XCBuildMessageTextBookmark */;
 			15C4628D11DD5FD600FD11FF /* PBXTextBookmark */ = 15C4628D11DD5FD600FD11FF /* PBXTextBookmark */;
+			15C462A511DD622800FD11FF /* PBXTextBookmark */ = 15C462A511DD622800FD11FF /* PBXTextBookmark */;
+			15C462A611DD622800FD11FF /* PBXTextBookmark */ = 15C462A611DD622800FD11FF /* PBXTextBookmark */;
+			15C462A711DD622800FD11FF /* PBXTextBookmark */ = 15C462A711DD622800FD11FF /* PBXTextBookmark */;
+			15C462A811DD622800FD11FF /* PBXTextBookmark */ = 15C462A811DD622800FD11FF /* PBXTextBookmark */;
+			15C462A911DD622800FD11FF /* PBXTextBookmark */ = 15C462A911DD622800FD11FF /* PBXTextBookmark */;
+			15C462AA11DD622800FD11FF /* PBXTextBookmark */ = 15C462AA11DD622800FD11FF /* PBXTextBookmark */;
+			15C462AB11DD622B00FD11FF /* PBXTextBookmark */ = 15C462AB11DD622B00FD11FF /* PBXTextBookmark */;
+			15C462AC11DD622B00FD11FF /* PBXTextBookmark */ = 15C462AC11DD622B00FD11FF /* PBXTextBookmark */;
+			15C462AD11DD622B00FD11FF /* PBXTextBookmark */ = 15C462AD11DD622B00FD11FF /* PBXTextBookmark */;
+			15C462AE11DD622B00FD11FF /* PBXTextBookmark */ = 15C462AE11DD622B00FD11FF /* PBXTextBookmark */;
+			15C462AF11DD622B00FD11FF /* PBXTextBookmark */ = 15C462AF11DD622B00FD11FF /* PBXTextBookmark */;
 			15DA8A6011DA3DBE0023942B = 15DA8A6011DA3DBE0023942B /* PBXTextBookmark */;
 			15DA8A8611DA3F880023942B = 15DA8A8611DA3F880023942B /* PBXTextBookmark */;
 			15DA8B2311DA4D4B0023942B = 15DA8B2311DA4D4B0023942B /* PBXTextBookmark */;
