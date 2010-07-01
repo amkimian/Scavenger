@@ -24,13 +24,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.geocoder = [[MKReverseGeocoder alloc] initWithCoordinate:rootController.currentLocation.coordinate];
-	self.geocoder.delegate = self;
+	locationTools = [[LocationTools alloc] init];
+	locationTools.coordinate = rootController.currentLocation.coordinate;
+	locationTools.delegate = self;
 	self.awsScavenger = [[AWSScavenger alloc] init];
-	
-//	[self.geocoder start];
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	[locationTools resolveGeocode];
+}
+
+-(void) locationFound
+{
+	[mainTable reloadData];
 }
 
 /*
@@ -81,7 +84,7 @@
 		case 0:
 			return [[self.rootController.fetchedResultsController fetchedObjects] count];
 		case 1:
-			if (placemark)
+			if (locationTools.valid)
 			{
 				return 4;
 			}
@@ -135,16 +138,16 @@
 			switch(indexPath.row)
 			{
 				case 0:
-					cell.textLabel.text = placemark.thoroughfare;
+					cell.textLabel.text = locationTools.postalCode;
 					break;
 				case 1:
-					cell.textLabel.text = placemark.locality;
+					cell.textLabel.text = locationTools.locality;
 					break;
 				case 2:
-					cell.textLabel.text = placemark.administrativeArea;
+					cell.textLabel.text = locationTools.administrativeArea;
 					break;
 				case 3:
-					cell.textLabel.text = placemark.country;
+					cell.textLabel.text = locationTools.country;
 					break;
 			}
 			break;
@@ -228,17 +231,6 @@
     [super dealloc];
 }
 
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error
-{
-	NSLog(@"Failed to do reverse lookup");
-}
-
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)pl
-{
-	NSLog(@"Found location placemark");
-	self.placemark = pl;
-	[mainTable reloadData];
-}
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
