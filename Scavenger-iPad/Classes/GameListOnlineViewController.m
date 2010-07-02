@@ -278,6 +278,16 @@
 	{
 		[self.popOver dismissPopoverAnimated:YES];
 		// Do something with the query selection
+		switch(item)
+		{
+			case 0:
+				// Postal code
+			{
+				NSString *query = [NSString stringWithFormat:@"select * from scgames where PostalCode='%@'", locationTools.postalCode];
+				[awsScavenger performSelect:query];
+			}
+				break;
+		}
 	}
 	else
 	{

@@ -212,6 +212,7 @@
 		15B00F0A11D143CD00757CCE /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B00F0811D143CD00757CCE /* GamePlayViewController.m */; };
 		15B00F0B11D143CD00757CCE /* GamePlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B00F0911D143CD00757CCE /* GamePlayViewController.xib */; };
 		15C4625011DCFD0700FD11FF /* LocationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C4624F11DCFD0700FD11FF /* LocationTools.m */; };
+		15C462F711DD9DC000FD11FF /* SelectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C462F611DD9DC000FD11FF /* SelectResponse.m */; };
 		15DA8A4B11DA3B6A0023942B /* GameListOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */; };
 		15DA8A4C11DA3B6A0023942B /* GameListOnlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DA8A4A11DA3B6A0023942B /* GameListOnlineViewController.xib */; };
 		15DA8B0611DA49810023942B /* CreateDomainResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8AF311DA49810023942B /* CreateDomainResponse.m */; };
@@ -516,6 +517,8 @@
 		15B00F0911D143CD00757CCE /* GamePlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GamePlayViewController.xib; path = GamePlaying/GamePlayViewController.xib; sourceTree = "<group>"; };
 		15C4624E11DCFD0700FD11FF /* LocationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTools.h; sourceTree = "<group>"; };
 		15C4624F11DCFD0700FD11FF /* LocationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTools.m; sourceTree = "<group>"; };
+		15C462F511DD9DC000FD11FF /* SelectResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectResponse.h; path = AWS/SelectResponse.h; sourceTree = "<group>"; };
+		15C462F611DD9DC000FD11FF /* SelectResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectResponse.m; path = AWS/SelectResponse.m; sourceTree = "<group>"; };
 		15DA8A4811DA3B6A0023942B /* GameListOnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameListOnlineViewController.h; sourceTree = "<group>"; };
 		15DA8A4911DA3B6A0023942B /* GameListOnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameListOnlineViewController.m; sourceTree = "<group>"; };
 		15DA8A4A11DA3B6A0023942B /* GameListOnlineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameListOnlineViewController.xib; sourceTree = "<group>"; };
@@ -934,6 +937,8 @@
 				15DA8B0311DA49810023942B /* SimpleDbAttribute.m */,
 				15DA8B0411DA49810023942B /* SimpleDbItem.h */,
 				15DA8B0511DA49810023942B /* SimpleDbItem.m */,
+				15C462F511DD9DC000FD11FF /* SelectResponse.h */,
+				15C462F611DD9DC000FD11FF /* SelectResponse.m */,
 			);
 			name = AWS;
 			sourceTree = "<group>";
@@ -1299,6 +1304,7 @@
 				153E941511DC43B6009D9BE4 /* ASIInputStream.m in Sources */,
 				153E941611DC43B6009D9BE4 /* ASINetworkQueue.m in Sources */,
 				15C4625011DCFD0700FD11FF /* LocationTools.m in Sources */,
+				15C462F711DD9DC000FD11FF /* SelectResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
