@@ -430,8 +430,6 @@
 	NSString *urlAsString = [NSString stringWithFormat:@"http://sdb.amazonaws.com?%@", queryParams];
 
 	NSLog(@"URL is %@", urlAsString);
-	NSString *str = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlAsString]];
-	NSLog(@"Result is %@", str);
 	
 	NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL: [NSURL URLWithString:urlAsString]];	
 

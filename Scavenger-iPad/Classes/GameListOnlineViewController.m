@@ -29,6 +29,7 @@
 	locationTools.coordinate = rootController.currentLocation.coordinate;
 	locationTools.delegate = self;
 	self.awsScavenger = [[AWSScavenger alloc] init];
+	self.awsScavenger.delegate = self;
 	[locationTools resolveGeocode];
 }
 
@@ -114,7 +115,7 @@
 				return 0; // Until we find our location
 			}
 		case 2:
-			return 0;	// For now, until we learn how to load the remote games
+			return [awsScavenger.searchResults count];
 	}
 	return 0;
 }
@@ -173,6 +174,12 @@
 			}
 			break;
 		}
+		case 2:
+			{
+				SimpleDbItem *item = [awsScavenger.searchResults objectAtIndex:indexPath.row];
+				cell.textLabel.text = item.name;
+			}
+			break;			
 	}
     return cell;
 }
@@ -287,6 +294,27 @@
 				[awsScavenger performSelect:query];
 			}
 				break;
+			case 1:
+				// City
+			{
+				NSString *query = [NSString stringWithFormat:@"select * from scgames where Locality='%@'", locationTools.locality];
+				[awsScavenger performSelect:query];
+			}
+				break;
+			case 2:
+				// State
+			{
+				NSString *query = [NSString stringWithFormat:@"select * from scgames where AdminArea='%@'", locationTools.administrativeArea];
+				[awsScavenger performSelect:query];
+			}
+				break;
+			case 3:
+				// Country
+			{
+				NSString *query = [NSString stringWithFormat:@"select * from scgames where Country='%@'", locationTools.country];
+				[awsScavenger performSelect:query];
+			}
+			break;		
 		}
 	}
 	else
@@ -304,6 +332,11 @@
 		}
 		[self dismissModalViewControllerAnimated:YES];
 	}
+}
+
+-(void) awsDataChanged
+{
+	[mainTable reloadData];
 }
 
 @end

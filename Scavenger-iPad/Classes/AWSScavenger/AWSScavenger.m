@@ -16,6 +16,8 @@
 
 @implementation AWSScavenger
 @synthesize simpleDb;
+@synthesize searchResults;
+@synthesize delegate;
 
 -(id) init
 {
@@ -53,10 +55,8 @@
 
 -(void) selectComplete:(NSMutableArray *) items
 {
-	for(SimpleDbItem *i in items)
-	{
-		NSLog(@"Found %@", i.name);		
-	}
+	self.searchResults = items;
+	[self.delegate awsDataChanged];
 }
 
 -(void) publishGame: (GameObject *) game

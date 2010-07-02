@@ -10,8 +10,13 @@
 #import "SimpleDb.h"
 #import "GameObject+Export.h"
 
+@protocol AWSDataChangedDelegate;
+
+
 @interface AWSScavenger : NSObject {
 	SimpleDb *simpleDb;
+	NSArray *searchResults;
+	id<AWSDataChangedDelegate> delegate;
 }
 
 -(void) listDomains;
@@ -24,4 +29,11 @@
 -(void) pushGameToS3: (GameObject *) game withId: (NSString *) gameId;
 
 @property(nonatomic, retain) SimpleDb *simpleDb;
+@property(nonatomic, retain) NSArray *searchResults;
+@property(nonatomic, retain) id<AWSDataChangedDelegate> delegate;
 @end
+
+@protocol AWSDataChangedDelegate
+-(void) awsDataChanged;
+@end
+

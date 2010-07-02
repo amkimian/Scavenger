@@ -13,7 +13,7 @@
 #import "AWSScavenger.h"
 #import "LocationTools.h"
 
-@interface GameListOnlineViewController : UIViewController<UITableViewDelegate,UITableViewDataSource, LocationToolsDelegate, MenuPopupDelegate> {
+@interface GameListOnlineViewController : UIViewController<UITableViewDelegate,UITableViewDataSource, LocationToolsDelegate, MenuPopupDelegate, AWSDataChangedDelegate> {
 	GameListViewController *rootController;
 	MKPlacemark *placemark;
 	MKReverseGeocoder *geocoder;
