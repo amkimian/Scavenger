@@ -25,6 +25,7 @@
 }
 
 -(IBAction) done:(id) sender;
+-(IBAction) query:(id) sender;
 
 @property(nonatomic, retain) GameListViewController *rootController;
 @property(nonatomic, retain) MKPlacemark *placemark;

@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+	self.title = @"Hello";
 	locationTools = [[LocationTools alloc] init];
 	locationTools.coordinate = rootController.currentLocation.coordinate;
 	locationTools.delegate = self;
@@ -34,6 +35,26 @@
 -(void) locationFound
 {
 	[mainTable reloadData];
+}
+
+-(IBAction) query:(id) sender
+{
+	MenuPopupController *controller = [[MenuPopupController alloc] initWithStyle:UITableViewStyleGrouped];
+	controller.sectionTitle = @"Search Criteria";
+	NSMutableArray *array = [[NSMutableArray alloc] init];
+	[array addObject:locationTools.postalCode];
+	[array addObject:locationTools.locality];
+	[array addObject:locationTools.administrativeArea];
+	[array addObject:locationTools.country];
+
+	controller.menuStrings = array;	
+	controller.delegate = self;
+	controller.tag = 1;
+	
+	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
+	//[self.popOver setPopoverContentSize:controller.view.bounds.size];
+	[self.popOver presentPopoverFromBarButtonItem:(UIBarButtonItem *) sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+
 }
 
 /*
@@ -253,18 +274,26 @@
 
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
 {
-	switch(item)
+	if (sender.tag == 1)
 	{
-		case 0:
-			// Publish
-			[awsScavenger publishGame:self.currentGame];
-			break;
-		case 1:
-			// Unpublish
-			[awsScavenger unpublishGame:self.currentGame];
-			break;
+		[self.popOver dismissPopoverAnimated:YES];
+		// Do something with the query selection
 	}
-	[self dismissModalViewControllerAnimated:YES];
+	else
+	{
+		switch(item)
+		{
+			case 0:
+				// Publish
+				[awsScavenger publishGame:self.currentGame];
+				break;
+			case 1:
+				// Unpublish
+				[awsScavenger unpublishGame:self.currentGame];
+				break;
+		}
+		[self dismissModalViewControllerAnimated:YES];
+	}
 }
 
 @end

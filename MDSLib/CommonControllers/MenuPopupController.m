@@ -12,6 +12,8 @@
 @implementation MenuPopupController
 @synthesize menuStrings;
 @synthesize delegate;
+@synthesize sectionTitle;
+@synthesize tag;
 
 #pragma mark -
 #pragma mark Initialization
@@ -81,6 +83,10 @@
     return [menuStrings count];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	return sectionTitle;
+}
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
