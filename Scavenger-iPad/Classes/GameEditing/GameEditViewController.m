@@ -21,7 +21,7 @@
 @synthesize game;
 @synthesize overlayView;
 @synthesize popOver;
-@synthesize geocoder;
+@synthesize locationTools;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -163,81 +163,25 @@
 		
 		if (game.placeMark == nil)
 		{
-			[self alternateReverse: coordinate];
-			//self.geocoder = [[MKReverseGeocoder alloc] initWithCoordinate:coordinate];
-			///self.geocoder.delegate = self;
-			//[self.geocoder start];
+			self.locationTools = [[LocationTools alloc] init];
+			self.locationTools.coordinate = coordinate;
+			[self.locationTools resolveGeocode];
 		}	
 	}
 }
 
--(void) alternateReverse: (CLLocationCoordinate2D) coordinate
-{
-	// Show network activity Indicator (no need really as its very quick)
-	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-	
-	// Use Google Service
-	// OK the code is verbose to illustrate step by step process
-	
-	// Form the string to make the call, passing in lat long 
-	NSString *urlString = [NSString stringWithFormat:@"http://maps.google.com/maps/geo?q=%lf,%lf&output=csv&sensor=false&key=scavenger",	 coordinate.latitude,coordinate.longitude];
-	
-	// Turn it into a URL
-	NSURL *urlFromURLString = [NSURL URLWithString:urlString];
-	
-	// Use UTF8 encoding
-	NSStringEncoding encodingType = NSUTF8StringEncoding;
-	
-	// reverseGeoString is what comes back with the goodies
-	NSString *reverseGeoString = [NSString stringWithContentsOfURL:urlFromURLString encoding:encodingType error:nil];
-	
-	// 200,8,"2-16 Lee St, Walnut Creek, CA 94595, USA"
-	// If it fails it returns nil	
-	if (reverseGeoString != nil)
-	{
-	
-		// Find first "
-		NSRange position = [reverseGeoString rangeOfString:@"\""];
-		if (position.length != 0)
-		{
-			NSString *subString = [reverseGeoString substringFromIndex:position.location+1];
-			NSArray *items = [[subString substringToIndex:[subString length]-1] componentsSeparatedByString:@","];
-
-			NSEntityDescription *edesc = [NSEntityDescription entityForName:@"PlaceMark" inManagedObjectContext:[game managedObjectContext]];
-			PlaceMarkObject *placeMark = [[PlaceMarkObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[game managedObjectContext]];
-
-			placeMark.country = [items objectAtIndex:3];
-			placeMark.locality = [items objectAtIndex:1];
-			NSArray *parts = [(NSString *)[items objectAtIndex:2] componentsSeparatedByString:@" "];
-			placeMark.postalCode = [parts objectAtIndex:2];
-			placeMark.administrativeArea = [parts objectAtIndex:1];
-			//placeMark.subAdministrativeArea = pl.subAdministrativeArea;
-			game.placeMark = placeMark;
-		}
-	}
-	
-	// Hide network activity indicator
-	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];	
-}
-
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error
-{
-	NSLog(@"Failed to do reverse lookup, error was %@", [error description]);
-}
-
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)pl
+- (void) locationFound
 {
 	NSLog(@"Found location placemark");
 	// Add a placemark
 	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"PlaceMark" inManagedObjectContext:[game managedObjectContext]];
 	PlaceMarkObject *placeMark = [[PlaceMarkObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:[game managedObjectContext]];
-	placeMark.administrativeArea = pl.administrativeArea;
-	placeMark.country = pl.country;
-	placeMark.locality = pl.locality;
-	placeMark.postalCode = pl.postalCode;
-	placeMark.subAdministrativeArea = pl.subAdministrativeArea;
+	
+	placeMark.administrativeArea = self.locationTools.administrativeArea;
+	placeMark.country = self.locationTools.country;
+	placeMark.locality = self.locationTools.locality;
+	placeMark.postalCode = self.locationTools.postalCode;
 	game.placeMark = placeMark;
-	self.geocoder = nil;
 }
 
 -(void) editLocationDidFinishEditing:(EditLocationController *) controller

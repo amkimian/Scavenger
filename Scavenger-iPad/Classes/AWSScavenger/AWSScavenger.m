@@ -16,6 +16,8 @@
 
 @implementation AWSScavenger
 @synthesize simpleDb;
+@synthesize searchResults;
+@synthesize delegate;
 
 -(id) init
 {
@@ -43,7 +45,18 @@
 -(void) unpublishGame: (GameObject *) game
 {
 	NSString *itemName = [NSString stringWithFormat:@"%@-%@", [UIDevice currentDevice].uniqueIdentifier, game.name];
-	[self.simpleDb deleteAttributes:@"Scavenger-Games" itemName:itemName attributes:nil];
+	[self.simpleDb deleteAttributes:@"scgames" itemName:itemName attributes:nil];
+}
+
+-(void) performSelect: (NSString *) query
+{
+	[self.simpleDb select:query];
+}
+
+-(void) selectComplete:(NSMutableArray *) items
+{
+	self.searchResults = items;
+	[self.delegate awsDataChanged];
 }
 
 -(void) publishGame: (GameObject *) game
@@ -89,7 +102,7 @@
 	
 	if ([attributes count] > 0)
 	{
-		[self.simpleDb putAttributes:@"Scavenger-Games" itemName:itemName attributes:attributes];
+		[self.simpleDb putAttributes:@"scgames" itemName:itemName attributes:attributes];
 		// And write the configuration string to S3
 		[self pushGameToS3:game withId:itemName];
 	}

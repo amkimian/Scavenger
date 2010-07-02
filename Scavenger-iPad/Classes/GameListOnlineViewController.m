@@ -24,13 +24,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.geocoder = [[MKReverseGeocoder alloc] initWithCoordinate:rootController.currentLocation.coordinate];
-	self.geocoder.delegate = self;
+	self.title = @"Hello";
+	locationTools = [[LocationTools alloc] init];
+	locationTools.coordinate = rootController.currentLocation.coordinate;
+	locationTools.delegate = self;
 	self.awsScavenger = [[AWSScavenger alloc] init];
+	self.awsScavenger.delegate = self;
+	[locationTools resolveGeocode];
+}
+
+-(void) locationFound
+{
+	[mainTable reloadData];
+}
+
+-(IBAction) query:(id) sender
+{
+	MenuPopupController *controller = [[MenuPopupController alloc] initWithStyle:UITableViewStyleGrouped];
+	controller.sectionTitle = @"Search Criteria";
+	NSMutableArray *array = [[NSMutableArray alloc] init];
+	[array addObject:locationTools.postalCode];
+	[array addObject:locationTools.locality];
+	[array addObject:locationTools.administrativeArea];
+	[array addObject:locationTools.country];
+
+	controller.menuStrings = array;	
+	controller.delegate = self;
+	controller.tag = 1;
 	
-//	[self.geocoder start];
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
+	//[self.popOver setPopoverContentSize:controller.view.bounds.size];
+	[self.popOver presentPopoverFromBarButtonItem:(UIBarButtonItem *) sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+
 }
 
 /*
@@ -81,7 +106,7 @@
 		case 0:
 			return [[self.rootController.fetchedResultsController fetchedObjects] count];
 		case 1:
-			if (placemark)
+			if (locationTools.valid)
 			{
 				return 4;
 			}
@@ -90,7 +115,7 @@
 				return 0; // Until we find our location
 			}
 		case 2:
-			return 0;	// For now, until we learn how to load the remote games
+			return [awsScavenger.searchResults count];
 	}
 	return 0;
 }
@@ -135,20 +160,26 @@
 			switch(indexPath.row)
 			{
 				case 0:
-					cell.textLabel.text = placemark.thoroughfare;
+					cell.textLabel.text = locationTools.postalCode;
 					break;
 				case 1:
-					cell.textLabel.text = placemark.locality;
+					cell.textLabel.text = locationTools.locality;
 					break;
 				case 2:
-					cell.textLabel.text = placemark.administrativeArea;
+					cell.textLabel.text = locationTools.administrativeArea;
 					break;
 				case 3:
-					cell.textLabel.text = placemark.country;
+					cell.textLabel.text = locationTools.country;
 					break;
 			}
 			break;
 		}
+		case 2:
+			{
+				SimpleDbItem *item = [awsScavenger.searchResults objectAtIndex:indexPath.row];
+				cell.textLabel.text = item.name;
+			}
+			break;			
 	}
     return cell;
 }
@@ -228,17 +259,6 @@
     [super dealloc];
 }
 
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error
-{
-	NSLog(@"Failed to do reverse lookup");
-}
-
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)pl
-{
-	NSLog(@"Found location placemark");
-	self.placemark = pl;
-	[mainTable reloadData];
-}
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
@@ -261,18 +281,62 @@
 
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
 {
-	switch(item)
+	if (sender.tag == 1)
 	{
-		case 0:
-			// Publish
-			[awsScavenger publishGame:self.currentGame];
-			break;
-		case 1:
-			// Unpublish
-			[awsScavenger unpublishGame:self.currentGame];
-			break;
+		[self.popOver dismissPopoverAnimated:YES];
+		// Do something with the query selection
+		switch(item)
+		{
+			case 0:
+				// Postal code
+			{
+				NSString *query = [NSString stringWithFormat:@"select * from scgames where PostalCode='%@'", locationTools.postalCode];
+				[awsScavenger performSelect:query];
+			}
+				break;
+			case 1:
+				// City
+			{
+				NSString *query = [NSString stringWithFormat:@"select * from scgames where Locality='%@'", locationTools.locality];
+				[awsScavenger performSelect:query];
+			}
+				break;
+			case 2:
+				// State
+			{
+				NSString *query = [NSString stringWithFormat:@"select * from scgames where AdminArea='%@'", locationTools.administrativeArea];
+				[awsScavenger performSelect:query];
+			}
+				break;
+			case 3:
+				// Country
+			{
+				NSString *query = [NSString stringWithFormat:@"select * from scgames where Country='%@'", locationTools.country];
+				[awsScavenger performSelect:query];
+			}
+			break;		
+		}
 	}
-	[self dismissModalViewControllerAnimated:YES];
+	else
+	{
+		switch(item)
+		{
+			case 0:
+				// Publish
+				[awsScavenger publishGame:self.currentGame];
+				break;
+			case 1:
+				// Unpublish
+				[awsScavenger unpublishGame:self.currentGame];
+				break;
+		}
+		[self dismissModalViewControllerAnimated:YES];
+	}
+}
+
+-(void) awsDataChanged
+{
+	[mainTable reloadData];
 }
 
 @end

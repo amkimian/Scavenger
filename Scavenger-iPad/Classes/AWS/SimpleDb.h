@@ -17,6 +17,7 @@
 #import "DeleteAttributesResponse.h"
 #import "SimpleDbAttribute.h"
 #import "QueryResponse.h"
+#import "SelectResponse.h"
 #import "QueryWithAttributesResponse.h"
 
 @interface NSObject (SimpleDbDelegate)
@@ -29,7 +30,7 @@
 - (void) deleteAttributesComplete;
 - (void) queryComplete:(NSMutableArray*) items;
 - (void) queryWithAttributesComplete:(NSMutableArray*) items;
-
+- (void) selectComplete:(NSMutableArray*) items;
 @end
 
 @interface SimpleDb : NSObject {
@@ -44,6 +45,7 @@
 	DeleteAttributesResponse *deleteAttributesResponse;
 	QueryResponse *queryResponse;
 	QueryWithAttributesResponse *queryWithAttributesResponse;
+	SelectResponse *selectResponse;
 }
 
 @property (nonatomic, retain) NSString* key;
@@ -55,7 +57,7 @@
 @property (nonatomic, retain) DeleteAttributesResponse* deleteAttributesResponse;
 @property (nonatomic, retain) QueryResponse* queryResponse;
 @property (nonatomic, retain) QueryWithAttributesResponse *queryWithAttributesResponse;
-
+@property (nonatomic, retain) SelectResponse *selectResponse;
 //
 // Need to call this first
 //
@@ -77,6 +79,7 @@
 // TODO should put in max items and token for these two, but we'll do that if and when we need to
 //
 - (void) query:(NSString*)domainName expression:(NSString*)expression;
+- (void) select:(NSString*) expression;
 
 //
 // TODO at some point add in the attributes that we want, but I think for now we are just going to always get 
@@ -93,6 +96,7 @@
 - (void) queryParseComplete;
 - (void) queryWithAttributesParseComplete;
 - (void) deleteAttributesParseComplete;
+- (void) selectParseComplete;
 
 //
 // Helper methods for making SimpleDb API calls

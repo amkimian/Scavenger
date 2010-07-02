@@ -11,8 +11,9 @@
 #import "GameListViewController.h"
 #import "GameObject.h"
 #import "AWSScavenger.h"
+#import "LocationTools.h"
 
-@interface GameListOnlineViewController : UIViewController<UITableViewDelegate,UITableViewDataSource, MKReverseGeocoderDelegate, MenuPopupDelegate> {
+@interface GameListOnlineViewController : UIViewController<UITableViewDelegate,UITableViewDataSource, LocationToolsDelegate, MenuPopupDelegate, AWSDataChangedDelegate> {
 	GameListViewController *rootController;
 	MKPlacemark *placemark;
 	MKReverseGeocoder *geocoder;
@@ -20,9 +21,11 @@
 	GameObject *currentGame;
 	UIPopoverController *popOver;
 	AWSScavenger *awsScavenger;
+	LocationTools *locationTools;
 }
 
 -(IBAction) done:(id) sender;
+-(IBAction) query:(id) sender;
 
 @property(nonatomic, retain) GameListViewController *rootController;
 @property(nonatomic, retain) MKPlacemark *placemark;

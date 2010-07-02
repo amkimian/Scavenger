@@ -12,6 +12,7 @@
 @implementation SimpleDb
 
 @synthesize key, secret, delegate, listDomainsResponse, createDomainResponse, putAttributesResponse, deleteAttributesResponse, queryResponse, queryWithAttributesResponse;
+@synthesize selectResponse;
 
 - (void) setAWSAccount:(NSString*) _key secret:(NSString*) _secret 
 {	
@@ -218,6 +219,36 @@
 	[parser release];
 }
 
+- (void) select:(NSString *) expression
+{
+	NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+	
+	if (expression != nil)
+	{
+		[params setValue:expression forKey:@"SelectExpression"];
+	}
+	
+	//
+	// Invoke our method
+	//
+	NSXMLParser *parser = [self invoke:@"Select" invokeParameters:params];
+	
+	//	
+    // Set self as the delegate of the parser so that it will receive the parser delegate methods callbacks.
+	//
+	if (self.selectResponse == nil)
+	{
+		selectResponse = [[SelectResponse alloc] init];
+		[selectResponse setDelegate:self];
+	}
+	
+    [parser setDelegate:selectResponse];
+	
+	[parser parse];
+	[parser release];
+	
+}
+
 - (void) query:(NSString*)domainName expression:(NSString*)expression {
 	
 	NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
@@ -329,6 +360,13 @@
     }		
 }
 
+-(void) selectParseComplete {
+	if ([self.delegate respondsToSelector:@selector(selectComplete:)])
+	{
+		[self.delegate selectComplete: self.selectResponse.items];
+	}
+}
+
 - (void) listDomainsParseComplete {
 	
 	//
@@ -391,6 +429,8 @@
 	//
 	NSString *urlAsString = [NSString stringWithFormat:@"http://sdb.amazonaws.com?%@", queryParams];
 
+	NSLog(@"URL is %@", urlAsString);
+	
 	NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL: [NSURL URLWithString:urlAsString]];	
 
 	[parser setShouldProcessNamespaces:NO];
