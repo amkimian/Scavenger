@@ -99,14 +99,16 @@
 		{
 			NSString *subString = [reverseGeoString substringFromIndex:position.location+1];
 			NSArray *items = [[subString substringToIndex:[subString length]-1] componentsSeparatedByString:@","];
-			
-			self.country = [items objectAtIndex:3];
-			self.locality = [items objectAtIndex:1];
-			NSArray *parts = [(NSString *)[items objectAtIndex:2] componentsSeparatedByString:@" "];
-			self.postalCode = [parts objectAtIndex:2];
-			self.administrativeArea = [parts objectAtIndex:1];
-			valid = YES;
-			[delegate locationFound];
+			if ([items count] > 3)
+			{
+				self.country = [items objectAtIndex:3];
+				self.locality = [items objectAtIndex:1];
+				NSArray *parts = [(NSString *)[items objectAtIndex:2] componentsSeparatedByString:@" "];
+				self.postalCode = [parts objectAtIndex:2];
+				self.administrativeArea = [parts objectAtIndex:1];
+				valid = YES;
+				[delegate locationFound];
+			}
 		}
 	}
 	

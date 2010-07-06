@@ -7,7 +7,7 @@
 //
 
 #import "Scavenger_iPadAppDelegate.h"
-
+#import "GameListOnlineViewController.h"
 
 @implementation Scavenger_iPadAppDelegate
 
@@ -23,13 +23,23 @@
 	
 	self.rootViewController = [[GameListViewController alloc] initWithNibName:nil bundle:nil];
 	self.rootViewController.managedObjectContext = self.managedObjectContext;
+	[self.rootViewController reloadData];
+
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: self.rootViewController];
 	[nav setToolbarHidden:NO animated:YES];
 	nav.navigationBar.barStyle = UIBarStyleBlack;
 	nav.toolbar.barStyle = UIBarStyleBlack;
 	nav.delegate = self.rootViewController;
 	
-	[window addSubview:nav.view];
+	UISplitViewController *splitController = [[UISplitViewController alloc] init];
+	
+	GameListOnlineViewController *masterController = [[GameListOnlineViewController alloc] initWithNibName:nil bundle:nil];
+	masterController.rootController = self.rootViewController;
+	NSArray *controllers = [NSArray arrayWithObjects:masterController,nav,nil];
+	splitController.viewControllers = controllers;
+
+	// [window addSubview:nav.view];
+	[window addSubview:splitController.view];
     [window makeKeyAndVisible];
     
 	//[nav release];

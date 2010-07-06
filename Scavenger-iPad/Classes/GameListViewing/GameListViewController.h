@@ -55,6 +55,7 @@
 -(void) finishedOnline;
 
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender;
+-(void) reloadData;
 
 - (NSFetchedResultsController *)fetchedResultsController;
 
