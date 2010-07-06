@@ -16,6 +16,6 @@
 -(BOOL) checkHit: (LocationObject *) other inMap:(MKMapView *) mapView andView: (UIView *) view;
 -(BOOL) finished;
 -(void) move;
-+(UIImage *) getMissileImageAtAngle: (float) angle;
++(UIImage *) missileImageAtAngle: (float) angle;
 
 @end

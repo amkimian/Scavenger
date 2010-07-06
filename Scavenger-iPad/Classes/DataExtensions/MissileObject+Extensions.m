@@ -17,7 +17,7 @@
  * Draw the missile in the game
  */
 
-+(UIImage *) getMissileImageAtAngle: (float) angle
++(UIImage *) missileImageAtAngle: (float) angle
 {
 	UIGraphicsBeginImageContext(CGSizeMake(20.0, 20.0));
 	CGContextRef context = UIGraphicsGetCurrentContext();
@@ -73,8 +73,11 @@
 	CGContextDrawImage(context, CGRectMake(-MISSILE_SIZE/2, -MISSILE_SIZE/2, MISSILE_SIZE, MISSILE_SIZE), theImage.CGImage);
 	
 	// Get an image from the context
-	UIImage *ret = [UIImage imageWithCGImage: CGBitmapContextCreateImage(context)];
+	CGImageRef cgi = CGBitmapContextCreateImage(context);
+	UIImage *ret = [UIImage imageWithCGImage: cgi];
 	UIGraphicsEndImageContext();
+	CGImageRelease(cgi);
+	[theImage release];
 	return ret;
 }
 
@@ -101,7 +104,7 @@
 	start = [mapView convertCoordinate:startCoord toPointToView:view];
 	CGPoint end = [mapView convertCoordinate:endCoord toPointToView:view];
 	float angle = angleBetweenPoints(start,end);
-	UIImage *theImage = [MissileObject getMissileImageAtAngle: angle];
+	UIImage *theImage = [MissileObject missileImageAtAngle: angle];
 	[theImage drawInRect:dRect];
 }
 

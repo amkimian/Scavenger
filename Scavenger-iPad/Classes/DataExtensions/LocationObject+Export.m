@@ -10,7 +10,7 @@
 #import "LocationPointObject+Export.h"
 
 @implementation LocationObject(Export)
--(NSDictionary *)getAsExportDictionary
+-(NSDictionary *)getCopyAsExportDictionary
 {
 	NSMutableDictionary *ret = [[NSMutableDictionary alloc] init];
 	[ret setObject:self.level forKey:@"level"];
@@ -27,10 +27,13 @@
 	LocationPointObject *p = self.firstPoint;
 	while(p)
 	{
-		[locs addObject:[p getAsExportDictionary]];
+		NSDictionary *lp = [p getCopyAsExportDictionary];
+		[locs addObject:lp];
+		[lp release];
 		p = p.nextPoint;
 	}
 	[ret setObject:locs forKey:@"locationPoints"];
+	[locs release];
 	return ret;	
 }
 @end

@@ -19,7 +19,9 @@
 	NSMutableArray *locs = [[NSMutableArray alloc] init];
 	for(LocationObject *l in self.locations)
 	{
-		[locs addObject:[l getAsExportDictionary]];
+		NSDictionary *locDict = [l getCopyAsExportDictionary];
+		[locs addObject:locDict];
+		[locDict release];
 	}
 	[ret setObject:locs forKey:@"Locations"];
 	[locs release];

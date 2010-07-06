@@ -27,5 +27,6 @@
 	missile.amount = self.amount;
 	
 	[self.gameRun addMissilesObject:missile];
+	[missile release];
 }
 @end

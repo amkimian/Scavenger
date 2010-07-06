@@ -10,7 +10,7 @@
 
 
 @implementation LocationPointObject(Export)
--(NSDictionary *)getAsExportDictionary
+-(NSDictionary *)getCopyAsExportDictionary
 {
 	NSMutableDictionary *ret = [[NSMutableDictionary alloc] init];
 	[ret setObject:self.latitude forKey:@"latitude"];

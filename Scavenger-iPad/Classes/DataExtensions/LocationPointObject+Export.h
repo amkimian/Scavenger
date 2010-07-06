@@ -10,5 +10,5 @@
 #import "LocationPointObject.h"
 
 @interface LocationPointObject(Export)
--(NSDictionary *)getAsExportDictionary;
+-(NSDictionary *)getCopyAsExportDictionary;
 @end
