@@ -18,20 +18,18 @@
 #define ADDLOCTYPEHEIGHT 600
 
 @implementation GameEditViewController
+
+#pragma mark -
+#pragma mark Properties
+
 @synthesize game;
 @synthesize overlayView;
 @synthesize popOver;
 @synthesize locationTools;
 
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
+
+#pragma mark -
+#pragma mark API
 
 -(void) insertNewLocation
 {
@@ -46,6 +44,9 @@
 										 animated:YES];
 }
 
+#pragma mark -
+#pragma mark Choose Delegate
+
 -(void) didChoose: (LocationType) type from: (ChooseListPopupController *) sender
 {
 	// Create new location
@@ -57,6 +58,9 @@
 	[self.overlayView setNeedsDisplay];
 }
 
+#pragma mark -
+#pragma mark API
+
 -(void) chooseMapType: (id) sender
 {
 	MapTypePopupController *mapTypeController = [[MapTypePopupController alloc] initWithNibName:nil bundle:nil];
@@ -66,13 +70,6 @@
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:mapTypeController];
 	[self.popOver setPopoverContentSize:mapTypeController.view.bounds.size];
 	[self.popOver presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];	
-}
-
--(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender
-{
-	mapView.mapType = mapType;
-	[self.popOver dismissPopoverAnimated:YES];
-	self.popOver = nil;
 }
 
 -(void) chooseDetails: (id) sender
@@ -86,6 +83,7 @@
 	[controller release];
 	
 }
+
 
 -(void) showRoute: (id) sender
 {
@@ -101,10 +99,26 @@
 	[self presentModalViewController:nav animated:YES];	
 }
 
+#pragma mark -
+#pragma mark MapType Controller Delegate
+
+-(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender
+{
+	mapView.mapType = mapType;
+	[self.popOver dismissPopoverAnimated:YES];
+	self.popOver = nil;
+}
+
+#pragma mark -
+#pragma mark ?? Delegate
+
 -(void) didEndRouteList: (RouteListController *) sender
 {
 	[self dismissModalViewControllerAnimated:YES];
 }
+
+#pragma mark -
+#pragma mark View Lifecycle
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -170,6 +184,35 @@
 	}
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Overriden to allow any orientation.
+    return YES;
+}
+
+
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
+}
+
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+
+- (void)dealloc {
+    [super dealloc];
+}
+
+
+#pragma mark -
+#pragma mark Reverse Geocode delegate
+
 - (void) locationFound
 {
 	NSLog(@"Found location placemark");
@@ -184,6 +227,9 @@
 	game.placeMark = placeMark;
 }
 
+#pragma mark -
+#pragma mark Location Edit Delegate
+
 -(void) editLocationDidFinishEditing:(EditLocationController *) controller
 {
 	// Dismiss modal dialog for the location editing...
@@ -191,6 +237,9 @@
 	overlayView.selectedLocation = nil;
 	[overlayView setNeedsDisplay];
 }
+
+#pragma mark -
+#pragma mark Menu Popup Delegate
 
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
 {
@@ -229,10 +278,14 @@
 	self.popOver = nil;
 }
 
+
 -(void) locationSelected: (LocationObject *) loc
 {
 	// What do we do when location is selected?
 }
+
+#pragma mark -
+#pragma mark Internal
 
 -(void) showIt
 {
@@ -253,31 +306,6 @@
 	savedRect.size.width = 10;
 	
 	[self performSelector:@selector(showIt) withObject:nil afterDelay:0.1];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Overriden to allow any orientation.
-    return YES;
-}
-
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-
-- (void)dealloc {
-    [super dealloc];
 }
 
 

@@ -10,36 +10,22 @@
 #import "LocationPointObject.h"
 
 @implementation SingleLocationEditor
+
+#pragma mark -
+#pragma mark Properties
+
 @synthesize location;
 
 
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
+#pragma mark -
+#pragma mark Setup
 
--(void) moveMode: (id) sender
-{
-	overlayView.mode = MODE_MOVE;
-	self.title = @"Mode = Move";
+- (void)dealloc {
+    [super dealloc];
 }
 
--(void) deleteMode: (id) sender
-{
-	overlayView.mode = MODE_DELETE;
-	self.title = @"Mode = Delete";
-}
-
--(void) addMode: (id) sender
-{
-	overlayView.mode = MODE_ADD;
-	self.title = @"Mode = Add";
-}
+#pragma mark -
+#pragma mark View Lifecycle
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -99,10 +85,30 @@
     // e.g. self.myOutlet = nil;
 }
 
+#pragma mark -
+#pragma mark Mode Management
 
-- (void)dealloc {
-    [super dealloc];
+-(void) moveMode: (id) sender
+{
+	overlayView.mode = MODE_MOVE;
+	self.title = @"Mode = Move";
 }
+
+-(void) deleteMode: (id) sender
+{
+	overlayView.mode = MODE_DELETE;
+	self.title = @"Mode = Delete";
+}
+
+-(void) addMode: (id) sender
+{
+	overlayView.mode = MODE_ADD;
+	self.title = @"Mode = Add";
+}
+
+
+#pragma mark -
+#pragma mark Single Location View Delegate
 
 -(void) selectedLocationPoint: (LocationPointObject *) point
 {

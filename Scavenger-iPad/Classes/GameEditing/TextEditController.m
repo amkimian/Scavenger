@@ -10,18 +10,16 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation TextEditController
+
+#pragma mark -
+#pragma mark Properties
+
 @synthesize location;
 @synthesize tagToEdit;
 @synthesize labelText;
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
+
+#pragma mark -
+#pragma mark View Lifecycle
 
 -(BOOL)textViewShouldEndEditing:(UITextView *)textView
 {

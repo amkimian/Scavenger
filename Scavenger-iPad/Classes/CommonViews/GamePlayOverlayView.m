@@ -15,6 +15,9 @@
 
 
 @implementation GamePlayOverlayView
+#pragma mark -
+#pragma mark Properties
+
 @synthesize gameRun;
 @synthesize hudView;
 @synthesize desiredLocation;
@@ -22,6 +25,9 @@
 @synthesize isInPingMode;
 @synthesize scoreView;
 @synthesize hidden;
+
+#pragma mark -
+#pragma mark Setup
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -52,6 +58,13 @@
     return self;
 }
 
+- (void)dealloc {
+    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark User Interaction
+
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	NSLog(@"Touch in game play overlay view");
@@ -63,6 +76,10 @@
 	hasDesiredLocation = YES;
 	
 }
+
+#pragma mark -
+#pragma mark API
+
 -(void) setGameRun:(GameRunObject *)gR
 {
 	gameRun = [gR retain];
@@ -77,6 +94,9 @@
 		[subView setNeedsDisplay];
 	}	
 }
+
+#pragma mark -
+#pragma mark Drawing
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -186,9 +206,6 @@
 
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
 
 -(void) drawRadarOverlay: (CGRect) rect
 {
@@ -237,6 +254,9 @@
 		CGContextStrokePath(c);
 	}	
 }
+
+#pragma mark -
+#pragma mark Map View Delegate
 
 // called by the MKMapView when the region is going to change
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:

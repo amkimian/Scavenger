@@ -11,7 +11,14 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation HardwareStatusView
+
+#pragma mark -
+#pragma mark Properties
+
 @synthesize hardware;
+
+#pragma mark -
+#pragma mark Setup
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -23,6 +30,13 @@
     }
     return self;
 }
+
+- (void)dealloc {
+    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark User Interation
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -57,6 +71,9 @@
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
 }
+
+#pragma mark -
+#pragma mark Drawing
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -121,6 +138,9 @@
 	}
 }
 
+#pragma mark -
+#pragma mark Internal
+
 -(CGRect) getMainRectangle
 {
 	CGRect ret = self.bounds;
@@ -131,9 +151,6 @@
 	return ret;	
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
 
 
 @end

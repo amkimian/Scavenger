@@ -15,9 +15,16 @@
 #import "ASIS3ObjectRequest.h"
 
 @implementation AWSScavenger
+
+#pragma mark -
+#pragma mark Properties
+
 @synthesize simpleDb;
 @synthesize searchResults;
 @synthesize delegate;
+
+#pragma mark -
+#pragma mark Setup
 
 -(id) init
 {
@@ -29,10 +36,8 @@
 	return self;
 }
 
--(void) listDomains
-{
-	[self.simpleDb listDomains];
-}
+#pragma mark -
+#pragma mark SimpleDBDelegate
 
 - (void) listDomainsComplete:(NSMutableArray*) domains
 {
@@ -41,6 +46,22 @@
 		NSLog(@"Domain is %@", domain);
 	}
 }
+
+-(void) selectComplete:(NSMutableArray *) items
+{
+	self.searchResults = items;
+	[self.delegate awsDataChanged];
+}
+
+
+#pragma mark -
+#pragma mark Main Api
+
+-(void) listDomains
+{
+	[self.simpleDb listDomains];
+}
+
 
 -(void) unpublishGame: (GameObject *) game
 {
@@ -51,12 +72,6 @@
 -(void) performSelect: (NSString *) query
 {
 	[self.simpleDb select:query];
-}
-
--(void) selectComplete:(NSMutableArray *) items
-{
-	self.searchResults = items;
-	[self.delegate awsDataChanged];
 }
 
 -(void) publishGame: (GameObject *) game
@@ -111,6 +126,10 @@
 		NSLog(@"There is nothing to publish!");
 	}
 }
+
+
+#pragma mark -
+#pragma mark Internal
 
 -(void) pushGameToS3: (GameObject *) game withId: (NSString *) gameId
 {

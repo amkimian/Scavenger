@@ -14,12 +14,19 @@
 #import "LocationPointObject.h"
 
 @implementation LocationOverlayView
+
+#pragma mark -
+#pragma mark Properties
+
 @synthesize game;
 @synthesize hidden;
 @synthesize selectedLocation;
 @synthesize delegate;
 @synthesize playMode;
 
+
+#pragma mark -
+#pragma mark Setup
 
 // initialize the view
 
@@ -38,17 +45,20 @@
     return self;
 }
 
+- (void)dealloc {
+    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark Notifications
+
 -(void) locationDataChanged: (NSNotification *) notification
 {
 	[self setNeedsDisplay];
 }
 
-/*
--(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-	NSLog(@"Hello from subview hittest");
-	return nil;
-}
-*/
+#pragma mark -
+#pragma mark Low Level View
 
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
 {
@@ -77,6 +87,9 @@
 	return NO;
 }
 	 
+#pragma mark -
+#pragma mark API
+
 -(NSMutableSet *) getLocations
 {
 	return [game mutableSetValueForKey: @"locations"];
@@ -95,6 +108,9 @@
 	}
 	return nil;
 }
+
+#pragma mark -
+#pragma mark User Interaction
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -133,6 +149,8 @@
 	releasedAfterSelection = YES;
 }
 
+#pragma mark -
+#pragma mark Drawing
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -159,10 +177,10 @@
 	[loc drawLocation:mapView andView:self andAlpha:0.5 inGame:NO];
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
 
+
+#pragma mark -
+#pragma mark Map View delegate
 
 // called by the MKMapView when the region is going to change
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:

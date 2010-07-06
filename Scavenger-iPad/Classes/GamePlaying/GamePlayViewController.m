@@ -14,6 +14,10 @@
 #import "GameScoreTableViewController.h"
 
 @implementation GamePlayViewController
+
+#pragma mark -
+#pragma mark Properties
+
 @synthesize gameRun;
 @synthesize overlayView;
 @synthesize manager;
@@ -23,6 +27,8 @@
 @synthesize mapRadius;
 
 
+#pragma mark -
+#pragma mark Setup
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -35,15 +41,6 @@
 		mapRadius = 0.005f;
     }
     return self;
-}
-
--(void) showGameOver
-{
-	GameScoreTableViewController *tv = [[GameScoreTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-	tv.gameRun = self.gameRun;
-	UIView *v = overlayView.hudView;
-	UIPopoverController *popOver = [[UIPopoverController alloc] initWithContentViewController:tv];
-	[popOver presentPopoverFromRect:v.bounds inView:v permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -80,13 +77,6 @@
 	
 }
 
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Overriden to allow any orientation.
-    return YES;
-}
-
-
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -113,13 +103,27 @@
     [super dealloc];
 }
 
-/**
- * Location Manager delegation
- */
+#pragma mark -
+#pragma mark General View Management
 
--(void) locationManager:(CLLocationManager *)manager didFailWithError: (NSError *) error
-{
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Overriden to allow any orientation.
+    return YES;
 }
+
+#pragma mark -
+#pragma mark Controller
+
+-(void) showGameOver
+{
+	GameScoreTableViewController *tv = [[GameScoreTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	tv.gameRun = self.gameRun;
+	UIView *v = overlayView.hudView;
+	UIPopoverController *popOver = [[UIPopoverController alloc] initWithContentViewController:tv];
+	[popOver presentPopoverFromRect:v.bounds inView:v permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+
 
 -(void) resetMapView
 {
@@ -133,12 +137,22 @@
 	[overlayView setNeedsDisplay];
 }
 
+#pragma mark -
+#pragma mark CLLocationManagerDelegate
+
+-(void) locationManager:(CLLocationManager *)manager didFailWithError: (NSError *) error
+{
+}
+
 -(void) locationManager:(CLLocationManager *)manager didUpdateToLocation: (CLLocation *) newLocation fromLocation: (CLLocation *) oldLocation
 {
 	NSLog(@"New location");
 	self.currentLocation = newLocation;
 	[self resetMapView];
 }
+
+#pragma mark -
+#pragma mark Simulation
 
 -(void) simulateMoveTo: (CLLocationCoordinate2D) dest
 {

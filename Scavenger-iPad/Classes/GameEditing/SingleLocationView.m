@@ -12,10 +12,16 @@
 #import "LocationPointObject.h"
 
 @implementation SingleLocationView
+#pragma mark -
+#pragma mark Properties
+
 @synthesize location;
 @synthesize delegate;
 @synthesize selectedLocationPoint;
 @synthesize mode;
+
+#pragma mark -
+#pragma mark Setup
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -27,6 +33,13 @@
     }
     return self;
 }
+
+- (void)dealloc {
+    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark API
 
 -(LocationPointObject *) findLocationAtPoint: (CGPoint) p
 {
@@ -48,6 +61,9 @@
 	}
 	return nil;
 }
+
+#pragma mark -
+#pragma mark User Interaction
 
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -157,6 +173,9 @@
 	return NO;
 }
 
+#pragma mark -
+#pragma mark Drawing
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
@@ -226,9 +245,10 @@
 	[location drawLocation:mapView andView:self andAlpha:0.5 inGame:NO];
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
+
+
+#pragma mark -
+#pragma mark Map View Delegate
 
 // called by the MKMapView when the region is going to change
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:

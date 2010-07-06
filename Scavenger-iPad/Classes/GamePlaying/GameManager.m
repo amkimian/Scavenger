@@ -16,15 +16,18 @@
 #import "MissileObject+Extensions.h"
 
 @implementation GameManager
+
+#pragma mark -
+#pragma mark Properties
+
 @synthesize gameRun;
 @synthesize gamePlayController;
 @synthesize gameSounds;
 
--(void) pause
-{
-	[gameTimer invalidate];
-	gameTimer = nil;
-}
+
+
+#pragma mark -
+#pragma mark Setup
 
 /**
  * This is called whenever we reload a game
@@ -100,7 +103,16 @@
 	// Setup Route?
 	
 }
- 
+
+#pragma mark -
+#pragma mark Game State Changes
+
+-(void) pause
+{
+	[gameTimer invalidate];
+	gameTimer = nil;
+}
+
 -(void) processAtSoughtLocation
 {
 	// We are at the location we are currently seeking.
@@ -155,6 +167,9 @@
 	// Refresh overlayView
 	[self.gamePlayController.overlayView setNeedsDisplay];
 }
+
+#pragma mark -
+#pragma mark Game Loop
 
 /**
  * Do one tick of the game

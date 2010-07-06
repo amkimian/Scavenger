@@ -11,7 +11,13 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation GameStatusHUDView
+#pragma mark -
+#pragma mark Properties
+
 @synthesize gameRun;
+
+#pragma mark -
+#pragma mark Setup
 
 - (id)initWithFrame:(CGRect)frame andGameRun: (GameRunObject *) gRun {
     if ((self = [super initWithFrame:frame])) {
@@ -19,6 +25,13 @@
 	}
     return self;
 }
+
+- (void)dealloc {
+    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark API
 
 -(void) setGameRun:(GameRunObject *)gR
 {
@@ -48,9 +61,7 @@
 }
 */
 
-- (void)dealloc {
-    [super dealloc];
-}
+
 
 
 @end

@@ -10,6 +10,10 @@
 
 
 @implementation LocationTools
+
+#pragma mark -
+#pragma mark Properties
+
 @synthesize coordinate;
 @synthesize country;
 @synthesize locality;
@@ -19,23 +23,18 @@
 @synthesize valid;
 @synthesize delegate;
 
+#pragma mark -
+#pragma mark Setup
+
 -(id) init
 {
 	valid = NO;
 	return self;
 }
 
--(void) resolveGeocode
-{
-	[self mapKitResolve];
-}
 
--(void) mapKitResolve
-{
-	self.geocoder = [[MKReverseGeocoder alloc] initWithCoordinate:coordinate];
-	self.geocoder.delegate = self;
-	[self.geocoder start];
-}
+#pragma mark -
+#pragma mark MKReverseGeocoderDelegate
 
 - (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error
 {
@@ -52,6 +51,21 @@
 	self.postalCode = pl.postalCode;
 	valid = YES;
 	[delegate locationFound];
+}
+
+#pragma mark -
+#pragma mark ReverseGeocodeApi
+
+-(void) resolveGeocode
+{
+	[self mapKitResolve];
+}
+
+-(void) mapKitResolve
+{
+	self.geocoder = [[MKReverseGeocoder alloc] initWithCoordinate:coordinate];
+	self.geocoder.delegate = self;
+	[self.geocoder start];
 }
 
 -(void) alternateResolve

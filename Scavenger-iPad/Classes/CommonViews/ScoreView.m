@@ -10,8 +10,14 @@
 
 
 @implementation ScoreView
+#pragma mark -
+#pragma mark Properties
+
 @synthesize scoreValue;
 @synthesize bonusValue;
+
+#pragma mark -
+#pragma mark Setup
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -21,6 +27,11 @@
     return self;
 }
 
+- (void)dealloc {
+    [super dealloc];
+}
+#pragma mark -
+#pragma mark Drawing
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -38,9 +49,7 @@
 	[label drawInRect:drawRect withFont:[UIFont systemFontOfSize:25] lineBreakMode:UILineBreakModeMiddleTruncation alignment:UITextAlignmentRight];
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
+
 
 
 @end

@@ -10,13 +10,22 @@
 
 
 @implementation GameSounds
+
+#pragma mark -
+#pragma mark Properties
 @synthesize player;
+
+#pragma mark -
+#pragma mark Setup
 
 -(id) init
 {
 	ableToPlay = YES;
 	return self;
 }
+
+#pragma mark -
+#pragma mark Main Api
 
 - (void)playAlert
 {
@@ -46,6 +55,9 @@
         }
 	}
 }
+
+#pragma mark -
+#pragma mark Audio Delegate
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
