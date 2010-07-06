@@ -349,7 +349,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LocationObject+Export.m</string>
+								<string>GameObject+Export.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -357,11 +357,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>LocationObject+Export.m</string>
+										<string>GameObject+Export.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>151E424311E3CA620046D0C6</string>
+										<string>151E426911E3D0E80046D0C6</string>
 										<key>history</key>
 										<array>
 											<string>153E5B2011CA991400DCDAC0</string>
@@ -388,7 +388,6 @@
 											<string>153631BA11D3A3FC00F63E59</string>
 											<string>153631C511D3E9DB00F63E59</string>
 											<string>153631DA11D3EACB00F63E59</string>
-											<string>1536320511D4072200F63E59</string>
 											<string>153632EE11D466A300F63E59</string>
 											<string>1536330611D469C200F63E59</string>
 											<string>1536330811D469C200F63E59</string>
@@ -401,7 +400,6 @@
 											<string>153633D511D56F8700F63E59</string>
 											<string>153633D611D56F8700F63E59</string>
 											<string>1524312711D6AF4500F4E9FA</string>
-											<string>1524312811D6AF4500F4E9FA</string>
 											<string>1524312911D6AF4500F4E9FA</string>
 											<string>1524312A11D6AF4500F4E9FA</string>
 											<string>1524312B11D6AF4500F4E9FA</string>
@@ -464,11 +462,13 @@
 											<string>151E420E11E3C0980046D0C6</string>
 											<string>151E420F11E3C0980046D0C6</string>
 											<string>151E421011E3C0980046D0C6</string>
-											<string>151E421111E3C0980046D0C6</string>
-											<string>151E421211E3C0980046D0C6</string>
-											<string>151E421411E3C0980046D0C6</string>
 											<string>151E424111E3CA620046D0C6</string>
-											<string>151E424211E3CA620046D0C6</string>
+											<string>151E426411E3D0E80046D0C6</string>
+											<string>151E426511E3D0E80046D0C6</string>
+											<string>151E426611E3D0E80046D0C6</string>
+											<string>151E426711E3D0E80046D0C6</string>
+											<string>151E426811E3D0E80046D0C6</string>
+											<string>151E426211E3D0E50046D0C6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -649,7 +649,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300141154.21533197</real>
+	<real>300142824.99202001</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -692,7 +692,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MissileObject+Extensions.h</string>
+								<string>GameObject+Export.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

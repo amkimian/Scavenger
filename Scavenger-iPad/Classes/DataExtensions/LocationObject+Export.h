@@ -11,4 +11,5 @@
 
 @interface LocationObject(Export)
 -(NSDictionary *)getCopyAsExportDictionary;
++(LocationObject *) newFromExportDictionary: (NSDictionary *) dict inManagedObjectContext: (NSManagedObjectContext *) context;
 @end

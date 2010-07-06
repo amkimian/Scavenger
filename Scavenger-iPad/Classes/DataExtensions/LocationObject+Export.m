@@ -36,4 +36,30 @@
 	[locs release];
 	return ret;	
 }
+
++(LocationObject *) newFromExportDictionary: (NSDictionary *) dict inManagedObjectContext: (NSManagedObjectContext *) context
+{
+	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"Location" inManagedObjectContext:context];
+	LocationObject *location = [[LocationObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:context];
+	location.name = [dict valueForKey: @"name"];
+	location.level = [dict valueForKey: @"level"];
+	location.locationType = [dict valueForKey: @"locationType"];
+	location.maxLevel = [dict valueForKey: @"maxLevel"];
+	NSArray *locPoints = [dict valueForKey:@"locationPoints"];
+	LocationPointObject *p = nil;
+	for(NSDictionary *pointDict in locPoints)
+	{
+		LocationPointObject *locPoint = [LocationPointObject newFromExportDictionary: pointDict inManagedObjectContext:context];
+		if (p == nil)
+		{
+			location.firstPoint = locPoint;
+		}
+		else
+		{
+			p.nextPoint = locPoint;
+		}
+		p = locPoint;
+	}
+	return location;
+}
 @end

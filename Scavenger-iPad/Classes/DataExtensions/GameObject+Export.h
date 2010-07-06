@@ -16,4 +16,5 @@
 
 @interface GameObject(Export)
 -(NSDictionary *)getCopyAsExportDictionary;
++(GameObject *) newFromExportDictionary: (NSDictionary *) dict inManagedObjectContext: (NSManagedObjectContext *) context;
 @end

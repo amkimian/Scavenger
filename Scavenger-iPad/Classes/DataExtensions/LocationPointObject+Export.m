@@ -18,4 +18,14 @@
 	return ret;
 	
 }
+
++(LocationPointObject *) newFromExportDictionary: (NSDictionary *) dict inManagedObjectContext: (NSManagedObjectContext *) context
+{
+	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"LocationPoint" inManagedObjectContext:context];
+	LocationPointObject *location = [[LocationPointObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:context];
+	location.latitude = [dict objectForKey: @"latitude"];
+	location.longitude = [dict objectForKey: @"longitude"];
+	return location;
+}
+
 @end

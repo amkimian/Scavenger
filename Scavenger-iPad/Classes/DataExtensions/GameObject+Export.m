@@ -27,4 +27,24 @@
 	[locs release];
 	return ret;
 }
+
++(GameObject *) newFromExportDictionary: (NSDictionary *) dict inManagedObjectContext: (NSManagedObjectContext *) context
+{
+	// Create a new GameObject in the given context, and set it up based on the dictionary
+	// Do the reverse of the above
+	
+	NSEntityDescription *edesc = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:context];
+	GameObject *game = [[GameObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:context];
+	
+	game.name = [dict objectForKey: @"Name"];
+	NSArray *locs = (NSArray *) [dict objectForKey:@"Locations"]; 
+	for(NSDictionary *locDict in locs)
+	{
+		LocationObject *loc = [LocationObject newFromExportDictionary:locDict inManagedObjectContext: context];
+		[game addLocationsObject:loc];
+		[loc release];
+	}
+	return game;
+}
+
 @end
