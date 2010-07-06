@@ -23,6 +23,8 @@
 - (void) listDomainsComplete:(NSMutableArray*) domains;
 -(void) publishGame: (GameObject *) game;
 -(void) unpublishGame: (GameObject *) game;
+-(void) copyGameTest: (GameObject *) game;
+
 -(void) performSelect: (NSString *) query;
 -(void) selectComplete:(NSMutableArray *) items;
 -(void) addAttribute: (NSString *) name withValue: (NSString *) value intoArray: (NSMutableArray *) array;

@@ -305,14 +305,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>62</integer>
-									<integer>52</integer>
+									<integer>11</integer>
+									<integer>9</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 535}, {275, 823}}</string>
+							<string>{{0, 35}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -349,7 +349,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameObject+Export.m</string>
+								<string>AWSScavenger.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -357,11 +357,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameObject+Export.m</string>
+										<string>AWSScavenger.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>151E426911E3D0E80046D0C6</string>
+										<string>151E428211E3D3140046D0C6</string>
 										<key>history</key>
 										<array>
 											<string>153E5B2011CA991400DCDAC0</string>
@@ -396,7 +396,6 @@
 											<string>153633A811D569BC00F63E59</string>
 											<string>153633B711D56AB600F63E59</string>
 											<string>153633B811D56AB600F63E59</string>
-											<string>153633BC11D56BCF00F63E59</string>
 											<string>153633D511D56F8700F63E59</string>
 											<string>153633D611D56F8700F63E59</string>
 											<string>1524312711D6AF4500F4E9FA</string>
@@ -431,13 +430,10 @@
 											<string>153E93B311DBD0F9009D9BE4</string>
 											<string>153E93B411DBD0F9009D9BE4</string>
 											<string>153E93B611DBD0F9009D9BE4</string>
-											<string>153E93BD11DBD170009D9BE4</string>
 											<string>153E943811DC45AA009D9BE4</string>
 											<string>153E943B11DC45AA009D9BE4</string>
 											<string>151E41F511E3C0980046D0C6</string>
 											<string>151E41F611E3C0980046D0C6</string>
-											<string>151E41F711E3C0980046D0C6</string>
-											<string>151E41F811E3C0980046D0C6</string>
 											<string>151E41F911E3C0980046D0C6</string>
 											<string>151E41FA11E3C0980046D0C6</string>
 											<string>151E41FB11E3C0980046D0C6</string>
@@ -465,10 +461,14 @@
 											<string>151E424111E3CA620046D0C6</string>
 											<string>151E426411E3D0E80046D0C6</string>
 											<string>151E426511E3D0E80046D0C6</string>
-											<string>151E426611E3D0E80046D0C6</string>
-											<string>151E426711E3D0E80046D0C6</string>
-											<string>151E426811E3D0E80046D0C6</string>
-											<string>151E426211E3D0E50046D0C6</string>
+											<string>151E427311E3D2C30046D0C6</string>
+											<string>151E427411E3D2C30046D0C6</string>
+											<string>151E427511E3D2C30046D0C6</string>
+											<string>151E427611E3D2C30046D0C6</string>
+											<string>151E427711E3D2C30046D0C6</string>
+											<string>151E427811E3D2C30046D0C6</string>
+											<string>151E427911E3D2C30046D0C6</string>
+											<string>151E427A11E3D2C30046D0C6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -649,7 +649,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300142824.99202001</real>
+	<real>300143380.63016498</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -666,9 +666,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>155BE54711C92BF00019A783</string>
+		<string>151E428311E3D3140046D0C6</string>
+		<string>151E428411E3D3140046D0C6</string>
+		<string>151E427E11E3D2C30046D0C6</string>
 		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
+		<string>155BE54711C92BF00019A783</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 61 1680 882 0 0 1680 1028 </string>
@@ -763,7 +767,7 @@
 			<key>WindowToolGUID</key>
 			<string>155BE54711C92BF00019A783</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -887,7 +891,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -1034,7 +1038,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>153E935111DB0C3E009D9BE4</string>
+				<string>151E427C11E3D2C30046D0C6</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

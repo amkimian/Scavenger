@@ -270,7 +270,7 @@
 		MenuPopupController *controller = [[MenuPopupController alloc] initWithNibName:nil bundle:nil];
 		controller.delegate = self;
 		self.currentGame = (GameObject *) [[self.rootController.fetchedResultsController fetchedObjects] objectAtIndex: indexPath.row];	
-		controller.menuStrings = [[NSArray alloc] initWithObjects:@"Publish",@"Unpublish", nil];
+		controller.menuStrings = [[NSArray alloc] initWithObjects:@"Publish",@"Unpublish",@"Copy (Test)", nil];
 		controller.modalPresentationStyle = UIModalPresentationFormSheet;
 		[self presentModalViewController:controller animated:YES];
 		//self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
@@ -329,6 +329,10 @@
 			case 1:
 				// Unpublish
 				[awsScavenger unpublishGame:self.currentGame];
+				break;
+			case 2:
+				// Copy (test)
+				[awsScavenger copyGameTest:self.currentGame];
 				break;
 		}
 		[self dismissModalViewControllerAnimated:YES];

@@ -144,6 +144,23 @@
 	[gameDict release];
 }
 
+-(void) copyGameTest: (GameObject *) game
+{
+	NSString *error;
+	NSDictionary *gameDict = [game getCopyAsExportDictionary];
+	NSData *gameData = [NSPropertyListSerialization dataFromPropertyList:gameDict
+																  format:NSPropertyListXMLFormat_v1_0
+														errorDescription:&error];
+	// And back
+	
+	NSDictionary *gameDictBack = [NSPropertyListSerialization propertyListFromData:gameData 
+																  mutabilityOption:NSPropertyListMutableContainers 
+																			format:nil 
+																  errorDescription:&error];
+	GameObject *newGame = [GameObject newFromExportDictionary:gameDictBack inManagedObjectContext:[game managedObjectContext]];
+	game.name = [NSString stringWithFormat: @"Copy of %@", newGame.name];
+}
+
 -(void) addAttribute: (NSString *) name withValue: (NSString *) value intoArray: (NSMutableArray *) array
 {
 	if (value)
