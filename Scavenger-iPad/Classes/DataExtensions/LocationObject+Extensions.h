@@ -77,7 +77,7 @@
 -(void) performDrift;
 -(int) countPoints;
 -(void) drawLocation: (MKMapView *) mapView andView:(UIView *) view andAlpha:(float) alpha inGame:(BOOL) inGame;
--(CGMutablePathRef) getPathRef: (MKMapView *) mapView andView: (UIView *) view inGame:(BOOL) inGame;
+-(CGMutablePathRef) getPathRefCopy: (MKMapView *) mapView andView: (UIView *) view inGame:(BOOL) inGame;
 -(BOOL) pointInLocation: (CGPoint) p inMap: (MKMapView *) mapView andView: (UIView *) view inGame:(BOOL) inGame;
 -(BOOL) coordinateInLocation: (CLLocationCoordinate2D) coord inMap: (MKMapView *) mapView andView: (UIView *) view;
 -(void) moveWithRelativeFrom: (CLLocationCoordinate2D) movingCoord to:(CLLocationCoordinate2D) coord;

@@ -175,10 +175,11 @@
 	}
 	else
 	{
-		CGPathRef path = [self getPathRef: mapView andView: view inGame:NO];
+		CGPathRef path = [self getPathRefCopy: mapView andView: view inGame:NO];
 		CGRect bounds = CGPathGetBoundingBox(path);
 		where.x = bounds.origin.x + bounds.size.width / 2;
 		where.y = bounds.origin.y + bounds.size.height / 2;
+		CGPathRelease(path);
 	}
 	
 	CGColorRef cRef = CGColorCreateCopyWithAlpha([UIColor blueColor].CGColor, OVERLAY_ALPHA);
@@ -186,7 +187,7 @@
 	
 	NSString *test = [NSString stringWithFormat: @"%@ - %.2f/%.2f", [self locationShortTypeString],[self.level floatValue], [self.maxLevel floatValue]];
 	[test drawAtPoint:where withFont:[UIFont systemFontOfSize:12]];
-	
+	CGColorRelease(cRef);
 }
 
 -(void) drawLocationAsCircle: (MKMapView *) mapView andView:(UIView *) view andAlpha:(float) alpha inGame:(BOOL) inGame
@@ -225,6 +226,7 @@
 	CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
 	CGContextSetLineWidth(context, 3.0);
 	CGContextAddEllipseInRect(context, dRect);
+	CGColorRelease(cRef);
 }
 
 -(void) drawLocationAsCircle2: (MKMapView *) mapView andView:(UIView *) view andAlpha:(float) alpha inGame:(BOOL) inGame
@@ -266,6 +268,7 @@
 	CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, alpha);
 	CGContextSetFillColorWithColor(context, cRef);
 	CGContextFillEllipseInRect(context, dRect);		
+	CGColorRelease(cRef);
 	[loc release];
 	[otherLoc release];
 	
@@ -274,11 +277,13 @@
 -(void) drawLocationAsPath: (MKMapView *) mapView andView:(UIView *) view andAlpha:(float) alpha inGame:(BOOL) inGame
 {
 	CGContextRef context = UIGraphicsGetCurrentContext();
-	CGMutablePathRef path = [self getPathRef:mapView andView:view inGame:inGame];
+	CGMutablePathRef path = [self getPathRefCopy:mapView andView:view inGame:inGame];
 	CGColorRef cRef = CGColorCreateCopyWithAlpha([self locationDisplayColor].CGColor, alpha);
 	CGContextSetFillColorWithColor(context, cRef);
 	CGContextAddPath(context, path);
 	CGContextFillPath(context);
+	CGColorRelease(cRef);
+	CGPathRelease(path);
 	
 }
 
@@ -316,7 +321,7 @@
 	}
 }
 
--(CGMutablePathRef) getPathRef: (MKMapView *) mapView andView: (UIView *) view inGame: (BOOL) inGame
+-(CGMutablePathRef) getPathRefCopy: (MKMapView *) mapView andView: (UIView *) view inGame: (BOOL) inGame
 {
 	CGMutablePathRef path = CGPathCreateMutable();
 	LocationPointObject *point = self.firstPoint;
@@ -440,6 +445,9 @@
 		
 		float radius = 2 * [loc distanceFromLocation:otherLoc];
 		
+		[loc release];
+		[otherLoc release];
+		
 		MKCoordinateRegion cr = MKCoordinateRegionMakeWithDistance(coord, radius, radius);
 		CGRect dRect = [mapView convertRegion:cr toRectToView:view];
 		dRect.size.height = dRect.size.width;
@@ -450,11 +458,10 @@
 	}
 	else
 	{
-		CGMutablePathRef pRef = [self getPathRef: mapView andView:view inGame:inGame];
-		if (CGPathContainsPoint(pRef, nil, p, true))
-		{
-			return YES;
-		}
+		CGMutablePathRef pRef = [self getPathRefCopy: mapView andView:view inGame:inGame];
+		BOOL ret = CGPathContainsPoint(pRef, nil, p, true);
+		CGPathRelease(pRef);
+		return ret;
 	}
 	return NO;
 }

@@ -55,6 +55,7 @@
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
 	//[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	[self.popOver presentPopoverFromBarButtonItem:(UIBarButtonItem *) sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	[controller release];
 
 }
 

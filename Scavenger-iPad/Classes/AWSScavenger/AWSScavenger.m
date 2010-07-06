@@ -134,13 +134,14 @@
 -(void) pushGameToS3: (GameObject *) game withId: (NSString *) gameId
 {
 	NSString *error;
-	NSDictionary *gameDict = [game getAsExportDictionary];
+	NSDictionary *gameDict = [game getCopyAsExportDictionary];
 	NSData *gameData = [NSPropertyListSerialization dataFromPropertyList:gameDict
 																  format:NSPropertyListXMLFormat_v1_0
 														errorDescription:&error];
 	ASIS3ObjectRequest *request = 
 	[ASIS3ObjectRequest PUTRequestForData:gameData withBucket:@"scavenger-games" key:gameId];
 	[request startSynchronous];
+	[gameDict release];
 }
 
 -(void) addAttribute: (NSString *) name withValue: (NSString *) value intoArray: (NSMutableArray *) array
@@ -151,6 +152,7 @@
 		attr.name = name;
 		attr.value = value;
 		[array addObject: attr];	
+		[attr release];
 	}
 }
 

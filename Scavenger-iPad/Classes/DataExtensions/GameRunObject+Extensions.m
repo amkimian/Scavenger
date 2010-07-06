@@ -152,6 +152,7 @@
 	alo.targetModifies = loc.locationType;
 	alo.location = loc;
 	alo.gameRun = self;
+	[alo release];
 	return YES;
 }
 

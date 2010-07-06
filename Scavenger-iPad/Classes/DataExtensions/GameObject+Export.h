@@ -15,5 +15,5 @@
  */
 
 @interface GameObject(Export)
--(NSDictionary *)getAsExportDictionary;
+-(NSDictionary *)getCopyAsExportDictionary;
 @end

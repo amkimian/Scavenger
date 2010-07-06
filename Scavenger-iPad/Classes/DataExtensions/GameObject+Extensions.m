@@ -28,7 +28,7 @@
 	return NO;
 }
 
--(LocationObject *) addLocationOfType: (LocationType) type at:(CLLocationCoordinate2D) coord;
+-(LocationObject *) newLocationOfType: (LocationType) type at:(CLLocationCoordinate2D) coord;
 {
 	// Create new LocationObject, setup its type, and add it to the locations set
 	// Some types can only have one type, so if they are already in the locations set, return
@@ -169,6 +169,7 @@
 	lo.location = loc;
 	lo.position = [NSNumber numberWithInt: [mainRoute.locations count]];
 	[mainRoute addLocationsObject:lo];	
+	[lo release];
 }
 
 

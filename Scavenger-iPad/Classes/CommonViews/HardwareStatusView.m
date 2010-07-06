@@ -134,6 +134,7 @@
 		}
 		CGContextSetFillColorWithColor(context, color);
 		CGContextFillRect(context, startDamageRect);
+		CGColorRelease(color);
 		startDamageRect.origin.x += 3;
 	}
 }

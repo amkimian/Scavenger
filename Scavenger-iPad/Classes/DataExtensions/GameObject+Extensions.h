@@ -13,7 +13,7 @@
 #import "GameRunObject.h"
 
 @interface GameObject(Extensions) <MKAnnotation>
--(LocationObject *) addLocationOfType: (LocationType) type at:(CLLocationCoordinate2D) coord;
+-(LocationObject *) newLocationOfType: (LocationType) type at:(CLLocationCoordinate2D) coord;
 -(LocationObject *) getLocationOfType: (LocationType) type;
 
 -(void) removeLocationOfType: (LocationType) type;

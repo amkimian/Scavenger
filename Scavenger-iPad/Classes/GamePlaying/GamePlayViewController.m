@@ -122,6 +122,8 @@
 	UIView *v = overlayView.hudView;
 	UIPopoverController *popOver = [[UIPopoverController alloc] initWithContentViewController:tv];
 	[popOver presentPopoverFromRect:v.bounds inView:v permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	[tv release];
+	[popOver release];
 }
 
 

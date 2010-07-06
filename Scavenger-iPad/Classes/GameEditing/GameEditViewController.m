@@ -39,9 +39,11 @@
 	bounds.size.height = ADDLOCTYPEHEIGHT;
 	controller.view.bounds = bounds;
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
+	[controller release];
 	[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	[self.popOver presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny
 										 animated:YES];
+
 }
 
 #pragma mark -
@@ -51,7 +53,7 @@
 {
 	// Create new location
 	
-	[game addLocationOfType:type at:mapView.centerCoordinate];
+	[[game newLocationOfType:type at:mapView.centerCoordinate] release];
 	
 	[self.popOver dismissPopoverAnimated:YES];
 	self.popOver = nil;
@@ -68,6 +70,7 @@
 	mapTypeController.mapType = mapView.mapType;
 	
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:mapTypeController];
+	[mapTypeController release];
 	[self.popOver setPopoverContentSize:mapTypeController.view.bounds.size];
 	[self.popOver presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];	
 }
@@ -97,6 +100,7 @@
 	controller.delegate = self;
 	controller.game = game;
 	[self presentModalViewController:nav animated:YES];	
+	[controller release];
 }
 
 #pragma mark -
@@ -256,6 +260,7 @@
 			controller.delegate = self;
 			controller.location = overlayView.selectedLocation;
 			[self presentModalViewController:nav animated:YES];
+			[controller release];
 		}
 			 break;
 		case 1:
@@ -306,6 +311,7 @@
 	savedRect.size.width = 10;
 	
 	[self performSelector:@selector(showIt) withObject:nil afterDelay:0.1];
+	[controller release];
 }
 
 

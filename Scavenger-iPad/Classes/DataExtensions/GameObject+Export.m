@@ -10,7 +10,7 @@
 #import "LocationObject+Export.h"
 
 @implementation GameObject(Export)
--(NSDictionary *)getAsExportDictionary
+-(NSDictionary *)getCopyAsExportDictionary
 {
 	NSMutableDictionary *ret = [[NSMutableDictionary alloc] init];
 	// name, routes, locations
@@ -22,6 +22,7 @@
 		[locs addObject:[l getAsExportDictionary]];
 	}
 	[ret setObject:locs forKey:@"Locations"];
+	[locs release];
 	return ret;
 }
 @end

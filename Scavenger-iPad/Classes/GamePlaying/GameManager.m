@@ -362,7 +362,7 @@
 	// Update the LOCATION_PLAYER location
 	if ([gameRun isRunning])
 	{
-		[gameRun.game addLocationOfType:LTYPE_PLAYER at:gamePlayController.currentLocation.coordinate];
+		[[gameRun.game newLocationOfType:LTYPE_PLAYER at:gamePlayController.currentLocation.coordinate] release];
 	}
 }
 

@@ -139,6 +139,8 @@
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:mapTypeController];
 	[self.popOver setPopoverContentSize:mapTypeController.view.bounds.size];
 	[self.popOver presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	
+	[mapTypeController release];
 }
 
 /**
@@ -171,6 +173,7 @@
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
 	[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	[self.popOver presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	[controller release];
 }
 
 -(void) textChangedFrom: (GetTextPopupController *) sender
@@ -188,7 +191,7 @@
 	[self.popOver dismissPopoverAnimated:YES];
 	self.popOver = nil;
 
-	[game addLocationOfType:LTYPE_START at:mapView.centerCoordinate];
+	[[game newLocationOfType:LTYPE_START at:mapView.centerCoordinate] release];
 	
 	[self addGameAnnotation: game];
 }
@@ -343,6 +346,7 @@
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
 	[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	[self.popOver presentPopoverFromRect:control.bounds inView:control permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+	[controller release];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error 
@@ -374,6 +378,7 @@
 				playController.gameRun = [currentGame createGameRun];
 			}
 			[[self navigationController] pushViewController:playController animated:YES];
+			[playController release];
 		}
 			break;
 		case 2:
@@ -391,7 +396,7 @@
 			// Email
 		{
 			NSString *error;
-			NSDictionary *gameDict = [currentGame getAsExportDictionary];
+			NSDictionary *gameDict = [currentGame getCopyAsExportDictionary];
 			NSData *gameData = [NSPropertyListSerialization dataFromPropertyList:gameDict
 																		  format:NSPropertyListXMLFormat_v1_0
 																errorDescription:&error];
@@ -403,6 +408,7 @@
 				[mail addAttachmentData:gameData mimeType:@"application/xml" fileName:@"game.xml"];
 				[self presentModalViewController:mail animated:YES];				
 			}
+			[gameDict release];
 		}
 			break;
 		case 5:
