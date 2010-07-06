@@ -37,6 +37,7 @@
 	masterController.rootController = self.rootViewController;
 	NSArray *controllers = [NSArray arrayWithObjects:masterController,nav,nil];
 	splitController.viewControllers = controllers;
+	splitController.delegate = self.rootViewController;
 
 	// [window addSubview:nav.view];
 	[window addSubview:splitController.view];

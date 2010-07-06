@@ -436,4 +436,23 @@
 	}
 }
 
+#pragma mark -
+#pragma mark SplitViewController delegate
+
+- (void)splitViewController:(UISplitViewController*)svc popoverController:(UIPopoverController*)pc willPresentViewController:(UIViewController *)aViewController
+{
+	NSLog(@"Nothing to do");
+}
+
+- (void)splitViewController:(UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController:(UIPopoverController*)pc
+{
+	self.navigationItem.leftBarButtonItem = barButtonItem;
+}
+
+- (void)splitViewController:(UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)button
+{
+	// Hide the toolbar button
+	self.navigationItem.leftBarButtonItem = nil;	
+}
+
 @end

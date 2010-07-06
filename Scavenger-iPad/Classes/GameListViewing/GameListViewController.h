@@ -29,7 +29,8 @@
 								MKMapViewDelegate,
 								MenuPopupDelegate,
 								UINavigationControllerDelegate,
-								MFMailComposeViewControllerDelegate> {
+								MFMailComposeViewControllerDelegate,
+								UISplitViewControllerDelegate> {
 	NSManagedObjectContext *managedObjectContext;
 	NSFetchedResultsController *fetchedResultsController;
 	UIPopoverController *popOver;
