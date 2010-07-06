@@ -32,7 +32,7 @@
 	[window addSubview:nav.view];
     [window makeKeyAndVisible];
     
-	[nav release];
+	//[nav release];
 	
     return YES;
 }

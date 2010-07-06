@@ -385,7 +385,8 @@
 		{
 			GameEditViewController *editController = [[GameEditViewController alloc] initWithNibName:nil bundle:nil];
 			editController.game = currentGame;
-			[[self navigationController] pushViewController:editController animated:YES];
+			UINavigationController *nav = [self navigationController];
+			[nav pushViewController:editController animated:YES];
 			[editController release];
 		}		
 			break;
