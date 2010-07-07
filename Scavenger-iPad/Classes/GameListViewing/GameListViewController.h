@@ -34,10 +34,9 @@
 	NSManagedObjectContext *managedObjectContext;
 	NSFetchedResultsController *fetchedResultsController;
 	UIPopoverController *popOver;
-	UIBarButtonItem *locateButton;
 	
 	IBOutlet MKMapView* mapView;
-	BOOL scanningForLocation;
+	BOOL centerOnLocationUpdates;
 	GameObject *currentGame;	
 }
 
@@ -48,9 +47,6 @@
 
 -(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender;
 -(void) textChangedFrom: (GetTextPopupController *) sender;
-
--(IBAction) goOnline: (id) sender;
--(void) finishedOnline;
 
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender;
 -(void) reloadData;
@@ -64,8 +60,5 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) UIPopoverController *popOver;
 @property (nonatomic, retain) GameObject *currentGame;
-
-
-@property (nonatomic, retain) UIBarButtonItem *locateButton;
 
 @end

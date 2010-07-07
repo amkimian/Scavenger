@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.title = @"Hello";
+	self.title = @"Games";
 	locationTools = [[LocationTools alloc] init];
 	Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
 
@@ -89,17 +89,12 @@
     return YES;
 }
 
--(IBAction) done:(id) sender
-{
-	[rootController finishedOnline];
-}
-
 #pragma mark -
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 3;
+    return 2;
 }
 
 
@@ -110,15 +105,6 @@
 		case 0:
 			return [[self.rootController.fetchedResultsController fetchedObjects] count];
 		case 1:
-			if (locationTools.valid)
-			{
-				return 4;
-			}
-			else
-			{
-				return 0; // Until we find our location
-			}
-		case 2:
 			return [awsScavenger.searchResults count];
 	}
 	return 0;
@@ -130,10 +116,8 @@
 	{
 		case 0:
 			return @"Local Games";
-		case 1:
-			return @"Location";
 		case 2:
-			return @"Remote Games near your location";
+			return @"Remote Games";
 	}
 	return nil;
 }
@@ -161,29 +145,10 @@
 		}
 		case 1:
 		{
-			switch(indexPath.row)
-			{
-				case 0:
-					cell.textLabel.text = locationTools.postalCode;
-					break;
-				case 1:
-					cell.textLabel.text = locationTools.locality;
-					break;
-				case 2:
-					cell.textLabel.text = locationTools.administrativeArea;
-					break;
-				case 3:
-					cell.textLabel.text = locationTools.country;
-					break;
-			}
-			break;
-		}
-		case 2:
-			{
-				SimpleDbItem *item = [awsScavenger.searchResults objectAtIndex:indexPath.row];
-				cell.textLabel.text = item.name;
-			}
+			SimpleDbItem *item = [awsScavenger.searchResults objectAtIndex:indexPath.row];
+			cell.textLabel.text = item.name;
 			break;			
+		}
 	}
     return cell;
 }
@@ -232,14 +197,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-	/*
-	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-	 [self.navigationController pushViewController:detailViewController animated:YES];
-	 [detailViewController release];
-	 */
+ // Make the detail view center on this game
 }
 
 

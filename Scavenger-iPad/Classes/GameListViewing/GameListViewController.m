@@ -21,7 +21,6 @@
 @synthesize managedObjectContext;
 @synthesize fetchedResultsController;
 @synthesize popOver;
-@synthesize locateButton;
 @synthesize currentGame;
 
 /*
@@ -36,18 +35,22 @@
 
 -(void) locationChangeNotification: (NSNotification *) n
 {
-	Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
-	MKCoordinateRegion region = MKCoordinateRegionMake(ad.currentLocation.coordinate,
+	if (centerOnLocationUpdates == YES)
+	{
+		Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
+		MKCoordinateRegion region = MKCoordinateRegionMake(ad.currentLocation.coordinate,
 													   MKCoordinateSpanMake(0.01f, 0.01f));
-	[mapView setRegion:region animated:YES];
+		[mapView setRegion:region animated:YES];
+		centerOnLocationUpdates = NO;
+	}
 }
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	// Fetch the games and create the annotations...
-	self.title = @"Scavenger Games";
-	scanningForLocation = NO;
+	self.title = @"";
+	centerOnLocationUpdates = YES;
 	
 	// Register for location updates
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationChangeNotification:) name:@"locationChanged" object:nil];
@@ -62,18 +65,15 @@
 	// Also setup the toolbar items (we do it this way programattically...)
 	
 	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(chooseMapType:)];
-	UIBarButtonItem *onlineButton = [[UIBarButtonItem alloc] initWithTitle:@"Online" style:UIBarButtonItemStyleBordered target:self action:@selector(goOnline:)];
-	self.locateButton = [[UIBarButtonItem alloc] initWithTitle:@"Locate"  style:UIBarButtonItemStyleBordered target:self action:@selector(centerOnLocation:)];
 	UIBarButtonItem *flexibleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
 																			   target:nil
 																			   action:nil];
 	
-	NSArray *array = [[NSArray alloc] initWithObjects:flexibleButton,onlineButton,mapButton,self.locateButton, nil];	
+	NSArray *array = [[NSArray alloc] initWithObjects:flexibleButton,mapButton, nil];	
 	self.toolbarItems = array;
 	
 	[mapButton release];
 	[flexibleButton release];
-	[onlineButton release];
 	[array release];
 	
 	// Now need to fetch the games and put out the annotations...
@@ -110,21 +110,6 @@
 	[mapTypeController release];
 }
 
-/**
- * Show dialog to manage uploading of games, downloading of near games, deletion of existing online games
- */
-
--(IBAction) goOnline: (id) sender
-{
-	GameListOnlineViewController *onlineController = [[GameListOnlineViewController alloc] initWithNibName:nil bundle:nil];
-	onlineController.rootController = self;
-	[self presentModalViewController:onlineController animated:YES];
-}
-
--(void) finishedOnline
-{
-	[self dismissModalViewControllerAnimated:YES];
-}
 
 -(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender
 {
@@ -414,12 +399,14 @@
 - (void)splitViewController:(UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController:(UIPopoverController*)pc
 {
 	self.navigationItem.leftBarButtonItem = barButtonItem;
+	self.title = @"Scavenger Games";
 }
 
 - (void)splitViewController:(UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)button
 {
 	// Hide the toolbar button
 	self.navigationItem.leftBarButtonItem = nil;	
+	self.title = @"";
 }
 
 @end

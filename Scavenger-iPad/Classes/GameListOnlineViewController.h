@@ -24,7 +24,6 @@
 	LocationTools *locationTools;
 }
 
--(IBAction) done:(id) sender;
 -(IBAction) query:(id) sender;
 
 @property(nonatomic, retain) GameListViewController *rootController;
