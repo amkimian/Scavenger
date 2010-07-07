@@ -8,6 +8,7 @@
 
 #import "GameListOnlineViewController.h"
 #import "MenuPopupController.h"
+#import "Scavenger_iPadAppDelegate.h"
 
 @implementation GameListOnlineViewController
 @synthesize rootController;
@@ -26,7 +27,9 @@
 
 	self.title = @"Hello";
 	locationTools = [[LocationTools alloc] init];
-	locationTools.coordinate = rootController.currentLocation.coordinate;
+	Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
+
+	locationTools.coordinate = ad.currentLocation.coordinate;
 	locationTools.delegate = self;
 	self.awsScavenger = [[AWSScavenger alloc] init];
 	self.awsScavenger.delegate = self;

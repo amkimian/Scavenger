@@ -13,6 +13,8 @@
 
 @synthesize window;
 @synthesize rootViewController;
+@synthesize locManager;
+@synthesize currentLocation;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -44,7 +46,12 @@
     [window makeKeyAndVisible];
     
 	//[nav release];
-	
+
+	self.locManager = [[CLLocationManager alloc] init];
+	self.locManager.delegate = self;
+	self.locManager.desiredAccuracy = kCLLocationAccuracyBest;
+	self.locManager.distanceFilter = 5.0f;
+	[self.locManager startUpdatingLocation];
     return YES;
 }
 
@@ -162,6 +169,20 @@
 	[super dealloc];
 }
 
+#pragma mark -
+#pragma mark Location Manager delegateAuthenticationLock
+-(void) locationManager:(CLLocationManager *)manager didFailWithError: (NSError *) error
+{
+	NSLog(@"Location failed:%@", [error description]);
+}
+
+-(void) locationManager:(CLLocationManager *)manager didUpdateToLocation: (CLLocation *) newLocation fromLocation: (CLLocation *) oldLocation
+{
+	NSLog(@"New location");
+	self.currentLocation = newLocation;
+	// Notify anyone else who is interested
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"locationChanged" object:self];
+}
 
 @end
 

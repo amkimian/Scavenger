@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "GameListViewController.h"
 
-@interface Scavenger_iPadAppDelegate : NSObject <UIApplicationDelegate> {
+@interface Scavenger_iPadAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate> {
 
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;	    
@@ -18,6 +18,9 @@
 
     UIWindow *window;
 	GameListViewController *rootViewController;
+	CLLocationManager *locManager;
+	CLLocation *currentLocation;
+
 }
 
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
@@ -27,6 +30,10 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (nonatomic, retain) GameListViewController *rootViewController;
+
+@property (nonatomic, retain) CLLocationManager *locManager;
+@property (nonatomic, retain) CLLocation *currentLocation;
+
 
 - (NSString *)applicationDocumentsDirectory;
 

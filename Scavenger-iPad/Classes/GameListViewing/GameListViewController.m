@@ -15,13 +15,12 @@
 #import "GameObject+Export.h"
 #import "GameListOnlineViewController.h"
 #import "AWSScavenger.h"
+#import "Scavenger_iPadAppDelegate.h"
 
 @implementation GameListViewController
 @synthesize managedObjectContext;
 @synthesize fetchedResultsController;
 @synthesize popOver;
-@synthesize locManager;
-@synthesize currentLocation;
 @synthesize locateButton;
 @synthesize currentGame;
 
@@ -35,22 +34,12 @@
 }
 */
 
--(void) locationManager:(CLLocationManager *)manager didFailWithError: (NSError *) error
+-(void) locationChangeNotification: (NSNotification *) n
 {
-	NSLog(@"Location failed:%@", [error description]);
-	scanningForLocation = NO;
-	[self.locManager stopUpdatingLocation];
-	self.locateButton.title = @"Locate";
-}
-
--(void) locationManager:(CLLocationManager *)manager didUpdateToLocation: (CLLocation *) newLocation fromLocation: (CLLocation *) oldLocation
-{
-	NSLog(@"New location");
-	self.currentLocation = newLocation;
-	MKCoordinateRegion region = MKCoordinateRegionMake(newLocation.coordinate,
+	Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
+	MKCoordinateRegion region = MKCoordinateRegionMake(ad.currentLocation.coordinate,
 													   MKCoordinateSpanMake(0.01f, 0.01f));
 	[mapView setRegion:region animated:YES];
-	 
 }
 
 
@@ -59,10 +48,9 @@
 	// Fetch the games and create the annotations...
 	self.title = @"Scavenger Games";
 	scanningForLocation = NO;
-	self.locManager = [[CLLocationManager alloc] init];
-	self.locManager.delegate = self;
-	self.locManager.desiredAccuracy = kCLLocationAccuracyBest;
-	self.locManager.distanceFilter = 5.0f;
+	
+	// Register for location updates
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationChangeNotification:) name:@"locationChanged" object:nil];
 	
 	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
 																			   target:self
@@ -108,27 +96,6 @@
 
 #pragma -
 #pragma buttonActions
-
--(IBAction) centerOnLocation: (id) sender
-{
-	// Depending on whether we are toggling this button on or off, 
-	// start monitoring location or stop monitoring location
-	
-	// When the location comes in, if we are monitoring, center the map on that location with a region size of 0.01f (as a default)
-	// And then stop monitoring location (after a certain amount of time or when there is an error)
-	if (scanningForLocation == YES)
-	{
-		[self.locManager stopUpdatingLocation];
-		scanningForLocation = NO;
-		self.locateButton.title = @"Locate";
-	}
-	else
-	{
-		scanningForLocation = YES;
-		[self.locManager startUpdatingLocation];
-		self.locateButton.title = @"Stop";
-	}
-}
 
 -(IBAction) chooseMapType: (id) sender
 {

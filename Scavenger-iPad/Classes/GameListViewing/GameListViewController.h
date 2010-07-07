@@ -38,15 +38,12 @@
 	
 	IBOutlet MKMapView* mapView;
 	BOOL scanningForLocation;
-	CLLocationManager *locManager;
-	CLLocation *currentLocation;
 	GameObject *currentGame;	
 }
 
 -(void) insertNewObject;
 -(void) addAllAnnotations;
 
--(IBAction) centerOnLocation: (id) sender;
 -(IBAction) chooseMapType: (id) sender;
 
 -(void) changeMapType: (MKMapType) mapType from:(MapTypePopupController *) sender;
@@ -57,6 +54,7 @@
 
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender;
 -(void) reloadData;
+-(void) locationChangeNotification: (NSNotification *) n;
 
 - (NSFetchedResultsController *)fetchedResultsController;
 
@@ -67,8 +65,6 @@
 @property (nonatomic, retain) UIPopoverController *popOver;
 @property (nonatomic, retain) GameObject *currentGame;
 
-@property (nonatomic, retain) CLLocationManager *locManager;
-@property (nonatomic, retain) CLLocation *currentLocation;
 
 @property (nonatomic, retain) UIBarButtonItem *locateButton;
 
