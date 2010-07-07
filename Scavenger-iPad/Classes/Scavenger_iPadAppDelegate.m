@@ -29,18 +29,23 @@
 
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: self.rootViewController];
 	[nav setToolbarHidden:NO animated:YES];
-	nav.navigationBar.barStyle = UIBarStyleBlack;
-	nav.toolbar.barStyle = UIBarStyleBlack;
 	nav.delegate = self.rootViewController;
 	
 	UISplitViewController *splitController = [[UISplitViewController alloc] init];
 	
 	GameListOnlineViewController *masterController = [[GameListOnlineViewController alloc] initWithNibName:nil bundle:nil];
 	masterController.rootController = self.rootViewController;
-	NSArray *controllers = [NSArray arrayWithObjects:masterController,nav,nil];
+	
+	UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController: masterController];
+	[nav2 setToolbarHidden:NO animated:YES];
+	nav2.delegate = masterController;	
+	
+	NSArray *controllers = [NSArray arrayWithObjects:nav2,nav,nil];
 	splitController.viewControllers = controllers;
 	splitController.delegate = self.rootViewController;
 
+
+	
 	// [window addSubview:nav.view];
 	[window addSubview:splitController.view];
     [window makeKeyAndVisible];

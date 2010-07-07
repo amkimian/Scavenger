@@ -305,14 +305,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>77</integer>
-									<integer>75</integer>
+									<integer>83</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 996}, {275, 823}}</string>
+							<string>{{0, 846}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -349,7 +348,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameListViewController.m</string>
+								<string>Scavenger_iPadAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -357,11 +356,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameListViewController.m</string>
+										<string>Scavenger_iPadAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>151E433311E5041F0046D0C6</string>
+										<string>151E436611E507930046D0C6</string>
 										<key>history</key>
 										<array>
 											<string>153E5B2011CA991400DCDAC0</string>
@@ -464,12 +463,12 @@
 											<string>151E427911E3D2C30046D0C6</string>
 											<string>151E428E11E3D4260046D0C6</string>
 											<string>151E42B211E3D5F30046D0C6</string>
-											<string>151E430711E4D7590046D0C6</string>
 											<string>151E430811E4D7590046D0C6</string>
 											<string>151E432211E5032C0046D0C6</string>
-											<string>151E432311E5032C0046D0C6</string>
-											<string>151E432A11E503CF0046D0C6</string>
-											<string>151E432B11E503CF0046D0C6</string>
+											<string>151E433D11E505390046D0C6</string>
+											<string>151E434C11E505EB0046D0C6</string>
+											<string>151E436411E507930046D0C6</string>
+											<string>151E436511E507930046D0C6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -650,7 +649,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300221471.06297302</real>
+	<real>300222355.30897999</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
