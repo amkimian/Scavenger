@@ -16,6 +16,7 @@
 #import "GameListOnlineViewController.h"
 #import "AWSScavenger.h"
 #import "Scavenger_iPadAppDelegate.h"
+#import "LocationPointObject.h"
 
 @implementation GameListViewController
 @synthesize managedObjectContext;
@@ -45,6 +46,17 @@
 	}
 }
 
+-(void) centerOnGame: (GameObject *) game
+{
+	self.currentGame = game;
+	CLLocationCoordinate2D coord;
+	LocationObject *startLocation = [game getLocationOfType:LTYPE_START];
+	coord.latitude = [startLocation.firstPoint.latitude floatValue];
+	coord.longitude = [startLocation.firstPoint.longitude floatValue];
+	MKCoordinateRegion region = MKCoordinateRegionMake(coord,
+													   MKCoordinateSpanMake(0.01f, 0.01f));
+	[mapView setRegion:region animated:YES];	
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -257,6 +269,10 @@
 			{
 				customPinView.pinColor = MKPinAnnotationColorGreen;
 			}
+			else if (g == self.currentGame)
+			{
+				customPinView.pinColor = MKPinAnnotationColorRed;
+			}
 			else
 			{
 				customPinView.pinColor = MKPinAnnotationColorPurple;
@@ -400,14 +416,14 @@
 {
 	barButtonItem.title = @"Games";
 	self.navigationItem.leftBarButtonItem = barButtonItem;
-	self.title = @"Scavenger Games";
+	self.title = @"Scavenger";
 }
 
 - (void)splitViewController:(UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)button
 {
 	// Hide the toolbar button
 	self.navigationItem.leftBarButtonItem = nil;	
-	self.title = @"";
+	self.title = @"Scavenger";
 }
 
 @end

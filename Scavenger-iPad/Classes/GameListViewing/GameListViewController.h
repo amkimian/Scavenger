@@ -55,6 +55,7 @@
 - (NSFetchedResultsController *)fetchedResultsController;
 
 -(void) addGameAnnotation: (GameObject *) game;
+-(void) centerOnGame: (GameObject *) game;
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;

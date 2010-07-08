@@ -140,7 +140,7 @@
 		{
 			GameObject *game = (GameObject *) [[self.rootController.fetchedResultsController fetchedObjects] objectAtIndex:indexPath.row];
 			cell.textLabel.text = game.name;
-			cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			break;
 		}
 		case 1:
@@ -198,6 +198,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
  // Make the detail view center on this game
+	[rootController centerOnGame: (GameObject *) [[self.rootController.fetchedResultsController fetchedObjects] objectAtIndex:indexPath.row]];	
 }
 
 
