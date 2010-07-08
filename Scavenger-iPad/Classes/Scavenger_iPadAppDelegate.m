@@ -15,6 +15,7 @@
 @synthesize rootViewController;
 @synthesize locManager;
 @synthesize currentLocation;
+@synthesize awsScavenger;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -26,6 +27,9 @@
 	self.rootViewController = [[GameListViewController alloc] initWithNibName:nil bundle:nil];
 	self.rootViewController.managedObjectContext = self.managedObjectContext;
 	[self.rootViewController reloadData];
+
+	self.awsScavenger = [[AWSScavenger alloc] init];
+	self.awsScavenger.delegate = self;
 
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: self.rootViewController];
 	[nav setToolbarHidden:NO animated:YES];
@@ -187,6 +191,13 @@
 	self.currentLocation = newLocation;
 	// Notify anyone else who is interested
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"locationChanged" object:self];
+}
+
+#pragma mark -
+#pragma mark AWSDataChanged Delegate
+
+-(void) awsDataChanged
+{
 }
 
 @end

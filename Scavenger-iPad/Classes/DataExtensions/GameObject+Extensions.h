@@ -19,9 +19,13 @@
 -(void) removeLocationOfType: (LocationType) type;
 -(void) removeLocationObject: (LocationObject *) loc;
 -(void) addLocationToDefaultRoute: (LocationObject *) loc;
+-(float) latitude;
+-(float) longitude;
 
 -(GameRunObject *) createGameRun;
 -(BOOL) canResume;
+
+-(NSString *) distanceFromCurrentLocation;
 
 @end
 

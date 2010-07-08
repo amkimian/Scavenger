@@ -83,6 +83,10 @@
 	// Name is deviceId + Name
 	// Attributes...
 	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Publishing" message:@"Publishing game" delegate:nil 
+										  cancelButtonTitle:nil otherButtonTitles:nil];
+	[alert show];
+	
 	[self unpublishGame: game];
 	
 	NSString *itemName = [NSString stringWithFormat:@"%@-%@", [UIDevice currentDevice].uniqueIdentifier, game.name];
@@ -125,6 +129,8 @@
 	{
 		NSLog(@"There is nothing to publish!");
 	}
+	[alert dismissWithClickedButtonIndex:0 animated:YES];
+	[alert release];
 }
 
 

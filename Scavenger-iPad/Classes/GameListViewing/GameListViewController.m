@@ -43,6 +43,7 @@
 													   MKCoordinateSpanMake(0.01f, 0.01f));
 		[mapView setRegion:region animated:YES];
 		centerOnLocationUpdates = NO;
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"gamesChanged" object:self];
 	}
 }
 
@@ -311,11 +312,11 @@
 	self.currentGame = (GameObject *) view.annotation;	
 	if ([currentGame canResume])
 	{
-		controller.menuStrings = [[NSArray alloc] initWithObjects:@"Resume",@"Play",@"Edit",@"Transmit",@"Mail",@"Delete", nil];
+		controller.menuStrings = [[NSArray alloc] initWithObjects:@"Resume",@"Play",@"Edit",@"Publish",@"Delete", nil];
 	}
 	else
 	{
-		controller.menuStrings = [[NSArray alloc] initWithObjects:@"Play",@"Edit",@"Transmit",@"Mail",@"Delete", nil];
+		controller.menuStrings = [[NSArray alloc] initWithObjects:@"Play",@"Edit",@"Publish",@"Delete", nil];
 	}
 	
 	self.popOver = [[UIPopoverController alloc] initWithContentViewController:controller];
@@ -366,28 +367,13 @@
 		}		
 			break;
 		case 3:
-			// Transmit
-			break;
-		case 4:
-			// Email
+			// Publish
 		{
-			NSString *error;
-			NSDictionary *gameDict = [currentGame getCopyAsExportDictionary];
-			NSData *gameData = [NSPropertyListSerialization dataFromPropertyList:gameDict
-																		  format:NSPropertyListXMLFormat_v1_0
-																errorDescription:&error];
-			if (gameData)
-			{
-				MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
-				mail.mailComposeDelegate = self;
-				[mail setSubject:currentGame.name];
-				[mail addAttachmentData:gameData mimeType:@"application/xml" fileName:@"game.xml"];
-				[self presentModalViewController:mail animated:YES];				
-			}
-			[gameDict release];
-		}
+			Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
+			[ad.awsScavenger publishGame:self.currentGame];			
 			break;
-		case 5:
+		}
+		case 4:
 			// Delete
 			[[self managedObjectContext] deleteObject:currentGame];
 			currentGame = nil;

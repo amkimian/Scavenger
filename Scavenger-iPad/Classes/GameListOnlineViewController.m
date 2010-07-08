@@ -16,7 +16,7 @@
 @synthesize geocoder;
 @synthesize currentGame;
 @synthesize popOver;
-@synthesize awsScavenger;
+
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -31,8 +31,6 @@
 
 	locationTools.coordinate = ad.currentLocation.coordinate;
 	locationTools.delegate = self;
-	self.awsScavenger = [[AWSScavenger alloc] init];
-	self.awsScavenger.delegate = self;
 	[locationTools resolveGeocode];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gamesChangeNotification:) name:@"gamesChanged" object:nil];
 }
@@ -111,7 +109,10 @@
 		case 0:
 			return [[self.rootController.fetchedResultsController fetchedObjects] count];
 		case 1:
-			return [awsScavenger.searchResults count];
+		{
+			Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
+			return [ad.awsScavenger.searchResults count];
+		}
 	}
 	return 0;
 }
@@ -135,7 +136,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
@@ -146,12 +147,15 @@
 		{
 			GameObject *game = (GameObject *) [[self.rootController.fetchedResultsController fetchedObjects] objectAtIndex:indexPath.row];
 			cell.textLabel.text = game.name;
+			// The alternate label is the distance of this game from the current location
+			cell.detailTextLabel.text = [game distanceFromCurrentLocation];
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			break;
 		}
 		case 1:
 		{
-			SimpleDbItem *item = [awsScavenger.searchResults objectAtIndex:indexPath.row];
+			Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
+			SimpleDbItem *item = [ad.awsScavenger.searchResults objectAtIndex:indexPath.row];
 			cell.textLabel.text = item.name;
 			break;			
 		}
@@ -250,6 +254,7 @@
 
 -(void) didSelectItem: (NSUInteger) item from:(MenuPopupController *) sender
 {
+	/*
 	if (sender.tag == 1)
 	{
 		[self.popOver dismissPopoverAnimated:YES];
@@ -305,12 +310,9 @@
 		}
 		[self dismissModalViewControllerAnimated:YES];
 	}
+	 */
 }
 
--(void) awsDataChanged
-{
-	[mainTable reloadData];
-}
 
 @end
 

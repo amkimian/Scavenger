@@ -14,6 +14,8 @@
 #import "HardwareObject+Extensions.h"
 #import "GameRunObject+Extensions.h"
 
+#import "Scavenger_iPadAppDelegate.h"
+
 @implementation GameObject(Extensions)
 
 -(BOOL) canResume
@@ -137,6 +139,35 @@
 	ret.longitude = [centerPoint.firstPoint.longitude floatValue];
 	return ret;
 }
+
+-(float) latitude
+{
+	LocationObject *centerPoint = [self getLocationOfType: LTYPE_START];
+	return  [centerPoint.firstPoint.latitude floatValue];	
+}
+
+-(float) longitude
+{
+	LocationObject *centerPoint = [self getLocationOfType: LTYPE_START];
+	return  [centerPoint.firstPoint.longitude floatValue];	
+}
+
+-(NSString *) distanceFromCurrentLocation
+{
+	Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
+	if (ad.currentLocation)
+	{
+		CLLocation *currentLoc = ad.currentLocation;
+		CLLocation *otherLoc = [[CLLocation alloc] initWithLatitude:[self latitude] longitude:[self longitude]];
+		CLLocationDistance dist = [currentLoc distanceFromLocation:otherLoc];
+		return [NSString stringWithFormat: @"%0.2f km", dist/1000];
+	}
+	else
+	{
+		return @"";
+	}
+}
+
 
 /**
  * This is a new location that needs to be added to the special

@@ -34,7 +34,7 @@
 	NSManagedObjectContext *managedObjectContext;
 	NSFetchedResultsController *fetchedResultsController;
 	UIPopoverController *popOver;
-	
+
 	IBOutlet MKMapView* mapView;
 	BOOL centerOnLocationUpdates;
 	GameObject *currentGame;	

@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "GameListViewController.h"
+#import "AWSScavenger.h"
 
-@interface Scavenger_iPadAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate> {
+@interface Scavenger_iPadAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate,AWSDataChangedDelegate> {
 
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;	    
@@ -20,7 +21,7 @@
 	GameListViewController *rootViewController;
 	CLLocationManager *locManager;
 	CLLocation *currentLocation;
-
+	AWSScavenger *awsScavenger;	
 }
 
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
@@ -33,7 +34,7 @@
 
 @property (nonatomic, retain) CLLocationManager *locManager;
 @property (nonatomic, retain) CLLocation *currentLocation;
-
+@property (nonatomic, retain) AWSScavenger *awsScavenger;
 
 - (NSString *)applicationDocumentsDirectory;
 
