@@ -34,9 +34,15 @@
 	self.awsScavenger = [[AWSScavenger alloc] init];
 	self.awsScavenger.delegate = self;
 	[locationTools resolveGeocode];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gamesChangeNotification:) name:@"gamesChanged" object:nil];
 }
 
 -(void) locationFound
+{
+	[mainTable reloadData];
+}
+
+-(void) gamesChangeNotification: (NSNotification *) n
 {
 	[mainTable reloadData];
 }

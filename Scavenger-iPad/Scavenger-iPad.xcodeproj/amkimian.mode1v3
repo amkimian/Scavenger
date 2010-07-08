@@ -312,7 +312,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 708}, {275, 823}}</string>
+							<string>{{0, 906}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -361,7 +361,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>151E439A11E56DD20046D0C6</string>
+										<string>151E43AF11E56F6F0046D0C6</string>
 										<key>history</key>
 										<array>
 											<string>153E5B2011CA991400DCDAC0</string>
@@ -465,11 +465,11 @@
 											<string>151E428E11E3D4260046D0C6</string>
 											<string>151E42B211E3D5F30046D0C6</string>
 											<string>151E430811E4D7590046D0C6</string>
-											<string>151E436D11E569BE0046D0C6</string>
-											<string>151E439011E56D570046D0C6</string>
-											<string>151E439111E56D570046D0C6</string>
 											<string>151E439211E56D570046D0C6</string>
-											<string>151E439311E56D570046D0C6</string>
+											<string>151E439F11E56EB50046D0C6</string>
+											<string>151E43A011E56EB50046D0C6</string>
+											<string>151E43A611E56F2A0046D0C6</string>
+											<string>151E43AD11E56F6C0046D0C6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -650,7 +650,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300248530.94739401</real>
+	<real>300248943.345514</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -696,7 +696,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameListOnlineViewController.m</string>
+								<string>GameListViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

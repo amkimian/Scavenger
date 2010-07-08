@@ -26,6 +26,7 @@ AWSDataChangedDelegate, UINavigationControllerDelegate> {
 }
 
 -(IBAction) query:(id) sender;
+-(void) gamesChangeNotification: (NSNotification *) n;
 
 @property(nonatomic, retain) GameListViewController *rootController;
 @property(nonatomic, retain) MKPlacemark *placemark;

@@ -158,6 +158,8 @@
 	[[game newLocationOfType:LTYPE_START at:mapView.centerCoordinate] release];
 	
 	[self addGameAnnotation: game];
+	[self reloadData];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"gamesChanged" object:self];
 }
 
 /**
@@ -390,6 +392,7 @@
 			[[self managedObjectContext] deleteObject:currentGame];
 			currentGame = nil;
 			[self addAllAnnotations];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"gamesChanged" object:self];
 			break;
 	}
 	[self.popOver dismissPopoverAnimated:YES];
@@ -401,6 +404,7 @@
 	if (viewController == self)
 	{
 		[self addAllAnnotations];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"gamesChanged" object:self];
 	}
 }
 
