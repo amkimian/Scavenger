@@ -26,13 +26,28 @@
     [super viewDidLoad];
 
 	self.title = @"Games";
-	locationTools = [[LocationTools alloc] init];
-	Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
 
+	/*
+	locationTools = [[LocationTools alloc] init];	
+	Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
 	locationTools.coordinate = ad.currentLocation.coordinate;
 	locationTools.delegate = self;
 	[locationTools resolveGeocode];
+	*/
+	
+	// Add refresh toolbar button at bottom
+	
+	UIBarButtonItem *queryButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(query:)];
+	UIBarButtonItem *flexibleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+																					target:nil
+																					action:nil];
+	
+	NSArray *array = [[NSArray alloc] initWithObjects:flexibleButton,queryButton, nil];	
+	self.toolbarItems = array;
+	//self.navigationController.toolbarHidden = NO;
+	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gamesChangeNotification:) name:@"gamesChanged" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gamesChangeNotification:) name:@"awsChanged" object:nil];
 }
 
 -(void) locationFound
@@ -47,6 +62,20 @@
 
 -(IBAction) query:(id) sender
 {
+	// The sender will be a bar button item so we can present a pop up controller from there?
+	
+	// Otherwise, simply perform a query to get the results
+	// When we get a notification that new results are available, bring them in by refreshing
+	// this views table.
+	
+	NSString *query = [NSString stringWithFormat:@"select * from scgames"];
+	Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
+	
+	[ad.awsScavenger performSelect:query];
+
+	// Get query information from app delegate which should have our reverse geocode location
+	
+	/*
 	MenuPopupController *controller = [[MenuPopupController alloc] initWithStyle:UITableViewStyleGrouped];
 	controller.sectionTitle = @"Search Criteria";
 	NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -63,7 +92,7 @@
 	//[self.popOver setPopoverContentSize:controller.view.bounds.size];
 	[self.popOver presentPopoverFromBarButtonItem:(UIBarButtonItem *) sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 	[controller release];
-
+	*/
 }
 
 /*
@@ -123,7 +152,7 @@
 	{
 		case 0:
 			return @"Local Games";
-		case 2:
+		case 1:
 			return @"Remote Games";
 	}
 	return nil;
@@ -156,11 +185,37 @@
 		{
 			Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
 			SimpleDbItem *item = [ad.awsScavenger.searchResults objectAtIndex:indexPath.row];
-			cell.textLabel.text = item.name;
+			SimpleDbAttribute *nameAttr = (SimpleDbAttribute *) [item.attributes valueForKey:@"Name"];
+			cell.textLabel.text = nameAttr.value;
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			cell.detailTextLabel.text = [self getDistanceTextForItem: item];
 			break;			
 		}
 	}
     return cell;
+}
+
+-(NSString *) getDistanceTextForItem: (SimpleDbItem *) item
+{
+	SimpleDbAttribute *latAttr = [item.attributes valueForKey:@"Latitude"];
+	SimpleDbAttribute *longAttr = [item.attributes valueForKey:@"Longitude"];
+	
+	double latitude = [latAttr.value doubleValue];
+	double longitude = [longAttr.value doubleValue];
+	
+	NSLog(@"Latitude %@, long %@", latAttr.value, longAttr.value);
+	Scavenger_iPadAppDelegate *ad = (Scavenger_iPadAppDelegate *) [UIApplication sharedApplication].delegate;
+	if (ad.currentLocation)
+	{
+		CLLocation *currentLoc = ad.currentLocation;
+		CLLocation *otherLoc = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+		CLLocationDistance dist = [currentLoc distanceFromLocation:otherLoc];
+		return [NSString stringWithFormat: @"%0.2f km", dist/1000];
+	}
+	else
+	{
+		return @"";
+	}	
 }
 
 /*

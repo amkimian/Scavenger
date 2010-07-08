@@ -305,14 +305,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
-									<integer>9</integer>
+									<integer>80</integer>
+									<integer>75</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {275, 823}}</string>
+							<string>{{0, 884}, {275, 823}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -349,7 +349,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AWSScavenger.m</string>
+								<string>GameListOnlineViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -357,11 +357,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AWSScavenger.m</string>
+										<string>GameListOnlineViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>151E440511E61C490046D0C6</string>
+										<string>151E445911E623DD0046D0C6</string>
 										<key>history</key>
 										<array>
 											<string>153E5B2011CA991400DCDAC0</string>
@@ -461,15 +461,16 @@
 											<string>151E427711E3D2C30046D0C6</string>
 											<string>151E427911E3D2C30046D0C6</string>
 											<string>151E42B211E3D5F30046D0C6</string>
-											<string>151E43C211E572050046D0C6</string>
-											<string>151E43DA11E5732F0046D0C6</string>
 											<string>151E43F311E58A0C0046D0C6</string>
 											<string>151E43F411E58A0C0046D0C6</string>
-											<string>151E43F511E58A0C0046D0C6</string>
-											<string>151E43F611E58A0C0046D0C6</string>
-											<string>151E43F711E58A0C0046D0C6</string>
-											<string>151E43F811E58A0C0046D0C6</string>
-											<string>151E428E11E3D4260046D0C6</string>
+											<string>151E440D11E61E270046D0C6</string>
+											<string>151E441911E61ECC0046D0C6</string>
+											<string>151E441A11E61ECC0046D0C6</string>
+											<string>151E443011E620760046D0C6</string>
+											<string>151E444F11E623540046D0C6</string>
+											<string>151E445011E623540046D0C6</string>
+											<string>151E445111E623540046D0C6</string>
+											<string>151E445211E623540046D0C6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -650,7 +651,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300293193.32543403</real>
+	<real>300295133.970909</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -669,10 +670,10 @@
 	<array>
 		<string>151E428411E3D3140046D0C6</string>
 		<string>151E427E11E3D2C30046D0C6</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/amkimian/Development/Scavenger/Scavenger-iPad/Scavenger-iPad.xcodeproj</string>
 		<string>155BE54711C92BF00019A783</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 	</array>
 	<key>WindowString</key>
 	<string>133 65 1680 882 0 0 1680 1028 </string>
@@ -696,7 +697,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AWSScavenger.m</string>
+								<string>GameListOnlineViewController.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -891,7 +892,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

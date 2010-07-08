@@ -198,6 +198,7 @@
 
 -(void) awsDataChanged
 {
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"awsChanged" object:self];
 }
 
 @end

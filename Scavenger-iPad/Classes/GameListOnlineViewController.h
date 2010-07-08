@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "GameListViewController.h"
 #import "GameObject.h"
+#import "AWSScavenger.h"
 
 #import "LocationTools.h"
 
@@ -22,11 +23,12 @@ UINavigationControllerDelegate> {
 	GameObject *currentGame;
 	UIPopoverController *popOver;
 
-	LocationTools *locationTools;
+//	LocationTools *locationTools;
 }
 
 -(IBAction) query:(id) sender;
 -(void) gamesChangeNotification: (NSNotification *) n;
+-(NSString *) getDistanceTextForItem: (SimpleDbItem *) item;
 
 @property(nonatomic, retain) GameListViewController *rootController;
 @property(nonatomic, retain) MKPlacemark *placemark;
