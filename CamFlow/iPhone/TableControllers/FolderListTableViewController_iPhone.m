@@ -1,42 +1,55 @@
 //
-//  TopLevelMenu_iPhone.m
+//  FolderListTableViewController.m
 //  CamFlow
 //
 //  Created by Alan Moore on 7/10/10.
 //  Copyright 2010 Mount Diablo Software. All rights reserved.
 //
 
-#import "TopLevelMenu_iPhone.h"
 #import "FolderListTableViewController_iPhone.h"
 
-@implementation TopLevelMenu_iPhone
 
+@implementation FolderListTableViewController_iPhone
+@synthesize camMode;
 
 #pragma mark -
 #pragma mark Initialization
 
-/*
+
 - (id)initWithStyle:(UITableViewStyle)style {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
     if ((self = [super initWithStyle:style])) {
+		UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+																				   target:self
+																				   action:@selector(insertNewObject)];
+		
+		NSArray *array = [[NSArray alloc] initWithObjects:addButton, nil];	
+		self.toolbarItems = array;
+		self.navigationItem.rightBarButtonItem = self.editButtonItem;
+		self.navigationController.toolbarHidden = NO;
+		//self.navigationItem.leftBarButtonItem = self.editButtonItem;
     }
     return self;
 }
-*/
+
+
+-(void) insertNewObject: (id) sender
+{
+	
+}
 
 
 #pragma mark -
 #pragma mark View lifecycle
 
-
+/*
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.title = @"CamFlow";
-	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+*/
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -72,13 +85,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 3;
+    return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return 0;
 }
 
 
@@ -92,18 +105,6 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	switch(indexPath.section)
-	{
-		case 0:
-			cell.textLabel.text = @"Cam Mode";
-			break;
-		case 1:
-			cell.textLabel.text = @"View Mode";
-			break;
-		case 2:
-			cell.textLabel.text = @"Settings";
-			break;
-	}
     // Configure the cell...
     
     return cell;
@@ -155,19 +156,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-	// CamMode, ViewMode or Settings
-	switch(indexPath.section)
-	{
-		case 0:
-		case 1:
-		{
-			FolderListTableViewController_iPhone *c = [[FolderListTableViewController_iPhone alloc] initWithStyle:UITableViewStylePlain];
-			[self.navigationController pushViewController:c animated:YES];
-			[c release];
-		}
-			break;
-	}
-	
 	/*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...

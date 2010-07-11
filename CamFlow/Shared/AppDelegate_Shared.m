@@ -12,7 +12,7 @@
 @implementation AppDelegate_Shared
 
 @synthesize window;
-
+@synthesize fetchedResultsController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -119,6 +119,56 @@
     
     return persistentStoreCoordinator_;
 }
+
+-(void) reloadData
+{
+	NSError *error;
+	
+	if (![[self fetchedResultsController] performFetch: &error])
+	{
+		NSLog(@"Could not load data: %@", [error description ]);
+	}	
+}
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+	// if a fetched results controller has already been initialized
+	if (fetchedResultsController != nil)
+		return fetchedResultsController; // return the controller
+	
+	// create the fetch request for the entity
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	
+	// edit the entity name as appropriate.
+	NSEntityDescription *entity = [NSEntityDescription entityForName:
+								   @"CamFolder" inManagedObjectContext:managedObjectContext_];
+	[fetchRequest setEntity:entity];
+	
+	// edit the sort key as appropriate.
+	NSSortDescriptor *sortDescriptor =
+	[[NSSortDescriptor alloc] initWithKey:@"folderName" ascending:YES];
+	NSArray *sortDescriptors =
+	[[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	
+	[fetchRequest setSortDescriptors:sortDescriptors];
+	
+	// edit the section name key path and cache name if appropriate
+	// nil for section name key path means "no sections"
+	NSFetchedResultsController *aFetchedResultsController =
+	[[NSFetchedResultsController alloc] initWithFetchRequest:
+	 fetchRequest managedObjectContext:managedObjectContext_
+										  sectionNameKeyPath:nil cacheName:@"Root"];
+	
+	aFetchedResultsController.delegate = self;
+	self.fetchedResultsController = aFetchedResultsController;
+	
+	[aFetchedResultsController release]; // release temporary controller
+	[fetchRequest release]; // release fetchRequest NSFetcheRequest
+	[sortDescriptor release]; // release sortDescriptor NSSortDescriptor
+	[sortDescriptors release]; // release sortDescriptor NSArray
+	
+	return fetchedResultsController;
+}  
 
 
 #pragma mark -

@@ -20,6 +20,7 @@
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
 		E707CF5111E95C4700FCBAEE /* TopLevelMenu_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E707CF5011E95C4700FCBAEE /* TopLevelMenu_iPhone.m */; };
 		E707CF8711E95EC600FCBAEE /* CamFolderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E707CF8611E95EC600FCBAEE /* CamFolderObject.m */; };
+		E707CFA311E961E500FCBAEE /* FolderListTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		E707CF5011E95C4700FCBAEE /* TopLevelMenu_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopLevelMenu_iPhone.m; path = TableControllers/TopLevelMenu_iPhone.m; sourceTree = "<group>"; };
 		E707CF8511E95EC600FCBAEE /* CamFolderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamFolderObject.h; sourceTree = "<group>"; };
 		E707CF8611E95EC600FCBAEE /* CamFolderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamFolderObject.m; sourceTree = "<group>"; };
+		E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderListTableViewController_iPhone.h; path = TableControllers/FolderListTableViewController_iPhone.h; sourceTree = "<group>"; };
+		E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderListTableViewController_iPhone.m; path = TableControllers/FolderListTableViewController_iPhone.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 			children = (
 				E707CF4F11E95C4700FCBAEE /* TopLevelMenu_iPhone.h */,
 				E707CF5011E95C4700FCBAEE /* TopLevelMenu_iPhone.m */,
+				E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */,
+				E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */,
 			);
 			name = TableControllers;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 				2860E38A111B897F00E27156 /* AppDelegate_iPhone.m in Sources */,
 				E707CF5111E95C4700FCBAEE /* TopLevelMenu_iPhone.m in Sources */,
 				E707CF8711E95EC600FCBAEE /* CamFolderObject.m in Sources */,
+				E707CFA311E961E500FCBAEE /* FolderListTableViewController_iPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

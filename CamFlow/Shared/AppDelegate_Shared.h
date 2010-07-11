@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface AppDelegate_Shared : NSObject <UIApplicationDelegate> {
+@interface AppDelegate_Shared : NSObject <UIApplicationDelegate, NSFetchedResultsControllerDelegate> {
     
     UIWindow *window;
+	NSFetchedResultsController *fetchedResultsController;
     
 @private
     NSManagedObjectContext *managedObjectContext_;
@@ -19,11 +20,15 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator_;
 }
 
+- (NSFetchedResultsController *)fetchedResultsController;
+-(void) reloadData;
+
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 - (NSString *)applicationDocumentsDirectory;
 

@@ -8,6 +8,7 @@
 
 #import "AppDelegate_iPhone.h"
 #import "TopLevelMenu_iPhone.h"
+#import "FolderListTableViewController_iPhone.h"
 
 @implementation AppDelegate_iPhone
 
@@ -19,10 +20,19 @@
 	
     // Override point for customization after application launch.
 
-	TopLevelMenu_iPhone *controller = [[TopLevelMenu_iPhone alloc] initWithStyle:UITableViewStyleGrouped];
-	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+	// use a tab controller
 	
-	[window addSubview:nav.view];
+	FolderListTableViewController_iPhone *camController = [[FolderListTableViewController_iPhone alloc] initWithStyle:UITableViewStylePlain];
+	FolderListTableViewController_iPhone *viewController = [[FolderListTableViewController_iPhone alloc] initWithStyle:UITableViewStylePlain];
+
+	NSArray *controllers = [[NSArray alloc ]initWithObjects: camController, viewController, nil];
+	
+	UITabBarController *tc = [[UITabBarController alloc] init];
+	tc.viewControllers = controllers;
+	tc.customizableViewControllers = controllers;
+	tc.delegate = self;
+	
+	[window addSubview:tc.view];
     [window makeKeyAndVisible];
 	
 	return YES;
