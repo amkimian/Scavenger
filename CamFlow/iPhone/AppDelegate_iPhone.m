@@ -20,12 +20,20 @@
 	
     // Override point for customization after application launch.
 
+	NSManagedObjectContext *ctx = self.managedObjectContext;
+
+	[self checkForDefaultFolder];
+	// Use this to setup the context
 	// use a tab controller
 	
-	FolderListTableViewController_iPhone *camController = [[FolderListTableViewController_iPhone alloc] initWithStyle:UITableViewStylePlain andType:FolderType_CamMode];
-	FolderListTableViewController_iPhone *viewController = [[FolderListTableViewController_iPhone alloc] initWithStyle:UITableViewStylePlain andType:FolderType_PlayMode];
+	FolderListTableViewController_iPhone *camController = [[FolderListTableViewController_iPhone alloc] initWithStyle:UITableViewStyleGrouped andType:FolderType_CamMode];
+	FolderListTableViewController_iPhone *viewController = [[FolderListTableViewController_iPhone alloc] initWithStyle:UITableViewStyleGrouped andType:FolderType_PlayMode];
 
-	NSArray *controllers = [[NSArray alloc ]initWithObjects: camController, viewController, nil];
+	UINavigationController *camNav = [[UINavigationController alloc] initWithRootViewController:camController];
+	camNav.toolbarHidden = NO;
+	UINavigationController *playNav = [[UINavigationController alloc] initWithRootViewController:viewController];
+	playNav.toolbarHidden = NO;
+	NSArray *controllers = [[NSArray alloc ]initWithObjects: camNav, playNav, nil];
 	
 	UITabBarController *tc = [[UITabBarController alloc] init];
 	tc.viewControllers = controllers;

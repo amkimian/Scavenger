@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+#define APPDELEGATE (AppDelegate_Shared *) [UIApplication sharedApplication].delegate
+
 @interface AppDelegate_Shared : NSObject <UIApplicationDelegate, NSFetchedResultsControllerDelegate> {
     
     UIWindow *window;
@@ -22,6 +24,7 @@
 
 - (NSFetchedResultsController *)fetchedResultsController;
 -(void) reloadData;
+-(void) checkForDefaultFolder;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 

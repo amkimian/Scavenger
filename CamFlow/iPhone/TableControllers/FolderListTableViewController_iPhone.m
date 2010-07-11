@@ -7,7 +7,8 @@
 //
 
 #import "FolderListTableViewController_iPhone.h"
-
+#import "AppDelegate_iPhone.h"
+#import "CamFolderObject.h"
 
 @implementation FolderListTableViewController_iPhone
 @synthesize folderType;
@@ -22,7 +23,7 @@
     if ((self = [super initWithStyle:style])) {
 		UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
 																				   target:self
-																				   action:@selector(insertNewObject)];
+																				   action:@selector(insertNewObject:)];
 		
 		NSArray *array = [[NSArray alloc] initWithObjects:addButton, nil];	
 		self.toolbarItems = array;
@@ -36,10 +37,12 @@
 			case FolderType_CamMode:	
 				self.tabBarItem.image = [UIImage imageNamed:@"86-camera.png"];
 				self.tabBarItem.title = @"Camera";
+				self.title = @"Camera";
 				break;
 			case FolderType_PlayMode:
 				self.tabBarItem.image = [UIImage imageNamed:@"45-movie1.png"];
 				self.tabBarItem.title = @"Play";
+				self.title = @"Play";
 				break;
 		}
     }
@@ -99,13 +102,21 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 0;
+	if (section == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;
+		return [ip.fetchedResultsController.fetchedObjects count];
+	}
 }
 
 
@@ -119,19 +130,39 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell...
-    
+	if (indexPath.section == 0)
+	{
+		if (self.folderType == FolderType_CamMode)
+		{
+			cell.textLabel.text = @"Please select a stream to save the camera images to";
+		}
+		else
+		{
+			cell.textLabel.text = @"Please select a stream to view";
+		}
+	}
+	else
+	{
+		// Configure the cell...
+		AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;
+		CamFolderObject *folder = [ip.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
+		cell.textLabel.text = folder.folderName;
+	}
     return cell;
 }
 
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
+	if (indexPath.section == 0)
+	{
+		return NO;
+	}
     return YES;
 }
-*/
+
 
 
 /*

@@ -298,8 +298,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>6</integer>
+									<integer>12</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
@@ -342,7 +341,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FolderListTableViewController_iPhone.h</string>
+								<string>FolderListTableViewController_iPhone.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -350,26 +349,28 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FolderListTableViewController_iPhone.h</string>
+										<string>FolderListTableViewController_iPhone.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E707D05111EA13A600FCBAEE</string>
+										<string>E707D0DC11EA1BB500FCBAEE</string>
 										<key>history</key>
 										<array>
 											<string>E707CF5A11E95D0800FCBAEE</string>
-											<string>E707CF5C11E95D0800FCBAEE</string>
-											<string>E707CF5D11E95D0800FCBAEE</string>
 											<string>E707CF5E11E95D0800FCBAEE</string>
 											<string>E707CF6011E95D0800FCBAEE</string>
-											<string>E707CFF511E9644E00FCBAEE</string>
-											<string>E707CFF711E9644E00FCBAEE</string>
-											<string>E707D00111E9647F00FCBAEE</string>
-											<string>E707D02711E9701300FCBAEE</string>
-											<string>E707D03811EA123100FCBAEE</string>
-											<string>E707D04711EA137800FCBAEE</string>
-											<string>E707D04F11EA13A600FCBAEE</string>
-											<string>E707D05011EA13A600FCBAEE</string>
+											<string>E707D07A11EA172F00FCBAEE</string>
+											<string>E707D07B11EA172F00FCBAEE</string>
+											<string>E707D07D11EA172F00FCBAEE</string>
+											<string>E707D09111EA182500FCBAEE</string>
+											<string>E707D09211EA182500FCBAEE</string>
+											<string>E707D09311EA182500FCBAEE</string>
+											<string>E707D09411EA182500FCBAEE</string>
+											<string>E707D09511EA182500FCBAEE</string>
+											<string>E707D0A011EA18AE00FCBAEE</string>
+											<string>E707D0B111EA191700FCBAEE</string>
+											<string>E707D0D511EA1B7E00FCBAEE</string>
+											<string>E707D0D611EA1B7E00FCBAEE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -550,7 +551,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300553126.63648599</real>
+	<real>300555189.19484699</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -567,10 +568,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>E707D0CC11EA1AAC00FCBAEE</string>
+		<string>E707D0C811EA1A8500FCBAEE</string>
+		<string>/Users/Alan/Development/Scavenger/CamFlow/CamFlow.xcodeproj</string>
 		<string>E701D72711E9598200A41CD7</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/Alan/Development/Scavenger/CamFlow/CamFlow.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>203 147 1164 731 0 0 1440 878 </string>
@@ -594,7 +597,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AppDelegate_iPhone.m</string>
+								<string>FolderListTableViewController_iPhone.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -665,7 +668,7 @@
 			<key>WindowToolGUID</key>
 			<string>E701D72711E9598200A41CD7</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

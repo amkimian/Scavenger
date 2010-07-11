@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate_Shared.h"
-
+#import "CamFolderObject.h"
 
 @implementation AppDelegate_Shared
 
@@ -52,6 +52,7 @@
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
+		NSLog(@"Coordinator");
         managedObjectContext_ = [[NSManagedObjectContext alloc] init];
         [managedObjectContext_ setPersistentStoreCoordinator:coordinator];
     }
@@ -68,6 +69,7 @@
     if (managedObjectModel_ != nil) {
         return managedObjectModel_;
     }
+	NSLog(@"Managed object model");
     NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"CamFlow" ofType:@"momd"];
     NSURL *modelURL = [NSURL fileURLWithPath:modelPath];
     managedObjectModel_ = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];    
@@ -80,7 +82,8 @@
  If the coordinator doesn't already exist, it is created and the application's store added to it.
  */
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    
+    NSLog(@"Persistent store coordinator");
+	
     if (persistentStoreCoordinator_ != nil) {
         return persistentStoreCoordinator_;
     }
@@ -128,6 +131,21 @@
 	{
 		NSLog(@"Could not load data: %@", [error description ]);
 	}	
+}
+
+-(void) checkForDefaultFolder
+{
+	[self reloadData];
+	if ([fetchedResultsController.fetchedObjects count] == 0)
+	{
+		NSEntityDescription *edesc = [NSEntityDescription entityForName:@"CamFolder" inManagedObjectContext:managedObjectContext_];
+		CamFolderObject *fo = [[CamFolderObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:managedObjectContext_];
+		fo.folderName = @"Default";
+		fo.maxImages = [NSNumber numberWithInt: 200];
+		fo.takeInterval = [NSNumber numberWithFloat:60];
+		fo.takeUnits = [NSNumber numberWithInt:1];
+		[self reloadData];
+	}
 }
 
 - (NSFetchedResultsController *)fetchedResultsController
