@@ -10,13 +10,14 @@
 
 
 @implementation FolderListTableViewController_iPhone
-@synthesize camMode;
+@synthesize folderType;
 
 #pragma mark -
 #pragma mark Initialization
 
 
-- (id)initWithStyle:(UITableViewStyle)style {
+- (id)initWithStyle:(UITableViewStyle)style andType:(FolderType) fType {
+	folderType = fType;
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
     if ((self = [super initWithStyle:style])) {
 		UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
@@ -28,6 +29,19 @@
 		self.navigationItem.rightBarButtonItem = self.editButtonItem;
 		self.navigationController.toolbarHidden = NO;
 		//self.navigationItem.leftBarButtonItem = self.editButtonItem;
+		
+		// setup tab bar controller
+		switch(folderType)
+		{
+			case FolderType_CamMode:	
+				self.tabBarItem.image = [UIImage imageNamed:@"86-camera.png"];
+				self.tabBarItem.title = @"Camera";
+				break;
+			case FolderType_PlayMode:
+				self.tabBarItem.image = [UIImage imageNamed:@"45-movie1.png"];
+				self.tabBarItem.title = @"Play";
+				break;
+		}
     }
     return self;
 }

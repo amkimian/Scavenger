@@ -8,11 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum
+{
+	FolderType_CamMode,
+	FolderType_PlayMode
+} FolderType;
 
 @interface FolderListTableViewController_iPhone : UITableViewController {
-	BOOL camMode;
+	FolderType folderType;
 }
 
-@property(nonatomic) BOOL camMode;
+@property(nonatomic) FolderType folderType;
 -(void) insertNewObject: (id) sender;
+-(id) initWithStyle:(UITableViewStyle)style andType:(FolderType) fType;
 @end
