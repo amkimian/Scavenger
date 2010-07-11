@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate_iPhone.h"
+#import "TopLevelMenu_iPhone.h"
 
 @implementation AppDelegate_iPhone
 
@@ -17,7 +18,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
     // Override point for customization after application launch.
+
+	TopLevelMenu_iPhone *controller = [[TopLevelMenu_iPhone alloc] initWithStyle:UITableViewStyleGrouped];
+	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
 	
+	[window addSubview:nav.view];
     [window makeKeyAndVisible];
 	
 	return YES;
