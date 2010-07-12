@@ -29,9 +29,9 @@
 	};
 	2860E388111B897F00E27156 /* AppDelegate_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1216, 1443}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1300}}";
 			sepNavSelRange = "{987, 0}";
-			sepNavVisRange = "{207, 1415}";
+			sepNavVisRange = "{1624, 1645}";
 		};
 	};
 	2870939E111907710040F596 /* CamFlow.xcdatamodel */ = {
@@ -351,6 +351,16 @@
 			E707D0D611EA1B7E00FCBAEE /* XCBuildMessageTextBookmark */ = E707D0D611EA1B7E00FCBAEE /* XCBuildMessageTextBookmark */;
 			E707D0D711EA1B7E00FCBAEE /* PBXTextBookmark */ = E707D0D711EA1B7E00FCBAEE /* PBXTextBookmark */;
 			E707D0DC11EA1BB500FCBAEE /* PBXTextBookmark */ = E707D0DC11EA1BB500FCBAEE /* PBXTextBookmark */;
+			E707D0E811EA9CCE00FCBAEE /* PBXTextBookmark */ = E707D0E811EA9CCE00FCBAEE /* PBXTextBookmark */;
+			E707D0E911EA9CCE00FCBAEE /* PBXTextBookmark */ = E707D0E911EA9CCE00FCBAEE /* PBXTextBookmark */;
+			E707D0F311EA9DF100FCBAEE /* PBXTextBookmark */ = E707D0F311EA9DF100FCBAEE /* PBXTextBookmark */;
+			E707D10611EAA1AE00FCBAEE /* PBXTextBookmark */ = E707D10611EAA1AE00FCBAEE /* PBXTextBookmark */;
+			E707D10711EAA1AE00FCBAEE /* PBXTextBookmark */ = E707D10711EAA1AE00FCBAEE /* PBXTextBookmark */;
+			E707D10811EAA1AE00FCBAEE /* PBXTextBookmark */ = E707D10811EAA1AE00FCBAEE /* PBXTextBookmark */;
+			E707D10911EAA1AE00FCBAEE /* PBXTextBookmark */ = E707D10911EAA1AE00FCBAEE /* PBXTextBookmark */;
+			E707D10C11EAA1DD00FCBAEE /* PBXTextBookmark */ = E707D10C11EAA1DD00FCBAEE /* PBXTextBookmark */;
+			E707D10D11EAA1DD00FCBAEE /* PBXTextBookmark */ = E707D10D11EAA1DD00FCBAEE /* PBXTextBookmark */;
+			E707D10E11EAA1DD00FCBAEE /* PBXTextBookmark */ = E707D10E11EAA1DD00FCBAEE /* PBXTextBookmark */;
 		};
 		sourceControlManager = E701D72911E9598200A41CD7 /* Source Control */;
 		userBuildSettings = {
@@ -710,17 +720,16 @@
 	};
 	E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {821, 441}}";
-			sepNavSelRange = "{510, 0}";
-			sepNavVisRange = "{0, 516}";
+			sepNavIntBoundsRect = "{{0, 0}, {978, 441}}";
+			sepNavSelRange = "{391, 0}";
+			sepNavVisRange = "{0, 581}";
 		};
 	};
 	E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{5597, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{5648, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{5698, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 6394}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1048, 3016}}";
-			sepNavSelRange = "{4281, 0}";
-			sepNavVisRange = "{3689, 1036}";
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 3120}}";
+			sepNavSelRange = "{6483, 0}";
+			sepNavVisRange = "{5772, 721}";
 		};
 	};
 	E707CFA611E9626400FCBAEE /* PBXTextBookmark */ = {
@@ -788,7 +797,7 @@
 		fRef = E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */;
 		name = "FolderListTableViewController_iPhone.h: 17";
 		rLen = 0;
-		rLoc = 510;
+		rLoc = 575;
 		rType = 0;
 		vrLen = 355;
 		vrLoc = 0;
@@ -838,7 +847,7 @@
 		fRef = E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */;
 		name = "FolderListTableViewController_iPhone.h: 17";
 		rLen = 0;
-		rLoc = 510;
+		rLoc = 575;
 		rType = 0;
 		vrLen = 355;
 		vrLoc = 0;
@@ -958,7 +967,7 @@
 		fRef = E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */;
 		name = "FolderListTableViewController_iPhone.h: 21";
 		rLen = 0;
-		rLoc = 399;
+		rLoc = 464;
 		rType = 0;
 		vrLen = 444;
 		vrLoc = 0;
@@ -1057,7 +1066,7 @@
 		fRef = E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */;
 		name = "FolderListTableViewController_iPhone.h: 21";
 		rLen = 0;
-		rLoc = 399;
+		rLoc = 464;
 		rType = 0;
 		vrLen = 444;
 		vrLoc = 0;
@@ -1067,7 +1076,7 @@
 		fRef = E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */;
 		name = "FolderListTableViewController_iPhone.h: 23";
 		rLen = 0;
-		rLoc = 510;
+		rLoc = 575;
 		rType = 0;
 		vrLen = 516;
 		vrLoc = 0;
@@ -1077,7 +1086,7 @@
 		fRef = E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */;
 		name = "FolderListTableViewController_iPhone.h: 23";
 		rLen = 0;
-		rLoc = 510;
+		rLoc = 575;
 		rType = 0;
 		vrLen = 516;
 		vrLoc = 0;
@@ -1197,7 +1206,7 @@
 		fRef = E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */;
 		name = "FolderListTableViewController_iPhone.h: 23";
 		rLen = 0;
-		rLoc = 510;
+		rLoc = 575;
 		rType = 0;
 		vrLen = 516;
 		vrLoc = 0;
@@ -1663,5 +1672,105 @@
 		rType = 0;
 		vrLen = 1036;
 		vrLoc = 3689;
+	};
+	E707D0E811EA9CCE00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */;
+		name = "FolderListTableViewController_iPhone.m: 162";
+		rLen = 0;
+		rLoc = 4281;
+		rType = 0;
+		vrLen = 1102;
+		vrLoc = 3689;
+	};
+	E707D0E911EA9CCE00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */;
+		name = "FolderListTableViewController_iPhone.m: 162";
+		rLen = 0;
+		rLoc = 4281;
+		rType = 0;
+		vrLen = 804;
+		vrLoc = 1925;
+	};
+	E707D0F311EA9DF100FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */;
+		name = "FolderListTableViewController_iPhone.m: 162";
+		rLen = 0;
+		rLoc = 4281;
+		rType = 0;
+		vrLen = 804;
+		vrLoc = 1925;
+	};
+	E707D10611EAA1AE00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2860E388111B897F00E27156 /* AppDelegate_iPhone.m */;
+		name = "AppDelegate_iPhone.m: 30";
+		rLen = 0;
+		rLoc = 987;
+		rType = 0;
+		vrLen = 1645;
+		vrLoc = 1624;
+	};
+	E707D10711EAA1AE00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */;
+		name = "FolderListTableViewController_iPhone.m: 207";
+		rLen = 0;
+		rLoc = 5718;
+		rType = 0;
+		vrLen = 1105;
+		vrLoc = 4931;
+	};
+	E707D10811EAA1AE00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */;
+		name = "FolderListTableViewController_iPhone.h: 17";
+		rLen = 0;
+		rLoc = 392;
+		rType = 0;
+		vrLen = 549;
+		vrLoc = 0;
+	};
+	E707D10911EAA1AE00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */;
+		name = "FolderListTableViewController_iPhone.h: 17";
+		rLen = 0;
+		rLoc = 391;
+		rType = 0;
+		vrLen = 581;
+		vrLoc = 0;
+	};
+	E707D10C11EAA1DD00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */;
+		name = "FolderListTableViewController_iPhone.h: 17";
+		rLen = 0;
+		rLoc = 391;
+		rType = 0;
+		vrLen = 581;
+		vrLoc = 0;
+	};
+	E707D10D11EAA1DD00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */;
+		name = "FolderListTableViewController_iPhone.m: 207";
+		rLen = 0;
+		rLoc = 5718;
+		rType = 0;
+		vrLen = 920;
+		vrLoc = 5116;
+	};
+	E707D10E11EAA1DD00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */;
+		name = "FolderListTableViewController_iPhone.m: 239";
+		rLen = 0;
+		rLoc = 6483;
+		rType = 0;
+		vrLen = 721;
+		vrLoc = 5772;
 	};
 }

@@ -200,14 +200,13 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-	/*
-	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-	 [self.navigationController pushViewController:detailViewController animated:YES];
-	 [detailViewController release];
-	 */
+	if (self.folderType == FolderType_CamMode)
+	{
+		UIImagePickerController *ic = [[UIImagePickerController alloc] init];
+		ic.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+		ic.delegate = self;
+		[self presentModalViewController:ic animated:YES];
+	}
 }
 
 
@@ -231,6 +230,14 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark Image Picker Controller
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+	NSLog(@"Picked image");
+	[self dismissModalViewControllerAnimated:YES];
+}
 
 @end
 

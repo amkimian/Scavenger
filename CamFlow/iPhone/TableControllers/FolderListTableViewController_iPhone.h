@@ -14,7 +14,7 @@ typedef enum
 	FolderType_PlayMode
 } FolderType;
 
-@interface FolderListTableViewController_iPhone : UITableViewController {
+@interface FolderListTableViewController_iPhone : UITableViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
 	FolderType folderType;
 }
 
