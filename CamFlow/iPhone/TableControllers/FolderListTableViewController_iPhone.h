@@ -16,9 +16,12 @@ typedef enum
 
 @interface FolderListTableViewController_iPhone : UITableViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
 	FolderType folderType;
+	NSString *currentFolder;
 }
 
 @property(nonatomic) FolderType folderType;
+@property(nonatomic, retain) NSString *currentFolder;
+
 -(void) insertNewObject: (id) sender;
 -(id) initWithStyle:(UITableViewStyle)style andType:(FolderType) fType;
 @end

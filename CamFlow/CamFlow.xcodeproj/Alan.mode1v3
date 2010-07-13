@@ -249,6 +249,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -292,7 +294,6 @@
 								<string>2819307C112F81BE00ECF9B4</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>E707D03711EA123100FCBAEE</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
@@ -335,8 +336,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -351,10 +350,6 @@
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>FolderListTableViewController_iPhone.m</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>E707D10E11EAA1DD00FCBAEE</string>
 										<key>history</key>
 										<array>
 											<string>E707CF5A11E95D0800FCBAEE</string>
@@ -383,14 +378,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {882, 496}}</string>
+								<string>{{0, 0}, {882, 490}}</string>
 								<key>RubberWindowFrame</key>
 								<string>203 147 1164 731 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>496pt</string>
+							<string>490pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -403,14 +398,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 501}, {882, 189}}</string>
+								<string>{{0, 495}, {882, 195}}</string>
 								<key>RubberWindowFrame</key>
 								<string>203 147 1164 731 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>189pt</string>
+							<string>195pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -429,9 +424,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>E707CF6211E95D0800FCBAEE</string>
+				<string>E707D11E11EC220A00FCBAEE</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>E707CF6311E95D0800FCBAEE</string>
+				<string>E707D11F11EC220A00FCBAEE</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -552,7 +547,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300589533.27805901</real>
+	<real>300687882.60402298</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -569,9 +564,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>E707D0CC11EA1AAC00FCBAEE</string>
-		<string>E707D0C811EA1A8500FCBAEE</string>
-		<string>E707D0EA11EA9CCE00FCBAEE</string>
 		<string>/Users/Alan/Development/Scavenger/CamFlow/CamFlow.xcodeproj</string>
 		<string>E701D72711E9598200A41CD7</string>
 		<string>1C78EAAD065D492600B07095</string>
@@ -599,7 +591,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FolderListTableViewController_iPhone.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -657,7 +649,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>E701D72711E9598200A41CD7</string>
-				<string>E707CF4111E95AAF00FCBAEE</string>
+				<string>E707D12011EC220A00FCBAEE</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -701,8 +693,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {396, 264}}</string>
-											<string>{{396, 0}, {474, 264}}</string>
+											<string>{{0, 0}, {397, 277}}</string>
+											<string>{{397, 0}, {473, 277}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -717,8 +709,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {870, 264}}</string>
-											<string>{{0, 264}, {870, 280}}</string>
+											<string>{{0, 0}, {870, 277}}</string>
+											<string>{{0, 277}, {870, 267}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -748,10 +740,10 @@
 										<string>Value</string>
 										<real>85</real>
 										<string>Summary</string>
-										<real>244</real>
+										<real>243</real>
 									</array>
 									<key>Frame</key>
-									<string>{{396, 0}, {474, 264}}</string>
+									<string>{{397, 0}, {473, 277}}</string>
 									<key>RubberWindowFrame</key>
 									<string>368 168 870 585 0 0 1440 878 </string>
 								</dict>
@@ -779,13 +771,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>E707CF4411E95B3000FCBAEE</string>
+				<string>E707D12111EC220A00FCBAEE</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>E707CF4511E95B3000FCBAEE</string>
-				<string>E707CF4611E95B3000FCBAEE</string>
-				<string>E707CF4711E95B3000FCBAEE</string>
-				<string>E707CF4811E95B3000FCBAEE</string>
-				<string>E707CF4911E95B3000FCBAEE</string>
+				<string>E707D12211EC220A00FCBAEE</string>
+				<string>E707D12311EC220A00FCBAEE</string>
+				<string>E707D12411EC220A00FCBAEE</string>
+				<string>E707D12511EC220A00FCBAEE</string>
+				<string>E707D12611EC220A00FCBAEE</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -949,7 +941,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>E707CF6411E95D0800FCBAEE</string>
+				<string>E707D12711EC220A00FCBAEE</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

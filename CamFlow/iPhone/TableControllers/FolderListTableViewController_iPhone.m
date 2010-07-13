@@ -13,6 +13,7 @@
 
 @implementation FolderListTableViewController_iPhone
 @synthesize folderType;
+@synthesize currentFolder;
 
 #pragma mark -
 #pragma mark Initialization
@@ -203,6 +204,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (self.folderType == FolderType_CamMode)
 	{
+		AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;
+		CamFolderObject *folder = [ip.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
+		self.currentFolder = folder.folderName;
 		UIImagePickerController *ic = [[UIImagePickerController alloc] init];
 		ic.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 		ic.delegate = self;
@@ -240,7 +244,7 @@
 	[self dismissModalViewControllerAnimated:YES];
 	UIImage *realImage = (UIImage *) [info valueForKey:UIImagePickerControllerOriginalImage];
 	CamFlowPhotoUploader *cf = [[CamFlowPhotoUploader alloc] init];
-	[cf uploadImage: realImage toFolder: @"Fred"];
+	[cf uploadImage: realImage toFolder: self.currentFolder];
 }
 
 @end
