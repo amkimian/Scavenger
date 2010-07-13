@@ -9,6 +9,7 @@
 #import "FolderListTableViewController_iPhone.h"
 #import "AppDelegate_iPhone.h"
 #import "CamFolderObject.h"
+#import "CamFlowPhotoUploader.h"
 
 @implementation FolderListTableViewController_iPhone
 @synthesize folderType;
@@ -237,6 +238,9 @@
 {
 	NSLog(@"Picked image");
 	[self dismissModalViewControllerAnimated:YES];
+	UIImage *realImage = (UIImage *) [info valueForKey:UIImagePickerControllerOriginalImage];
+	CamFlowPhotoUploader *cf = [[CamFlowPhotoUploader alloc] init];
+	[cf uploadImage: realImage toFolder: @"Fred"];
 }
 
 @end
