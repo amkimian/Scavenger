@@ -30,16 +30,23 @@
 	
 	// The folder to upload will be DEVICE_ID/folder/[yyyymmdd.hhmmss].jpg
 	
+	
+	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+	[dateFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"] autorelease]];
+	[dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+	[dateFormatter setDateFormat:@"yyyyMMdd.HHmmss"];
+	NSDate *now = [NSDate date];
+	
+	NSString *fileName = [dateFormatter stringFromDate:now];	
 	NSData *imageData = UIImageJPEGRepresentation(resizedImage, 90);
 	
 	// And upload that
 	
-	NSString *key = [NSString stringWithFormat: @"%@/%@/fred.jpg", [UIDevice currentDevice].uniqueIdentifier, folder];
+	NSString *key = [NSString stringWithFormat: @"%@/%@/%@.jpg", [UIDevice currentDevice].uniqueIdentifier, folder,fileName];
 	
 	ASIS3ObjectRequest *request = 
 	[ASIS3ObjectRequest PUTRequestForData:imageData withBucket:@"camflow-images" key:key];
 	[request startSynchronous];
-	
 }
 
 
