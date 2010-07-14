@@ -10,6 +10,7 @@
 #import "AppDelegate_iPhone.h"
 #import "PairedDeviceObject.h"
 #import "DeviceFolderTableViewController.h"
+#import "PairedDevice+Extensions.h"
 
 @implementation DeviceListTableViewController
 
@@ -153,6 +154,7 @@
 	
 	AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;	
 	PairedDeviceObject *pd = [ip.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];	
+	[pd ensureFoldersCorrect];
 	// Here we need to validate and ensure that the folders in the PairedDeviceObject are valid
 	DeviceFolderTableViewController *tv = [[DeviceFolderTableViewController alloc] initWithStyle:UITableViewStylePlain andPairedDevice:pd];
 	[self.navigationController pushViewController:tv animated:YES];

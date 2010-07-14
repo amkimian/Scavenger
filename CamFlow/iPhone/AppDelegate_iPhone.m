@@ -10,6 +10,7 @@
 #import "TopLevelMenu_iPhone.h"
 #import "FolderListTableViewController_iPhone.h"
 #import "DeviceListTableViewController.h"
+#import "ASIS3Request.h"
 
 @implementation AppDelegate_iPhone
 
@@ -20,6 +21,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
     // Override point for customization after application launch.
+
+	[ASIS3Request setSharedSecretAccessKey:@"o3Nw5NnnamrywCy7m6gIEBEQiKZrnROP/cxuvvLy"];
+	[ASIS3Request setSharedAccessKey:@"0289QDXAHCXX0JH9GXR2"];	
 
 	NSManagedObjectContext *ctx = self.managedObjectContext;
 

@@ -12,6 +12,7 @@
 		15356AFE11ED613A006F5F22 /* CamFolderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356AFB11ED613A006F5F22 /* CamFolderObject.m */; };
 		15356B1911ED65A5006F5F22 /* DeviceListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356B1811ED65A5006F5F22 /* DeviceListTableViewController.m */; };
 		15356B3A11ED67D1006F5F22 /* DeviceFolderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356B3911ED67D1006F5F22 /* DeviceFolderTableViewController.m */; };
+		15356B5511ED6A56006F5F22 /* PairedDevice+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356B5411ED6A56006F5F22 /* PairedDevice+Extensions.m */; };
 		15B4E61111EC16FB000009D2 /* CamFlowPhotoUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4E61011EC16FB000009D2 /* CamFlowPhotoUploader.m */; };
 		15B4E61711EC183D000009D2 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4E61611EC183D000009D2 /* UIImage+Resize.m */; };
 		15B4E61F11EC18E7000009D2 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4E61C11EC18E7000009D2 /* UIImage+Alpha.m */; };
@@ -62,6 +63,8 @@
 		15356B1811ED65A5006F5F22 /* DeviceListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceListTableViewController.m; path = TableControllers/DeviceListTableViewController.m; sourceTree = "<group>"; };
 		15356B3811ED67D1006F5F22 /* DeviceFolderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceFolderTableViewController.h; path = TableControllers/DeviceFolderTableViewController.h; sourceTree = "<group>"; };
 		15356B3911ED67D1006F5F22 /* DeviceFolderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceFolderTableViewController.m; path = TableControllers/DeviceFolderTableViewController.m; sourceTree = "<group>"; };
+		15356B5311ED6A56006F5F22 /* PairedDevice+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PairedDevice+Extensions.h"; path = "Shared/Extensions/PairedDevice+Extensions.h"; sourceTree = "<group>"; };
+		15356B5411ED6A56006F5F22 /* PairedDevice+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PairedDevice+Extensions.m"; path = "Shared/Extensions/PairedDevice+Extensions.m"; sourceTree = "<group>"; };
 		15B4E60F11EC16FB000009D2 /* CamFlowPhotoUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamFlowPhotoUploader.h; sourceTree = "<group>"; };
 		15B4E61011EC16FB000009D2 /* CamFlowPhotoUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamFlowPhotoUploader.m; sourceTree = "<group>"; };
 		15B4E61511EC183D000009D2 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "Shared/Extensions/UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				15B4E61E11EC18E7000009D2 /* UIImage+RoundedCorner.m */,
 				15B4E61511EC183D000009D2 /* UIImage+Resize.h */,
 				15B4E61611EC183D000009D2 /* UIImage+Resize.m */,
+				15356B5311ED6A56006F5F22 /* PairedDevice+Extensions.h */,
+				15356B5411ED6A56006F5F22 /* PairedDevice+Extensions.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				15356AFE11ED613A006F5F22 /* CamFolderObject.m in Sources */,
 				15356B1911ED65A5006F5F22 /* DeviceListTableViewController.m in Sources */,
 				15356B3A11ED67D1006F5F22 /* DeviceFolderTableViewController.m in Sources */,
+				15356B5511ED6A56006F5F22 /* PairedDevice+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,6 @@
 
 -(id) init
 {
-	[ASIS3Request setSharedSecretAccessKey:@"o3Nw5NnnamrywCy7m6gIEBEQiKZrnROP/cxuvvLy"];
-	[ASIS3Request setSharedAccessKey:@"0289QDXAHCXX0JH9GXR2"];	
 	return self;
 }
 
