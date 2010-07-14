@@ -1,5 +1,13 @@
 // !$*UTF8*$!
 {
+	15356B3911ED67D1006F5F22 /* DeviceFolderTableViewController.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4750, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4801, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4851, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5547}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1069, 2600}}";
+			sepNavSelRange = "{262, 0}";
+			sepNavVisRange = "{0, 831}";
+		};
+	};
 	15B4E60F11EC16FB000009D2 /* CamFlowPhotoUploader.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {821, 458}}";
@@ -9,9 +17,9 @@
 	};
 	15B4E61011EC16FB000009D2 /* CamFlowPhotoUploader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {838, 637}}";
+			sepNavIntBoundsRect = "{{0, 0}, {887, 637}}";
 			sepNavSelRange = "{928, 6}";
-			sepNavVisRange = "{210, 1022}";
+			sepNavVisRange = "{183, 1122}";
 		};
 	};
 	1D3623240D0F684500981E51 /* AppDelegate_iPad.h */ = {
@@ -257,8 +265,30 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 300687865;
-			PBXWorkspaceStateSaveDate = 300687865;
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					603,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 300774318;
+			PBXWorkspaceStateSaveDate = 300774318;
 		};
 		perUserProjectItems = {
 			E707CF5A11E95D0800FCBAEE /* PBXTextBookmark */ = E707CF5A11E95D0800FCBAEE /* PBXTextBookmark */;
@@ -276,9 +306,12 @@
 			E707D13211ED593A00FCBAEE /* PBXTextBookmark */ = E707D13211ED593A00FCBAEE /* PBXTextBookmark */;
 			E707D13311ED593A00FCBAEE /* PBXTextBookmark */ = E707D13311ED593A00FCBAEE /* PBXTextBookmark */;
 			E707D13411ED593A00FCBAEE /* PBXTextBookmark */ = E707D13411ED593A00FCBAEE /* PBXTextBookmark */;
-			E707D13511ED593A00FCBAEE /* PBXTextBookmark */ = E707D13511ED593A00FCBAEE /* PBXTextBookmark */;
-			E707D13611ED593A00FCBAEE /* PBXTextBookmark */ = E707D13611ED593A00FCBAEE /* PBXTextBookmark */;
-			E707D13711ED593A00FCBAEE /* PBXTextBookmark */ = E707D13711ED593A00FCBAEE /* PBXTextBookmark */;
+			E707D1E711ED807B00FCBAEE /* PBXTextBookmark */ = E707D1E711ED807B00FCBAEE /* PBXTextBookmark */;
+			E707D1E811ED807B00FCBAEE /* PBXTextBookmark */ = E707D1E811ED807B00FCBAEE /* PBXTextBookmark */;
+			E707D27E11ED877C00FCBAEE /* PBXTextBookmark */ = E707D27E11ED877C00FCBAEE /* PBXTextBookmark */;
+			E707D28511ED87CF00FCBAEE /* PBXTextBookmark */ = E707D28511ED87CF00FCBAEE /* PBXTextBookmark */;
+			E707D28611ED87CF00FCBAEE /* PBXTextBookmark */ = E707D28611ED87CF00FCBAEE /* PBXTextBookmark */;
+			E707D28811ED87D200FCBAEE /* PBXTextBookmark */ = E707D28811ED87D200FCBAEE /* PBXTextBookmark */;
 		};
 		sourceControlManager = E701D72911E9598200A41CD7 /* Source Control */;
 		userBuildSettings = {
@@ -384,20 +417,6 @@
 		vrLen = 241;
 		vrLoc = 0;
 	};
-	E707CF8511E95EC600FCBAEE /* CamFolderObject.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1054, 720}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 447}";
-		};
-	};
-	E707CF8611E95EC600FCBAEE /* CamFolderObject.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {821, 458}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 296}";
-		};
-	};
 	E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {978, 458}}";
@@ -407,9 +426,9 @@
 	};
 	E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1048, 3159}}";
-			sepNavSelRange = "{5667, 0}";
-			sepNavVisRange = "{5423, 606}";
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 3341}}";
+			sepNavSelRange = "{6016, 0}";
+			sepNavVisRange = "{4993, 1184}";
 		};
 	};
 	E707D07B11EA172F00FCBAEE /* PBXTextBookmark */ = {
@@ -434,7 +453,6 @@
 	};
 	E707D09111EA182500FCBAEE /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = E707CF8511E95EC600FCBAEE /* CamFolderObject.h */;
 		name = "CamFolderObject.h: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -517,7 +535,6 @@
 	};
 	E707D13211ED593A00FCBAEE /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = E707CF8611E95EC600FCBAEE /* CamFolderObject.m */;
 		name = "CamFolderObject.m: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -545,34 +562,78 @@
 		vrLen = 662;
 		vrLoc = 0;
 	};
-	E707D13511ED593A00FCBAEE /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */;
-		name = "FolderListTableViewController_iPhone.m: 207";
-		rLen = 0;
-		rLoc = 5622;
-		rType = 0;
-		vrLen = 1238;
-		vrLoc = 4785;
-	};
-	E707D13611ED593A00FCBAEE /* PBXTextBookmark */ = {
+	E707D1E711ED807B00FCBAEE /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 15B4E61011EC16FB000009D2 /* CamFlowPhotoUploader.m */;
-		name = "CamFlowPhotoUploader.m: 21";
-		rLen = 0;
-		rLoc = 480;
-		rType = 0;
-		vrLen = 1015;
-		vrLoc = 30;
-	};
-	E707D13711ED593A00FCBAEE /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 15B4E61011EC16FB000009D2 /* CamFlowPhotoUploader.m */;
-		name = "CamFlowPhotoUploader.m: 37";
+		name = "CamFlowPhotoUploader.m: 34";
 		rLen = 6;
 		rLoc = 928;
 		rType = 0;
-		vrLen = 1022;
-		vrLoc = 210;
+		vrLen = 1122;
+		vrLoc = 183;
+	};
+	E707D1E811ED807B00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */;
+		name = "FolderListTableViewController_iPhone.m: 214";
+		rLen = 0;
+		rLoc = 6016;
+		rType = 0;
+		vrLen = 1184;
+		vrLoc = 4993;
+	};
+	E707D23A11ED843000FCBAEE /* FolderPhotoSource.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {821, 429}}";
+			sepNavSelRange = "{248, 0}";
+			sepNavVisRange = "{0, 525}";
+		};
+	};
+	E707D23B11ED843000FCBAEE /* FolderPhotoSource.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {821, 452}}";
+			sepNavSelRange = "{432, 0}";
+			sepNavVisRange = "{0, 588}";
+		};
+	};
+	E707D27E11ED877C00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15356B3911ED67D1006F5F22 /* DeviceFolderTableViewController.m */;
+		name = "DeviceFolderTableViewController.m: 11";
+		rLen = 0;
+		rLoc = 262;
+		rType = 0;
+		vrLen = 831;
+		vrLoc = 0;
+	};
+	E707D28511ED87CF00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707D23A11ED843000FCBAEE /* FolderPhotoSource.h */;
+		name = "FolderPhotoSource.h: 12";
+		rLen = 0;
+		rLoc = 248;
+		rType = 0;
+		vrLen = 525;
+		vrLoc = 0;
+	};
+	E707D28611ED87CF00FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707D23B11ED843000FCBAEE /* FolderPhotoSource.m */;
+		name = "FolderPhotoSource.m: 22";
+		rLen = 0;
+		rLoc = 521;
+		rType = 0;
+		vrLen = 456;
+		vrLoc = 0;
+	};
+	E707D28811ED87D200FCBAEE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E707D23B11ED843000FCBAEE /* FolderPhotoSource.m */;
+		name = "FolderPhotoSource.m: 21";
+		rLen = 0;
+		rLoc = 432;
+		rType = 0;
+		vrLen = 588;
+		vrLoc = 0;
 	};
 }

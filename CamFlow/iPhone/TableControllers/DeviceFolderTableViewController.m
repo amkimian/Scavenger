@@ -8,6 +8,8 @@
 
 #import "DeviceFolderTableViewController.h"
 #import "CamFolderObject.h"
+#import "FolderPhotoSource.h"
+#import "Three20/Three20.h"
 
 @implementation DeviceFolderTableViewController
 @synthesize pairedDevice;
@@ -150,6 +152,9 @@
 	// We need to only download those images (files) we haven't seen before
 	// We download them to where?
 	
+	FolderPhotoSource *folderPhotoSource = [[FolderPhotoSource alloc] init];
+	TTPhotoViewController *ttPhoto = [[TTPhotoViewController alloc] initWithPhotoSource:folderPhotoSource];
+	[self.navigationController pushViewController:ttPhoto animated:YES];
 	
     // Navigation logic may go here. Create and push another view controller.
 	/*

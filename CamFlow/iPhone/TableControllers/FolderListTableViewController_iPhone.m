@@ -208,7 +208,15 @@
 		CamFolderObject *folder = [[ip getMyFolders] objectAtIndex:indexPath.row];
 		self.currentFolder = folder.folderName;
 		UIImagePickerController *ic = [[UIImagePickerController alloc] init];
-		ic.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+		{
+			ic.sourceType = UIImagePickerControllerSourceTypeCamera;
+			// Need to do a little bit more than this...!
+		}
+		else
+		{
+			ic.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+		}
 		ic.delegate = self;
 		[self presentModalViewController:ic animated:YES];
 	}
