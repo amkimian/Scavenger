@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate_Shared.h"
+#import "PairedDeviceObject.h"
 #import "CamFolderObject.h"
 
 @implementation AppDelegate_Shared
@@ -138,14 +139,36 @@
 	[self reloadData];
 	if ([fetchedResultsController.fetchedObjects count] == 0)
 	{
-		NSEntityDescription *edesc = [NSEntityDescription entityForName:@"CamFolder" inManagedObjectContext:managedObjectContext_];
-		CamFolderObject *fo = [[CamFolderObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:managedObjectContext_];
+		NSEntityDescription *edesc = [NSEntityDescription entityForName:@"PairedDevice" inManagedObjectContext:managedObjectContext_];
+		PairedDeviceObject *pd = [[PairedDeviceObject alloc] initWithEntity:edesc insertIntoManagedObjectContext:managedObjectContext_];
+		pd.isMe = [NSNumber numberWithBool:YES];
+		pd.deviceId = [UIDevice currentDevice].uniqueIdentifier;
+		pd.name = @"Me";
+		
+		NSEntityDescription *edesc1 = [NSEntityDescription entityForName:@"CamFolder" inManagedObjectContext:managedObjectContext_];
+		CamFolderObject *fo = [[CamFolderObject alloc] initWithEntity:edesc1 insertIntoManagedObjectContext:managedObjectContext_];
 		fo.folderName = @"Default";
 		fo.maxImages = [NSNumber numberWithInt: 200];
 		fo.takeInterval = [NSNumber numberWithFloat:60];
 		fo.takeUnits = [NSNumber numberWithInt:1];
+		
+		[pd addFoldersObject:fo];
+		
 		[self reloadData];
 	}
+}
+
+-(NSArray *) getMyFolders
+{
+	NSArray *allDevices = [[self fetchedResultsController] fetchedObjects];
+	for(PairedDeviceObject *pd in allDevices)
+	{
+		if ([pd.isMe boolValue] == YES)
+		{
+			return [pd.folders allObjects];
+		}
+	}
+	return nil;	
 }
 
 - (NSFetchedResultsController *)fetchedResultsController
@@ -159,12 +182,12 @@
 	
 	// edit the entity name as appropriate.
 	NSEntityDescription *entity = [NSEntityDescription entityForName:
-								   @"CamFolder" inManagedObjectContext:managedObjectContext_];
+								   @"PairedDevice" inManagedObjectContext:managedObjectContext_];
 	[fetchRequest setEntity:entity];
 	
 	// edit the sort key as appropriate.
 	NSSortDescriptor *sortDescriptor =
-	[[NSSortDescriptor alloc] initWithKey:@"folderName" ascending:YES];
+	[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
 	NSArray *sortDescriptors =
 	[[NSArray alloc] initWithObjects:sortDescriptor, nil];
 	

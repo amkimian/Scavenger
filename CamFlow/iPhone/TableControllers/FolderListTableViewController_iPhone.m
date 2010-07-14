@@ -117,7 +117,7 @@
 	else
 	{
 		AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;
-		return [ip.fetchedResultsController.fetchedObjects count];
+		return [[ip getMyFolders] count];
 	}
 }
 
@@ -147,7 +147,7 @@
 	{
 		// Configure the cell...
 		AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;
-		CamFolderObject *folder = [ip.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
+		CamFolderObject *folder = [[ip getMyFolders ] objectAtIndex:indexPath.row];
 		cell.textLabel.text = folder.folderName;
 	}
     return cell;
@@ -205,7 +205,7 @@
 	if (self.folderType == FolderType_CamMode)
 	{
 		AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;
-		CamFolderObject *folder = [ip.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
+		CamFolderObject *folder = [[ip getMyFolders] objectAtIndex:indexPath.row];
 		self.currentFolder = folder.folderName;
 		UIImagePickerController *ic = [[UIImagePickerController alloc] init];
 		ic.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;

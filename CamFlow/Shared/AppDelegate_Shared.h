@@ -25,6 +25,8 @@
 - (NSFetchedResultsController *)fetchedResultsController;
 -(void) reloadData;
 -(void) checkForDefaultFolder;
+-(NSArray *) getMyFolders;
+
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
