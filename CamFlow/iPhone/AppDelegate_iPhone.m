@@ -9,6 +9,7 @@
 #import "AppDelegate_iPhone.h"
 #import "TopLevelMenu_iPhone.h"
 #import "FolderListTableViewController_iPhone.h"
+#import "DeviceListTableViewController.h"
 
 @implementation AppDelegate_iPhone
 
@@ -27,7 +28,7 @@
 	// use a tab controller
 	
 	FolderListTableViewController_iPhone *camController = [[FolderListTableViewController_iPhone alloc] initWithStyle:UITableViewStyleGrouped andType:FolderType_CamMode];
-	FolderListTableViewController_iPhone *viewController = [[FolderListTableViewController_iPhone alloc] initWithStyle:UITableViewStyleGrouped andType:FolderType_PlayMode];
+	DeviceListTableViewController *viewController = [[DeviceListTableViewController alloc] initWithStyle:UITableViewStylePlain];
 
 	UINavigationController *camNav = [[UINavigationController alloc] initWithRootViewController:camController];
 	camNav.toolbarHidden = NO;
