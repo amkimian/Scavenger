@@ -1,29 +1,25 @@
 //
-//  DeviceListTableViewController.m
+//  DeviceFolderTableViewController.m
 //  CamFlow
 //
 //  Created by Alan Moore on 7/13/10.
 //  Copyright 2010 Mount Diablo Software. All rights reserved.
 //
 
-#import "DeviceListTableViewController.h"
-#import "AppDelegate_iPhone.h"
-#import "PairedDeviceObject.h"
 #import "DeviceFolderTableViewController.h"
+#import "CamFolderObject.h"
 
-@implementation DeviceListTableViewController
-
+@implementation DeviceFolderTableViewController
+@synthesize pairedDevice;
 
 #pragma mark -
 #pragma mark Initialization
 
-
-- (id)initWithStyle:(UITableViewStyle)style {
+- (id)initWithStyle:(UITableViewStyle)style andPairedDevice: (PairedDeviceObject *)pd;
+{
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
     if ((self = [super initWithStyle:style])) {
-		self.tabBarItem.image = [UIImage imageNamed:@"45-movie1.png"];
-		self.tabBarItem.title = @"Play";
-		self.title = @"Play";
+		self.pairedDevice = pd;
     }
     return self;
 }
@@ -81,8 +77,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-	AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;
-	return [ip.fetchedResultsController.fetchedObjects count];
+    return [[self.pairedDevice.folders allObjects] count];
 }
 
 
@@ -96,11 +91,11 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;
+    // Configure the cell...
 	
-	PairedDeviceObject *pd = [ip.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
-	cell.textLabel.text = pd.name;
-    return cell;
+	CamFolderObject *cf = [[self.pairedDevice.folders allObjects] objectAtIndex:indexPath.row];
+	cell.textLabel.text = cf.folderName;
+	return cell;
 }
 
 
@@ -148,15 +143,14 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	// Push a new DeviceFolder viewer, rooted to the PairedDeviceObject
-	
-	AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;	
-	PairedDeviceObject *pd = [ip.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];	
-	// Here we need to validate and ensure that the folders in the PairedDeviceObject are valid
-	DeviceFolderTableViewController *tv = [[DeviceFolderTableViewController alloc] initWithStyle:UITableViewStylePlain andPairedDevice:pd];
-	[self.navigationController pushViewController:tv animated:YES];
-	[tv release];
+    // Navigation logic may go here. Create and push another view controller.
+	/*
+	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+	 [self.navigationController pushViewController:detailViewController animated:YES];
+	 [detailViewController release];
+	 */
 }
 
 
