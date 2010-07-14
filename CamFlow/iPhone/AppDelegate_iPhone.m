@@ -13,6 +13,7 @@
 #import "ASIS3Request.h"
 #import "TopLevelTabBarController.h"
 #import "CameraFolderTableViewController.h"
+#import "DeviceListViewController.h"
 #import "Three20/Three20.h"
 
 @implementation AppDelegate_iPhone
@@ -36,12 +37,13 @@
 	// Now use Three20
 	TTNavigator *navigator = [TTNavigator navigator];
 	navigator.window = window;
-	navigator.persistenceMode = TTNavigatorPersistenceModeNone;
+	navigator.persistenceMode = TTNavigatorPersistenceModeAll;
 	TTURLMap *map = navigator.URLMap;
 	
 	[map from:@"*" toViewController:[TTWebController class]];
 	[map from:@"cf://tabBar" toViewController:[TopLevelTabBarController class]];
 	[map from:@"cf://camera" toSharedViewController:[CameraFolderTableViewController class]];
+	[map from:@"cf://viewer" toSharedViewController:[DeviceListViewController class]];
 	
 	if (![navigator restoreViewControllers])
 	{

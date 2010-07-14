@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		15044C7511EE476A0048125C /* TopLevelTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15044C7411EE476A0048125C /* TopLevelTabBarController.m */; };
 		15044C8B11EE48BD0048125C /* CameraFolderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15044C8A11EE48BD0048125C /* CameraFolderTableViewController.m */; };
+		15044CEB11EE52E90048125C /* DeviceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15044CEA11EE52E90048125C /* DeviceListViewController.m */; };
 		15356AFC11ED613A006F5F22 /* PairedDeviceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356AF711ED613A006F5F22 /* PairedDeviceObject.m */; };
 		15356AFD11ED613A006F5F22 /* ViewedImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356AF911ED613A006F5F22 /* ViewedImageObject.m */; };
 		15356AFE11ED613A006F5F22 /* CamFolderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356AFB11ED613A006F5F22 /* CamFolderObject.m */; };
@@ -219,6 +220,8 @@
 		15044C7411EE476A0048125C /* TopLevelTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopLevelTabBarController.m; path = Three20/TopLevelTabBarController.m; sourceTree = "<group>"; };
 		15044C8911EE48BD0048125C /* CameraFolderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraFolderTableViewController.h; path = Three20/CameraFolderTableViewController.h; sourceTree = "<group>"; };
 		15044C8A11EE48BD0048125C /* CameraFolderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraFolderTableViewController.m; path = Three20/CameraFolderTableViewController.m; sourceTree = "<group>"; };
+		15044CE911EE52E90048125C /* DeviceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceListViewController.h; path = Three20/DeviceListViewController.h; sourceTree = "<group>"; };
+		15044CEA11EE52E90048125C /* DeviceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceListViewController.m; path = Three20/DeviceListViewController.m; sourceTree = "<group>"; };
 		15356AF611ED613A006F5F22 /* PairedDeviceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairedDeviceObject.h; sourceTree = "<group>"; };
 		15356AF711ED613A006F5F22 /* PairedDeviceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairedDeviceObject.m; sourceTree = "<group>"; };
 		15356AF811ED613A006F5F22 /* ViewedImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewedImageObject.h; sourceTree = "<group>"; };
@@ -345,6 +348,8 @@
 				15044C7411EE476A0048125C /* TopLevelTabBarController.m */,
 				15044C8911EE48BD0048125C /* CameraFolderTableViewController.h */,
 				15044C8A11EE48BD0048125C /* CameraFolderTableViewController.m */,
+				15044CE911EE52E90048125C /* DeviceListViewController.h */,
+				15044CEA11EE52E90048125C /* DeviceListViewController.m */,
 			);
 			name = Three20TableControllers;
 			sourceTree = "<group>";
@@ -824,6 +829,7 @@
 				E707D23C11ED843000FCBAEE /* FolderPhotoSource.m in Sources */,
 				15044C7511EE476A0048125C /* TopLevelTabBarController.m in Sources */,
 				15044C8B11EE48BD0048125C /* CameraFolderTableViewController.m in Sources */,
+				15044CEB11EE52E90048125C /* DeviceListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
