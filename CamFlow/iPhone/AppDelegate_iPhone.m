@@ -11,6 +11,9 @@
 #import "FolderListTableViewController_iPhone.h"
 #import "DeviceListTableViewController.h"
 #import "ASIS3Request.h"
+#import "TopLevelTabBarController.h"
+#import "CameraFolderTableViewController.h"
+#import "Three20/Three20.h"
 
 @implementation AppDelegate_iPhone
 
@@ -28,6 +31,26 @@
 	NSManagedObjectContext *ctx = self.managedObjectContext;
 
 	[self checkForDefaultFolder];
+	
+	
+	// Now use Three20
+	TTNavigator *navigator = [TTNavigator navigator];
+	navigator.window = window;
+	navigator.persistenceMode = TTNavigatorPersistenceModeNone;
+	TTURLMap *map = navigator.URLMap;
+	
+	[map from:@"*" toViewController:[TTWebController class]];
+	[map from:@"cf://tabBar" toViewController:[TopLevelTabBarController class]];
+	[map from:@"cf://camera" toSharedViewController:[CameraFolderTableViewController class]];
+	
+	if (![navigator restoreViewControllers])
+	{
+		[navigator openURLAction:[TTURLAction actionWithURLPath:@"cf://tabBar"]];
+	}
+	
+	/*
+	
+	
 	// Use this to setup the context
 	// use a tab controller
 	
@@ -46,6 +69,7 @@
 	tc.delegate = self;
 	
 	[window addSubview:tc.view];
+	 */
     [window makeKeyAndVisible];
 	
 	return YES;
