@@ -20,6 +20,7 @@
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
     if ((self = [super initWithStyle:style])) {
 		self.pairedDevice = pd;
+		self.title = pairedDevice.name;
     }
     return self;
 }
@@ -143,6 +144,13 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	// We now have a folder and a device, so we can dive into the folder
+	// to get at the images and image names
+	// We need to only download those images (files) we haven't seen before
+	// We download them to where?
+	
+	
     // Navigation logic may go here. Create and push another view controller.
 	/*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
