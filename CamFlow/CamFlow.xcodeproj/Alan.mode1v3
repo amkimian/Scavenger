@@ -249,8 +249,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -299,9 +297,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>6</integer>
-									<integer>5</integer>
+									<integer>29</integer>
+									<integer>18</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -336,12 +333,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FolderListTableViewController_iPhone.m</string>
+								<string>CamFlowPhotoUploader.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -349,7 +348,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FolderListTableViewController_iPhone.m</string>
+										<string>CamFlowPhotoUploader.m</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>E707D13711ED593A00FCBAEE</string>
 										<key>history</key>
 										<array>
 											<string>E707CF5A11E95D0800FCBAEE</string>
@@ -359,14 +362,16 @@
 											<string>E707D07D11EA172F00FCBAEE</string>
 											<string>E707D09111EA182500FCBAEE</string>
 											<string>E707D09211EA182500FCBAEE</string>
-											<string>E707D09311EA182500FCBAEE</string>
 											<string>E707D09411EA182500FCBAEE</string>
 											<string>E707D09511EA182500FCBAEE</string>
 											<string>E707D0A011EA18AE00FCBAEE</string>
 											<string>E707D0B111EA191700FCBAEE</string>
 											<string>E707D10611EAA1AE00FCBAEE</string>
-											<string>E707D10C11EAA1DD00FCBAEE</string>
-											<string>E707D10D11EAA1DD00FCBAEE</string>
+											<string>E707D13211ED593A00FCBAEE</string>
+											<string>E707D13311ED593A00FCBAEE</string>
+											<string>E707D13411ED593A00FCBAEE</string>
+											<string>E707D13511ED593A00FCBAEE</string>
+											<string>E707D13611ED593A00FCBAEE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -547,7 +552,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300687882.60402298</real>
+	<real>300767546.13437402</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -564,10 +569,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/Alan/Development/Scavenger/CamFlow/CamFlow.xcodeproj</string>
 		<string>E701D72711E9598200A41CD7</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>/Users/Alan/Development/Scavenger/CamFlow/CamFlow.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>203 147 1164 731 0 0 1440 878 </string>
@@ -591,21 +596,21 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>FolderListTableViewController_iPhone.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {500, 218}}</string>
+								<string>{{0, 0}, {691, 283}}</string>
 								<key>RubberWindowFrame</key>
-								<string>368 253 500 500 0 0 1440 878 </string>
+								<string>368 188 691 565 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>218pt</string>
+							<string>283pt</string>
 						</dict>
 						<dict>
 							<key>BecomeActive</key>
@@ -624,9 +629,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 223}, {500, 236}}</string>
+								<string>{{0, 288}, {691, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>368 253 500 500 0 0 1440 878 </string>
+								<string>368 188 691 565 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -635,7 +640,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>459pt</string>
+					<string>524pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -658,11 +663,11 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>368 253 500 500 0 0 1440 878 </string>
+			<string>368 188 691 565 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>E701D72711E9598200A41CD7</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
