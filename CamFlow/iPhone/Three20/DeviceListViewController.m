@@ -11,13 +11,19 @@
 #import "PairedDeviceObject.h"
 
 @implementation DeviceListViewController
--(void) viewDidLoad
+
+-(id) init
 {
+	[super init];
 	self.tabBarItem.image = [UIImage imageNamed:@"45-movie1.png"];
 	self.tabBarItem.title = @"Play";
 	self.title = @"Play";
-	[self resetContent];
-	
+	return self;
+}
+
+-(void) viewDidLoad
+{
+	[self resetContent];	
 }
 
 -(void) resetContent
@@ -27,7 +33,7 @@
 	NSArray *pairedDevices = ip.fetchedResultsController.fetchedObjects;
 	for(PairedDeviceObject *f in pairedDevices)
 	{
-		TTTableTextItem *item = [TTTableTextItem itemWithText:f.name URL:[NSString stringWithFormat:@"cf://viewer/%@",f.name]];
+		TTTableSubtitleItem *item = [TTTableSubtitleItem itemWithText:f.name subtitle:f.deviceId URL:[NSString stringWithFormat:@"cf://viewer/%@",f.name]];
 		[data addObject:item];		
 	}
 	self.dataSource = [TTListDataSource dataSourceWithItems:data];

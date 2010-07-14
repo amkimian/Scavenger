@@ -14,6 +14,8 @@
 #import "TopLevelTabBarController.h"
 #import "CameraFolderTableViewController.h"
 #import "DeviceListViewController.h"
+#import "DeviceFolderListController.h"
+
 #import "Three20/Three20.h"
 
 @implementation AppDelegate_iPhone
@@ -44,6 +46,8 @@
 	[map from:@"cf://tabBar" toViewController:[TopLevelTabBarController class]];
 	[map from:@"cf://camera" toSharedViewController:[CameraFolderTableViewController class]];
 	[map from:@"cf://viewer" toSharedViewController:[DeviceListViewController class]];
+	[map from:@"cf://viewer/(initWithDevice:)" toSharedViewController:[DeviceFolderListController class]];
+	
 	
 	if (![navigator restoreViewControllers])
 	{

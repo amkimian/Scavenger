@@ -13,11 +13,17 @@
 @implementation CameraFolderTableViewController
 @synthesize sds;
 
--(void) viewDidLoad
+-(id) init
 {
+	[super init];
 	self.tabBarItem.image = [UIImage imageNamed:@"86-camera.png"];
 	self.tabBarItem.title = @"Camera";
-	self.title = @"Camera";	
+	self.title = @"Camera";		
+	return self;
+}
+
+-(void) viewDidLoad
+{
 	
 	self.sds = [[TTSectionedDataSource alloc] init];
 	
