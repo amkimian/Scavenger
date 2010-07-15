@@ -22,7 +22,7 @@
 #import "Three20/Three20.h"
 
 @implementation AppDelegate_iPhone
-
+@synthesize currentFolder;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -146,6 +146,7 @@
 -(UIViewController *) showImagePicker: (NSString *) folder
 {
 	NSLog(@"Folder is %@", folder);
+	self.currentFolder = folder;
 	ImagePickerController *controller = [[ImagePickerController alloc] initWithMode:2];
 	controller.delegate = self;
 	return controller;	
@@ -160,7 +161,7 @@
 	[picker dismissModalViewControllerAnimated:YES];
 	UIImage *realImage = (UIImage *) [info valueForKey:UIImagePickerControllerOriginalImage];
 	CamFlowPhotoUploader *cf = [[CamFlowPhotoUploader alloc] init];
-	//[cf uploadImage: realImage toFolder: self.currentFolder];
+	[cf uploadImage: realImage toFolder: self.currentFolder];
 }
 
 @end

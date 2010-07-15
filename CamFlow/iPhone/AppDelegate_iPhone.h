@@ -12,8 +12,10 @@
 #define APPDELEGATE_IPHONE (AppDelegate_iPhone *) [UIApplication sharedApplication].delegate
 
 @interface AppDelegate_iPhone : AppDelegate_Shared<UITabBarControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+	NSString *currentFolder;
 }
 
+@property(nonatomic, copy) NSString *currentFolder;
 
 @end
 
