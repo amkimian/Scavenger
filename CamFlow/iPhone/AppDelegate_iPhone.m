@@ -51,7 +51,7 @@
 	[map from:@"cf://viewer" toSharedViewController:[DeviceListViewController class]];
 	[map from:@"cf://viewer/(initWithDevice:)" toSharedViewController:[DeviceFolderListController class]];
 	[map from:@"cf://settings" toSharedViewController:[DeviceSettingsViewController class]];
-	[map from:@"cf://camera/2" toModalViewController:self selector:@selector(showImagePicker)];
+	[map from:@"cf://camera/take/(showImagePicker:)" toModalViewController:self selector:@selector(showImagePicker:)];
 	
 	if (![navigator restoreViewControllers])
 	{
@@ -143,8 +143,9 @@
 #pragma mark -
 #pragma mark ImageController
 
--(UIViewController *) showImagePicker
+-(UIViewController *) showImagePicker: (NSString *) folder
 {
+	NSLog(@"Folder is %@", folder);
 	ImagePickerController *controller = [[ImagePickerController alloc] initWithMode:2];
 	controller.delegate = self;
 	return controller;	

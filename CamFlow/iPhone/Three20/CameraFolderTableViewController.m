@@ -45,7 +45,7 @@
 	NSArray *objFolders = [ip getMyFolders];
 	for(CamFolderObject *f in objFolders)
 	{
-		TTTableTextItem *item = [TTTableTextItem itemWithText:f.folderName URL:[NSString stringWithFormat:@"cf://camera/2",f.folderName]];
+		TTTableTextItem *item = [TTTableTextItem itemWithText:f.folderName URL:[NSString stringWithFormat:@"cf://camera/take/%@",f.folderName]];
 		[folders addObject:item];		
 	}
 	[data addObject:folders];
