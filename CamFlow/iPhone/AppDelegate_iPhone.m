@@ -15,6 +15,8 @@
 #import "CameraFolderTableViewController.h"
 #import "DeviceListViewController.h"
 #import "DeviceFolderListController.h"
+#import "DeviceSettingsViewController.h"
+#import "ImagePickerController.h"
 
 #import "Three20/Three20.h"
 
@@ -47,7 +49,8 @@
 	[map from:@"cf://camera" toSharedViewController:[CameraFolderTableViewController class]];
 	[map from:@"cf://viewer" toSharedViewController:[DeviceListViewController class]];
 	[map from:@"cf://viewer/(initWithDevice:)" toSharedViewController:[DeviceFolderListController class]];
-	
+	[map from:@"cf://settings" toSharedViewController:[DeviceSettingsViewController class]];
+	[map from:@"cf://camera/(initWithMode:)" toModalViewController:[ImagePickerController class]];
 	
 	if (![navigator restoreViewControllers])
 	{

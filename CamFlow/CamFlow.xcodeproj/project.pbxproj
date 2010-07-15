@@ -11,6 +11,8 @@
 		15044C8B11EE48BD0048125C /* CameraFolderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15044C8A11EE48BD0048125C /* CameraFolderTableViewController.m */; };
 		15044CEB11EE52E90048125C /* DeviceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15044CEA11EE52E90048125C /* DeviceListViewController.m */; };
 		15044D1B11EE56FB0048125C /* DeviceFolderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15044D1A11EE56FB0048125C /* DeviceFolderListController.m */; };
+		15044D3511EEB6300048125C /* DeviceSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15044D3411EEB6300048125C /* DeviceSettingsViewController.m */; };
+		15044D4D11EF5FDF0048125C /* ImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15044D4C11EF5FDF0048125C /* ImagePickerController.m */; };
 		15356AFC11ED613A006F5F22 /* PairedDeviceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356AF711ED613A006F5F22 /* PairedDeviceObject.m */; };
 		15356AFD11ED613A006F5F22 /* ViewedImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356AF911ED613A006F5F22 /* ViewedImageObject.m */; };
 		15356AFE11ED613A006F5F22 /* CamFolderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356AFB11ED613A006F5F22 /* CamFolderObject.m */; };
@@ -225,6 +227,10 @@
 		15044CEA11EE52E90048125C /* DeviceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceListViewController.m; path = Three20/DeviceListViewController.m; sourceTree = "<group>"; };
 		15044D1911EE56FB0048125C /* DeviceFolderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceFolderListController.h; path = Three20/DeviceFolderListController.h; sourceTree = "<group>"; };
 		15044D1A11EE56FB0048125C /* DeviceFolderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceFolderListController.m; path = Three20/DeviceFolderListController.m; sourceTree = "<group>"; };
+		15044D3311EEB6300048125C /* DeviceSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceSettingsViewController.h; path = Three20/DeviceSettingsViewController.h; sourceTree = "<group>"; };
+		15044D3411EEB6300048125C /* DeviceSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceSettingsViewController.m; path = Three20/DeviceSettingsViewController.m; sourceTree = "<group>"; };
+		15044D4B11EF5FDF0048125C /* ImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagePickerController.h; path = Three20/ImagePickerController.h; sourceTree = "<group>"; };
+		15044D4C11EF5FDF0048125C /* ImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagePickerController.m; path = Three20/ImagePickerController.m; sourceTree = "<group>"; };
 		15356AF611ED613A006F5F22 /* PairedDeviceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairedDeviceObject.h; sourceTree = "<group>"; };
 		15356AF711ED613A006F5F22 /* PairedDeviceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairedDeviceObject.m; sourceTree = "<group>"; };
 		15356AF811ED613A006F5F22 /* ViewedImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewedImageObject.h; sourceTree = "<group>"; };
@@ -355,6 +361,10 @@
 				15044CEA11EE52E90048125C /* DeviceListViewController.m */,
 				15044D1911EE56FB0048125C /* DeviceFolderListController.h */,
 				15044D1A11EE56FB0048125C /* DeviceFolderListController.m */,
+				15044D3311EEB6300048125C /* DeviceSettingsViewController.h */,
+				15044D3411EEB6300048125C /* DeviceSettingsViewController.m */,
+				15044D4B11EF5FDF0048125C /* ImagePickerController.h */,
+				15044D4C11EF5FDF0048125C /* ImagePickerController.m */,
 			);
 			name = Three20TableControllers;
 			sourceTree = "<group>";
@@ -836,6 +846,8 @@
 				15044C8B11EE48BD0048125C /* CameraFolderTableViewController.m in Sources */,
 				15044CEB11EE52E90048125C /* DeviceListViewController.m in Sources */,
 				15044D1B11EE56FB0048125C /* DeviceFolderListController.m in Sources */,
+				15044D3511EEB6300048125C /* DeviceSettingsViewController.m in Sources */,
+				15044D4D11EF5FDF0048125C /* ImagePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
