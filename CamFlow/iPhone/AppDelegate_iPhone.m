@@ -17,6 +17,7 @@
 #import "DeviceFolderListController.h"
 #import "DeviceSettingsViewController.h"
 #import "ImagePickerController.h"
+#import "CamFlowPhotoUploader.h"
 
 #import "Three20/Three20.h"
 
@@ -50,7 +51,7 @@
 	[map from:@"cf://viewer" toSharedViewController:[DeviceListViewController class]];
 	[map from:@"cf://viewer/(initWithDevice:)" toSharedViewController:[DeviceFolderListController class]];
 	[map from:@"cf://settings" toSharedViewController:[DeviceSettingsViewController class]];
-	[map from:@"cf://camera/(initWithMode:)" toModalViewController:[ImagePickerController class]];
+	[map from:@"cf://camera/2" toModalViewController:self selector:@selector(showImagePicker)];
 	
 	if (![navigator restoreViewControllers])
 	{
@@ -139,6 +140,27 @@
 	[super dealloc];
 }
 
+#pragma mark -
+#pragma mark ImageController
+
+-(UIViewController *) showImagePicker
+{
+	ImagePickerController *controller = [[ImagePickerController alloc] initWithMode:2];
+	controller.delegate = self;
+	return controller;	
+}
+
+#pragma mark -
+#pragma mark ImagePickerController delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+	NSLog(@"Picked image");
+	[picker.modalViewController dismissModalViewControllerAnimated:YES];
+	UIImage *realImage = (UIImage *) [info valueForKey:UIImagePickerControllerOriginalImage];
+	CamFlowPhotoUploader *cf = [[CamFlowPhotoUploader alloc] init];
+	//[cf uploadImage: realImage toFolder: self.currentFolder];
+}
 
 @end
 
