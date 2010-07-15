@@ -156,7 +156,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	NSLog(@"Picked image");
-	[picker.modalViewController dismissModalViewControllerAnimated:YES];
+	[picker dismissModalViewControllerAnimated:YES];
 	UIImage *realImage = (UIImage *) [info valueForKey:UIImagePickerControllerOriginalImage];
 	CamFlowPhotoUploader *cf = [[CamFlowPhotoUploader alloc] init];
 	//[cf uploadImage: realImage toFolder: self.currentFolder];
