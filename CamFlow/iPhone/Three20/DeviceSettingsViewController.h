@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Three20/Three20.h"
+#import <GameKit/GameKit.h>
 
-@interface DeviceSettingsViewController  : TTTableViewController  {
+@interface DeviceSettingsViewController  : TTTableViewController<GKPeerPickerControllerDelegate>  {
 
 }
 
 -(void) resetContent;
+-(void) pairDevice;
 
 @end

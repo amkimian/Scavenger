@@ -19,6 +19,7 @@
 		15356B1911ED65A5006F5F22 /* DeviceListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356B1811ED65A5006F5F22 /* DeviceListTableViewController.m */; };
 		15356B3A11ED67D1006F5F22 /* DeviceFolderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356B3911ED67D1006F5F22 /* DeviceFolderTableViewController.m */; };
 		15356B5511ED6A56006F5F22 /* PairedDevice+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15356B5411ED6A56006F5F22 /* PairedDevice+Extensions.m */; };
+		15AB473F11F0E73E00B0D64D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15AB473E11F0E73E00B0D64D /* GameKit.framework */; };
 		15B4E61111EC16FB000009D2 /* CamFlowPhotoUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4E61011EC16FB000009D2 /* CamFlowPhotoUploader.m */; };
 		15B4E61711EC183D000009D2 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4E61611EC183D000009D2 /* UIImage+Resize.m */; };
 		15B4E61F11EC18E7000009D2 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4E61C11EC18E7000009D2 /* UIImage+Alpha.m */; };
@@ -246,6 +247,7 @@
 		15356B3911ED67D1006F5F22 /* DeviceFolderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceFolderTableViewController.m; path = TableControllers/DeviceFolderTableViewController.m; sourceTree = "<group>"; };
 		15356B5311ED6A56006F5F22 /* PairedDevice+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PairedDevice+Extensions.h"; path = "Shared/Extensions/PairedDevice+Extensions.h"; sourceTree = "<group>"; };
 		15356B5411ED6A56006F5F22 /* PairedDevice+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PairedDevice+Extensions.m"; path = "Shared/Extensions/PairedDevice+Extensions.m"; sourceTree = "<group>"; };
+		15AB473E11F0E73E00B0D64D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		15B4E60F11EC16FB000009D2 /* CamFlowPhotoUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamFlowPhotoUploader.h; sourceTree = "<group>"; };
 		15B4E61011EC16FB000009D2 /* CamFlowPhotoUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamFlowPhotoUploader.m; sourceTree = "<group>"; };
 		15B4E61511EC183D000009D2 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "Shared/Extensions/UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				E707D1E511ED807700FCBAEE /* libThree20UICommon.a in Frameworks */,
 				E707D1E611ED807900FCBAEE /* libThree20UINavigator.a in Frameworks */,
 				E707D23111ED820000FCBAEE /* QuartzCore.framework in Frameworks */,
+				15AB473F11F0E73E00B0D64D /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +524,7 @@
 				15B4E6A011EC1C0C000009D2 /* MobileCoreServices.framework */,
 				15B4E6A611EC1C1E000009D2 /* SystemConfiguration.framework */,
 				E707D23011ED820000FCBAEE /* QuartzCore.framework */,
+				15AB473E11F0E73E00B0D64D /* GameKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
