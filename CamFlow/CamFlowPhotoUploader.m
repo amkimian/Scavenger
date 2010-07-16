@@ -36,14 +36,21 @@
 	NSDate *now = [NSDate date];
 	
 	NSString *fileName = [dateFormatter stringFromDate:now];	
-	NSData *imageData = UIImageJPEGRepresentation(resizedImage, 90);
+	
+	NSData *thumbImageData = UIImageJPEGRepresentation(resizedImage, 90);
+	NSData *realImageData = UIImageJPEGRepresentation(image, 90);
 	
 	// And upload that
 	
-	NSString *key = [NSString stringWithFormat: @"%@/%@/%@.jpg", [UIDevice currentDevice].uniqueIdentifier, folder,fileName];
-	
+	NSString *mainKey = [NSString stringWithFormat: @"%@/%@/%@.jpg", [UIDevice currentDevice].uniqueIdentifier, folder,fileName];
+	NSString *thumbKey = [NSString stringWithFormat: @"%@/%@/thumb/%@.jpg", [UIDevice currentDevice].uniqueIdentifier, folder,fileName];
+
 	ASIS3ObjectRequest *request = 
-	[ASIS3ObjectRequest PUTRequestForData:imageData withBucket:@"camflow-images" key:key];
+	[ASIS3ObjectRequest PUTRequestForData:realImageData withBucket:@"camflow-images" key:mainKey];
+	[request startSynchronous];
+	
+	request = 
+	[ASIS3ObjectRequest PUTRequestForData:thumbImageData withBucket:@"camflow-images" key:thumbKey];
 	[request startSynchronous];
 }
 

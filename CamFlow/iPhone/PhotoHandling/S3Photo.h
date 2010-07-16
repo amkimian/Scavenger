@@ -12,6 +12,7 @@
 @interface S3Photo : NSObject <TTPhoto> {
 	id<TTPhotoSource> _photoSource;
 	NSString* _s3URL;
+	NSString* _s3ThumbURL;
 	NSString* _thumbURL;
 	NSString* _smallURL;
 	NSString* _URL;
@@ -21,8 +22,10 @@
 }
 
 @property(nonatomic, copy) NSString *s3URL;
+@property(nonatomic, copy) NSString *s3ThumbURL;
 
 -(id) initWithS3Image: (NSString *) s3URL photoSource:(id<TTPhotoSource>) src;
--(void) ensureLoaded;
+-(void) ensureURLLoaded;
+-(void) ensureThumbURLLoaded;
 
 @end

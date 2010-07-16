@@ -1,10 +1,38 @@
 // !$*UTF8*$!
 {
+	15044C8A11EE48BD0048125C /* CameraFolderTableViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1055, 741}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{502, 1111}";
+		};
+	};
+	15044CEA11EE52E90048125C /* DeviceListViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1097, 546}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{87, 845}";
+		};
+	};
 	15044D1A11EE56FB0048125C /* DeviceFolderListController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1167, 650}}";
 			sepNavSelRange = "{857, 0}";
-			sepNavVisRange = "{756, 505}";
+			sepNavVisRange = "{765, 496}";
+		};
+	};
+	15044D3411EEB6300048125C /* DeviceSettingsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1111, 559}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{230, 795}";
+		};
+	};
+	15044D4C11EF5FDF0048125C /* ImagePickerController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {821, 423}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 558}";
 		};
 	};
 	15356AFB11ED613A006F5F22 /* CamFolderObject.m */ = {
@@ -52,9 +80,9 @@
 	};
 	15B4E61011EC16FB000009D2 /* CamFlowPhotoUploader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {887, 676}}";
-			sepNavSelRange = "{928, 6}";
-			sepNavVisRange = "{318, 1145}";
+			sepNavIntBoundsRect = "{{0, 0}, {964, 767}}";
+			sepNavSelRange = "{1672, 0}";
+			sepNavVisRange = "{466, 1353}";
 		};
 	};
 	15B4E63411EC1B7C000009D2 /* ASIDownloadCache.m */ = {
@@ -344,8 +372,9 @@
 			E707D0C111EA1A8300FCBAEE /* AppDelegate_iPhone.m:26 */,
 			E7021B4211EFF62100B9F6C0 /* DeviceFolderListController.m:39 */,
 			E7021C4F11F0072400B9F6C0 /* PhotoFolderController.m:20 */,
-			E7021CBC11F00E9100B9F6C0 /* S3Photo.m:28 */,
+			E7021CBC11F00E9100B9F6C0 /* S3Photo.m:35 */,
 			E7021CFD11F0123300B9F6C0 /* PhotoFolderController.m:31 */,
+			E7021D3711F016E500B9F6C0 /* S3Photo.m:26 */,
 		);
 		codeSenseManager = E701D72A11E9598200A41CD7 /* Code sense */;
 		executables = (
@@ -488,6 +517,29 @@
 			E7021D2711F0142C00B9F6C0 /* PBXTextBookmark */ = E7021D2711F0142C00B9F6C0 /* PBXTextBookmark */;
 			E7021D2811F0142C00B9F6C0 /* PBXTextBookmark */ = E7021D2811F0142C00B9F6C0 /* PBXTextBookmark */;
 			E7021D2911F0142C00B9F6C0 /* PBXTextBookmark */ = E7021D2911F0142C00B9F6C0 /* PBXTextBookmark */;
+			E7021D2A11F014E500B9F6C0 /* XCBuildMessageTextBookmark */ = E7021D2A11F014E500B9F6C0 /* XCBuildMessageTextBookmark */;
+			E7021D2B11F014E500B9F6C0 /* PBXTextBookmark */ = E7021D2B11F014E500B9F6C0 /* PBXTextBookmark */;
+			E7021D2E11F0158900B9F6C0 /* PBXTextBookmark */ = E7021D2E11F0158900B9F6C0 /* PBXTextBookmark */;
+			E7021D3511F016DB00B9F6C0 /* XCBuildMessageTextBookmark */ = E7021D3511F016DB00B9F6C0 /* XCBuildMessageTextBookmark */;
+			E7021D3611F016DB00B9F6C0 /* PBXTextBookmark */ = E7021D3611F016DB00B9F6C0 /* PBXTextBookmark */;
+			E7021D3B11F016ED00B9F6C0 /* PBXTextBookmark */ = E7021D3B11F016ED00B9F6C0 /* PBXTextBookmark */;
+			E7021D3C11F016ED00B9F6C0 /* PBXTextBookmark */ = E7021D3C11F016ED00B9F6C0 /* PBXTextBookmark */;
+			E7021D3D11F016ED00B9F6C0 /* PBXTextBookmark */ = E7021D3D11F016ED00B9F6C0 /* PBXTextBookmark */;
+			E7021D3E11F016ED00B9F6C0 /* PBXTextBookmark */ = E7021D3E11F016ED00B9F6C0 /* PBXTextBookmark */;
+			E7021D3F11F016ED00B9F6C0 /* PBXTextBookmark */ = E7021D3F11F016ED00B9F6C0 /* PBXTextBookmark */;
+			E7021D4011F016ED00B9F6C0 /* PBXTextBookmark */ = E7021D4011F016ED00B9F6C0 /* PBXTextBookmark */;
+			E7021D4111F016ED00B9F6C0 /* PBXTextBookmark */ = E7021D4111F016ED00B9F6C0 /* PBXTextBookmark */;
+			E7021D4211F016ED00B9F6C0 /* PBXTextBookmark */ = E7021D4211F016ED00B9F6C0 /* PBXTextBookmark */;
+			E7021D4311F016ED00B9F6C0 /* PBXTextBookmark */ = E7021D4311F016ED00B9F6C0 /* PBXTextBookmark */;
+			E7021D4411F016ED00B9F6C0 /* PBXTextBookmark */ = E7021D4411F016ED00B9F6C0 /* PBXTextBookmark */;
+			E7021D4B11F017F200B9F6C0 /* PBXTextBookmark */ = E7021D4B11F017F200B9F6C0 /* PBXTextBookmark */;
+			E7021D4E11F0182800B9F6C0 /* PBXTextBookmark */ = E7021D4E11F0182800B9F6C0 /* PBXTextBookmark */;
+			E7021D4F11F0183000B9F6C0 /* PBXTextBookmark */ = E7021D4F11F0183000B9F6C0 /* PBXTextBookmark */;
+			E7021D5211F018C100B9F6C0 /* PBXTextBookmark */ = E7021D5211F018C100B9F6C0 /* PBXTextBookmark */;
+			E7021D5311F018C500B9F6C0 /* PBXTextBookmark */ = E7021D5311F018C500B9F6C0 /* PBXTextBookmark */;
+			E7021D5411F018C500B9F6C0 /* PBXTextBookmark */ = E7021D5411F018C500B9F6C0 /* PBXTextBookmark */;
+			E7021D5511F018C500B9F6C0 /* PBXTextBookmark */ = E7021D5511F018C500B9F6C0 /* PBXTextBookmark */;
+			E7021D5611F018C500B9F6C0 /* PBXTextBookmark */ = E7021D5611F018C500B9F6C0 /* PBXTextBookmark */;
 			E707CF5A11E95D0800FCBAEE = E707CF5A11E95D0800FCBAEE /* PBXTextBookmark */;
 			E707CF5E11E95D0800FCBAEE = E707CF5E11E95D0800FCBAEE /* PlistBookmark */;
 			E707CF6011E95D0800FCBAEE = E707CF6011E95D0800FCBAEE /* PBXTextBookmark */;
@@ -591,7 +643,7 @@
 		ignoreCount = 0;
 		lineNumber = 39;
 		location = CamFlow;
-		modificationTime = 300946338.242801;
+		modificationTime = 300947447.934449;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -953,7 +1005,7 @@
 		ignoreCount = 0;
 		lineNumber = 20;
 		location = CamFlow;
-		modificationTime = 300946343.140031;
+		modificationTime = 300947455.748543;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1054,15 +1106,15 @@
 	E7021C7911F008F200B9F6C0 /* S3Photo.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {821, 446}}";
-			sepNavSelRange = "{457, 0}";
-			sepNavVisRange = "{0, 565}";
+			sepNavSelRange = "{664, 0}";
+			sepNavVisRange = "{0, 671}";
 		};
 	};
 	E7021C7A11F008F200B9F6C0 /* S3Photo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {821, 689}}";
-			sepNavSelRange = "{630, 0}";
-			sepNavVisRange = "{0, 883}";
+			sepNavIntBoundsRect = "{{0, 0}, {782, 1053}}";
+			sepNavSelRange = "{740, 0}";
+			sepNavVisRange = "{487, 653}";
 		};
 	};
 	E7021C8A11F00A7B00B9F6C0 /* XCBuildMessageTextBookmark */ = {
@@ -1071,7 +1123,7 @@
 		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 24;
+		rLoc = 26;
 		rType = 1;
 	};
 	E7021C8B11F00A7B00B9F6C0 /* PBXTextBookmark */ = {
@@ -1079,7 +1131,7 @@
 		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
 		name = "S3Photo.h: 23";
 		rLen = 0;
-		rLoc = 535;
+		rLoc = 608;
 		rType = 0;
 		vrLen = 362;
 		vrLoc = 136;
@@ -1089,7 +1141,7 @@
 		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
 		name = "S3Photo.h: 23";
 		rLen = 0;
-		rLoc = 535;
+		rLoc = 608;
 		rType = 0;
 		vrLen = 362;
 		vrLoc = 136;
@@ -1099,7 +1151,7 @@
 		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
 		name = "S3Photo.h: 23";
 		rLen = 0;
-		rLoc = 535;
+		rLoc = 608;
 		rType = 0;
 		vrLen = 362;
 		vrLoc = 136;
@@ -1119,7 +1171,7 @@
 		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
 		name = "S3Photo.h: 23";
 		rLen = 0;
-		rLoc = 458;
+		rLoc = 531;
 		rType = 0;
 		vrLen = 498;
 		vrLoc = 0;
@@ -1129,7 +1181,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 18";
 		rLen = 0;
-		rLoc = 448;
+		rLoc = 486;
 		rType = 0;
 		vrLen = 757;
 		vrLoc = 0;
@@ -1179,7 +1231,7 @@
 		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
 		name = "S3Photo.h: 23";
 		rLen = 0;
-		rLoc = 535;
+		rLoc = 608;
 		rType = 0;
 		vrLen = 365;
 		vrLoc = 133;
@@ -1209,7 +1261,7 @@
 		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
 		name = "S3Photo.h: 25";
 		rLen = 0;
-		rLoc = 559;
+		rLoc = 665;
 		rType = 0;
 		vrLen = 520;
 		vrLoc = 0;
@@ -1220,7 +1272,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 31;
+		rLoc = 38;
 		rType = 1;
 	};
 	E7021CB911F00E7400B9F6C0 /* PBXTextBookmark */ = {
@@ -1228,12 +1280,12 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 31";
 		rLen = 0;
-		rLoc = 838;
+		rLoc = 1116;
 		rType = 0;
 		vrLen = 974;
 		vrLoc = 189;
 	};
-	E7021CBC11F00E9100B9F6C0 /* S3Photo.m:28 */ = {
+	E7021CBC11F00E9100B9F6C0 /* S3Photo.m:35 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1243,11 +1295,11 @@
 		delayBeforeContinue = 0;
 		fileReference = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		functionName = "-ensureLoaded";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 28;
+		lineNumber = 35;
 		location = CamFlow;
-		modificationTime = 300946348.152641;
+		modificationTime = 300947443.476321;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1256,7 +1308,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 31";
 		rLen = 0;
-		rLoc = 838;
+		rLoc = 1116;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 304;
@@ -1266,7 +1318,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 31";
 		rLen = 0;
-		rLoc = 838;
+		rLoc = 1116;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 304;
@@ -1286,7 +1338,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 31";
 		rLen = 0;
-		rLoc = 838;
+		rLoc = 1116;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 304;
@@ -1296,7 +1348,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 27";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 885;
 		rType = 0;
 		vrLen = 893;
 		vrLoc = 304;
@@ -1306,7 +1358,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 27";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 885;
 		rType = 0;
 		vrLen = 910;
 		vrLoc = 304;
@@ -1356,7 +1408,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 39";
 		rLen = 0;
-		rLoc = 978;
+		rLoc = 1602;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 424;
@@ -1445,7 +1497,7 @@
 		ignoreCount = 0;
 		lineNumber = 31;
 		location = CamFlow;
-		modificationTime = 300946346.627232;
+		modificationTime = 300947458.154512;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1464,7 +1516,7 @@
 		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
 		name = "S3Photo.h: 23";
 		rLen = 0;
-		rLoc = 535;
+		rLoc = 608;
 		rType = 0;
 		vrLen = 387;
 		vrLoc = 133;
@@ -1475,7 +1527,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 31;
+		rLoc = 38;
 		rType = 1;
 	};
 	E7021D1311F0134C00B9F6C0 /* PBXTextBookmark */ = {
@@ -1483,7 +1535,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 30";
 		rLen = 0;
-		rLoc = 760;
+		rLoc = 1038;
 		rType = 0;
 		vrLen = 598;
 		vrLoc = 603;
@@ -1533,7 +1585,7 @@
 		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
 		name = "S3Photo.h: 24";
 		rLen = 0;
-		rLoc = 457;
+		rLoc = 530;
 		rType = 0;
 		vrLen = 565;
 		vrLoc = 0;
@@ -1543,7 +1595,7 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 39";
 		rLen = 0;
-		rLoc = 978;
+		rLoc = 1602;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 399;
@@ -1553,9 +1605,255 @@
 		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
 		name = "S3Photo.m: 28";
 		rLen = 0;
-		rLoc = 630;
+		rLoc = 908;
 		rType = 0;
 		vrLen = 883;
+		vrLoc = 0;
+	};
+	E7021D2A11F014E500B9F6C0 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "No declaration of property 'S3URL' found in the interface";
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 14;
+		rType = 1;
+	};
+	E7021D2B11F014E500B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 14";
+		rLen = 0;
+		rLoc = 316;
+		rType = 0;
+		vrLen = 454;
+		vrLoc = 29;
+	};
+	E7021D2E11F0158900B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 14";
+		rLen = 0;
+		rLoc = 316;
+		rType = 0;
+		vrLen = 454;
+		vrLoc = 29;
+	};
+	E7021D3511F016DB00B9F6C0 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected identifier or '(' before 'return'";
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 27;
+		rType = 1;
+	};
+	E7021D3611F016DB00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 26";
+		rLen = 0;
+		rLoc = 740;
+		rType = 0;
+		vrLen = 420;
+		vrLoc = 487;
+	};
+	E7021D3711F016E500B9F6C0 /* S3Photo.m:26 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		functionName = "-initWithS3Image:photoSource:";
+		hitCount = 2;
+		ignoreCount = 0;
+		lineNumber = 26;
+		location = CamFlow;
+		modificationTime = 300947461.266752;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	E7021D3B11F016ED00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15B4E61011EC16FB000009D2 /* CamFlowPhotoUploader.m */;
+		name = "CamFlowPhotoUploader.m: 52";
+		rLen = 0;
+		rLoc = 1672;
+		rType = 0;
+		vrLen = 1237;
+		vrLoc = 582;
+	};
+	E7021D3C11F016ED00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
+		name = "S3Photo.h: 26";
+		rLen = 0;
+		rLoc = 530;
+		rType = 0;
+		vrLen = 638;
+		vrLoc = 0;
+	};
+	E7021D3D11F016ED00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15044D3411EEB6300048125C /* DeviceSettingsViewController.m */;
+		name = "DeviceSettingsViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 795;
+		vrLoc = 230;
+	};
+	E7021D3E11F016ED00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15044CEA11EE52E90048125C /* DeviceListViewController.m */;
+		name = "DeviceListViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 845;
+		vrLoc = 87;
+	};
+	E7021D3F11F016ED00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15044D4C11EF5FDF0048125C /* ImagePickerController.m */;
+		name = "ImagePickerController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 558;
+		vrLoc = 0;
+	};
+	E7021D4011F016ED00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15044D1A11EE56FB0048125C /* DeviceFolderListController.m */;
+		name = "DeviceFolderListController.m: 46";
+		rLen = 19;
+		rLoc = 1229;
+		rType = 0;
+		vrLen = 858;
+		vrLoc = 409;
+	};
+	E7021D4111F016ED00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15044C8A11EE48BD0048125C /* CameraFolderTableViewController.m */;
+		name = "CameraFolderTableViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1111;
+		vrLoc = 502;
+	};
+	E7021D4211F016ED00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15356B5411ED6A56006F5F22 /* PairedDevice+Extensions.m */;
+		name = "PairedDevice+Extensions.m: 33";
+		rLen = 0;
+		rLoc = 831;
+		rType = 0;
+		vrLen = 1085;
+		vrLoc = 248;
+	};
+	E7021D4311F016ED00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 15";
+		rLen = 0;
+		rLoc = 331;
+		rType = 0;
+		vrLen = 837;
+		vrLoc = 70;
+	};
+	E7021D4411F016ED00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 15";
+		rLen = 0;
+		rLoc = 331;
+		rType = 0;
+		vrLen = 837;
+		vrLoc = 70;
+	};
+	E7021D4B11F017F200B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 26";
+		rLen = 0;
+		rLoc = 739;
+		rType = 0;
+		vrLen = 1050;
+		vrLoc = 70;
+	};
+	E7021D4E11F0182800B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 27";
+		rLen = 0;
+		rLoc = 740;
+		rType = 0;
+		vrLen = 674;
+		vrLoc = 487;
+	};
+	E7021D4F11F0183000B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 27";
+		rLen = 0;
+		rLoc = 740;
+		rType = 0;
+		vrLen = 674;
+		vrLoc = 487;
+	};
+	E7021D5211F018C100B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 27";
+		rLen = 0;
+		rLoc = 740;
+		rType = 0;
+		vrLen = 653;
+		vrLoc = 487;
+	};
+	E7021D5311F018C500B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15B4E61011EC16FB000009D2 /* CamFlowPhotoUploader.m */;
+		name = "CamFlowPhotoUploader.m: 52";
+		rLen = 0;
+		rLoc = 1672;
+		rType = 0;
+		vrLen = 1353;
+		vrLoc = 466;
+	};
+	E7021D5411F018C500B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 68";
+		rLen = 0;
+		rLoc = 1862;
+		rType = 0;
+		vrLen = 952;
+		vrLoc = 1040;
+	};
+	E7021D5511F018C500B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
+		name = "S3Photo.h: 26";
+		rLen = 0;
+		rLoc = 530;
+		rType = 0;
+		vrLen = 638;
+		vrLoc = 0;
+	};
+	E7021D5611F018C500B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
+		name = "S3Photo.h: 29";
+		rLen = 0;
+		rLoc = 664;
+		rType = 0;
+		vrLen = 671;
 		vrLoc = 0;
 	};
 	E707CF4F11E95C4700FCBAEE /* TopLevelMenu_iPhone.h */ = {
@@ -1707,7 +2005,7 @@
 		ignoreCount = 0;
 		lineNumber = 26;
 		location = CamFlow;
-		modificationTime = 300946333.049749;
+		modificationTime = 300947443.474241;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
