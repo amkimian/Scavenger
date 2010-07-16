@@ -306,14 +306,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>24</integer>
+									<integer>21</integer>
 									<integer>19</integer>
 									<integer>18</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {260, 672}}</string>
+							<string>{{0, 228}, {260, 672}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -350,7 +350,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>S3Photo.h</string>
+								<string>PhotoFolderController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -358,11 +358,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>S3Photo.h</string>
+										<string>PhotoFolderController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7021D5611F018C500B9F6C0</string>
+										<string>E7021D6211F01B7200B9F6C0</string>
 										<key>history</key>
 										<array>
 											<string>E707CF5A11E95D0800FCBAEE</string>
@@ -399,17 +399,17 @@
 											<string>E7021CA311F00C2C00B9F6C0</string>
 											<string>E7021CB511F00E7400B9F6C0</string>
 											<string>E7021CDB11F00FDA00B9F6C0</string>
-											<string>E7021D1811F0137A00B9F6C0</string>
 											<string>E7021D2611F0142C00B9F6C0</string>
 											<string>E7021D3D11F016ED00B9F6C0</string>
 											<string>E7021D3E11F016ED00B9F6C0</string>
-											<string>E7021D3F11F016ED00B9F6C0</string>
 											<string>E7021D4011F016ED00B9F6C0</string>
-											<string>E7021D4111F016ED00B9F6C0</string>
 											<string>E7021D4211F016ED00B9F6C0</string>
 											<string>E7021D5311F018C500B9F6C0</string>
 											<string>E7021D5411F018C500B9F6C0</string>
-											<string>E7021D5511F018C500B9F6C0</string>
+											<string>E7021D5F11F01B7200B9F6C0</string>
+											<string>E7021D6011F01B7200B9F6C0</string>
+											<string>E7021D6111F01B7200B9F6C0</string>
+											<string>E7021D1811F0137A00B9F6C0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -590,7 +590,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300947653.577604</real>
+	<real>300948338.894566</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -609,11 +609,11 @@
 	<array>
 		<string>E7021BE511F0016800B9F6C0</string>
 		<string>E7021B4D11EFF62500B9F6C0</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>E701D72711E9598200A41CD7</string>
 		<string>E7021C4C11F006C400B9F6C0</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Alan/Development/Scavenger/CamFlow/CamFlow.xcodeproj</string>
+		<string>E701D72711E9598200A41CD7</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 	</array>
 	<key>WindowString</key>
 	<string>182 50 1164 731 0 0 1440 878 </string>
@@ -708,7 +708,7 @@
 			<key>WindowToolGUID</key>
 			<string>E701D72711E9598200A41CD7</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -832,7 +832,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

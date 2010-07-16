@@ -4,7 +4,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1055, 741}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{502, 1111}";
+			sepNavVisRange = "{486, 1127}";
 		};
 	};
 	15044CEA11EE52E90048125C /* DeviceListViewController.m */ = {
@@ -30,7 +30,7 @@
 	};
 	15044D4C11EF5FDF0048125C /* ImagePickerController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {821, 423}}";
+			sepNavIntBoundsRect = "{{0, 0}, {821, 446}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 558}";
 		};
@@ -540,6 +540,12 @@
 			E7021D5411F018C500B9F6C0 /* PBXTextBookmark */ = E7021D5411F018C500B9F6C0 /* PBXTextBookmark */;
 			E7021D5511F018C500B9F6C0 /* PBXTextBookmark */ = E7021D5511F018C500B9F6C0 /* PBXTextBookmark */;
 			E7021D5611F018C500B9F6C0 /* PBXTextBookmark */ = E7021D5611F018C500B9F6C0 /* PBXTextBookmark */;
+			E7021D5911F01AA200B9F6C0 /* PBXTextBookmark */ = E7021D5911F01AA200B9F6C0 /* PBXTextBookmark */;
+			E7021D5A11F01AAA00B9F6C0 /* PBXTextBookmark */ = E7021D5A11F01AAA00B9F6C0 /* PBXTextBookmark */;
+			E7021D5F11F01B7200B9F6C0 /* PBXTextBookmark */ = E7021D5F11F01B7200B9F6C0 /* PBXTextBookmark */;
+			E7021D6011F01B7200B9F6C0 /* PBXTextBookmark */ = E7021D6011F01B7200B9F6C0 /* PBXTextBookmark */;
+			E7021D6111F01B7200B9F6C0 /* PBXTextBookmark */ = E7021D6111F01B7200B9F6C0 /* PBXTextBookmark */;
+			E7021D6211F01B7200B9F6C0 /* PBXTextBookmark */ = E7021D6211F01B7200B9F6C0 /* PBXTextBookmark */;
 			E707CF5A11E95D0800FCBAEE = E707CF5A11E95D0800FCBAEE /* PBXTextBookmark */;
 			E707CF5E11E95D0800FCBAEE = E707CF5E11E95D0800FCBAEE /* PlistBookmark */;
 			E707CF6011E95D0800FCBAEE = E707CF6011E95D0800FCBAEE /* PBXTextBookmark */;
@@ -876,9 +882,9 @@
 	};
 	E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {809, 741}}";
-			sepNavSelRange = "{411, 0}";
-			sepNavVisRange = "{446, 532}";
+			sepNavIntBoundsRect = "{{0, 0}, {821, 832}}";
+			sepNavSelRange = "{1220, 0}";
+			sepNavVisRange = "{500, 945}";
 		};
 	};
 	E7021C3A11F004C400B9F6C0 /* PBXTextBookmark */ = {
@@ -1112,9 +1118,9 @@
 	};
 	E7021C7A11F008F200B9F6C0 /* S3Photo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {782, 1053}}";
+			sepNavIntBoundsRect = "{{0, 0}, {817, 1014}}";
 			sepNavSelRange = "{740, 0}";
-			sepNavVisRange = "{487, 653}";
+			sepNavVisRange = "{303, 500}";
 		};
 	};
 	E7021C8A11F00A7B00B9F6C0 /* XCBuildMessageTextBookmark */ = {
@@ -1201,7 +1207,7 @@
 		fRef = E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */;
 		name = "PhotoFolderController.m: 47";
 		rLen = 0;
-		rLoc = 1376;
+		rLoc = 1476;
 		rType = 0;
 		vrLen = 779;
 		vrLoc = 409;
@@ -1398,7 +1404,7 @@
 		fRef = E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */;
 		name = "PhotoFolderController.m: 47";
 		rLen = 0;
-		rLoc = 1376;
+		rLoc = 1476;
 		rType = 0;
 		vrLen = 840;
 		vrLoc = 348;
@@ -1458,7 +1464,7 @@
 		fRef = E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */;
 		name = "PhotoFolderController.m: 47";
 		rLen = 0;
-		rLoc = 1367;
+		rLoc = 1467;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 347;
@@ -1468,7 +1474,7 @@
 		fRef = E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */;
 		name = "PhotoFolderController.m: 47";
 		rLen = 0;
-		rLoc = 1367;
+		rLoc = 1467;
 		rType = 0;
 		vrLen = 844;
 		vrLoc = 347;
@@ -1478,7 +1484,7 @@
 		fRef = E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */;
 		name = "PhotoFolderController.m: 49";
 		rLen = 0;
-		rLoc = 1286;
+		rLoc = 1386;
 		rType = 0;
 		vrLen = 885;
 		vrLoc = 500;
@@ -1506,7 +1512,7 @@
 		fRef = E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */;
 		name = "PhotoFolderController.m: 49";
 		rLen = 0;
-		rLoc = 1286;
+		rLoc = 1386;
 		rType = 0;
 		vrLen = 885;
 		vrLoc = 500;
@@ -1545,7 +1551,7 @@
 		fRef = E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */;
 		name = "PhotoFolderController.m: 58";
 		rLen = 0;
-		rLoc = 1380;
+		rLoc = 1480;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 521;
@@ -1855,6 +1861,66 @@
 		rType = 0;
 		vrLen = 671;
 		vrLoc = 0;
+	};
+	E7021D5911F01AA200B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 27";
+		rLen = 0;
+		rLoc = 740;
+		rType = 0;
+		vrLen = 653;
+		vrLoc = 487;
+	};
+	E7021D5A11F01AAA00B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */;
+		name = "S3Photo.m: 27";
+		rLen = 0;
+		rLoc = 740;
+		rType = 0;
+		vrLen = 500;
+		vrLoc = 303;
+	};
+	E7021D5F11F01B7200B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021C7911F008F200B9F6C0 /* S3Photo.h */;
+		name = "S3Photo.h: 29";
+		rLen = 0;
+		rLoc = 664;
+		rType = 0;
+		vrLen = 671;
+		vrLoc = 0;
+	};
+	E7021D6011F01B7200B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15044C8A11EE48BD0048125C /* CameraFolderTableViewController.m */;
+		name = "CameraFolderTableViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1127;
+		vrLoc = 486;
+	};
+	E7021D6111F01B7200B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15044D4C11EF5FDF0048125C /* ImagePickerController.m */;
+		name = "ImagePickerController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 558;
+		vrLoc = 0;
+	};
+	E7021D6211F01B7200B9F6C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */;
+		name = "PhotoFolderController.m: 47";
+		rLen = 0;
+		rLoc = 1220;
+		rType = 0;
+		vrLen = 945;
+		vrLoc = 500;
 	};
 	E707CF4F11E95C4700FCBAEE /* TopLevelMenu_iPhone.h */ = {
 		uiCtxt = {

@@ -38,9 +38,13 @@
 	PhotoFolderSource *source = [[PhotoFolderSource alloc] init];
 	for(NSString *imageName in bRequest.commonPrefixes)
 	{
-		S3Photo *p = [[S3Photo alloc] initWithS3Image:imageName photoSource:source];
-		[photos addObject:p];
-		NSLog(@"Image url is %@", imageName);
+		NSRange thumbPoint = [imageName rangeOfString:@"thumb"];
+		if (thumbPoint.length == 0)
+		{
+			S3Photo *p = [[S3Photo alloc] initWithS3Image:imageName photoSource:source];
+			[photos addObject:p];
+			NSLog(@"Image url is %@", imageName);
+		}
 	}
 	
 	for (int i = 0; i < photos.count; ++i) {
