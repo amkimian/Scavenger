@@ -9,6 +9,7 @@
 #import "DeviceFolderListController.h"
 #import "AppDelegate_iPhone.h"
 #import "PairedDeviceObject.h"
+#import "PairedDevice+Extensions.h"
 #import "CamFolderObject.h"
 
 @implementation DeviceFolderListController
@@ -35,10 +36,11 @@
 -(void) setupFrom: (PairedDeviceObject *) pd
 {
 	self.title = pd.name;
+	[pd ensureFoldersCorrect];
 	NSMutableArray *folders = [[NSMutableArray alloc] init];
 	for(CamFolderObject *f in [pd.folders allObjects])
 	{
-		TTTableTextItem *item = [TTTableTextItem itemWithText:f.folderName URL:[NSString stringWithFormat:@"cf://viewer/%@/%@",pd.name,f.folderName]];
+		TTTableTextItem *item = [TTTableTextItem itemWithText:f.folderName URL:[NSString stringWithFormat:@"cf://viewer/folderShow/%@/%@",pd.deviceId,f.folderName]];
 		[folders addObject:item];			
 	}
 	self.dataSource = [TTListDataSource dataSourceWithItems:folders];

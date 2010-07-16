@@ -16,16 +16,22 @@
 {
 	// If this is not ME, go onto Amazon S3 to find out the folders for this
 	// DEVICE ID
-	if ([self.isMe boolValue] == YES)
-	{
-		return;
-	}
+	//if ([self.isMe boolValue] == YES)
+	//{
+	//	return;
+	//}
 	
 	ASIS3BucketRequest *bRequest = [ASIS3BucketRequest requestWithBucket:@"camflow-images"];
 	bRequest.prefix = [NSString stringWithFormat: @"%@/", self.deviceId];
 	bRequest.delimiter = @"/";
 	
 	[bRequest startSynchronous];
+	
+	NSDictionary *rh = bRequest.requestHeaders;
+	for(NSString *key in [rh keyEnumerator])
+	{
+		NSLog(@"Key = %@, Value = %@", key, [rh objectForKey:key]);
+	}
 	
 	self.folders = nil;
 	

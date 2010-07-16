@@ -100,6 +100,7 @@
 	AppDelegate_iPhone *ip = APPDELEGATE_IPHONE;
 	
 	PairedDeviceObject *pd = [ip.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
+
 	cell.textLabel.text = pd.name;
     return cell;
 }

@@ -18,6 +18,7 @@
 #import "DeviceSettingsViewController.h"
 #import "ImagePickerController.h"
 #import "CamFlowPhotoUploader.h"
+#import "PhotoFolderController.h"
 
 #import "Three20/Three20.h"
 
@@ -52,7 +53,7 @@
 	[map from:@"cf://viewer/(initWithDevice:)" toSharedViewController:[DeviceFolderListController class]];
 	[map from:@"cf://settings" toSharedViewController:[DeviceSettingsViewController class]];
 	[map from:@"cf://camera/take/(showImagePicker:)" toModalViewController:self selector:@selector(showImagePicker:)];
-	
+	[map from:@"cf://viewer/folderShow/(initWithDevice:)/(andFolder:)" toSharedViewController:[PhotoFolderController class]];
 	if (![navigator restoreViewControllers])
 	{
 		[navigator openURLAction:[TTURLAction actionWithURLPath:@"cf://tabBar"]];

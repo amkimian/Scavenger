@@ -51,6 +51,9 @@
 		28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */; };
 		28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEBFDC1118E19E00187D67 /* CoreData.framework */; };
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
+		E7021BF911F001B300B9F6C0 /* PhotoFolderController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */; };
+		E7021C7811F0089C00B9F6C0 /* PhotoFolderSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E7021C7711F0089C00B9F6C0 /* PhotoFolderSource.m */; };
+		E7021C7B11F008F200B9F6C0 /* S3Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7021C7A11F008F200B9F6C0 /* S3Photo.m */; };
 		E707CF5111E95C4700FCBAEE /* TopLevelMenu_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E707CF5011E95C4700FCBAEE /* TopLevelMenu_iPhone.m */; };
 		E707CFA311E961E500FCBAEE /* FolderListTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E707CFA211E961E500FCBAEE /* FolderListTableViewController_iPhone.m */; };
 		E707D03011EA11DA00FCBAEE /* 45-movie1.png in Resources */ = {isa = PBXBuildFile; fileRef = E707D02D11EA11DA00FCBAEE /* 45-movie1.png */; };
@@ -303,6 +306,12 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CamFlow_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamFlow_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CamFlow-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CamFlow-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		E7021BF711F001B300B9F6C0 /* PhotoFolderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoFolderController.h; path = PhotoHandling/PhotoFolderController.h; sourceTree = "<group>"; };
+		E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoFolderController.m; path = PhotoHandling/PhotoFolderController.m; sourceTree = "<group>"; };
+		E7021C7611F0089C00B9F6C0 /* PhotoFolderSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoFolderSource.h; path = PhotoHandling/PhotoFolderSource.h; sourceTree = "<group>"; };
+		E7021C7711F0089C00B9F6C0 /* PhotoFolderSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoFolderSource.m; path = PhotoHandling/PhotoFolderSource.m; sourceTree = "<group>"; };
+		E7021C7911F008F200B9F6C0 /* S3Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = S3Photo.h; path = PhotoHandling/S3Photo.h; sourceTree = "<group>"; };
+		E7021C7A11F008F200B9F6C0 /* S3Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = S3Photo.m; path = PhotoHandling/S3Photo.m; sourceTree = "<group>"; };
 		E707CF4F11E95C4700FCBAEE /* TopLevelMenu_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopLevelMenu_iPhone.h; path = TableControllers/TopLevelMenu_iPhone.h; sourceTree = "<group>"; };
 		E707CF5011E95C4700FCBAEE /* TopLevelMenu_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopLevelMenu_iPhone.m; path = TableControllers/TopLevelMenu_iPhone.m; sourceTree = "<group>"; };
 		E707CFA111E961E500FCBAEE /* FolderListTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderListTableViewController_iPhone.h; path = TableControllers/FolderListTableViewController_iPhone.h; sourceTree = "<group>"; };
@@ -433,6 +442,7 @@
 		2860E386111B897F00E27156 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				E7021BD411F0015B00B9F6C0 /* PhotoHandling */,
 				15044C7011EE47190048125C /* Three20TableControllers */,
 				E707CF4E11E95BF600FCBAEE /* TableControllers */,
 				2860E387111B897F00E27156 /* AppDelegate_iPhone.h */,
@@ -513,6 +523,19 @@
 				E707D23011ED820000FCBAEE /* QuartzCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7021BD411F0015B00B9F6C0 /* PhotoHandling */ = {
+			isa = PBXGroup;
+			children = (
+				E7021BF711F001B300B9F6C0 /* PhotoFolderController.h */,
+				E7021BF811F001B300B9F6C0 /* PhotoFolderController.m */,
+				E7021C7611F0089C00B9F6C0 /* PhotoFolderSource.h */,
+				E7021C7711F0089C00B9F6C0 /* PhotoFolderSource.m */,
+				E7021C7911F008F200B9F6C0 /* S3Photo.h */,
+				E7021C7A11F008F200B9F6C0 /* S3Photo.m */,
+			);
+			name = PhotoHandling;
 			sourceTree = "<group>";
 		};
 		E707CF4E11E95BF600FCBAEE /* TableControllers */ = {
@@ -848,6 +871,9 @@
 				15044D1B11EE56FB0048125C /* DeviceFolderListController.m in Sources */,
 				15044D3511EEB6300048125C /* DeviceSettingsViewController.m in Sources */,
 				15044D4D11EF5FDF0048125C /* ImagePickerController.m in Sources */,
+				E7021BF911F001B300B9F6C0 /* PhotoFolderController.m in Sources */,
+				E7021C7811F0089C00B9F6C0 /* PhotoFolderSource.m in Sources */,
+				E7021C7B11F008F200B9F6C0 /* S3Photo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
