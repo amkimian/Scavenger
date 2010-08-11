@@ -1,0 +1,66 @@
+// !$*UTF8*$!
+{
+	15D9F5FD1212EA6E00CFA337 /* MapNotes */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MapNotes;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	15D9F60C1212EA9000CFA337 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	15D9F60D1212EA9000CFA337 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	1D6058900D05DD3D006BFB54 /* MapNotes */ = {
+		activeExec = 0;
+		executables = (
+			15D9F5FD1212EA6E00CFA337 /* MapNotes */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 15D9F5FD1212EA6E00CFA337 /* MapNotes */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* MapNotes */;
+		codeSenseManager = 15D9F60D1212EA9000CFA337 /* Code sense */;
+		executables = (
+			15D9F5FD1212EA6E00CFA337 /* MapNotes */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 303229550;
+			PBXWorkspaceStateSaveDate = 303229550;
+		};
+		sourceControlManager = 15D9F60C1212EA9000CFA337 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+}

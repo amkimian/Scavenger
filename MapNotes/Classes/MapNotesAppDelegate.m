@@ -1,15 +1,15 @@
 //
-//  BallFlowAppDelegate.m
-//  BallFlow
+//  MapNotesAppDelegate.m
+//  MapNotes
 //
-//  Created by Alan Moore on 8/9/10.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
+//  Created by Alan Moore on 8/11/10.
+//  Copyright 2010 Mount Diablo Software. All rights reserved.
 //
 
-#import "BallFlowAppDelegate.h"
+#import "MapNotesAppDelegate.h"
 
 
-@implementation BallFlowAppDelegate
+@implementation MapNotesAppDelegate
 
 @synthesize window;
 
@@ -23,17 +23,9 @@
 
     [window makeKeyAndVisible];
 
-	NSLog(@"Hello world");
-	UIAccelerometer *theAccelerometer = [UIAccelerometer sharedAccelerometer];
-	theAccelerometer.updateInterval = 1 / 50.0;
-	theAccelerometer.delegate = self;
     return YES;
 }
 
-- (void) accelerometer: (UIAccelerometer *) accelerometer didAccelerate: (UIAcceleration *) acceleration
-{
-	NSLog(@"Acc x = %d, Acc y = %d, Acc z = %d", acceleration.x, acceleration.y, acceleration.z);	
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
@@ -101,7 +93,7 @@
     if (managedObjectModel_ != nil) {
         return managedObjectModel_;
     }
-    NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"BallFlow" ofType:@"momd"];
+    NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"MapNotes" ofType:@"momd"];
     NSURL *modelURL = [NSURL fileURLWithPath:modelPath];
     managedObjectModel_ = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];    
     return managedObjectModel_;
@@ -118,7 +110,7 @@
         return persistentStoreCoordinator_;
     }
     
-    NSURL *storeURL = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"BallFlow.sqlite"]];
+    NSURL *storeURL = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"MapNotes.sqlite"]];
     
     NSError *error = nil;
     persistentStoreCoordinator_ = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

@@ -1,19 +1,17 @@
 //
-//  BallFlowAppDelegate.h
-//  BallFlow
+//  MapNotesAppDelegate.h
+//  MapNotes
 //
-//  Created by Alan Moore on 8/9/10.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
+//  Created by Alan Moore on 8/11/10.
+//  Copyright 2010 Mount Diablo Software All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import <CoreMotion/CMMotionManager.h>
 
-@interface BallFlowAppDelegate : NSObject <UIApplicationDelegate, UIAccelerometerDelegate> {
+@interface MapNotesAppDelegate : NSObject <UIApplicationDelegate> {
     
     UIWindow *window;
-	CMMotionManager *motion;
     
 @private
     NSManagedObjectContext *managedObjectContext_;
