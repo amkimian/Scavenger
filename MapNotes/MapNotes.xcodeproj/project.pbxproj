@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15D9F6561212ED6700CFA337 /* NoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9F6511212ED6700CFA337 /* NoteObject.m */; };
+		15D9F6571212ED6700CFA337 /* RegionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9F6531212ED6700CFA337 /* RegionObject.m */; };
+		15D9F6581212ED6700CFA337 /* LocationPointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9F6551212ED6700CFA337 /* LocationPointObject.m */; };
 		1D3623260D0F684500981E51 /* MapNotesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* MapNotesAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -18,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15D9F6501212ED6700CFA337 /* NoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteObject.h; sourceTree = "<group>"; };
+		15D9F6511212ED6700CFA337 /* NoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteObject.m; sourceTree = "<group>"; };
+		15D9F6521212ED6700CFA337 /* RegionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionObject.h; sourceTree = "<group>"; };
+		15D9F6531212ED6700CFA337 /* RegionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionObject.m; sourceTree = "<group>"; };
+		15D9F6541212ED6700CFA337 /* LocationPointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPointObject.h; sourceTree = "<group>"; };
+		15D9F6551212ED6700CFA337 /* LocationPointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPointObject.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* MapNotesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNotesAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* MapNotesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapNotesAppDelegate.m; sourceTree = "<group>"; };
@@ -131,6 +140,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Mount Diablo Software (Alan Moore)";
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MapNotes" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -169,6 +181,9 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MapNotesAppDelegate.m in Sources */,
 				28193055112F811F00ECF9B4 /* MapNotes.xcdatamodeld in Sources */,
+				15D9F6561212ED6700CFA337 /* NoteObject.m in Sources */,
+				15D9F6571212ED6700CFA337 /* RegionObject.m in Sources */,
+				15D9F6581212ED6700CFA337 /* LocationPointObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +273,12 @@
 		28193054112F811F00ECF9B4 /* MapNotes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				15D9F6501212ED6700CFA337 /* NoteObject.h */,
+				15D9F6511212ED6700CFA337 /* NoteObject.m */,
+				15D9F6521212ED6700CFA337 /* RegionObject.h */,
+				15D9F6531212ED6700CFA337 /* RegionObject.m */,
+				15D9F6541212ED6700CFA337 /* LocationPointObject.h */,
+				15D9F6551212ED6700CFA337 /* LocationPointObject.m */,
 				28C3AD890F43EF2300507BA6 /* MapNotes.xcdatamodel */,
 			);
 			currentVersion = 28C3AD890F43EF2300507BA6 /* MapNotes.xcdatamodel */;
