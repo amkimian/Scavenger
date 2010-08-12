@@ -94,6 +94,7 @@
     }
     
     // Configure the cell...
+    cell.textLabel.text = @"Hello world";
     
     return cell;
 }
