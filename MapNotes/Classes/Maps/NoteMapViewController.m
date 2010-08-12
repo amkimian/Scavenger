@@ -21,12 +21,31 @@
 }
 */
 
-/*
+
+-(void) chooseMapType: (id) sender
+{
+    /*
+	MapTypePopupController *mapTypeController = [[MapTypePopupController alloc] initWithNibName:nil bundle:nil];
+	mapTypeController.delegate = self;
+	mapTypeController.mapType = mapView.mapType;
+	
+	self.popOver = [[UIPopoverController alloc] initWithContentViewController:mapTypeController];
+	[mapTypeController release];
+	[self.popOver setPopoverContentSize:mapTypeController.view.bounds.size];
+	[self.popOver presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+     */
+}
+
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(chooseMapType:)];
+    
+    NSArray *array = [[NSArray alloc] initWithObjects:mapButton, nil];	
+	self.toolbarItems = array;
 }
-*/
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

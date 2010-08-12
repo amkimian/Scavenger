@@ -13,4 +13,5 @@
 	IBOutlet MKMapView *mapView;
 }
 
+-(void) chooseMapType:(id) sender;
 @end
