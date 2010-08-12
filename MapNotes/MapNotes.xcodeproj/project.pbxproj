@@ -10,6 +10,10 @@
 		15D9F6561212ED6700CFA337 /* NoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9F6511212ED6700CFA337 /* NoteObject.m */; };
 		15D9F6571212ED6700CFA337 /* RegionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9F6531212ED6700CFA337 /* RegionObject.m */; };
 		15D9F6581212ED6700CFA337 /* LocationPointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9F6551212ED6700CFA337 /* LocationPointObject.m */; };
+		15D9F6611213885500CFA337 /* NoteMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9F65F1213885500CFA337 /* NoteMapViewController.m */; };
+		15D9F6621213885500CFA337 /* NoteMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D9F6601213885500CFA337 /* NoteMapViewController.xib */; };
+		15D9F6691213890200CFA337 /* NoteLocationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9F6681213890200CFA337 /* NoteLocationListViewController.m */; };
+		15D9F66D1213892B00CFA337 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D9F66C1213892B00CFA337 /* MapKit.framework */; };
 		1D3623260D0F684500981E51 /* MapNotesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* MapNotesAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -27,6 +31,12 @@
 		15D9F6531212ED6700CFA337 /* RegionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionObject.m; sourceTree = "<group>"; };
 		15D9F6541212ED6700CFA337 /* LocationPointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPointObject.h; sourceTree = "<group>"; };
 		15D9F6551212ED6700CFA337 /* LocationPointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPointObject.m; sourceTree = "<group>"; };
+		15D9F65E1213885500CFA337 /* NoteMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteMapViewController.h; path = Maps/NoteMapViewController.h; sourceTree = "<group>"; };
+		15D9F65F1213885500CFA337 /* NoteMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteMapViewController.m; path = Maps/NoteMapViewController.m; sourceTree = "<group>"; };
+		15D9F6601213885500CFA337 /* NoteMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NoteMapViewController.xib; path = Maps/NoteMapViewController.xib; sourceTree = "<group>"; };
+		15D9F6671213890200CFA337 /* NoteLocationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteLocationListViewController.h; path = Lists/NoteLocationListViewController.h; sourceTree = "<group>"; };
+		15D9F6681213890200CFA337 /* NoteLocationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteLocationListViewController.m; path = Lists/NoteLocationListViewController.m; sourceTree = "<group>"; };
+		15D9F66C1213892B00CFA337 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* MapNotesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNotesAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* MapNotesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapNotesAppDelegate.m; sourceTree = "<group>"; };
@@ -50,6 +60,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */,
+				15D9F66D1213892B00CFA337 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +70,31 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				15D9F666121388DB00CFA337 /* Lists */,
+				15D9F65D1213881C00CFA337 /* Maps */,
 				1D3623240D0F684500981E51 /* MapNotesAppDelegate.h */,
 				1D3623250D0F684500981E51 /* MapNotesAppDelegate.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		15D9F65D1213881C00CFA337 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				15D9F65E1213885500CFA337 /* NoteMapViewController.h */,
+				15D9F65F1213885500CFA337 /* NoteMapViewController.m */,
+				15D9F6601213885500CFA337 /* NoteMapViewController.xib */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		15D9F666121388DB00CFA337 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				15D9F6671213890200CFA337 /* NoteLocationListViewController.h */,
+				15D9F6681213890200CFA337 /* NoteLocationListViewController.m */,
+			);
+			name = Lists;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -111,6 +143,7 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				28D801B30F44B63D00FB423F /* CoreData.framework */,
+				15D9F66C1213892B00CFA337 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				15D9F6621213885500CFA337 /* NoteMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +218,8 @@
 				15D9F6561212ED6700CFA337 /* NoteObject.m in Sources */,
 				15D9F6571212ED6700CFA337 /* RegionObject.m in Sources */,
 				15D9F6581212ED6700CFA337 /* LocationPointObject.m in Sources */,
+				15D9F6611213885500CFA337 /* NoteMapViewController.m in Sources */,
+				15D9F6691213890200CFA337 /* NoteLocationListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

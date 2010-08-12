@@ -12,7 +12,8 @@
 @implementation MapNotesAppDelegate
 
 @synthesize window;
-
+@synthesize mapViewController;
+@synthesize locationListController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -21,6 +22,23 @@
 
     // Override point for customization after application launch.
 
+	self.locationListController = [[NoteLocationListViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	self.mapViewController = [[NoteMapViewController alloc] initWithNibName:nil bundle:nil];
+	
+	UINavigationController *leftNav = [[UINavigationController alloc] initWithRootViewController:self.locationListController];
+	[leftNav setToolbarHidden:NO animated:YES];
+	
+	UINavigationController *mapNav = [[UINavigationController alloc] initWithRootViewController:self.mapViewController];
+	[mapNav setToolbarHidden:NO animated:YES];
+	
+	UISplitViewController *splitController = [[UISplitViewController alloc] init];
+	
+	NSArray *controllers = [NSArray arrayWithObjects: leftNav, mapNav, nil];
+	splitController.viewControllers = controllers;
+	splitController.delegate = self.mapViewController;
+	
+	[window addSubview:splitController.view];
+	
     [window makeKeyAndVisible];
 
     return YES;

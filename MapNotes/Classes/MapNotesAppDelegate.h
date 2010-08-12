@@ -8,16 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "NoteMapViewController.h"
+#import "NoteLocationListViewController.h"
 
 @interface MapNotesAppDelegate : NSObject <UIApplicationDelegate> {
     
     UIWindow *window;
-    
+ 	NoteMapViewController *mapViewController;
+	NoteLocationListViewController *locationListController;
+   
 @private
     NSManagedObjectContext *managedObjectContext_;
     NSManagedObjectModel *managedObjectModel_;
     NSPersistentStoreCoordinator *persistentStoreCoordinator_;
 }
+
+@property (nonatomic, retain) NoteMapViewController *mapViewController;
+@property (nonatomic, retain) NoteLocationListViewController *locationListController;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
